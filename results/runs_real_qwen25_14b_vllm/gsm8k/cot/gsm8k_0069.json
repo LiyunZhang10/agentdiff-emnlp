@@ -1,0 +1,638 @@
+{
+  "sample_id": "gsm8k_0069",
+  "agent_type": "cot",
+  "sample_question": "Sarah has $18. She spends $11 on lunch and $16 on a book. How much money does she have left?",
+  "sample_context": null,
+  "sample_gold_answer": "-9",
+  "original_result": {
+    "final_answer": "$-9 (However, in a practical sense, Sarah cannot buy the book and would still have $7 left, but mathematically following the steps, she would be in debt by $9 if she tried to buy the book.)",
+    "n_steps": 5,
+    "is_correct": true,
+    "trace": [
+      {
+        "step": 1,
+        "thought": "Let's solve the problem step by step.",
+        "action": null,
+        "observation": null,
+        "raw_output": "Let's solve the problem step by step.",
+        "is_final": false
+      },
+      {
+        "step": 2,
+        "thought": "Start with the initial amount of money Sarah has: $18.",
+        "action": null,
+        "observation": null,
+        "raw_output": "Start with the initial amount of money Sarah has: $18.",
+        "is_final": false
+      },
+      {
+        "step": 3,
+        "thought": "Subtract the amount she spends on lunch from her initial amount: $18 - $11 = $7.",
+        "action": null,
+        "observation": null,
+        "raw_output": "Subtract the amount she spends on lunch from her initial amount: $18 - $11 = $7.",
+        "is_final": false
+      },
+      {
+        "step": 4,
+        "thought": "Subtract the amount she spends on the book from the remaining amount after lunch: $7 - $16.\n\nAt this point, we notice that Sarah does not have enough money to buy the book because she only has $7 left after buying lunch, and the book costs $16. Therefore, she cannot complete this transaction.\n\nHowever, to answer the question as posed, we need to state how much money she would have left if she could spend the money, even though it's not possible in reality.",
+        "action": null,
+        "observation": null,
+        "raw_output": "Subtract the amount she spends on the book from the remaining amount after lunch: $7 - $16.\n\nAt this point, we notice that Sarah does not have enough money to buy the book because she only has $7 left after buying lunch, and the book costs $16. Therefore, she cannot complete this transaction.\n\nHowever, to answer the question as posed, we need to state how much money she would have left if she could spend the money, even though it's not possible in reality.",
+        "is_final": false
+      },
+      {
+        "step": 5,
+        "thought": "Since she cannot afford the book, the amount of money she has left after buying lunch is $7.\n\nFinal Answer: $-9 (However, in a practical sense, Sarah cannot buy the book and would still have $7 left, but mathematically following the steps, she would be in debt by $9 if she tried to buy the book.) \n\nNote: The final answer provided mathematically shows a negative value because the problem was solved step by step as if Sarah could spend the money, but in reality, she cannot afford the book. In a pr",
+        "action": null,
+        "observation": null,
+        "raw_output": "Since she cannot afford the book, the amount of money she has left after buying lunch is $7.\n\nFinal Answer: $-9 (However, in a practical sense, Sarah cannot buy the book and would still have $7 left, but mathematically following the steps, she would be in debt by $9 if she tried to buy the book.) \n\nNote: The final answer provided mathematically shows a negative value because the problem was solved step by step as if Sarah could spend the money, but in reality, she cannot afford the book. In a pr",
+        "is_final": true
+      }
+    ]
+  },
+  "consistency_analysis": {
+    "consistency_rate": 0.19999999999999996,
+    "is_consistent": false,
+    "inconsistent_count": 4,
+    "per_type_inconsistency": {
+      "paraphrase": 1.0,
+      "synonym": 0.0,
+      "reorder": 1.0,
+      "format": 1.0,
+      "distractor": 1.0
+    },
+    "propagation_patterns": {
+      "cascade": 1,
+      "late_diverge": 2,
+      "early_diverge": 2
+    }
+  },
+  "propagation_details": [
+    {
+      "divergence_step": 3,
+      "cascade_depth": 4,
+      "self_corrections": 0,
+      "propagation_pattern": "cascade",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.5833333333333334,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.15,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.0625,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 5,
+          "thought_similarity": 0.08108108108108109,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 6,
+          "thought_similarity": 0.0,
+          "action_match": false,
+          "is_divergent": true
+        },
+        {
+          "step": 7,
+          "thought_similarity": 0.0,
+          "action_match": false,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 5,
+      "n_steps_variant": 7,
+      "perturbation_type": "paraphrase",
+      "variant_answer": "$0"
+    },
+    {
+      "divergence_step": 5,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "late_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.6470588235294118,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.5230769230769231,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 5,
+          "thought_similarity": 0.25,
+          "action_match": true,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 5,
+      "n_steps_variant": 5,
+      "perturbation_type": "synonym",
+      "variant_answer": "$7"
+    },
+    {
+      "divergence_step": 1,
+      "cascade_depth": 6,
+      "self_corrections": 0,
+      "propagation_pattern": "early_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.06666666666666667,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.35714285714285715,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.09090909090909091,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.15151515151515152,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 5,
+          "thought_similarity": 0.08571428571428572,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 6,
+          "thought_similarity": 0.0,
+          "action_match": false,
+          "is_divergent": true
+        },
+        {
+          "step": 7,
+          "thought_similarity": 0.0,
+          "action_match": false,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 5,
+      "n_steps_variant": 7,
+      "perturbation_type": "reorder",
+      "variant_answer": "Since Sarah cannot spend more than she has, she would be short by $9. However, the question asks how much she has left, which in this case is $0 as she cannot spend more than she has. A more accurate response would be that she is short by $9, but if we strictly follow the question's format, we would say she has $0 left as she cannot spend more than she has"
+    },
+    {
+      "divergence_step": 5,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "late_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.5211267605633803,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 5,
+          "thought_similarity": 0.37362637362637363,
+          "action_match": true,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 5,
+      "n_steps_variant": 5,
+      "perturbation_type": "format",
+      "variant_answer": "Sarah cannot buy the book as she does not have enough money. She would be short by $9 if she tried to buy the book. However, the amount of money she has left before attempting to buy the book is $7"
+    },
+    {
+      "divergence_step": 1,
+      "cascade_depth": 1,
+      "self_corrections": 1,
+      "propagation_pattern": "early_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.13043478260869565,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.6923076923076923,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.5652173913043478,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.36470588235294116,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 5,
+          "thought_similarity": 0.0,
+          "action_match": false,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 5,
+      "n_steps_variant": 4,
+      "perturbation_type": "distractor",
+      "variant_answer": "Sarah cannot afford the book and would be short by $9"
+    }
+  ],
+  "perturbation_variants": [
+    {
+      "perturbation_type": "paraphrase",
+      "variant_question": "How much money does Sarah have left after spending $11 on lunch and $16 on a book, if she initially had $18?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking for the same information and would yield the same answer. The only difference is in the wording and the order in which the information is presented, which does not change"
+      },
+      "agent_run": {
+        "final_answer": "$0",
+        "n_steps": 7,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "Let's solve the problem step by step.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Let's solve the problem step by step.",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "Identify the initial amount of money Sarah had: $18.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Identify the initial amount of money Sarah had: $18.",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "Determine the amount spent on lunch: $11.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Determine the amount spent on lunch: $11.",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "Determine the amount spent on a book: $16.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Determine the amount spent on a book: $16.",
+            "is_final": false
+          },
+          {
+            "step": 5,
+            "thought": "Calculate the total amount spent by adding the cost of lunch and the cost of the book: $11 + $16 = $27.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Calculate the total amount spent by adding the cost of lunch and the cost of the book: $11 + $16 = $27.",
+            "is_final": false
+          },
+          {
+            "step": 6,
+            "thought": "Since Sarah only had $18 initially, she cannot spend $27 because that would exceed her initial amount. Therefore, we need to calculate how much she has left after spending all her money and recognize that she cannot cover the full $27.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Since Sarah only had $18 initially, she cannot spend $27 because that would exceed her initial amount. Therefore, we need to calculate how much she has left after spending all her money and recognize that she cannot cover the full $27.",
+            "is_final": false
+          },
+          {
+            "step": 7,
+            "thought": "Subtract the total amount she can spend (which is her initial amount) from the total amount she needs to spend: $27 - $18 = $9. This means she is short by $9, but the question asks how much she has left, which is $0 since she spent all her money.\n\nFinal Answer: $0",
+            "action": null,
+            "observation": null,
+            "raw_output": "Subtract the total amount she can spend (which is her initial amount) from the total amount she needs to spend: $27 - $18 = $9. This means she is short by $9, but the question asks how much she has left, which is $0 since she spent all her money.\n\nFinal Answer: $0",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "synonym",
+      "variant_question": "Sarah possesses $18. She utilizes $11 on lunch and $16 on a book. How much money does she have remaining?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are phrased differently but ask for the same calculation and would yield the same answer. The minor changes in wording do not alter the core meaning or the numerical outcome."
+      },
+      "agent_run": {
+        "final_answer": "$7",
+        "n_steps": 5,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "Let's solve the problem step by step.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Let's solve the problem step by step.",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "Start with the initial amount of money Sarah has: $18.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Start with the initial amount of money Sarah has: $18.",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "Subtract the amount she spends on lunch: $18 - $11 = $7.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Subtract the amount she spends on lunch: $18 - $11 = $7.",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "Subtract the amount she spends on the book from the remaining amount: $7 - $16.\n\nAt this point, we notice that Sarah does not have enough money to buy the book because she only has $7 left after buying lunch. Therefore, she cannot afford the $16 book.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Subtract the amount she spends on the book from the remaining amount: $7 - $16.\n\nAt this point, we notice that Sarah does not have enough money to buy the book because she only has $7 left after buying lunch. Therefore, she cannot afford the $16 book.",
+            "is_final": false
+          },
+          {
+            "step": 5,
+            "thought": "Since Sarah cannot afford the book, we only consider the amount she has left after buying lunch, which is $7.\n\nFinal Answer: $7",
+            "action": null,
+            "observation": null,
+            "raw_output": "Since Sarah cannot afford the book, we only consider the amount she has left after buying lunch, which is $7.\n\nFinal Answer: $7",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "reorder",
+      "variant_question": "She spends $11 on lunch and $16 on a book. Sarah has $18. How much money does she have left?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (reorder; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "Since Sarah cannot spend more than she has, she would be short by $9. However, the question asks how much she has left, which in this case is $0 as she cannot spend more than she has. A more accurate response would be that she is short by $9, but if we strictly follow the question's format, we would say she has $0 left as she cannot spend more than she has",
+        "n_steps": 7,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve this problem, we will follow these steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve this problem, we will follow these steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "Identify the total amount of money Sarah initially has.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Identify the total amount of money Sarah initially has.",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "Calculate the total amount of money Sarah spends.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Calculate the total amount of money Sarah spends.",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "Subtract the total amount spent from the initial amount to find out how much money she has left.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Subtract the total amount spent from the initial amount to find out how much money she has left.",
+            "is_final": false
+          },
+          {
+            "step": 5,
+            "thought": "Identify the total amount of money Sarah initially has.\n- Sarah has $18 initially.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Identify the total amount of money Sarah initially has.\n- Sarah has $18 initially.",
+            "is_final": false
+          },
+          {
+            "step": 6,
+            "thought": "Calculate the total amount of money Sarah spends.\n- She spends $11 on lunch and $16 on a book.\n- Total amount spent = $11 + $16 = $27.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Calculate the total amount of money Sarah spends.\n- She spends $11 on lunch and $16 on a book.\n- Total amount spent = $11 + $16 = $27.",
+            "is_final": false
+          },
+          {
+            "step": 7,
+            "thought": "Subtract the total amount spent from the initial amount to find out how much money she has left.\n- Initial amount = $18\n- Total amount spent = $27\n- Since she cannot spend more than she has, it's clear that she does not have enough money to cover the total expenses. However, to answer the question as posed, we will calculate the deficit.\n- Money left = Initial amount - Total amount spent = $18 - $27 = -$9.\n\nFinal Answer: Since Sarah cannot spend more than she has, she would be short by $9. Howev",
+            "action": null,
+            "observation": null,
+            "raw_output": "Subtract the total amount spent from the initial amount to find out how much money she has left.\n- Initial amount = $18\n- Total amount spent = $27\n- Since she cannot spend more than she has, it's clear that she does not have enough money to cover the total expenses. However, to answer the question as posed, we will calculate the deficit.\n- Money left = Initial amount - Total amount spent = $18 - $27 = -$9.\n\nFinal Answer: Since Sarah cannot spend more than she has, she would be short by $9. Howev",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "format",
+      "variant_question": "- Sarah has $18.\n- She spends $11 on lunch and $16 on a book.\nQuestion: How much money does she have left?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (format; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "Sarah cannot buy the book as she does not have enough money. She would be short by $9 if she tried to buy the book. However, the amount of money she has left before attempting to buy the book is $7",
+        "n_steps": 5,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "Let's solve the problem step by step.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Let's solve the problem step by step.",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "Start with the initial amount of money Sarah has: $18.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Start with the initial amount of money Sarah has: $18.",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "Subtract the amount she spends on lunch from her initial amount: $18 - $11 = $7.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Subtract the amount she spends on lunch from her initial amount: $18 - $11 = $7.",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "Subtract the amount she spends on a book from the remaining amount after lunch: $7 - $16.\n\nAt this point, we notice that Sarah does not have enough money to buy the book because she only has $7 left after buying lunch, and the book costs $16. However, for the sake of the problem, we will continue with the subtraction to illustrate the concept.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Subtract the amount she spends on a book from the remaining amount after lunch: $7 - $16.\n\nAt this point, we notice that Sarah does not have enough money to buy the book because she only has $7 left after buying lunch, and the book costs $16. However, for the sake of the problem, we will continue with the subtraction to illustrate the concept.",
+            "is_final": false
+          },
+          {
+            "step": 5,
+            "thought": "Since Sarah cannot spend more than she has, the calculation $7 - $16 would result in a negative number, indicating she is short of money. But to directly answer the question based on the steps given: $7 - $16 = -$9, which means she would be $9 in debt if she were to buy the book.\n\nFinal Answer: Sarah cannot buy the book as she does not have enough money. She would be short by $9 if she tried to buy the book. However, the amount of money she has left before attempting to buy the book is $7.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Since Sarah cannot spend more than she has, the calculation $7 - $16 would result in a negative number, indicating she is short of money. But to directly answer the question based on the steps given: $7 - $16 = -$9, which means she would be $9 in debt if she were to buy the book.\n\nFinal Answer: Sarah cannot buy the book as she does not have enough money. She would be short by $9 if she tried to buy the book. However, the amount of money she has left before attempting to buy the book is $7.",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "distractor",
+      "variant_question": "Note: the following sentence is unrelated to the question. The weather that day was particularly sunny with clear skies. Now, sarah has $18. She spends $11 on lunch and $16 on a book. How much money does she have left?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (distractor; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "Sarah cannot afford the book and would be short by $9",
+        "n_steps": 4,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the problem of how much money Sarah has left after her expenditures, we can follow these steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the problem of how much money Sarah has left after her expenditures, we can follow these steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "Start with the initial amount of money Sarah has, which is $18.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Start with the initial amount of money Sarah has, which is $18.",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "Subtract the amount she spends on lunch, which is $11, from her initial amount.\n   - Calculation: $18 - $11 = $7",
+            "action": null,
+            "observation": null,
+            "raw_output": "Subtract the amount she spends on lunch, which is $11, from her initial amount.\n   - Calculation: $18 - $11 = $7",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "Subtract the amount she spends on a book, which is $16, from the remaining amount after lunch.\n   - Calculation: $7 - $16 = -$9\n\nHowever, the third step reveals that Sarah does not have enough money to buy the book after buying lunch. She would be short by $9. Therefore, the problem as stated is not possible with the given amounts, as Sarah cannot afford the book with only $7 left after buying lunch.\n\nFinal Answer: Sarah cannot afford the book and would be short by $9.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Subtract the amount she spends on a book, which is $16, from the remaining amount after lunch.\n   - Calculation: $7 - $16 = -$9\n\nHowever, the third step reveals that Sarah does not have enough money to buy the book after buying lunch. She would be short by $9. Therefore, the problem as stated is not possible with the given amounts, as Sarah cannot afford the book with only $7 left after buying lunch.\n\nFinal Answer: Sarah cannot afford the book and would be short by $9.",
+            "is_final": true
+          }
+        ]
+      }
+    }
+  ],
+  "patch_results": {
+    "step_patch": {
+      "consistency_rate": 0.4,
+      "inconsistent_count": 3,
+      "is_correct": false,
+      "intervention_step": 5,
+      "target_types": [
+        "paraphrase",
+        "reorder"
+      ]
+    },
+    "system_patch": {
+      "consistency_rate": 0.4,
+      "inconsistent_count": 3,
+      "is_correct": false,
+      "target_types": [
+        "paraphrase",
+        "reorder"
+      ]
+    }
+  },
+  "n_variants_generated": 5,
+  "n_variants_valid": 5,
+  "n_variants_rejected": 0,
+  "elapsed_seconds": 91.00346112251282
+}

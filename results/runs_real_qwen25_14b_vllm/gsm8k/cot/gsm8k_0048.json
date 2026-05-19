@@ -1,0 +1,491 @@
+{
+  "sample_id": "gsm8k_0048",
+  "agent_type": "cot",
+  "sample_question": "A train travels at 18 km/h for 3 hours, then at 16 km/h for 10 hours. What is the total distance?",
+  "sample_context": null,
+  "sample_gold_answer": "214",
+  "original_result": {
+    "final_answer": "214 km",
+    "n_steps": 4,
+    "is_correct": true,
+    "trace": [
+      {
+        "step": 1,
+        "thought": "To solve this problem, we will break it down into steps, calculating the distance traveled at each speed and then summing these distances to find the total distance.",
+        "action": null,
+        "observation": null,
+        "raw_output": "To solve this problem, we will break it down into steps, calculating the distance traveled at each speed and then summing these distances to find the total distance.",
+        "is_final": false
+      },
+      {
+        "step": 2,
+        "thought": "Calculate the distance traveled at 18 km/h for 3 hours.\n- Distance = Speed × Time\n- Distance at 18 km/h = 18 km/h × 3 hours = 54 km",
+        "action": null,
+        "observation": null,
+        "raw_output": "Calculate the distance traveled at 18 km/h for 3 hours.\n- Distance = Speed × Time\n- Distance at 18 km/h = 18 km/h × 3 hours = 54 km",
+        "is_final": false
+      },
+      {
+        "step": 3,
+        "thought": "Calculate the distance traveled at 16 km/h for 10 hours.\n- Distance = Speed × Time\n- Distance at 16 km/h = 16 km/h × 10 hours = 160 km",
+        "action": null,
+        "observation": null,
+        "raw_output": "Calculate the distance traveled at 16 km/h for 10 hours.\n- Distance = Speed × Time\n- Distance at 16 km/h = 16 km/h × 10 hours = 160 km",
+        "is_final": false
+      },
+      {
+        "step": 4,
+        "thought": "Sum the distances from Step 1 and Step 2 to find the total distance.\n- Total distance = Distance at 18 km/h + Distance at 16 km/h\n- Total distance = 54 km + 160 km = 214 km\n\nFinal Answer: 214 km",
+        "action": null,
+        "observation": null,
+        "raw_output": "Sum the distances from Step 1 and Step 2 to find the total distance.\n- Total distance = Distance at 18 km/h + Distance at 16 km/h\n- Total distance = 54 km + 160 km = 214 km\n\nFinal Answer: 214 km",
+        "is_final": true
+      }
+    ]
+  },
+  "consistency_analysis": {
+    "consistency_rate": 1.0,
+    "is_consistent": true,
+    "inconsistent_count": 0,
+    "per_type_inconsistency": {
+      "paraphrase": 0.0,
+      "synonym": 0.0,
+      "reorder": 0.0,
+      "format": 0.0,
+      "distractor": 0.0
+    },
+    "propagation_patterns": {
+      "consistent": 1,
+      "early_diverge": 4
+    }
+  },
+  "propagation_details": [
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.8928571428571429,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.9259259259259259,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 4,
+      "n_steps_variant": 4,
+      "perturbation_type": "paraphrase",
+      "variant_answer": "214 km"
+    },
+    {
+      "divergence_step": 1,
+      "cascade_depth": 0,
+      "self_corrections": 1,
+      "propagation_pattern": "early_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.29411764705882354,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.6666666666666666,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.64,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.6060606060606061,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 4,
+      "n_steps_variant": 4,
+      "perturbation_type": "synonym",
+      "variant_answer": "214 km"
+    },
+    {
+      "divergence_step": 1,
+      "cascade_depth": 0,
+      "self_corrections": 1,
+      "propagation_pattern": "early_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.3333333333333333,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.6666666666666666,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.64,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.5757575757575758,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 4,
+      "n_steps_variant": 4,
+      "perturbation_type": "reorder",
+      "variant_answer": "214 km"
+    },
+    {
+      "divergence_step": 1,
+      "cascade_depth": 0,
+      "self_corrections": 1,
+      "propagation_pattern": "early_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.3333333333333333,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.6666666666666666,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.64,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.5757575757575758,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 4,
+      "n_steps_variant": 4,
+      "perturbation_type": "format",
+      "variant_answer": "214 km"
+    },
+    {
+      "divergence_step": 1,
+      "cascade_depth": 0,
+      "self_corrections": 1,
+      "propagation_pattern": "early_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.3333333333333333,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.6666666666666666,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.64,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.5757575757575758,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 4,
+      "n_steps_variant": 4,
+      "perturbation_type": "distractor",
+      "variant_answer": "214 km"
+    }
+  ],
+  "perturbation_variants": [
+    {
+      "perturbation_type": "paraphrase",
+      "variant_question": "What is the total distance a train travels at 18 km/h for 3 hours, then at 16 km/h for 10 hours?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking for the same information with only minor wording differences, which do not change the core of the question or the answer. Both questions are asking for the total distance"
+      },
+      "agent_run": {
+        "final_answer": "214 km",
+        "n_steps": 4,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve this problem, we will break it down into steps, calculating the distance traveled at each speed separately and then summing these distances to find the total distance traveled.",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve this problem, we will break it down into steps, calculating the distance traveled at each speed separately and then summing these distances to find the total distance traveled.",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "Calculate the distance traveled at 18 km/h for 3 hours.\n- Distance = Speed × Time\n- Distance at 18 km/h = 18 km/h × 3 hours = 54 km",
+            "action": null,
+            "observation": null,
+            "raw_output": "Calculate the distance traveled at 18 km/h for 3 hours.\n- Distance = Speed × Time\n- Distance at 18 km/h = 18 km/h × 3 hours = 54 km",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "Calculate the distance traveled at 16 km/h for 10 hours.\n- Distance = Speed × Time\n- Distance at 16 km/h = 16 km/h × 10 hours = 160 km",
+            "action": null,
+            "observation": null,
+            "raw_output": "Calculate the distance traveled at 16 km/h for 10 hours.\n- Distance = Speed × Time\n- Distance at 16 km/h = 16 km/h × 10 hours = 160 km",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "Sum the distances from Step 1 and Step 2 to find the total distance traveled.\n- Total Distance = Distance at 18 km/h + Distance at 16 km/h\n- Total Distance = 54 km + 160 km = 214 km\n\nFinal Answer: 214 km",
+            "action": null,
+            "observation": null,
+            "raw_output": "Sum the distances from Step 1 and Step 2 to find the total distance traveled.\n- Total Distance = Distance at 18 km/h + Distance at 16 km/h\n- Total Distance = 54 km + 160 km = 214 km\n\nFinal Answer: 214 km",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "synonym",
+      "variant_question": "A locomotive moves at 18 km/h for 3 hours, then at 16 km/h for 10 hours. What is the overall distance?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking for the same calculation with only minor wording differences ('train' vs 'locomotive', 'total distance' vs 'overall distance'), which do not change the answer."
+      },
+      "agent_run": {
+        "final_answer": "214 km",
+        "n_steps": 4,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the problem of finding the overall distance traveled by the locomotive, we can break it down into steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the problem of finding the overall distance traveled by the locomotive, we can break it down into steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "**Calculate the distance traveled at the first speed:**\n   - The locomotive moves at 18 km/h for 3 hours.\n   - Distance = Speed × Time\n   - Distance at 18 km/h = 18 km/h × 3 h = 54 km",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Calculate the distance traveled at the first speed:**\n   - The locomotive moves at 18 km/h for 3 hours.\n   - Distance = Speed × Time\n   - Distance at 18 km/h = 18 km/h × 3 h = 54 km",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "**Calculate the distance traveled at the second speed:**\n   - The locomotive then moves at 16 km/h for 10 hours.\n   - Distance = Speed × Time\n   - Distance at 16 km/h = 16 km/h × 10 h = 160 km",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Calculate the distance traveled at the second speed:**\n   - The locomotive then moves at 16 km/h for 10 hours.\n   - Distance = Speed × Time\n   - Distance at 16 km/h = 16 km/h × 10 h = 160 km",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "**Add the distances from both parts of the journey to find the overall distance:**\n   - Total distance = Distance at 18 km/h + Distance at 16 km/h\n   - Total distance = 54 km + 160 km = 214 km\n\nFinal Answer: 214 km",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Add the distances from both parts of the journey to find the overall distance:**\n   - Total distance = Distance at 18 km/h + Distance at 16 km/h\n   - Total distance = 54 km + 160 km = 214 km\n\nFinal Answer: 214 km",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "reorder",
+      "variant_question": "A train travels at 18 km/h for 3 hours, then at 16 km/h for 10 hours. What is the total distance? Please reason step by step.",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (reorder; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "214 km",
+        "n_steps": 4,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the problem of finding the total distance traveled by the train, we can break it down into steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the problem of finding the total distance traveled by the train, we can break it down into steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "**Calculate the distance traveled at the first speed:**\n   - The train travels at 18 km/h for 3 hours.\n   - Distance = Speed × Time\n   - Distance at 18 km/h = 18 km/h × 3 h = 54 km",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Calculate the distance traveled at the first speed:**\n   - The train travels at 18 km/h for 3 hours.\n   - Distance = Speed × Time\n   - Distance at 18 km/h = 18 km/h × 3 h = 54 km",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "**Calculate the distance traveled at the second speed:**\n   - The train then travels at 16 km/h for 10 hours.\n   - Distance = Speed × Time\n   - Distance at 16 km/h = 16 km/h × 10 h = 160 km",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Calculate the distance traveled at the second speed:**\n   - The train then travels at 16 km/h for 10 hours.\n   - Distance = Speed × Time\n   - Distance at 16 km/h = 16 km/h × 10 h = 160 km",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "**Add the distances from both parts of the journey to get the total distance:**\n   - Total Distance = Distance at 18 km/h + Distance at 16 km/h\n   - Total Distance = 54 km + 160 km = 214 km\n\nFinal Answer: 214 km",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Add the distances from both parts of the journey to get the total distance:**\n   - Total Distance = Distance at 18 km/h + Distance at 16 km/h\n   - Total Distance = 54 km + 160 km = 214 km\n\nFinal Answer: 214 km",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "format",
+      "variant_question": "- A train travels at 18 km/h for 3 hours, then at 16 km/h for 10 hours.\nQuestion: What is the total distance?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (format; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "214 km",
+        "n_steps": 4,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the problem of finding the total distance traveled by the train, we can break it down into steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the problem of finding the total distance traveled by the train, we can break it down into steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "**Calculate the distance traveled at the first speed:**\n   - The train travels at 18 km/h for 3 hours.\n   - Distance = Speed × Time\n   - Distance at 18 km/h = 18 km/h × 3 h = 54 km",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Calculate the distance traveled at the first speed:**\n   - The train travels at 18 km/h for 3 hours.\n   - Distance = Speed × Time\n   - Distance at 18 km/h = 18 km/h × 3 h = 54 km",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "**Calculate the distance traveled at the second speed:**\n   - The train then travels at 16 km/h for 10 hours.\n   - Distance = Speed × Time\n   - Distance at 16 km/h = 16 km/h × 10 h = 160 km",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Calculate the distance traveled at the second speed:**\n   - The train then travels at 16 km/h for 10 hours.\n   - Distance = Speed × Time\n   - Distance at 16 km/h = 16 km/h × 10 h = 160 km",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "**Add the distances from both parts of the journey to get the total distance:**\n   - Total Distance = Distance at 18 km/h + Distance at 16 km/h\n   - Total Distance = 54 km + 160 km = 214 km\n\nFinal Answer: 214 km",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Add the distances from both parts of the journey to get the total distance:**\n   - Total Distance = Distance at 18 km/h + Distance at 16 km/h\n   - Total Distance = 54 km + 160 km = 214 km\n\nFinal Answer: 214 km",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "distractor",
+      "variant_question": "Note: the following sentence is unrelated to the question. The weather that day was particularly sunny with clear skies. Now, a train travels at 18 km/h for 3 hours, then at 16 km/h for 10 hours. What is the total distance?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (distractor; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "214 km",
+        "n_steps": 4,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the problem of finding the total distance traveled by the train, we can break it down into steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the problem of finding the total distance traveled by the train, we can break it down into steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "**Calculate the distance traveled at the first speed:**\n   - The train travels at 18 km/h for 3 hours.\n   - Distance = Speed × Time\n   - Distance at 18 km/h = 18 km/h × 3 h = 54 km",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Calculate the distance traveled at the first speed:**\n   - The train travels at 18 km/h for 3 hours.\n   - Distance = Speed × Time\n   - Distance at 18 km/h = 18 km/h × 3 h = 54 km",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "**Calculate the distance traveled at the second speed:**\n   - The train then travels at 16 km/h for 10 hours.\n   - Distance = Speed × Time\n   - Distance at 16 km/h = 16 km/h × 10 h = 160 km",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Calculate the distance traveled at the second speed:**\n   - The train then travels at 16 km/h for 10 hours.\n   - Distance = Speed × Time\n   - Distance at 16 km/h = 16 km/h × 10 h = 160 km",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "**Add the distances from both parts of the journey to get the total distance:**\n   - Total Distance = Distance at 18 km/h + Distance at 16 km/h\n   - Total Distance = 54 km + 160 km = 214 km\n\nFinal Answer: 214 km",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Add the distances from both parts of the journey to get the total distance:**\n   - Total Distance = Distance at 18 km/h + Distance at 16 km/h\n   - Total Distance = 54 km + 160 km = 214 km\n\nFinal Answer: 214 km",
+            "is_final": true
+          }
+        ]
+      }
+    }
+  ],
+  "patch_results": null,
+  "n_variants_generated": 5,
+  "n_variants_valid": 5,
+  "n_variants_rejected": 0,
+  "elapsed_seconds": 31.68653440475464
+}

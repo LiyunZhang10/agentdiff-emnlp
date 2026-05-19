@@ -1,0 +1,626 @@
+{
+  "sample_id": "gsm8k_0181",
+  "agent_type": "cot",
+  "sample_question": "A store sells 26 shirts on Monday and 12 shirts on Tuesday. Each shirt costs $15. What is the total revenue?",
+  "sample_context": null,
+  "sample_gold_answer": "570",
+  "original_result": {
+    "final_answer": "$570",
+    "n_steps": 5,
+    "is_correct": true,
+    "trace": [
+      {
+        "step": 1,
+        "thought": "To solve the problem of calculating the total revenue from the shirts sold on Monday and Tuesday, we can follow these steps:",
+        "action": null,
+        "observation": null,
+        "raw_output": "To solve the problem of calculating the total revenue from the shirts sold on Monday and Tuesday, we can follow these steps:",
+        "is_final": false
+      },
+      {
+        "step": 2,
+        "thought": "Calculate the number of shirts sold on Monday and Tuesday combined.\n   - Shirts sold on Monday: 26\n   - Shirts sold on Tuesday: 12\n   - Total shirts sold: 26 + 12 = 38",
+        "action": null,
+        "observation": null,
+        "raw_output": "Calculate the number of shirts sold on Monday and Tuesday combined.\n   - Shirts sold on Monday: 26\n   - Shirts sold on Tuesday: 12\n   - Total shirts sold: 26 + 12 = 38",
+        "is_final": false
+      },
+      {
+        "step": 3,
+        "thought": "Determine the cost of each shirt.\n   - Cost per shirt: $15",
+        "action": null,
+        "observation": null,
+        "raw_output": "Determine the cost of each shirt.\n   - Cost per shirt: $15",
+        "is_final": false
+      },
+      {
+        "step": 4,
+        "thought": "Calculate the total revenue by multiplying the total number of shirts sold by the cost per shirt.\n   - Total revenue = Total shirts sold × Cost per shirt\n   - Total revenue = 38 × $15",
+        "action": null,
+        "observation": null,
+        "raw_output": "Calculate the total revenue by multiplying the total number of shirts sold by the cost per shirt.\n   - Total revenue = Total shirts sold × Cost per shirt\n   - Total revenue = 38 × $15",
+        "is_final": false
+      },
+      {
+        "step": 5,
+        "thought": "Perform the multiplication to find the total revenue.\n   - 38 × 15 = 570\n\nFinal Answer: $570",
+        "action": null,
+        "observation": null,
+        "raw_output": "Perform the multiplication to find the total revenue.\n   - 38 × 15 = 570\n\nFinal Answer: $570",
+        "is_final": true
+      }
+    ]
+  },
+  "consistency_analysis": {
+    "consistency_rate": 1.0,
+    "is_consistent": true,
+    "inconsistent_count": 0,
+    "per_type_inconsistency": {
+      "paraphrase": 0.0,
+      "synonym": 0.0,
+      "reorder": 0.0,
+      "format": 0.0,
+      "distractor": 0.0
+    },
+    "propagation_patterns": {
+      "cascade": 2,
+      "early_diverge": 2,
+      "consistent": 1
+    }
+  },
+  "propagation_details": [
+    {
+      "divergence_step": 2,
+      "cascade_depth": 5,
+      "self_corrections": 0,
+      "propagation_pattern": "cascade",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.6363636363636364,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.18421052631578946,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.0967741935483871,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.22580645161290322,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 5,
+          "thought_similarity": 0.08333333333333333,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 6,
+          "thought_similarity": 0.0,
+          "action_match": false,
+          "is_divergent": true
+        },
+        {
+          "step": 7,
+          "thought_similarity": 0.0,
+          "action_match": false,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 5,
+      "n_steps_variant": 7,
+      "perturbation_type": "paraphrase",
+      "variant_answer": "$570"
+    },
+    {
+      "divergence_step": 1,
+      "cascade_depth": 4,
+      "self_corrections": 0,
+      "propagation_pattern": "early_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.3181818181818182,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.34782608695652173,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.21052631578947367,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.38461538461538464,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 5,
+          "thought_similarity": 0.34285714285714286,
+          "action_match": true,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 5,
+      "n_steps_variant": 5,
+      "perturbation_type": "synonym",
+      "variant_answer": "$570"
+    },
+    {
+      "divergence_step": 1,
+      "cascade_depth": 6,
+      "self_corrections": 0,
+      "propagation_pattern": "early_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.2608695652173913,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.18421052631578946,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.0967741935483871,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.15151515151515152,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 5,
+          "thought_similarity": 0.08333333333333333,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 6,
+          "thought_similarity": 0.0,
+          "action_match": false,
+          "is_divergent": true
+        },
+        {
+          "step": 7,
+          "thought_similarity": 0.0,
+          "action_match": false,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 5,
+      "n_steps_variant": 7,
+      "perturbation_type": "reorder",
+      "variant_answer": "$570"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.7142857142857143,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.6956521739130435,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.5384615384615384,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.95,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 5,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 5,
+      "n_steps_variant": 5,
+      "perturbation_type": "format",
+      "variant_answer": "$570"
+    },
+    {
+      "divergence_step": 2,
+      "cascade_depth": 3,
+      "self_corrections": 0,
+      "propagation_pattern": "cascade",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.7142857142857143,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.3103448275862069,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.11538461538461539,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.20833333333333334,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 5,
+          "thought_similarity": 0.3103448275862069,
+          "action_match": true,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 5,
+      "n_steps_variant": 5,
+      "perturbation_type": "distractor",
+      "variant_answer": "$570"
+    }
+  ],
+  "perturbation_variants": [
+    {
+      "perturbation_type": "paraphrase",
+      "variant_question": "What is the total revenue if a store sells 26 shirts on Monday and 12 shirts on Tuesday, with each shirt costing $15?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking for the same information and can be answered with the same calculation, despite minor differences in wording and structure."
+      },
+      "agent_run": {
+        "final_answer": "$570",
+        "n_steps": 7,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the problem of calculating the total revenue from the sale of shirts, we can follow these steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the problem of calculating the total revenue from the sale of shirts, we can follow these steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "Calculate the revenue from Monday's sales:\n   - The store sells 26 shirts on Monday.\n   - Each shirt costs $15.\n   - Therefore, the revenue from Monday is \\( 26 \\times 15 \\).",
+            "action": null,
+            "observation": null,
+            "raw_output": "Calculate the revenue from Monday's sales:\n   - The store sells 26 shirts on Monday.\n   - Each shirt costs $15.\n   - Therefore, the revenue from Monday is \\( 26 \\times 15 \\).",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "Calculate the revenue from Tuesday's sales:\n   - The store sells 12 shirts on Tuesday.\n   - Each shirt costs $15.\n   - Therefore, the revenue from Tuesday is \\( 12 \\times 15 \\).",
+            "action": null,
+            "observation": null,
+            "raw_output": "Calculate the revenue from Tuesday's sales:\n   - The store sells 12 shirts on Tuesday.\n   - Each shirt costs $15.\n   - Therefore, the revenue from Tuesday is \\( 12 \\times 15 \\).",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "Calculate the total revenue by adding Monday's and Tuesday's revenues:\n   - Total revenue = Revenue from Monday + Revenue from Tuesday.\n\nLet's perform the calculations:",
+            "action": null,
+            "observation": null,
+            "raw_output": "Calculate the total revenue by adding Monday's and Tuesday's revenues:\n   - Total revenue = Revenue from Monday + Revenue from Tuesday.\n\nLet's perform the calculations:",
+            "is_final": false
+          },
+          {
+            "step": 5,
+            "thought": "Revenue from Monday:\n   \\[\n   26 \\times 15 = 390\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "Revenue from Monday:\n   \\[\n   26 \\times 15 = 390\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 6,
+            "thought": "Revenue from Tuesday:\n   \\[\n   12 \\times 15 = 180\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "Revenue from Tuesday:\n   \\[\n   12 \\times 15 = 180\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 7,
+            "thought": "Total revenue:\n   \\[\n   390 + 180 = 570\n   \\]\n\nFinal Answer: $570",
+            "action": null,
+            "observation": null,
+            "raw_output": "Total revenue:\n   \\[\n   390 + 180 = 570\n   \\]\n\nFinal Answer: $570",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "synonym",
+      "variant_question": "A shop sells 26 shirts on Monday and 12 shirts on Tuesday. Each shirt costs $15. What is the total earnings?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking for the same information (total revenue/earnings) with only a minor wording difference ('revenue' vs 'earnings'). The context, numbers, and calculation required are ident"
+      },
+      "agent_run": {
+        "final_answer": "$570",
+        "n_steps": 5,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the problem, we will follow these steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the problem, we will follow these steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "Calculate the total number of shirts sold on both days.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Calculate the total number of shirts sold on both days.",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "Multiply the total number of shirts by the cost per shirt to find the total earnings.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Multiply the total number of shirts by the cost per shirt to find the total earnings.",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "Calculate the total number of shirts sold.\n- Shirts sold on Monday: 26\n- Shirts sold on Tuesday: 12\n- Total shirts sold = 26 + 12 = 38 shirts",
+            "action": null,
+            "observation": null,
+            "raw_output": "Calculate the total number of shirts sold.\n- Shirts sold on Monday: 26\n- Shirts sold on Tuesday: 12\n- Total shirts sold = 26 + 12 = 38 shirts",
+            "is_final": false
+          },
+          {
+            "step": 5,
+            "thought": "Calculate the total earnings.\n- Cost per shirt: $15\n- Total earnings = Total shirts sold * Cost per shirt\n- Total earnings = 38 * $15\n\nTo perform the multiplication:\n- 38 * 15 = 38 * (10 + 5) = (38 * 10) + (38 * 5) = 380 + 190 = 570\n\nFinal Answer: $570",
+            "action": null,
+            "observation": null,
+            "raw_output": "Calculate the total earnings.\n- Cost per shirt: $15\n- Total earnings = Total shirts sold * Cost per shirt\n- Total earnings = 38 * $15\n\nTo perform the multiplication:\n- 38 * 15 = 38 * (10 + 5) = (38 * 10) + (38 * 5) = 380 + 190 = 570\n\nFinal Answer: $570",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "reorder",
+      "variant_question": "Each shirt costs $15. A store sells 26 shirts on Monday and 12 shirts on Tuesday. What is the total revenue?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (reorder; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "$570",
+        "n_steps": 7,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve this problem, we will follow these steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve this problem, we will follow these steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "Calculate the revenue from Monday's sales.\n   - The store sells 26 shirts on Monday.\n   - Each shirt costs $15.\n   - Therefore, the revenue from Monday is \\( 26 \\times 15 \\).",
+            "action": null,
+            "observation": null,
+            "raw_output": "Calculate the revenue from Monday's sales.\n   - The store sells 26 shirts on Monday.\n   - Each shirt costs $15.\n   - Therefore, the revenue from Monday is \\( 26 \\times 15 \\).",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "Calculate the revenue from Tuesday's sales.\n   - The store sells 12 shirts on Tuesday.\n   - Each shirt costs $15.\n   - Therefore, the revenue from Tuesday is \\( 12 \\times 15 \\).",
+            "action": null,
+            "observation": null,
+            "raw_output": "Calculate the revenue from Tuesday's sales.\n   - The store sells 12 shirts on Tuesday.\n   - Each shirt costs $15.\n   - Therefore, the revenue from Tuesday is \\( 12 \\times 15 \\).",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "Add the revenues from Monday and Tuesday to get the total revenue.\n   - Total revenue = Revenue from Monday + Revenue from Tuesday.\n\nLet's perform the calculations:",
+            "action": null,
+            "observation": null,
+            "raw_output": "Add the revenues from Monday and Tuesday to get the total revenue.\n   - Total revenue = Revenue from Monday + Revenue from Tuesday.\n\nLet's perform the calculations:",
+            "is_final": false
+          },
+          {
+            "step": 5,
+            "thought": "Revenue from Monday:\n   \\[\n   26 \\times 15 = 390\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "Revenue from Monday:\n   \\[\n   26 \\times 15 = 390\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 6,
+            "thought": "Revenue from Tuesday:\n   \\[\n   12 \\times 15 = 180\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "Revenue from Tuesday:\n   \\[\n   12 \\times 15 = 180\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 7,
+            "thought": "Total revenue:\n   \\[\n   390 + 180 = 570\n   \\]\n\nFinal Answer: $570",
+            "action": null,
+            "observation": null,
+            "raw_output": "Total revenue:\n   \\[\n   390 + 180 = 570\n   \\]\n\nFinal Answer: $570",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "format",
+      "variant_question": "- A store sells 26 shirts on Monday and 12 shirts on Tuesday.\n- Each shirt costs $15.\nQuestion: What is the total revenue?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (format; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "$570",
+        "n_steps": 5,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the problem of calculating the total revenue from the shirts sold, we can follow these steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the problem of calculating the total revenue from the shirts sold, we can follow these steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "Calculate the total number of shirts sold on both days.\n   - Shirts sold on Monday: 26\n   - Shirts sold on Tuesday: 12\n   - Total shirts sold = 26 + 12 = 38 shirts",
+            "action": null,
+            "observation": null,
+            "raw_output": "Calculate the total number of shirts sold on both days.\n   - Shirts sold on Monday: 26\n   - Shirts sold on Tuesday: 12\n   - Total shirts sold = 26 + 12 = 38 shirts",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "Determine the cost of each shirt.\n   - Each shirt costs $15.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Determine the cost of each shirt.\n   - Each shirt costs $15.",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "Calculate the total revenue by multiplying the total number of shirts sold by the cost of each shirt.\n   - Total revenue = Total shirts sold × Cost per shirt\n   - Total revenue = 38 × $15",
+            "action": null,
+            "observation": null,
+            "raw_output": "Calculate the total revenue by multiplying the total number of shirts sold by the cost of each shirt.\n   - Total revenue = Total shirts sold × Cost per shirt\n   - Total revenue = 38 × $15",
+            "is_final": false
+          },
+          {
+            "step": 5,
+            "thought": "Perform the multiplication to find the total revenue.\n   - 38 × 15 = 570\n\nFinal Answer: $570",
+            "action": null,
+            "observation": null,
+            "raw_output": "Perform the multiplication to find the total revenue.\n   - 38 × 15 = 570\n\nFinal Answer: $570",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "distractor",
+      "variant_question": "Note: the following sentence is unrelated to the question. The local newspaper reported extensively on unrelated events that week. Now, a store sells 26 shirts on Monday and 12 shirts on Tuesday. Each shirt costs $15. What is the total revenue?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (distractor; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "$570",
+        "n_steps": 5,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the problem of calculating the total revenue from the shirts sold, we can follow these steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the problem of calculating the total revenue from the shirts sold, we can follow these steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "**Determine the number of shirts sold on each day:**\n   - On Monday, the store sells 26 shirts.\n   - On Tuesday, the store sells 12 shirts.",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Determine the number of shirts sold on each day:**\n   - On Monday, the store sells 26 shirts.\n   - On Tuesday, the store sells 12 shirts.",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "**Calculate the total number of shirts sold over the two days:**\n   - Total shirts = Shirts sold on Monday + Shirts sold on Tuesday\n   - Total shirts = 26 + 12 = 38 shirts",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Calculate the total number of shirts sold over the two days:**\n   - Total shirts = Shirts sold on Monday + Shirts sold on Tuesday\n   - Total shirts = 26 + 12 = 38 shirts",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "**Determine the cost of each shirt:**\n   - Each shirt costs $15.",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Determine the cost of each shirt:**\n   - Each shirt costs $15.",
+            "is_final": false
+          },
+          {
+            "step": 5,
+            "thought": "**Calculate the total revenue from selling the shirts:**\n   - Total revenue = Total number of shirts sold × Cost per shirt\n   - Total revenue = 38 shirts × $15/shirt = $570\n\nFinal Answer: $570",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Calculate the total revenue from selling the shirts:**\n   - Total revenue = Total number of shirts sold × Cost per shirt\n   - Total revenue = 38 shirts × $15/shirt = $570\n\nFinal Answer: $570",
+            "is_final": true
+          }
+        ]
+      }
+    }
+  ],
+  "patch_results": null,
+  "n_variants_generated": 5,
+  "n_variants_valid": 5,
+  "n_variants_rejected": 0,
+  "elapsed_seconds": 29.691889762878418
+}

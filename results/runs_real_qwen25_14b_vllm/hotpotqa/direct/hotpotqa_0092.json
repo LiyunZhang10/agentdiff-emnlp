@@ -1,0 +1,257 @@
+{
+  "sample_id": "hotpotqa_0092",
+  "agent_type": "direct",
+  "sample_question": "What nationality was the person who created On the Origin of Species?",
+  "sample_context": "Charles Darwin was born in Shrewsbury, England in 1809. Charles Darwin created On the Origin of Species in 1859. Meanwhile, Ada Lovelace was working on similar topics in England.",
+  "sample_gold_answer": "England",
+  "original_result": {
+    "final_answer": "English",
+    "n_steps": 1,
+    "is_correct": false,
+    "trace": [
+      {
+        "step": 1,
+        "thought": "English",
+        "action": null,
+        "observation": null,
+        "raw_output": "English",
+        "is_final": true
+      }
+    ]
+  },
+  "consistency_analysis": {
+    "consistency_rate": 1.0,
+    "is_consistent": true,
+    "inconsistent_count": 0,
+    "per_type_inconsistency": {
+      "paraphrase": 0.0,
+      "synonym": 0.0,
+      "reorder": 0.0,
+      "format": 0.0,
+      "distractor": 0.0
+    },
+    "propagation_patterns": {
+      "consistent": 4,
+      "early_diverge": 1
+    }
+  },
+  "propagation_details": [
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "paraphrase",
+      "variant_answer": "English"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "synonym",
+      "variant_answer": "English"
+    },
+    {
+      "divergence_step": 1,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "early_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.0,
+          "action_match": true,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "reorder",
+      "variant_answer": "The person who created \"On the Origin of Species\" was Charles Darwin, and he was English. Charles Darwin was born in Shrewsbury, England in 1809, which establishes his nationality as English."
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "format",
+      "variant_answer": "English"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "distractor",
+      "variant_answer": "English"
+    }
+  ],
+  "perturbation_variants": [
+    {
+      "perturbation_type": "paraphrase",
+      "variant_question": "Who was the nationality of the person that created On the Origin of Species?",
+      "variant_context": "Charles Darwin was born in Shrewsbury, England in 1809. Charles Darwin created On the Origin of Species in 1859. Meanwhile, Ada Lovelace was working on similar topics in England.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe two questions are asking for the same information: the nationality of the person who created \"On the Origin of Species\". The slight reordering of the words does not change the core informatio"
+      },
+      "agent_run": {
+        "final_answer": "English",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "English",
+            "action": null,
+            "observation": null,
+            "raw_output": "English",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "synonym",
+      "variant_question": "What ethnic background was the individual who authored On the Origin of Species?",
+      "variant_context": "Charles Darwin was born in Shrewsbury, England in 1809. Charles Darwin created On the Origin of Species in 1859. Meanwhile, Ada Lovelace was working on similar topics in England.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe two questions are asking about the same information: the nationality/ethnic background of the author of \"On the Origin of Species\". The minor differences in wording do not change the core of "
+      },
+      "agent_run": {
+        "final_answer": "English",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "English",
+            "action": null,
+            "observation": null,
+            "raw_output": "English",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "reorder",
+      "variant_question": "What nationality was the person who created On the Origin of Species? Please reason step by step.",
+      "variant_context": "Charles Darwin was born in Shrewsbury, England in 1809. Charles Darwin created On the Origin of Species in 1859. Meanwhile, Ada Lovelace was working on similar topics in England.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (reorder; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "The person who created \"On the Origin of Species\" was Charles Darwin, and he was English. Charles Darwin was born in Shrewsbury, England in 1809, which establishes his nationality as English.",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "The person who created \"On the Origin of Species\" was Charles Darwin, and he was English. Charles Darwin was born in Shrewsbury, England in 1809, which establishes his nationality as English.",
+            "action": null,
+            "observation": null,
+            "raw_output": "The person who created \"On the Origin of Species\" was Charles Darwin, and he was English. Charles Darwin was born in Shrewsbury, England in 1809, which establishes his nationality as English.",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "format",
+      "variant_question": "> What nationality was the person who created On the Origin of Species?",
+      "variant_context": "• Charles Darwin was born in Shrewsbury, England in 1809.\n• Charles Darwin created On the Origin of Species in 1859.\n• Meanwhile, Ada Lovelace was working on similar topics in England.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (format; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "English",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "English",
+            "action": null,
+            "observation": null,
+            "raw_output": "English",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "distractor",
+      "variant_question": "Note: the following sentence is unrelated to the question. The local newspaper reported extensively on unrelated events that week. Now, what nationality was the person who created On the Origin of Species?",
+      "variant_context": "Charles Darwin was born in Shrewsbury, England in 1809. Charles Darwin created On the Origin of Species in 1859. Meanwhile, Ada Lovelace was working on similar topics in England. The local newspaper reported extensively on unrelated events that week.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (distractor; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "English",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "English",
+            "action": null,
+            "observation": null,
+            "raw_output": "English",
+            "is_final": true
+          }
+        ]
+      }
+    }
+  ],
+  "patch_results": null,
+  "n_variants_generated": 5,
+  "n_variants_valid": 5,
+  "n_variants_rejected": 0,
+  "elapsed_seconds": 4.438080072402954
+}

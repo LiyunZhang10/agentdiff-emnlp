@@ -1,0 +1,858 @@
+{
+  "sample_id": "math_0007",
+  "agent_type": "cot",
+  "sample_question": "Solve the system: 2x + 3y = 12 and x - y = 1.",
+  "sample_context": null,
+  "sample_gold_answer": "x=3, y=2",
+  "original_result": {
+    "final_answer": "\\(x = 3, y = 2\\)",
+    "n_steps": 9,
+    "is_correct": false,
+    "trace": [
+      {
+        "step": 1,
+        "thought": "To solve the system of equations:",
+        "action": null,
+        "observation": null,
+        "raw_output": "To solve the system of equations:",
+        "is_final": false
+      },
+      {
+        "step": 2,
+        "thought": "\\(2x + 3y = 12\\)",
+        "action": null,
+        "observation": null,
+        "raw_output": "\\(2x + 3y = 12\\)",
+        "is_final": false
+      },
+      {
+        "step": 3,
+        "thought": "\\(x - y = 1\\)\n\nWe can use the method of substitution or elimination. Here, we'll use the substitution method for clarity.",
+        "action": null,
+        "observation": null,
+        "raw_output": "\\(x - y = 1\\)\n\nWe can use the method of substitution or elimination. Here, we'll use the substitution method for clarity.",
+        "is_final": false
+      },
+      {
+        "step": 4,
+        "thought": "Solve the second equation for \\(x\\).\n\\[x - y = 1\\]\n\\[x = y + 1\\]",
+        "action": null,
+        "observation": null,
+        "raw_output": "Solve the second equation for \\(x\\).\n\\[x - y = 1\\]\n\\[x = y + 1\\]",
+        "is_final": false
+      },
+      {
+        "step": 5,
+        "thought": "Substitute \\(x = y + 1\\) into the first equation.\n\\[2(y + 1) + 3y = 12\\]",
+        "action": null,
+        "observation": null,
+        "raw_output": "Substitute \\(x = y + 1\\) into the first equation.\n\\[2(y + 1) + 3y = 12\\]",
+        "is_final": false
+      },
+      {
+        "step": 6,
+        "thought": "Simplify the equation.\n\\[2y + 2 + 3y = 12\\]\n\\[5y + 2 = 12\\]",
+        "action": null,
+        "observation": null,
+        "raw_output": "Simplify the equation.\n\\[2y + 2 + 3y = 12\\]\n\\[5y + 2 = 12\\]",
+        "is_final": false
+      },
+      {
+        "step": 7,
+        "thought": "Solve for \\(y\\).\n\\[5y = 10\\]\n\\[y = 2\\]",
+        "action": null,
+        "observation": null,
+        "raw_output": "Solve for \\(y\\).\n\\[5y = 10\\]\n\\[y = 2\\]",
+        "is_final": false
+      },
+      {
+        "step": 8,
+        "thought": "Substitute \\(y = 2\\) back into the equation \\(x = y + 1\\).\n\\[x = 2 + 1\\]\n\\[x = 3\\]",
+        "action": null,
+        "observation": null,
+        "raw_output": "Substitute \\(y = 2\\) back into the equation \\(x = y + 1\\).\n\\[x = 2 + 1\\]\n\\[x = 3\\]",
+        "is_final": false
+      },
+      {
+        "step": 9,
+        "thought": "Verify the solution by substituting \\(x = 3\\) and \\(y = 2\\) into both original equations.\nFor the first equation:\n\\[2(3) + 3(2) = 6 + 6 = 12\\]\nFor the second equation:\n\\[3 - 2 = 1\\]\n\nBoth equations are satisfied, confirming the solution.\n\nFinal Answer: \\(x = 3, y = 2\\)",
+        "action": null,
+        "observation": null,
+        "raw_output": "Verify the solution by substituting \\(x = 3\\) and \\(y = 2\\) into both original equations.\nFor the first equation:\n\\[2(3) + 3(2) = 6 + 6 = 12\\]\nFor the second equation:\n\\[3 - 2 = 1\\]\n\nBoth equations are satisfied, confirming the solution.\n\nFinal Answer: \\(x = 3, y = 2\\)",
+        "is_final": true
+      }
+    ]
+  },
+  "consistency_analysis": {
+    "consistency_rate": 1.0,
+    "is_consistent": true,
+    "inconsistent_count": 0,
+    "per_type_inconsistency": {
+      "paraphrase": 0.0,
+      "synonym": 0.0,
+      "reorder": 0.0,
+      "format": 0.0,
+      "distractor": 0.0
+    },
+    "propagation_patterns": {
+      "cascade": 3,
+      "self_correct": 1,
+      "consistent": 1
+    }
+  },
+  "propagation_details": [
+    {
+      "divergence_step": 2,
+      "cascade_depth": 7,
+      "self_corrections": 0,
+      "propagation_pattern": "cascade",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.2777777777777778,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.21428571428571427,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.17391304347826086,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 5,
+          "thought_similarity": 0.17391304347826086,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 6,
+          "thought_similarity": 0.15,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 7,
+          "thought_similarity": 0.08,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 8,
+          "thought_similarity": 0.24390243902439024,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 9,
+          "thought_similarity": 0.0,
+          "action_match": false,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 9,
+      "n_steps_variant": 8,
+      "perturbation_type": "paraphrase",
+      "variant_answer": "\\((3, 2)\\)"
+    },
+    {
+      "divergence_step": 3,
+      "cascade_depth": 0,
+      "self_corrections": 1,
+      "propagation_pattern": "self_correct",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.391304347826087,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 4,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 5,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 6,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 7,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 8,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 9,
+          "thought_similarity": 0.9,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 9,
+      "n_steps_variant": 9,
+      "perturbation_type": "synonym",
+      "variant_answer": "\\(x = 3, y = 2\\)"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.8947368421052632,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 4,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 5,
+          "thought_similarity": 0.9333333333333333,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 6,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 7,
+          "thought_similarity": 0.7272727272727273,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 8,
+          "thought_similarity": 0.75,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 9,
+          "thought_similarity": 0.7291666666666666,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 9,
+      "n_steps_variant": 9,
+      "perturbation_type": "reorder",
+      "variant_answer": "\\(x = 3, y = 2\\)"
+    },
+    {
+      "divergence_step": 2,
+      "cascade_depth": 7,
+      "self_corrections": 0,
+      "propagation_pattern": "cascade",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.2777777777777778,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.21428571428571427,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.17391304347826086,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 5,
+          "thought_similarity": 0.17391304347826086,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 6,
+          "thought_similarity": 0.15,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 7,
+          "thought_similarity": 0.08,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 8,
+          "thought_similarity": 0.23255813953488372,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 9,
+          "thought_similarity": 0.0,
+          "action_match": false,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 9,
+      "n_steps_variant": 8,
+      "perturbation_type": "format",
+      "variant_answer": "\\((x, y) = (3, 2)\\)"
+    },
+    {
+      "divergence_step": 2,
+      "cascade_depth": 7,
+      "self_corrections": 0,
+      "propagation_pattern": "cascade",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.3125,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.34375,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.16,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 5,
+          "thought_similarity": 0.17391304347826086,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 6,
+          "thought_similarity": 0.15,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 7,
+          "thought_similarity": 0.058823529411764705,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 8,
+          "thought_similarity": 0.20689655172413793,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 9,
+          "thought_similarity": 0.0,
+          "action_match": false,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 9,
+      "n_steps_variant": 8,
+      "perturbation_type": "distractor",
+      "variant_answer": "\\(x = 3, y = 2\\)"
+    }
+  ],
+  "perturbation_variants": [
+    {
+      "perturbation_type": "paraphrase",
+      "variant_question": "Find the solution to the system: 2x + 3y = 12 and x - y = 1.",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking for the same solution to the same system of equations, with only minor wording differences. Therefore, they are equivalent."
+      },
+      "agent_run": {
+        "final_answer": "\\((3, 2)\\)",
+        "n_steps": 8,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the system of equations:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the system of equations:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "We start with the given equations:\n   - Equation 1: \\(2x + 3y = 12\\)\n   - Equation 2: \\(x - y = 1\\)",
+            "action": null,
+            "observation": null,
+            "raw_output": "We start with the given equations:\n   - Equation 1: \\(2x + 3y = 12\\)\n   - Equation 2: \\(x - y = 1\\)",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "We can solve Equation 2 for \\(x\\):\n   \\[\n   x - y = 1 \\implies x = y + 1\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "We can solve Equation 2 for \\(x\\):\n   \\[\n   x - y = 1 \\implies x = y + 1\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "Substitute \\(x = y + 1\\) into Equation 1:\n   \\[\n   2(y + 1) + 3y = 12\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "Substitute \\(x = y + 1\\) into Equation 1:\n   \\[\n   2(y + 1) + 3y = 12\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 5,
+            "thought": "Simplify the equation:\n   \\[\n   2y + 2 + 3y = 12 \\implies 5y + 2 = 12\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "Simplify the equation:\n   \\[\n   2y + 2 + 3y = 12 \\implies 5y + 2 = 12\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 6,
+            "thought": "Solve for \\(y\\):\n   \\[\n   5y + 2 = 12 \\implies 5y = 10 \\implies y = 2\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "Solve for \\(y\\):\n   \\[\n   5y + 2 = 12 \\implies 5y = 10 \\implies y = 2\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 7,
+            "thought": "Substitute \\(y = 2\\) back into the expression for \\(x\\):\n   \\[\n   x = y + 1 \\implies x = 2 + 1 \\implies x = 3\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "Substitute \\(y = 2\\) back into the expression for \\(x\\):\n   \\[\n   x = y + 1 \\implies x = 2 + 1 \\implies x = 3\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 8,
+            "thought": "Verify the solution by substituting \\(x = 3\\) and \\(y = 2\\) back into the original equations:\n   - For Equation 1: \\(2(3) + 3(2) = 6 + 6 = 12\\), which is true.\n   - For Equation 2: \\(3 - 2 = 1\\), which is true.\n\nFinal Answer: \\((3, 2)\\)",
+            "action": null,
+            "observation": null,
+            "raw_output": "Verify the solution by substituting \\(x = 3\\) and \\(y = 2\\) back into the original equations:\n   - For Equation 1: \\(2(3) + 3(2) = 6 + 6 = 12\\), which is true.\n   - For Equation 2: \\(3 - 2 = 1\\), which is true.\n\nFinal Answer: \\((3, 2)\\)",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "synonym",
+      "variant_question": "Resolve the system: 2x + 3y = 12 and x - y = 1.",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe wording difference between \"Solve the system\" and \"Resolve the system\" is minor and does not change the meaning or the solution of the system of equations. Therefore, the two questions are eq"
+      },
+      "agent_run": {
+        "final_answer": "\\(x = 3, y = 2\\)",
+        "n_steps": 9,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the system of equations:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the system of equations:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "\\(2x + 3y = 12\\)",
+            "action": null,
+            "observation": null,
+            "raw_output": "\\(2x + 3y = 12\\)",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "\\(x - y = 1\\)\n\nWe will use the substitution method. Here are the steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "\\(x - y = 1\\)\n\nWe will use the substitution method. Here are the steps:",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "Solve the second equation for \\(x\\).\n\\[x - y = 1\\]\n\\[x = y + 1\\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "Solve the second equation for \\(x\\).\n\\[x - y = 1\\]\n\\[x = y + 1\\]",
+            "is_final": false
+          },
+          {
+            "step": 5,
+            "thought": "Substitute \\(x = y + 1\\) into the first equation.\n\\[2(y + 1) + 3y = 12\\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "Substitute \\(x = y + 1\\) into the first equation.\n\\[2(y + 1) + 3y = 12\\]",
+            "is_final": false
+          },
+          {
+            "step": 6,
+            "thought": "Simplify the equation.\n\\[2y + 2 + 3y = 12\\]\n\\[5y + 2 = 12\\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "Simplify the equation.\n\\[2y + 2 + 3y = 12\\]\n\\[5y + 2 = 12\\]",
+            "is_final": false
+          },
+          {
+            "step": 7,
+            "thought": "Solve for \\(y\\).\n\\[5y = 10\\]\n\\[y = 2\\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "Solve for \\(y\\).\n\\[5y = 10\\]\n\\[y = 2\\]",
+            "is_final": false
+          },
+          {
+            "step": 8,
+            "thought": "Substitute \\(y = 2\\) back into the equation \\(x = y + 1\\).\n\\[x = 2 + 1\\]\n\\[x = 3\\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "Substitute \\(y = 2\\) back into the equation \\(x = y + 1\\).\n\\[x = 2 + 1\\]\n\\[x = 3\\]",
+            "is_final": false
+          },
+          {
+            "step": 9,
+            "thought": "Verify the solution by substituting \\(x = 3\\) and \\(y = 2\\) into both original equations.\nFor the first equation:\n\\[2(3) + 3(2) = 6 + 6 = 12\\]\nFor the second equation:\n\\[3 - 2 = 1\\]\n\nBoth equations are satisfied, confirming that the solution is correct.\n\nFinal Answer: \\(x = 3, y = 2\\)",
+            "action": null,
+            "observation": null,
+            "raw_output": "Verify the solution by substituting \\(x = 3\\) and \\(y = 2\\) into both original equations.\nFor the first equation:\n\\[2(3) + 3(2) = 6 + 6 = 12\\]\nFor the second equation:\n\\[3 - 2 = 1\\]\n\nBoth equations are satisfied, confirming that the solution is correct.\n\nFinal Answer: \\(x = 3, y = 2\\)",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "reorder",
+      "variant_question": "Solve the system: 2x + 3y = 12 and x - y = 1. Please reason step by step.",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (reorder; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "\\(x = 3, y = 2\\)",
+        "n_steps": 9,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the system of equations:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the system of equations:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "\\(2x + 3y = 12\\)",
+            "action": null,
+            "observation": null,
+            "raw_output": "\\(2x + 3y = 12\\)",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "\\(x - y = 1\\)\n\nWe will use the method of substitution or elimination. Here, we'll use the substitution method for clarity.",
+            "action": null,
+            "observation": null,
+            "raw_output": "\\(x - y = 1\\)\n\nWe will use the method of substitution or elimination. Here, we'll use the substitution method for clarity.",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "Solve the second equation for \\(x\\).\n\\[x - y = 1\\]\n\\[x = y + 1\\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "Solve the second equation for \\(x\\).\n\\[x - y = 1\\]\n\\[x = y + 1\\]",
+            "is_final": false
+          },
+          {
+            "step": 5,
+            "thought": "Substitute \\(x = y + 1\\) into the first equation.\n\\[2x + 3y = 12\\]\n\\[2(y + 1) + 3y = 12\\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "Substitute \\(x = y + 1\\) into the first equation.\n\\[2x + 3y = 12\\]\n\\[2(y + 1) + 3y = 12\\]",
+            "is_final": false
+          },
+          {
+            "step": 6,
+            "thought": "Simplify the equation.\n\\[2y + 2 + 3y = 12\\]\n\\[5y + 2 = 12\\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "Simplify the equation.\n\\[2y + 2 + 3y = 12\\]\n\\[5y + 2 = 12\\]",
+            "is_final": false
+          },
+          {
+            "step": 7,
+            "thought": "Solve for \\(y\\).\n\\[5y + 2 = 12\\]\n\\[5y = 10\\]\n\\[y = 2\\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "Solve for \\(y\\).\n\\[5y + 2 = 12\\]\n\\[5y = 10\\]\n\\[y = 2\\]",
+            "is_final": false
+          },
+          {
+            "step": 8,
+            "thought": "Substitute \\(y = 2\\) back into the equation \\(x = y + 1\\) to find \\(x\\).\n\\[x = 2 + 1\\]\n\\[x = 3\\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "Substitute \\(y = 2\\) back into the equation \\(x = y + 1\\) to find \\(x\\).\n\\[x = 2 + 1\\]\n\\[x = 3\\]",
+            "is_final": false
+          },
+          {
+            "step": 9,
+            "thought": "Verify the solution by substituting \\(x = 3\\) and \\(y = 2\\) back into the original equations.\nFor the first equation:\n\\[2x + 3y = 12\\]\n\\[2(3) + 3(2) = 12\\]\n\\[6 + 6 = 12\\]\n\\[12 = 12\\] (True)\n\nFor the second equation:\n\\[x - y = 1\\]\n\\[3 - 2 = 1\\]\n\\[1 = 1\\] (True)\n\nSince both equations are satisfied, the solution is correct.\n\nFinal Answer: \\(x = 3, y = 2\\)",
+            "action": null,
+            "observation": null,
+            "raw_output": "Verify the solution by substituting \\(x = 3\\) and \\(y = 2\\) back into the original equations.\nFor the first equation:\n\\[2x + 3y = 12\\]\n\\[2(3) + 3(2) = 12\\]\n\\[6 + 6 = 12\\]\n\\[12 = 12\\] (True)\n\nFor the second equation:\n\\[x - y = 1\\]\n\\[3 - 2 = 1\\]\n\\[1 = 1\\] (True)\n\nSince both equations are satisfied, the solution is correct.\n\nFinal Answer: \\(x = 3, y = 2\\)",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "format",
+      "variant_question": "> Solve the system: 2x + 3y = 12 and x - y = 1.",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (format; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "\\((x, y) = (3, 2)\\)",
+        "n_steps": 8,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the system of equations:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the system of equations:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "We start with the given equations:\n   - Equation 1: \\(2x + 3y = 12\\)\n   - Equation 2: \\(x - y = 1\\)",
+            "action": null,
+            "observation": null,
+            "raw_output": "We start with the given equations:\n   - Equation 1: \\(2x + 3y = 12\\)\n   - Equation 2: \\(x - y = 1\\)",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "We can solve Equation 2 for \\(x\\):\n   \\[\n   x - y = 1 \\implies x = y + 1\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "We can solve Equation 2 for \\(x\\):\n   \\[\n   x - y = 1 \\implies x = y + 1\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "Substitute \\(x = y + 1\\) into Equation 1:\n   \\[\n   2(y + 1) + 3y = 12\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "Substitute \\(x = y + 1\\) into Equation 1:\n   \\[\n   2(y + 1) + 3y = 12\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 5,
+            "thought": "Simplify the equation:\n   \\[\n   2y + 2 + 3y = 12 \\implies 5y + 2 = 12\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "Simplify the equation:\n   \\[\n   2y + 2 + 3y = 12 \\implies 5y + 2 = 12\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 6,
+            "thought": "Solve for \\(y\\):\n   \\[\n   5y + 2 = 12 \\implies 5y = 10 \\implies y = 2\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "Solve for \\(y\\):\n   \\[\n   5y + 2 = 12 \\implies 5y = 10 \\implies y = 2\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 7,
+            "thought": "Substitute \\(y = 2\\) back into the expression for \\(x\\):\n   \\[\n   x = y + 1 \\implies x = 2 + 1 \\implies x = 3\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "Substitute \\(y = 2\\) back into the expression for \\(x\\):\n   \\[\n   x = y + 1 \\implies x = 2 + 1 \\implies x = 3\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 8,
+            "thought": "Verify the solution by substituting \\(x = 3\\) and \\(y = 2\\) back into the original equations:\n   - For Equation 1: \\(2(3) + 3(2) = 6 + 6 = 12\\), which is true.\n   - For Equation 2: \\(3 - 2 = 1\\), which is true.\n\nFinal Answer: \\((x, y) = (3, 2)\\)",
+            "action": null,
+            "observation": null,
+            "raw_output": "Verify the solution by substituting \\(x = 3\\) and \\(y = 2\\) back into the original equations:\n   - For Equation 1: \\(2(3) + 3(2) = 6 + 6 = 12\\), which is true.\n   - For Equation 2: \\(3 - 2 = 1\\), which is true.\n\nFinal Answer: \\((x, y) = (3, 2)\\)",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "distractor",
+      "variant_question": "Note: the following sentence is unrelated to the question. Meanwhile, advances in technology continued to reshape daily life. Now, solve the system: 2x + 3y = 12 and x - y = 1.",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (distractor; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "\\(x = 3, y = 2\\)",
+        "n_steps": 8,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the system of equations:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the system of equations:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "We have two equations:\n   - Equation 1: \\(2x + 3y = 12\\)\n   - Equation 2: \\(x - y = 1\\)",
+            "action": null,
+            "observation": null,
+            "raw_output": "We have two equations:\n   - Equation 1: \\(2x + 3y = 12\\)\n   - Equation 2: \\(x - y = 1\\)",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "We can use the substitution method to solve this system. First, we'll solve Equation 2 for \\(x\\):\n   \\[\n   x - y = 1 \\implies x = y + 1\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "We can use the substitution method to solve this system. First, we'll solve Equation 2 for \\(x\\):\n   \\[\n   x - y = 1 \\implies x = y + 1\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "Next, we substitute \\(x = y + 1\\) into Equation 1:\n   \\[\n   2(y + 1) + 3y = 12\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "Next, we substitute \\(x = y + 1\\) into Equation 1:\n   \\[\n   2(y + 1) + 3y = 12\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 5,
+            "thought": "Simplify the equation:\n   \\[\n   2y + 2 + 3y = 12 \\implies 5y + 2 = 12\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "Simplify the equation:\n   \\[\n   2y + 2 + 3y = 12 \\implies 5y + 2 = 12\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 6,
+            "thought": "Solve for \\(y\\):\n   \\[\n   5y + 2 = 12 \\implies 5y = 10 \\implies y = 2\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "Solve for \\(y\\):\n   \\[\n   5y + 2 = 12 \\implies 5y = 10 \\implies y = 2\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 7,
+            "thought": "Now that we have \\(y = 2\\), substitute this value back into the expression for \\(x\\) from step 2:\n   \\[\n   x = y + 1 \\implies x = 2 + 1 \\implies x = 3\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "Now that we have \\(y = 2\\), substitute this value back into the expression for \\(x\\) from step 2:\n   \\[\n   x = y + 1 \\implies x = 2 + 1 \\implies x = 3\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 8,
+            "thought": "Therefore, the solution to the system of equations is \\(x = 3\\) and \\(y = 2\\).\n\nFinal Answer: \\(x = 3, y = 2\\)",
+            "action": null,
+            "observation": null,
+            "raw_output": "Therefore, the solution to the system of equations is \\(x = 3\\) and \\(y = 2\\).\n\nFinal Answer: \\(x = 3, y = 2\\)",
+            "is_final": true
+          }
+        ]
+      }
+    }
+  ],
+  "patch_results": null,
+  "n_variants_generated": 5,
+  "n_variants_valid": 5,
+  "n_variants_rejected": 0,
+  "elapsed_seconds": 47.5022337436676
+}

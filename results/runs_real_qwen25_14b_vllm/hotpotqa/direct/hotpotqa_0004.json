@@ -1,0 +1,224 @@
+{
+  "sample_id": "hotpotqa_0004",
+  "agent_type": "direct",
+  "sample_question": "In which town was the author of Hamlet born?",
+  "sample_context": "Shakespeare wrote Hamlet around 1600. He was born in Stratford-upon-Avon in 1564. The play features the famous soliloquy 'To be or not to be'. Shakespeare died on April 23, 1616.",
+  "sample_gold_answer": "Stratford-upon-Avon",
+  "original_result": {
+    "final_answer": "Stratford-upon-Avon",
+    "n_steps": 1,
+    "is_correct": true,
+    "trace": [
+      {
+        "step": 1,
+        "thought": "Stratford-upon-Avon",
+        "action": null,
+        "observation": null,
+        "raw_output": "Stratford-upon-Avon",
+        "is_final": true
+      }
+    ]
+  },
+  "consistency_analysis": {
+    "consistency_rate": 1.0,
+    "is_consistent": true,
+    "inconsistent_count": 0,
+    "per_type_inconsistency": {
+      "paraphrase": 0.0,
+      "reorder": 0.0,
+      "format": 0.0,
+      "distractor": 0.0
+    },
+    "propagation_patterns": {
+      "consistent": 4
+    }
+  },
+  "propagation_details": [
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "paraphrase",
+      "variant_answer": "Stratford-upon-Avon"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "reorder",
+      "variant_answer": "Stratford-upon-Avon"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "format",
+      "variant_answer": "Stratford-upon-Avon"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "distractor",
+      "variant_answer": "Stratford-upon-Avon"
+    }
+  ],
+  "perturbation_variants": [
+    {
+      "perturbation_type": "paraphrase",
+      "variant_question": "Where was the author of Hamlet born in terms of town?",
+      "variant_context": "Shakespeare wrote Hamlet around 1600. He was born in Stratford-upon-Avon in 1564. The play features the famous soliloquy 'To be or not to be'. Shakespeare died on April 23, 1616.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking for the same information: the town where the author of Hamlet was born. The minor difference in wording does not change the answer, which is 'Stratford-upon-Avon'."
+      },
+      "agent_run": {
+        "final_answer": "Stratford-upon-Avon",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "Stratford-upon-Avon",
+            "action": null,
+            "observation": null,
+            "raw_output": "Stratford-upon-Avon",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "synonym",
+      "variant_question": "In what borough was the creator of Hamlet born?",
+      "variant_context": "Shakespeare wrote Hamlet around 1600. He was born in Stratford-upon-Avon in 1564. The play features the famous soliloquy 'To be or not to be'. Shakespeare died on April 23, 1616.",
+      "validation": {
+        "is_equivalent": false,
+        "confidence": 0.2,
+        "reason": "NO\nThe term \"town\" in Question A is not equivalent to \"borough\" in Question B. Stratford-upon-Avon is a town, not a borough, and the question's context and specificity are different, which could lead "
+      },
+      "agent_run": null
+    },
+    {
+      "perturbation_type": "reorder",
+      "variant_question": "In which town was the author of Hamlet born? Please reason step by step.",
+      "variant_context": "Shakespeare wrote Hamlet around 1600. He was born in Stratford-upon-Avon in 1564. The play features the famous soliloquy 'To be or not to be'. Shakespeare died on April 23, 1616.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (reorder; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "Stratford-upon-Avon",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "Stratford-upon-Avon",
+            "action": null,
+            "observation": null,
+            "raw_output": "Stratford-upon-Avon\n\nStep-by-step reasoning:\n1. The context states that Shakespeare wrote Hamlet.\n2. It also mentions that Shakespeare was born in Stratford-upon-Avon.\n3. Therefore, the author of Hamlet, Shakespeare, was born in Stratford-upon-Avon.",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "format",
+      "variant_question": "> In which town was the author of Hamlet born?",
+      "variant_context": "• Shakespeare wrote Hamlet around 1600.\n• He was born in Stratford-upon-Avon in 1564.\n• The play features the famous soliloquy 'To be or not to be'.\n• Shakespeare died on April 23, 1616.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (format; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "Stratford-upon-Avon",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "Stratford-upon-Avon",
+            "action": null,
+            "observation": null,
+            "raw_output": "Stratford-upon-Avon",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "distractor",
+      "variant_question": "Note: the following sentence is unrelated to the question. The weather that day was particularly sunny with clear skies. Now, in which town was the author of Hamlet born?",
+      "variant_context": "Shakespeare wrote Hamlet around 1600. He was born in Stratford-upon-Avon in 1564. The play features the famous soliloquy 'To be or not to be'. Shakespeare died on April 23, 1616. The weather that day was particularly sunny with clear skies.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (distractor; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "Stratford-upon-Avon",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "Stratford-upon-Avon",
+            "action": null,
+            "observation": null,
+            "raw_output": "Stratford-upon-Avon",
+            "is_final": true
+          }
+        ]
+      }
+    }
+  ],
+  "patch_results": null,
+  "n_variants_generated": 5,
+  "n_variants_valid": 4,
+  "n_variants_rejected": 1,
+  "elapsed_seconds": 5.161959648132324
+}

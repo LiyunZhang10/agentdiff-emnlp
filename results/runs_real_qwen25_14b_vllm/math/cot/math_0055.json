@@ -1,0 +1,545 @@
+{
+  "sample_id": "math_0055",
+  "agent_type": "cot",
+  "sample_question": "Solve for x: 8x + 15 = 9x + 7",
+  "sample_context": null,
+  "sample_gold_answer": "8",
+  "original_result": {
+    "final_answer": "8",
+    "n_steps": 5,
+    "is_correct": true,
+    "trace": [
+      {
+        "step": 1,
+        "thought": "To solve the equation \\(8x + 15 = 9x + 7\\) for \\(x\\), follow these steps:",
+        "action": null,
+        "observation": null,
+        "raw_output": "To solve the equation \\(8x + 15 = 9x + 7\\) for \\(x\\), follow these steps:",
+        "is_final": false
+      },
+      {
+        "step": 2,
+        "thought": "**Start with the given equation:**\n   \\[\n   8x + 15 = 9x + 7\n   \\]",
+        "action": null,
+        "observation": null,
+        "raw_output": "**Start with the given equation:**\n   \\[\n   8x + 15 = 9x + 7\n   \\]",
+        "is_final": false
+      },
+      {
+        "step": 3,
+        "thought": "**Subtract \\(8x\\) from both sides of the equation to isolate the \\(x\\) terms on one side:**\n   \\[\n   8x + 15 - 8x = 9x + 7 - 8x\n   \\]\n   Simplifying this, we get:\n   \\[\n   15 = x + 7\n   \\]",
+        "action": null,
+        "observation": null,
+        "raw_output": "**Subtract \\(8x\\) from both sides of the equation to isolate the \\(x\\) terms on one side:**\n   \\[\n   8x + 15 - 8x = 9x + 7 - 8x\n   \\]\n   Simplifying this, we get:\n   \\[\n   15 = x + 7\n   \\]",
+        "is_final": false
+      },
+      {
+        "step": 4,
+        "thought": "**Subtract 7 from both sides of the equation to isolate \\(x\\):**\n   \\[\n   15 - 7 = x + 7 - 7\n   \\]\n   Simplifying this, we get:\n   \\[\n   8 = x\n   \\]",
+        "action": null,
+        "observation": null,
+        "raw_output": "**Subtract 7 from both sides of the equation to isolate \\(x\\):**\n   \\[\n   15 - 7 = x + 7 - 7\n   \\]\n   Simplifying this, we get:\n   \\[\n   8 = x\n   \\]",
+        "is_final": false
+      },
+      {
+        "step": 5,
+        "thought": "**Thus, the solution to the equation is:**\n   \\[\n   x = 8\n   \\]\n\nFinal Answer: 8",
+        "action": null,
+        "observation": null,
+        "raw_output": "**Thus, the solution to the equation is:**\n   \\[\n   x = 8\n   \\]\n\nFinal Answer: 8",
+        "is_final": true
+      }
+    ]
+  },
+  "consistency_analysis": {
+    "consistency_rate": 1.0,
+    "is_consistent": true,
+    "inconsistent_count": 0,
+    "per_type_inconsistency": {
+      "paraphrase": 0.0,
+      "synonym": 0.0,
+      "reorder": 0.0,
+      "format": 0.0,
+      "distractor": 0.0
+    },
+    "propagation_patterns": {
+      "consistent": 3,
+      "self_correct": 2
+    }
+  },
+  "propagation_details": [
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 4,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 5,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 5,
+      "n_steps_variant": 5,
+      "perturbation_type": "paraphrase",
+      "variant_answer": "8"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.8695652173913043,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 5,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 5,
+      "n_steps_variant": 5,
+      "perturbation_type": "synonym",
+      "variant_answer": "8"
+    },
+    {
+      "divergence_step": 2,
+      "cascade_depth": 1,
+      "self_corrections": 1,
+      "propagation_pattern": "self_correct",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.8823529411764706,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.225,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.4186046511627907,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.2641509433962264,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 5,
+          "thought_similarity": 0.0,
+          "action_match": false,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 5,
+      "n_steps_variant": 4,
+      "perturbation_type": "reorder",
+      "variant_answer": "\\(x = 8\\)"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.8695652173913043,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 5,
+          "thought_similarity": 0.8461538461538461,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 5,
+      "n_steps_variant": 5,
+      "perturbation_type": "format",
+      "variant_answer": "8"
+    },
+    {
+      "divergence_step": 2,
+      "cascade_depth": 1,
+      "self_corrections": 1,
+      "propagation_pattern": "self_correct",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.8823529411764706,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.2127659574468085,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.4117647058823529,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.0,
+          "action_match": false,
+          "is_divergent": true
+        },
+        {
+          "step": 5,
+          "thought_similarity": 0.0,
+          "action_match": false,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 5,
+      "n_steps_variant": 3,
+      "perturbation_type": "distractor",
+      "variant_answer": "\\(x = 8\\)"
+    }
+  ],
+  "perturbation_variants": [
+    {
+      "perturbation_type": "paraphrase",
+      "variant_question": "Find x: 8x + 15 = 9x + 7",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking for the same solution, with only a minor wording difference in the instruction ('Solve for x' vs 'Find x'). This does not change the answer."
+      },
+      "agent_run": {
+        "final_answer": "8",
+        "n_steps": 5,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the equation \\(8x + 15 = 9x + 7\\) for \\(x\\), follow these steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the equation \\(8x + 15 = 9x + 7\\) for \\(x\\), follow these steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "**Start with the given equation:**\n   \\[\n   8x + 15 = 9x + 7\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Start with the given equation:**\n   \\[\n   8x + 15 = 9x + 7\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "**Subtract \\(8x\\) from both sides of the equation to isolate the \\(x\\) terms on one side:**\n   \\[\n   8x + 15 - 8x = 9x + 7 - 8x\n   \\]\n   Simplifying this, we get:\n   \\[\n   15 = x + 7\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Subtract \\(8x\\) from both sides of the equation to isolate the \\(x\\) terms on one side:**\n   \\[\n   8x + 15 - 8x = 9x + 7 - 8x\n   \\]\n   Simplifying this, we get:\n   \\[\n   15 = x + 7\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "**Subtract 7 from both sides of the equation to isolate \\(x\\):**\n   \\[\n   15 - 7 = x + 7 - 7\n   \\]\n   Simplifying this, we get:\n   \\[\n   8 = x\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Subtract 7 from both sides of the equation to isolate \\(x\\):**\n   \\[\n   15 - 7 = x + 7 - 7\n   \\]\n   Simplifying this, we get:\n   \\[\n   8 = x\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 5,
+            "thought": "**Thus, the solution to the equation is:**\n   \\[\n   x = 8\n   \\]\n\nFinal Answer: 8",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Thus, the solution to the equation is:**\n   \\[\n   x = 8\n   \\]\n\nFinal Answer: 8",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "synonym",
+      "variant_question": "Determine for x: 8x + 15 = 9x + 7",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are phrased differently but ask for the same solution, with 'Solve for x' and 'Determine for x' being minor wording differences that do not change the core of the question or its an"
+      },
+      "agent_run": {
+        "final_answer": "8",
+        "n_steps": 5,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the equation \\(8x + 15 = 9x + 7\\) for \\(x\\), follow these steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the equation \\(8x + 15 = 9x + 7\\) for \\(x\\), follow these steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "**Start with the given equation:**\n   \\[\n   8x + 15 = 9x + 7\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Start with the given equation:**\n   \\[\n   8x + 15 = 9x + 7\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "**Subtract \\(8x\\) from both sides of the equation to isolate the \\(x\\) terms on one side:**\n   \\[\n   8x + 15 - 8x = 9x + 7 - 8x\n   \\]\n   Simplifying this, we get:\n   \\[\n   15 = x + 7\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Subtract \\(8x\\) from both sides of the equation to isolate the \\(x\\) terms on one side:**\n   \\[\n   8x + 15 - 8x = 9x + 7 - 8x\n   \\]\n   Simplifying this, we get:\n   \\[\n   15 = x + 7\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "**Subtract 7 from both sides to isolate \\(x\\):**\n   \\[\n   15 - 7 = x + 7 - 7\n   \\]\n   Simplifying this, we get:\n   \\[\n   8 = x\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Subtract 7 from both sides to isolate \\(x\\):**\n   \\[\n   15 - 7 = x + 7 - 7\n   \\]\n   Simplifying this, we get:\n   \\[\n   8 = x\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 5,
+            "thought": "**Thus, the solution to the equation is:**\n   \\[\n   x = 8\n   \\]\n\nFinal Answer: 8",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Thus, the solution to the equation is:**\n   \\[\n   x = 8\n   \\]\n\nFinal Answer: 8",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "reorder",
+      "variant_question": "Solve for x: 8x + 15 = 9x + 7 Please reason step by step.",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (reorder; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "\\(x = 8\\)",
+        "n_steps": 4,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the equation \\(8x + 15 = 9x + 7\\) for \\(x\\), we will follow these steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the equation \\(8x + 15 = 9x + 7\\) for \\(x\\), we will follow these steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "**Isolate the variable \\(x\\) on one side of the equation**: To do this, we can subtract \\(8x\\) from both sides of the equation to eliminate \\(x\\) from the left side.\n   \\[\n   8x + 15 - 8x = 9x + 7 - 8x\n   \\]\n   Simplifying both sides, we get:\n   \\[\n   15 = x + 7\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Isolate the variable \\(x\\) on one side of the equation**: To do this, we can subtract \\(8x\\) from both sides of the equation to eliminate \\(x\\) from the left side.\n   \\[\n   8x + 15 - 8x = 9x + 7 - 8x\n   \\]\n   Simplifying both sides, we get:\n   \\[\n   15 = x + 7\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "**Isolate \\(x\\) completely**: Now, we need to get \\(x\\) by itself. We can do this by subtracting 7 from both sides of the equation.\n   \\[\n   15 - 7 = x + 7 - 7\n   \\]\n   Simplifying both sides, we get:\n   \\[\n   8 = x\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Isolate \\(x\\) completely**: Now, we need to get \\(x\\) by itself. We can do this by subtracting 7 from both sides of the equation.\n   \\[\n   15 - 7 = x + 7 - 7\n   \\]\n   Simplifying both sides, we get:\n   \\[\n   8 = x\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "**Verify the solution**: To ensure our solution is correct, we can substitute \\(x = 8\\) back into the original equation and check if both sides are equal.\n   \\[\n   8(8) + 15 = 9(8) + 7\n   \\]\n   Simplifying both sides, we get:\n   \\[\n   64 + 15 = 72 + 7\n   \\]\n   \\[\n   79 = 79\n   \\]\n   Since both sides are equal, our solution is correct.\n\nFinal Answer: \\(x = 8\\)",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Verify the solution**: To ensure our solution is correct, we can substitute \\(x = 8\\) back into the original equation and check if both sides are equal.\n   \\[\n   8(8) + 15 = 9(8) + 7\n   \\]\n   Simplifying both sides, we get:\n   \\[\n   64 + 15 = 72 + 7\n   \\]\n   \\[\n   79 = 79\n   \\]\n   Since both sides are equal, our solution is correct.\n\nFinal Answer: \\(x = 8\\)",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "format",
+      "variant_question": "> Solve for x: 8x + 15 = 9x + 7",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (format; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "8",
+        "n_steps": 5,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the equation \\(8x + 15 = 9x + 7\\) for \\(x\\), follow these steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the equation \\(8x + 15 = 9x + 7\\) for \\(x\\), follow these steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "**Start with the given equation:**\n   \\[\n   8x + 15 = 9x + 7\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Start with the given equation:**\n   \\[\n   8x + 15 = 9x + 7\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "**Subtract \\(8x\\) from both sides of the equation to isolate the \\(x\\) terms on one side:**\n   \\[\n   8x + 15 - 8x = 9x + 7 - 8x\n   \\]\n   Simplifying this, we get:\n   \\[\n   15 = x + 7\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Subtract \\(8x\\) from both sides of the equation to isolate the \\(x\\) terms on one side:**\n   \\[\n   8x + 15 - 8x = 9x + 7 - 8x\n   \\]\n   Simplifying this, we get:\n   \\[\n   15 = x + 7\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "**Subtract 7 from both sides to isolate \\(x\\):**\n   \\[\n   15 - 7 = x + 7 - 7\n   \\]\n   Simplifying this, we get:\n   \\[\n   8 = x\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Subtract 7 from both sides to isolate \\(x\\):**\n   \\[\n   15 - 7 = x + 7 - 7\n   \\]\n   Simplifying this, we get:\n   \\[\n   8 = x\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 5,
+            "thought": "**Thus, the solution is:**\n   \\[\n   x = 8\n   \\]\n\nFinal Answer: 8",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Thus, the solution is:**\n   \\[\n   x = 8\n   \\]\n\nFinal Answer: 8",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "distractor",
+      "variant_question": "Note: the following sentence is unrelated to the question. Historical records from that era are preserved in multiple archives. Now, solve for x: 8x + 15 = 9x + 7",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (distractor; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "\\(x = 8\\)",
+        "n_steps": 3,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the equation \\(8x + 15 = 9x + 7\\) for \\(x\\), we will follow these steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the equation \\(8x + 15 = 9x + 7\\) for \\(x\\), we will follow these steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "**Isolate the variable \\(x\\)**: To do this, we need to get all terms with \\(x\\) on one side of the equation and all other terms on the other side. We can start by subtracting \\(8x\\) from both sides of the equation to move the \\(x\\) terms to the right side.\n   \\[\n   8x + 15 - 8x = 9x + 7 - 8x\n   \\]\n   Simplifying this, we get:\n   \\[\n   15 = x + 7\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Isolate the variable \\(x\\)**: To do this, we need to get all terms with \\(x\\) on one side of the equation and all other terms on the other side. We can start by subtracting \\(8x\\) from both sides of the equation to move the \\(x\\) terms to the right side.\n   \\[\n   8x + 15 - 8x = 9x + 7 - 8x\n   \\]\n   Simplifying this, we get:\n   \\[\n   15 = x + 7\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "**Solve for \\(x\\)**: Now, we need to isolate \\(x\\) by moving the constant term on the right side to the left side. We do this by subtracting 7 from both sides of the equation.\n   \\[\n   15 - 7 = x + 7 - 7\n   \\]\n   Simplifying this, we get:\n   \\[\n   8 = x\n   \\]\n\nFinal Answer: \\(x = 8\\)",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Solve for \\(x\\)**: Now, we need to isolate \\(x\\) by moving the constant term on the right side to the left side. We do this by subtracting 7 from both sides of the equation.\n   \\[\n   15 - 7 = x + 7 - 7\n   \\]\n   Simplifying this, we get:\n   \\[\n   8 = x\n   \\]\n\nFinal Answer: \\(x = 8\\)",
+            "is_final": true
+          }
+        ]
+      }
+    }
+  ],
+  "patch_results": null,
+  "n_variants_generated": 5,
+  "n_variants_valid": 5,
+  "n_variants_rejected": 0,
+  "elapsed_seconds": 35.532207012176514
+}

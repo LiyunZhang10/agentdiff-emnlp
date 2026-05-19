@@ -1,0 +1,256 @@
+{
+  "sample_id": "hotpotqa_0043",
+  "agent_type": "direct",
+  "sample_question": "When was first computer program created by the person born in London?",
+  "sample_context": "Ada Lovelace was born in London, England in 1815. Ada Lovelace created first computer program in 1843. Meanwhile, Charles Darwin was working on similar topics in England.",
+  "sample_gold_answer": "1843",
+  "original_result": {
+    "final_answer": "1843",
+    "n_steps": 1,
+    "is_correct": true,
+    "trace": [
+      {
+        "step": 1,
+        "thought": "1843",
+        "action": null,
+        "observation": null,
+        "raw_output": "1843",
+        "is_final": true
+      }
+    ]
+  },
+  "consistency_analysis": {
+    "consistency_rate": 1.0,
+    "is_consistent": true,
+    "inconsistent_count": 0,
+    "per_type_inconsistency": {
+      "paraphrase": 0.0,
+      "synonym": 0.0,
+      "reorder": 0.0,
+      "format": 0.0,
+      "distractor": 0.0
+    },
+    "propagation_patterns": {
+      "consistent": 5
+    }
+  },
+  "propagation_details": [
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "paraphrase",
+      "variant_answer": "1843"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "synonym",
+      "variant_answer": "1843"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "reorder",
+      "variant_answer": "1843"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "format",
+      "variant_answer": "1843"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "distractor",
+      "variant_answer": "1843"
+    }
+  ],
+  "perturbation_variants": [
+    {
+      "perturbation_type": "paraphrase",
+      "variant_question": "What is the creation date of the first computer program by the individual born in London?",
+      "variant_context": "Ada Lovelace was born in London, England in 1815. Ada Lovelace created first computer program in 1843. Meanwhile, Charles Darwin was working on similar topics in England.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking for the same information: the creation date of the first computer program by an individual born in London. The minor differences in wording do not change the core of the "
+      },
+      "agent_run": {
+        "final_answer": "1843",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "1843",
+            "action": null,
+            "observation": null,
+            "raw_output": "1843",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "synonym",
+      "variant_question": "When was initial computer program devised by the individual born in London?",
+      "variant_context": "Ada Lovelace was born in London, England in 1815. Ada Lovelace created first computer program in 1843. Meanwhile, Charles Darwin was working on similar topics in England.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking for the same information: the year the first (or initial) computer program was created by someone born in London. The minor differences in wording ('first' vs 'initial', "
+      },
+      "agent_run": {
+        "final_answer": "1843",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "1843",
+            "action": null,
+            "observation": null,
+            "raw_output": "1843",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "reorder",
+      "variant_question": "When was first computer program created by the person born in London? Please reason step by step.",
+      "variant_context": "Ada Lovelace was born in London, England in 1815. Ada Lovelace created first computer program in 1843. Meanwhile, Charles Darwin was working on similar topics in England.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (reorder; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "1843",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "1843",
+            "action": null,
+            "observation": null,
+            "raw_output": "1843\n\nStep 1: Identify the person born in London - Ada Lovelace.\nStep 2: Determine when Ada Lovelace created the first computer program - 1843.",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "format",
+      "variant_question": "> When was first computer program created by the person born in London?",
+      "variant_context": "• Ada Lovelace was born in London, England in 1815.\n• Ada Lovelace created first computer program in 1843.\n• Meanwhile, Charles Darwin was working on similar topics in England.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (format; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "1843",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "1843",
+            "action": null,
+            "observation": null,
+            "raw_output": "1843",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "distractor",
+      "variant_question": "Note: the following sentence is unrelated to the question. Historical records from that era are preserved in multiple archives. Now, when was first computer program created by the person born in London?",
+      "variant_context": "Ada Lovelace was born in London, England in 1815. Ada Lovelace created first computer program in 1843. Meanwhile, Charles Darwin was working on similar topics in England. Historical records from that era are preserved in multiple archives.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (distractor; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "1843",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "1843",
+            "action": null,
+            "observation": null,
+            "raw_output": "1843",
+            "is_final": true
+          }
+        ]
+      }
+    }
+  ],
+  "patch_results": null,
+  "n_variants_generated": 5,
+  "n_variants_valid": 5,
+  "n_variants_rejected": 0,
+  "elapsed_seconds": 4.900485038757324
+}

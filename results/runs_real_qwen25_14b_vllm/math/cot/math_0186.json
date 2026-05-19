@@ -1,0 +1,547 @@
+{
+  "sample_id": "math_0186",
+  "agent_type": "cot",
+  "sample_question": "What is 5 + 12 * 5?",
+  "sample_context": null,
+  "sample_gold_answer": "65",
+  "original_result": {
+    "final_answer": "65",
+    "n_steps": 4,
+    "is_correct": true,
+    "trace": [
+      {
+        "step": 1,
+        "thought": "To solve the problem 5 + 12 * 5, we need to follow the order of operations, often remembered by the acronym PEMDAS (Parentheses, Exponents, Multiplication and Division (from left to right), Addition and Subtraction (from left to right)).",
+        "action": null,
+        "observation": null,
+        "raw_output": "To solve the problem 5 + 12 * 5, we need to follow the order of operations, often remembered by the acronym PEMDAS (Parentheses, Exponents, Multiplication and Division (from left to right), Addition and Subtraction (from left to right)).",
+        "is_final": false
+      },
+      {
+        "step": 2,
+        "thought": "Identify and perform any multiplication or division first.\nIn the expression 5 + 12 * 5, the multiplication operation is 12 * 5.\n12 * 5 = 60.",
+        "action": null,
+        "observation": null,
+        "raw_output": "Identify and perform any multiplication or division first.\nIn the expression 5 + 12 * 5, the multiplication operation is 12 * 5.\n12 * 5 = 60.",
+        "is_final": false
+      },
+      {
+        "step": 3,
+        "thought": "Substitute the result of the multiplication back into the expression.\nThe expression now becomes 5 + 60.",
+        "action": null,
+        "observation": null,
+        "raw_output": "Substitute the result of the multiplication back into the expression.\nThe expression now becomes 5 + 60.",
+        "is_final": false
+      },
+      {
+        "step": 4,
+        "thought": "Perform the addition.\n5 + 60 = 65.\n\nFinal Answer: 65",
+        "action": null,
+        "observation": null,
+        "raw_output": "Perform the addition.\n5 + 60 = 65.\n\nFinal Answer: 65",
+        "is_final": true
+      }
+    ]
+  },
+  "consistency_analysis": {
+    "consistency_rate": 1.0,
+    "is_consistent": true,
+    "inconsistent_count": 0,
+    "per_type_inconsistency": {
+      "paraphrase": 0.0,
+      "synonym": 0.0,
+      "reorder": 0.0,
+      "format": 0.0,
+      "distractor": 0.0
+    },
+    "propagation_patterns": {
+      "cascade": 3,
+      "consistent": 2
+    }
+  },
+  "propagation_details": [
+    {
+      "divergence_step": 3,
+      "cascade_depth": 2,
+      "self_corrections": 0,
+      "propagation_pattern": "cascade",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.8285714285714286,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.4074074074074074,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.12,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.3333333333333333,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 5,
+          "thought_similarity": 0.0,
+          "action_match": false,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 4,
+      "n_steps_variant": 5,
+      "perturbation_type": "paraphrase",
+      "variant_answer": "65"
+    },
+    {
+      "divergence_step": 2,
+      "cascade_depth": 3,
+      "self_corrections": 0,
+      "propagation_pattern": "cascade",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.7777777777777778,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.3103448275862069,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.12,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.3333333333333333,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 5,
+          "thought_similarity": 0.0,
+          "action_match": false,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 4,
+      "n_steps_variant": 5,
+      "perturbation_type": "synonym",
+      "variant_answer": "65"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 4,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 4,
+      "n_steps_variant": 4,
+      "perturbation_type": "reorder",
+      "variant_answer": "65"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 4,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 4,
+      "n_steps_variant": 4,
+      "perturbation_type": "format",
+      "variant_answer": "65"
+    },
+    {
+      "divergence_step": 2,
+      "cascade_depth": 4,
+      "self_corrections": 0,
+      "propagation_pattern": "cascade",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.2222222222222222,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.12,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.3333333333333333,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 5,
+          "thought_similarity": 0.0,
+          "action_match": false,
+          "is_divergent": true
+        },
+        {
+          "step": 6,
+          "thought_similarity": 0.0,
+          "action_match": false,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 4,
+      "n_steps_variant": 6,
+      "perturbation_type": "distractor",
+      "variant_answer": "65"
+    }
+  ],
+  "perturbation_variants": [
+    {
+      "perturbation_type": "paraphrase",
+      "variant_question": "What is the result of 5 plus 12 times 5?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking for the same mathematical operation with the same numbers, just with different wording. The order of operations (PEMDAS/BODMAS) would be applied the same way in both case"
+      },
+      "agent_run": {
+        "final_answer": "65",
+        "n_steps": 5,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the problem of finding the result of 5 plus 12 times 5, we need to follow the order of operations, often remembered by the acronym PEMDAS (Parentheses, Exponents, Multiplication and Division (from left to right), Addition and Subtraction (from left to right)).",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the problem of finding the result of 5 plus 12 times 5, we need to follow the order of operations, often remembered by the acronym PEMDAS (Parentheses, Exponents, Multiplication and Division (from left to right), Addition and Subtraction (from left to right)).",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "Identify the operations in the expression.\nThe expression is 5 + 12 * 5. It contains addition and multiplication.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Identify the operations in the expression.\nThe expression is 5 + 12 * 5. It contains addition and multiplication.",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "Apply the order of operations.\nAccording to PEMDAS, multiplication should be performed before addition.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Apply the order of operations.\nAccording to PEMDAS, multiplication should be performed before addition.",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "Perform the multiplication first.\n12 * 5 = 60",
+            "action": null,
+            "observation": null,
+            "raw_output": "Perform the multiplication first.\n12 * 5 = 60",
+            "is_final": false
+          },
+          {
+            "step": 5,
+            "thought": "Now, add the result of the multiplication to 5.\n5 + 60 = 65\n\nFinal Answer: 65",
+            "action": null,
+            "observation": null,
+            "raw_output": "Now, add the result of the multiplication to 5.\n5 + 60 = 65\n\nFinal Answer: 65",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "synonym",
+      "variant_question": "What equals 5 plus 12 times 5?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking for the same mathematical operation, just with different wording. Both are asking to calculate 5 plus the product of 12 and 5, which results in 65."
+      },
+      "agent_run": {
+        "final_answer": "65",
+        "n_steps": 5,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the problem \"What equals 5 plus 12 times 5?\", we need to follow the order of operations, often remembered by the acronym PEMDAS (Parentheses, Exponents, Multiplication and Division (from left to right), Addition and Subtraction (from left to right)).",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the problem \"What equals 5 plus 12 times 5?\", we need to follow the order of operations, often remembered by the acronym PEMDAS (Parentheses, Exponents, Multiplication and Division (from left to right), Addition and Subtraction (from left to right)).",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "Identify the operations in the expression.\nThe expression is \"5 + 12 * 5\". It contains addition and multiplication.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Identify the operations in the expression.\nThe expression is \"5 + 12 * 5\". It contains addition and multiplication.",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "Apply the order of operations.\nAccording to PEMDAS, multiplication should be performed before addition.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Apply the order of operations.\nAccording to PEMDAS, multiplication should be performed before addition.",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "Perform the multiplication first.\n12 * 5 = 60",
+            "action": null,
+            "observation": null,
+            "raw_output": "Perform the multiplication first.\n12 * 5 = 60",
+            "is_final": false
+          },
+          {
+            "step": 5,
+            "thought": "Now, add the result to 5.\n5 + 60 = 65\n\nFinal Answer: 65",
+            "action": null,
+            "observation": null,
+            "raw_output": "Now, add the result to 5.\n5 + 60 = 65\n\nFinal Answer: 65",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "reorder",
+      "variant_question": "What is 5 + 12 * 5? Please reason step by step.",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (reorder; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "65",
+        "n_steps": 4,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the problem 5 + 12 * 5, we need to follow the order of operations, often remembered by the acronym PEMDAS (Parentheses, Exponents, Multiplication and Division (from left to right), Addition and Subtraction (from left to right)).",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the problem 5 + 12 * 5, we need to follow the order of operations, often remembered by the acronym PEMDAS (Parentheses, Exponents, Multiplication and Division (from left to right), Addition and Subtraction (from left to right)).",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "Identify and perform any multiplication or division first.\nIn the expression 5 + 12 * 5, the multiplication operation is 12 * 5.\n12 * 5 = 60.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Identify and perform any multiplication or division first.\nIn the expression 5 + 12 * 5, the multiplication operation is 12 * 5.\n12 * 5 = 60.",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "Substitute the result of the multiplication back into the expression.\nThe expression now becomes 5 + 60.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Substitute the result of the multiplication back into the expression.\nThe expression now becomes 5 + 60.",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "Perform the addition.\n5 + 60 = 65.\n\nFinal Answer: 65",
+            "action": null,
+            "observation": null,
+            "raw_output": "Perform the addition.\n5 + 60 = 65.\n\nFinal Answer: 65",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "format",
+      "variant_question": "> What is 5 + 12 * 5?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (format; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "65",
+        "n_steps": 4,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the problem 5 + 12 * 5, we need to follow the order of operations, often remembered by the acronym PEMDAS (Parentheses, Exponents, Multiplication and Division (from left to right), Addition and Subtraction (from left to right)).",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the problem 5 + 12 * 5, we need to follow the order of operations, often remembered by the acronym PEMDAS (Parentheses, Exponents, Multiplication and Division (from left to right), Addition and Subtraction (from left to right)).",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "Identify and perform any multiplication or division first.\nIn the expression 5 + 12 * 5, the multiplication operation is 12 * 5.\n12 * 5 = 60.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Identify and perform any multiplication or division first.\nIn the expression 5 + 12 * 5, the multiplication operation is 12 * 5.\n12 * 5 = 60.",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "Substitute the result of the multiplication back into the expression.\nThe expression now becomes 5 + 60.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Substitute the result of the multiplication back into the expression.\nThe expression now becomes 5 + 60.",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "Perform the addition.\n5 + 60 = 65.\n\nFinal Answer: 65",
+            "action": null,
+            "observation": null,
+            "raw_output": "Perform the addition.\n5 + 60 = 65.\n\nFinal Answer: 65",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "distractor",
+      "variant_question": "Note: the following sentence is unrelated to the question. The weather that day was particularly sunny with clear skies. Now, what is 5 + 12 * 5?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (distractor; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "65",
+        "n_steps": 6,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the problem 5 + 12 * 5, we need to follow the order of operations, often remembered by the acronym PEMDAS (Parentheses, Exponents, Multiplication and Division (from left to right), Addition and Subtraction (from left to right)).",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the problem 5 + 12 * 5, we need to follow the order of operations, often remembered by the acronym PEMDAS (Parentheses, Exponents, Multiplication and Division (from left to right), Addition and Subtraction (from left to right)).",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "Identify the operations in the expression.\nThe expression contains addition (+) and multiplication (*).",
+            "action": null,
+            "observation": null,
+            "raw_output": "Identify the operations in the expression.\nThe expression contains addition (+) and multiplication (*).",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "Apply the order of operations.\nAccording to PEMDAS, multiplication should be performed before addition.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Apply the order of operations.\nAccording to PEMDAS, multiplication should be performed before addition.",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "Perform the multiplication first.\n12 * 5 = 60",
+            "action": null,
+            "observation": null,
+            "raw_output": "Perform the multiplication first.\n12 * 5 = 60",
+            "is_final": false
+          },
+          {
+            "step": 5,
+            "thought": "Substitute the result of the multiplication back into the expression.\nThe expression now becomes 5 + 60.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Substitute the result of the multiplication back into the expression.\nThe expression now becomes 5 + 60.",
+            "is_final": false
+          },
+          {
+            "step": 6,
+            "thought": "Perform the addition.\n5 + 60 = 65\n\nFinal Answer: 65",
+            "action": null,
+            "observation": null,
+            "raw_output": "Perform the addition.\n5 + 60 = 65\n\nFinal Answer: 65",
+            "is_final": true
+          }
+        ]
+      }
+    }
+  ],
+  "patch_results": null,
+  "n_variants_generated": 5,
+  "n_variants_valid": 5,
+  "n_variants_rejected": 0,
+  "elapsed_seconds": 23.97436499595642
+}

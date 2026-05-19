@@ -1,0 +1,348 @@
+{
+  "sample_id": "math_0169",
+  "agent_type": "react",
+  "sample_question": "What is the sum of the first 6 positive integers?",
+  "sample_context": null,
+  "sample_gold_answer": "21",
+  "original_result": {
+    "final_answer": "21",
+    "n_steps": 2,
+    "is_correct": true,
+    "trace": [
+      {
+        "step": 1,
+        "input_length": 924,
+        "thought": "To find the sum of the first 6 positive integers, I can use the formula for the sum of an arithmetic series or simply add them up. Since this is a small set, I'll use the calculate tool to add them directly.",
+        "action": "calculate(1+2+3+4+5+6)",
+        "observation": "21",
+        "raw_output": "Thought: To find the sum of the first 6 positive integers, I can use the formula for the sum of an arithmetic series or simply add them up. Since this is a small set, I'll use the calculate tool to add them directly.\nAction: calculate(1+2+3+4+5+6)",
+        "is_final": false
+      },
+      {
+        "step": 2,
+        "input_length": 1189,
+        "thought": "The sum of the first 6 positive integers is 21.",
+        "action": null,
+        "observation": null,
+        "raw_output": "Thought: The sum of the first 6 positive integers is 21.\nFinal Answer: 21",
+        "is_final": true
+      }
+    ]
+  },
+  "consistency_analysis": {
+    "consistency_rate": 1.0,
+    "is_consistent": true,
+    "inconsistent_count": 0,
+    "per_type_inconsistency": {
+      "paraphrase": 0.0,
+      "synonym": 0.0,
+      "reorder": 0.0,
+      "format": 0.0,
+      "distractor": 0.0
+    },
+    "propagation_patterns": {
+      "early_diverge": 3,
+      "consistent": 1,
+      "late_diverge": 1
+    }
+  },
+  "propagation_details": [
+    {
+      "divergence_step": 1,
+      "cascade_depth": 0,
+      "self_corrections": 1,
+      "propagation_pattern": "early_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.325,
+          "action_match": false,
+          "is_divergent": true
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.42857142857142855,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 2,
+      "n_steps_variant": 2,
+      "perturbation_type": "paraphrase",
+      "variant_answer": "21"
+    },
+    {
+      "divergence_step": 1,
+      "cascade_depth": 1,
+      "self_corrections": 0,
+      "propagation_pattern": "early_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.2926829268292683,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.23076923076923078,
+          "action_match": true,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 2,
+      "n_steps_variant": 2,
+      "perturbation_type": "synonym",
+      "variant_answer": "21"
+    },
+    {
+      "divergence_step": 1,
+      "cascade_depth": 1,
+      "self_corrections": 0,
+      "propagation_pattern": "early_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.9393939393939394,
+          "action_match": false,
+          "is_divergent": true
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.23076923076923078,
+          "action_match": true,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 2,
+      "n_steps_variant": 2,
+      "perturbation_type": "reorder",
+      "variant_answer": "21"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 2,
+      "n_steps_variant": 2,
+      "perturbation_type": "format",
+      "variant_answer": "21"
+    },
+    {
+      "divergence_step": 2,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "late_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.55,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.23076923076923078,
+          "action_match": true,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 2,
+      "n_steps_variant": 2,
+      "perturbation_type": "distractor",
+      "variant_answer": "21"
+    }
+  ],
+  "perturbation_variants": [
+    {
+      "perturbation_type": "paraphrase",
+      "variant_question": "What would be the total of the first 6 positive integers?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking for the same information, just with slightly different wording. The core of the question remains the same, and both would yield the answer '21'."
+      },
+      "agent_run": {
+        "final_answer": "21",
+        "n_steps": 2,
+        "trace": [
+          {
+            "step": 1,
+            "input_length": 932,
+            "thought": "To find the total of the first 6 positive integers, I need to calculate the sum of these numbers. This can be done using the calculate tool.",
+            "action": "calculate((1+2+3+4+5+6))",
+            "observation": "21",
+            "raw_output": "Thought: To find the total of the first 6 positive integers, I need to calculate the sum of these numbers. This can be done using the calculate tool.\nAction: calculate((1+2+3+4+5+6))",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "input_length": 1132,
+            "thought": "The calculate tool has returned the sum of the first 6 positive integers.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Thought: The calculate tool has returned the sum of the first 6 positive integers.\nFinal Answer: 21",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "synonym",
+      "variant_question": "What is the total of the first 6 positive numbers?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking for the same mathematical operation, which is the sum of the first 6 positive integers. The wording difference between \"sum\" and \"total\" does not change the meaning or th"
+      },
+      "agent_run": {
+        "final_answer": "21",
+        "n_steps": 2,
+        "trace": [
+          {
+            "step": 1,
+            "input_length": 925,
+            "thought": "To find the total of the first 6 positive numbers, I need to calculate the sum of these numbers. This can be done using the calculate tool.",
+            "action": "calculate(1+2+3+4+5+6)",
+            "observation": "21",
+            "raw_output": "Thought: To find the total of the first 6 positive numbers, I need to calculate the sum of these numbers. This can be done using the calculate tool.\nAction: calculate(1+2+3+4+5+6)",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "input_length": 1122,
+            "thought": "The calculation is complete and the result is 21.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Thought: The calculation is complete and the result is 21.\nFinal Answer: 21",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "reorder",
+      "variant_question": "What is the sum of the first 6 positive integers? Please reason step by step.",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (reorder; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "21",
+        "n_steps": 2,
+        "trace": [
+          {
+            "step": 1,
+            "input_length": 952,
+            "thought": "To find the sum of the first 6 positive integers, I can use the formula for the sum of an arithmetic series or simply add them up. Since this is a small set, I'll calculate it directly.",
+            "action": "calculate(\"1+2+3+4+5+6\")",
+            "observation": "21",
+            "raw_output": "Thought: To find the sum of the first 6 positive integers, I can use the formula for the sum of an arithmetic series or simply add them up. Since this is a small set, I'll calculate it directly.\nAction: calculate(\"1+2+3+4+5+6\")",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "input_length": 1197,
+            "thought": "The calculation is done and the result is 21.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Thought: The calculation is done and the result is 21.\nFinal Answer: 21",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "format",
+      "variant_question": "> What is the sum of the first 6 positive integers?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (format; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "21",
+        "n_steps": 2,
+        "trace": [
+          {
+            "step": 1,
+            "input_length": 926,
+            "thought": "To find the sum of the first 6 positive integers, I can use the formula for the sum of an arithmetic series or simply add them up. Since this is a small set, I'll use the calculate tool to add them directly.",
+            "action": "calculate(1+2+3+4+5+6)",
+            "observation": "21",
+            "raw_output": "Thought: To find the sum of the first 6 positive integers, I can use the formula for the sum of an arithmetic series or simply add them up. Since this is a small set, I'll use the calculate tool to add them directly.\nAction: calculate(1+2+3+4+5+6)",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "input_length": 1191,
+            "thought": "The sum of the first 6 positive integers is 21.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Thought: The sum of the first 6 positive integers is 21.\nFinal Answer: 21",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "distractor",
+      "variant_question": "Note: the following sentence is unrelated to the question. Historical records from that era are preserved in multiple archives. Now, what is the sum of the first 6 positive integers?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (distractor; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "21",
+        "n_steps": 2,
+        "trace": [
+          {
+            "step": 1,
+            "input_length": 1057,
+            "thought": "The sum of the first 6 positive integers can be calculated using the formula for the sum of an arithmetic series or simply by adding them up. I will use the calculate tool to find the sum.",
+            "action": "calculate(1+2+3+4+5+6)",
+            "observation": "21",
+            "raw_output": "Thought: The sum of the first 6 positive integers can be calculated using the formula for the sum of an arithmetic series or simply by adding them up. I will use the calculate tool to find the sum.\nAction: calculate(1+2+3+4+5+6)",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "input_length": 1303,
+            "thought": "The calculation is complete and the result is 21.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Thought: The calculation is complete and the result is 21.\nFinal Answer: 21",
+            "is_final": true
+          }
+        ]
+      }
+    }
+  ],
+  "patch_results": null,
+  "n_variants_generated": 5,
+  "n_variants_valid": 5,
+  "n_variants_rejected": 0,
+  "elapsed_seconds": 13.982476949691772
+}

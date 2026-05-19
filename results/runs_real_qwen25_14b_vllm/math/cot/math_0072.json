@@ -1,0 +1,455 @@
+{
+  "sample_id": "math_0072",
+  "agent_type": "cot",
+  "sample_question": "What is the sum of the first 4 positive integers?",
+  "sample_context": null,
+  "sample_gold_answer": "10",
+  "original_result": {
+    "final_answer": "10",
+    "n_steps": 3,
+    "is_correct": true,
+    "trace": [
+      {
+        "step": 1,
+        "thought": "To solve the problem of finding the sum of the first 4 positive integers, we can follow these steps:",
+        "action": null,
+        "observation": null,
+        "raw_output": "To solve the problem of finding the sum of the first 4 positive integers, we can follow these steps:",
+        "is_final": false
+      },
+      {
+        "step": 2,
+        "thought": "Identify the first 4 positive integers. These are 1, 2, 3, and 4.",
+        "action": null,
+        "observation": null,
+        "raw_output": "Identify the first 4 positive integers. These are 1, 2, 3, and 4.",
+        "is_final": false
+      },
+      {
+        "step": 3,
+        "thought": "Add these integers together step by step:\n   - Start with the first two numbers: 1 + 2 = 3\n   - Add the next number to the result: 3 + 3 = 6\n   - Finally, add the last number: 6 + 4 = 10\n\nFinal Answer: 10",
+        "action": null,
+        "observation": null,
+        "raw_output": "Add these integers together step by step:\n   - Start with the first two numbers: 1 + 2 = 3\n   - Add the next number to the result: 3 + 3 = 6\n   - Finally, add the last number: 6 + 4 = 10\n\nFinal Answer: 10",
+        "is_final": true
+      }
+    ]
+  },
+  "consistency_analysis": {
+    "consistency_rate": 1.0,
+    "is_consistent": true,
+    "inconsistent_count": 0,
+    "per_type_inconsistency": {
+      "paraphrase": 0.0,
+      "synonym": 0.0,
+      "reorder": 0.0,
+      "format": 0.0,
+      "distractor": 0.0
+    },
+    "propagation_patterns": {
+      "late_diverge": 3,
+      "consistent": 2
+    }
+  },
+  "propagation_details": [
+    {
+      "divergence_step": 3,
+      "cascade_depth": 1,
+      "self_corrections": 0,
+      "propagation_pattern": "late_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.8823529411764706,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.8571428571428571,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.2878787878787879,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.0,
+          "action_match": false,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 3,
+      "n_steps_variant": 4,
+      "perturbation_type": "paraphrase",
+      "variant_answer": "10"
+    },
+    {
+      "divergence_step": 3,
+      "cascade_depth": 1,
+      "self_corrections": 0,
+      "propagation_pattern": "late_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.7777777777777778,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.7333333333333333,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.26865671641791045,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.0,
+          "action_match": false,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 3,
+      "n_steps_variant": 4,
+      "perturbation_type": "synonym",
+      "variant_answer": "10"
+    },
+    {
+      "divergence_step": 4,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "late_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.8571428571428571,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.5714285714285714,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.0,
+          "action_match": false,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 3,
+      "n_steps_variant": 4,
+      "perturbation_type": "reorder",
+      "variant_answer": "10"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.8571428571428571,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.6285714285714286,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 3,
+      "n_steps_variant": 3,
+      "perturbation_type": "format",
+      "variant_answer": "10"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.6285714285714286,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 3,
+      "n_steps_variant": 3,
+      "perturbation_type": "distractor",
+      "variant_answer": "10"
+    }
+  ],
+  "perturbation_variants": [
+    {
+      "perturbation_type": "paraphrase",
+      "variant_question": "What would be the total of the first 4 positive integers?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking for the same information with only a minor wording difference ('sum' vs 'total'), which does not change the answer."
+      },
+      "agent_run": {
+        "final_answer": "10",
+        "n_steps": 4,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the problem of finding the total of the first 4 positive integers, we can follow these steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the problem of finding the total of the first 4 positive integers, we can follow these steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "Identify the first 4 positive integers. The first 4 positive integers are 1, 2, 3, and 4.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Identify the first 4 positive integers. The first 4 positive integers are 1, 2, 3, and 4.",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "Add these integers together to find their total. We can do this step by step:\n   - First, add 1 and 2: \\(1 + 2 = 3\\).\n   - Next, add the result to 3: \\(3 + 3 = 6\\).\n   - Finally, add the result to 4: \\(6 + 4 = 10\\).\n\nAlternatively, we can use the formula for the sum of the first n positive integers, which is \\(\\frac{n(n + 1)}{2}\\), where n is the number of integers. For n = 4:",
+            "action": null,
+            "observation": null,
+            "raw_output": "Add these integers together to find their total. We can do this step by step:\n   - First, add 1 and 2: \\(1 + 2 = 3\\).\n   - Next, add the result to 3: \\(3 + 3 = 6\\).\n   - Finally, add the result to 4: \\(6 + 4 = 10\\).\n\nAlternatively, we can use the formula for the sum of the first n positive integers, which is \\(\\frac{n(n + 1)}{2}\\), where n is the number of integers. For n = 4:",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "Substitute n = 4 into the formula: \\(\\frac{4(4 + 1)}{2} = \\frac{4 \\times 5}{2} = \\frac{20}{2} = 10\\).\n\nBoth methods lead to the same result.\n\nFinal Answer: 10",
+            "action": null,
+            "observation": null,
+            "raw_output": "Substitute n = 4 into the formula: \\(\\frac{4(4 + 1)}{2} = \\frac{4 \\times 5}{2} = \\frac{20}{2} = 10\\).\n\nBoth methods lead to the same result.\n\nFinal Answer: 10",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "synonym",
+      "variant_question": "What is the total of the first 4 positive numbers?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking for the same mathematical operation, which is the sum of the first four positive integers. The terms \"sum\" and \"total\" are used interchangeably in this context, and the m"
+      },
+      "agent_run": {
+        "final_answer": "10",
+        "n_steps": 4,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the problem of finding the total of the first 4 positive numbers, we can follow these steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the problem of finding the total of the first 4 positive numbers, we can follow these steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "Identify the first 4 positive numbers. The first 4 positive numbers are 1, 2, 3, and 4.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Identify the first 4 positive numbers. The first 4 positive numbers are 1, 2, 3, and 4.",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "Add these numbers together to find their total. We can do this step by step:\n   - First, add 1 and 2: \\(1 + 2 = 3\\).\n   - Next, add the result to 3: \\(3 + 3 = 6\\).\n   - Finally, add the result to 4: \\(6 + 4 = 10\\).\n\nAlternatively, we can use the formula for the sum of the first n positive integers, which is \\(\\frac{n(n + 1)}{2}\\), where n is the number of terms. For the first 4 positive integers, n = 4:",
+            "action": null,
+            "observation": null,
+            "raw_output": "Add these numbers together to find their total. We can do this step by step:\n   - First, add 1 and 2: \\(1 + 2 = 3\\).\n   - Next, add the result to 3: \\(3 + 3 = 6\\).\n   - Finally, add the result to 4: \\(6 + 4 = 10\\).\n\nAlternatively, we can use the formula for the sum of the first n positive integers, which is \\(\\frac{n(n + 1)}{2}\\), where n is the number of terms. For the first 4 positive integers, n = 4:",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "Substitute n = 4 into the formula: \\(\\frac{4(4 + 1)}{2} = \\frac{4 \\times 5}{2} = \\frac{20}{2} = 10\\).\n\nBoth methods lead to the same result.\n\nFinal Answer: 10",
+            "action": null,
+            "observation": null,
+            "raw_output": "Substitute n = 4 into the formula: \\(\\frac{4(4 + 1)}{2} = \\frac{4 \\times 5}{2} = \\frac{20}{2} = 10\\).\n\nBoth methods lead to the same result.\n\nFinal Answer: 10",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "reorder",
+      "variant_question": "What is the sum of the first 4 positive integers? Please reason step by step.",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (reorder; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "10",
+        "n_steps": 4,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the problem of finding the sum of the first 4 positive integers, we can follow these steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the problem of finding the sum of the first 4 positive integers, we can follow these steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "Identify the first 4 positive integers. The first 4 positive integers are 1, 2, 3, and 4.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Identify the first 4 positive integers. The first 4 positive integers are 1, 2, 3, and 4.",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "Add these integers together step by step:\n   - Start with the first integer: 1\n   - Add the second integer: 1 + 2 = 3\n   - Add the third integer: 3 + 3 = 6\n   - Add the fourth integer: 6 + 4 = 10",
+            "action": null,
+            "observation": null,
+            "raw_output": "Add these integers together step by step:\n   - Start with the first integer: 1\n   - Add the second integer: 1 + 2 = 3\n   - Add the third integer: 3 + 3 = 6\n   - Add the fourth integer: 6 + 4 = 10",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "The result of adding these integers is 10.\n\nFinal Answer: 10",
+            "action": null,
+            "observation": null,
+            "raw_output": "The result of adding these integers is 10.\n\nFinal Answer: 10",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "format",
+      "variant_question": "> What is the sum of the first 4 positive integers?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (format; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "10",
+        "n_steps": 3,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the problem of finding the sum of the first 4 positive integers, we can follow these steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the problem of finding the sum of the first 4 positive integers, we can follow these steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "Identify the first 4 positive integers. The first 4 positive integers are 1, 2, 3, and 4.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Identify the first 4 positive integers. The first 4 positive integers are 1, 2, 3, and 4.",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "Add these integers together step by step:\n   - Start with the first integer: 1\n   - Add the second integer: 1 + 2 = 3\n   - Add the third integer: 3 + 3 = 6\n   - Add the fourth integer: 6 + 4 = 10\n\nFinal Answer: 10",
+            "action": null,
+            "observation": null,
+            "raw_output": "Add these integers together step by step:\n   - Start with the first integer: 1\n   - Add the second integer: 1 + 2 = 3\n   - Add the third integer: 3 + 3 = 6\n   - Add the fourth integer: 6 + 4 = 10\n\nFinal Answer: 10",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "distractor",
+      "variant_question": "Note: the following sentence is unrelated to the question. Meanwhile, advances in technology continued to reshape daily life. Now, what is the sum of the first 4 positive integers?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (distractor; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "10",
+        "n_steps": 3,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the problem of finding the sum of the first 4 positive integers, we can follow these steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the problem of finding the sum of the first 4 positive integers, we can follow these steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "Identify the first 4 positive integers. These are 1, 2, 3, and 4.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Identify the first 4 positive integers. These are 1, 2, 3, and 4.",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "Add these integers together step by step:\n   - Start with the first integer: 1\n   - Add the second integer: 1 + 2 = 3\n   - Add the third integer: 3 + 3 = 6\n   - Add the fourth integer: 6 + 4 = 10\n\nFinal Answer: 10",
+            "action": null,
+            "observation": null,
+            "raw_output": "Add these integers together step by step:\n   - Start with the first integer: 1\n   - Add the second integer: 1 + 2 = 3\n   - Add the third integer: 3 + 3 = 6\n   - Add the fourth integer: 6 + 4 = 10\n\nFinal Answer: 10",
+            "is_final": true
+          }
+        ]
+      }
+    }
+  ],
+  "patch_results": null,
+  "n_variants_generated": 5,
+  "n_variants_valid": 5,
+  "n_variants_rejected": 0,
+  "elapsed_seconds": 25.07980751991272
+}

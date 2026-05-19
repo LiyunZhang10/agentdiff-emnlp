@@ -1,0 +1,698 @@
+{
+  "sample_id": "gsm8k_0012",
+  "agent_type": "cot",
+  "sample_question": "Tom reads 13 pages per day. The book has 260 pages. How many days will it take Tom to finish the book?",
+  "sample_context": null,
+  "sample_gold_answer": "20",
+  "original_result": {
+    "final_answer": "20",
+    "n_steps": 6,
+    "is_correct": true,
+    "trace": [
+      {
+        "step": 1,
+        "thought": "To solve this problem, we will follow these steps:",
+        "action": null,
+        "observation": null,
+        "raw_output": "To solve this problem, we will follow these steps:",
+        "is_final": false
+      },
+      {
+        "step": 2,
+        "thought": "Identify the total number of pages in the book, which is given as 260 pages.",
+        "action": null,
+        "observation": null,
+        "raw_output": "Identify the total number of pages in the book, which is given as 260 pages.",
+        "is_final": false
+      },
+      {
+        "step": 3,
+        "thought": "Identify the number of pages Tom reads per day, which is given as 13 pages.",
+        "action": null,
+        "observation": null,
+        "raw_output": "Identify the number of pages Tom reads per day, which is given as 13 pages.",
+        "is_final": false
+      },
+      {
+        "step": 4,
+        "thought": "To find out how many days it will take Tom to finish the book, we need to divide the total number of pages by the number of pages he reads per day.",
+        "action": null,
+        "observation": null,
+        "raw_output": "To find out how many days it will take Tom to finish the book, we need to divide the total number of pages by the number of pages he reads per day.",
+        "is_final": false
+      },
+      {
+        "step": 5,
+        "thought": "Perform the division: \\( \\frac{260}{13} \\).",
+        "action": null,
+        "observation": null,
+        "raw_output": "Perform the division: \\( \\frac{260}{13} \\).",
+        "is_final": false
+      },
+      {
+        "step": 6,
+        "thought": "Calculate the result of the division to find the number of days.\n\nLet's do the calculation:\n\n\\[ \\frac{260}{13} = 20 \\]\n\nSo, it will take Tom 20 days to finish the book.\n\nFinal Answer: 20",
+        "action": null,
+        "observation": null,
+        "raw_output": "Calculate the result of the division to find the number of days.\n\nLet's do the calculation:\n\n\\[ \\frac{260}{13} = 20 \\]\n\nSo, it will take Tom 20 days to finish the book.\n\nFinal Answer: 20",
+        "is_final": true
+      }
+    ]
+  },
+  "consistency_analysis": {
+    "consistency_rate": 1.0,
+    "is_consistent": true,
+    "inconsistent_count": 0,
+    "per_type_inconsistency": {
+      "paraphrase": 0.0,
+      "synonym": 0.0,
+      "reorder": 0.0,
+      "format": 0.0,
+      "distractor": 0.0
+    },
+    "propagation_patterns": {
+      "late_diverge": 1,
+      "cascade": 1,
+      "consistent": 1,
+      "self_correct": 1,
+      "early_diverge": 1
+    }
+  },
+  "propagation_details": [
+    {
+      "divergence_step": 5,
+      "cascade_depth": 1,
+      "self_corrections": 0,
+      "propagation_pattern": "late_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.5833333333333334,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.6,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.625,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 4,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 5,
+          "thought_similarity": 0.1875,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 6,
+          "thought_similarity": 0.0,
+          "action_match": false,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 6,
+      "n_steps_variant": 5,
+      "perturbation_type": "paraphrase",
+      "variant_answer": "20"
+    },
+    {
+      "divergence_step": 6,
+      "cascade_depth": 4,
+      "self_corrections": 0,
+      "propagation_pattern": "cascade",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.8888888888888888,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 5,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 6,
+          "thought_similarity": 0.3793103448275862,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 7,
+          "thought_similarity": 0.0,
+          "action_match": false,
+          "is_divergent": true
+        },
+        {
+          "step": 8,
+          "thought_similarity": 0.0,
+          "action_match": false,
+          "is_divergent": true
+        },
+        {
+          "step": 9,
+          "thought_similarity": 0.0,
+          "action_match": false,
+          "is_divergent": true
+        },
+        {
+          "step": 10,
+          "thought_similarity": 0.0,
+          "action_match": false,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 6,
+      "n_steps_variant": 10,
+      "perturbation_type": "synonym",
+      "variant_answer": "20"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 4,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 5,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 6,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 6,
+      "n_steps_variant": 6,
+      "perturbation_type": "reorder",
+      "variant_answer": "20"
+    },
+    {
+      "divergence_step": 5,
+      "cascade_depth": 0,
+      "self_corrections": 1,
+      "propagation_pattern": "self_correct",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.875,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 4,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 5,
+          "thought_similarity": 0.2727272727272727,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 6,
+          "thought_similarity": 0.7419354838709677,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 6,
+      "n_steps_variant": 6,
+      "perturbation_type": "format",
+      "variant_answer": "20"
+    },
+    {
+      "divergence_step": 1,
+      "cascade_depth": 1,
+      "self_corrections": 1,
+      "propagation_pattern": "early_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.3333333333333333,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.45,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.47368421052631576,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.6153846153846154,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 5,
+          "thought_similarity": 0.047619047619047616,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 6,
+          "thought_similarity": 0.27586206896551724,
+          "action_match": true,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 6,
+      "n_steps_variant": 6,
+      "perturbation_type": "distractor",
+      "variant_answer": "20"
+    }
+  ],
+  "perturbation_variants": [
+    {
+      "perturbation_type": "paraphrase",
+      "variant_question": "How many days will it take Tom to finish a 260-page book if he reads 13 pages per day?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking for the same information and can be answered with the same calculation, despite the slight difference in wording and order of information provided. Both questions are ask"
+      },
+      "agent_run": {
+        "final_answer": "20",
+        "n_steps": 5,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve this problem, we will follow a step-by-step approach:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve this problem, we will follow a step-by-step approach:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "Identify the total number of pages in the book: 260 pages.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Identify the total number of pages in the book: 260 pages.",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "Identify the number of pages Tom reads per day: 13 pages.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Identify the number of pages Tom reads per day: 13 pages.",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "To find out how many days it will take Tom to finish the book, we need to divide the total number of pages by the number of pages he reads per day.",
+            "action": null,
+            "observation": null,
+            "raw_output": "To find out how many days it will take Tom to finish the book, we need to divide the total number of pages by the number of pages he reads per day.",
+            "is_final": false
+          },
+          {
+            "step": 5,
+            "thought": "Perform the division: \\( \\frac{260}{13} \\).\n\nLet's calculate the division:\n\n- \\( 260 \\div 13 = 20 \\).\n\nTherefore, it will take Tom 20 days to finish the 260-page book if he reads 13 pages per day.\n\nFinal Answer: 20",
+            "action": null,
+            "observation": null,
+            "raw_output": "Perform the division: \\( \\frac{260}{13} \\).\n\nLet's calculate the division:\n\n- \\( 260 \\div 13 = 20 \\).\n\nTherefore, it will take Tom 20 days to finish the 260-page book if he reads 13 pages per day.\n\nFinal Answer: 20",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "synonym",
+      "variant_question": "Tom peruses 13 pages per day. The book contains 260 pages. How many days will it take Tom to complete the book?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are phrased differently but use equivalent terms and the same numerical values, thus they would yield the same answer."
+      },
+      "agent_run": {
+        "final_answer": "20",
+        "n_steps": 10,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve this problem, we will follow these steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve this problem, we will follow these steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "Identify the total number of pages in the book, which is given as 260 pages.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Identify the total number of pages in the book, which is given as 260 pages.",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "Identify the number of pages Tom reads per day, which is given as 13 pages.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Identify the number of pages Tom reads per day, which is given as 13 pages.",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "To find out how many days it will take Tom to read the entire book, we need to divide the total number of pages by the number of pages he reads per day.",
+            "action": null,
+            "observation": null,
+            "raw_output": "To find out how many days it will take Tom to read the entire book, we need to divide the total number of pages by the number of pages he reads per day.",
+            "is_final": false
+          },
+          {
+            "step": 5,
+            "thought": "Perform the division: \\( \\frac{260}{13} \\).",
+            "action": null,
+            "observation": null,
+            "raw_output": "Perform the division: \\( \\frac{260}{13} \\).",
+            "is_final": false
+          },
+          {
+            "step": 6,
+            "thought": "Calculate the result of the division to find the number of days.\n\nLet's go through the calculation:",
+            "action": null,
+            "observation": null,
+            "raw_output": "Calculate the result of the division to find the number of days.\n\nLet's go through the calculation:",
+            "is_final": false
+          },
+          {
+            "step": 7,
+            "thought": "Total pages in the book = 260 pages.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Total pages in the book = 260 pages.",
+            "is_final": false
+          },
+          {
+            "step": 8,
+            "thought": "Pages read per day = 13 pages.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Pages read per day = 13 pages.",
+            "is_final": false
+          },
+          {
+            "step": 9,
+            "thought": "Number of days to read the book = \\( \\frac{260}{13} \\).",
+            "action": null,
+            "observation": null,
+            "raw_output": "Number of days to read the book = \\( \\frac{260}{13} \\).",
+            "is_final": false
+          },
+          {
+            "step": 10,
+            "thought": "Performing the division: \\( \\frac{260}{13} = 20 \\).\n\nTherefore, it will take Tom 20 days to complete the book.\n\nFinal Answer: 20",
+            "action": null,
+            "observation": null,
+            "raw_output": "Performing the division: \\( \\frac{260}{13} = 20 \\).\n\nTherefore, it will take Tom 20 days to complete the book.\n\nFinal Answer: 20",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "reorder",
+      "variant_question": "Tom reads 13 pages per day. The book has 260 pages. How many days will it take Tom to finish the book?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Variant identical to original (no-op); auto-equiv."
+      },
+      "agent_run": {
+        "final_answer": "20",
+        "n_steps": 6,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve this problem, we will follow these steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve this problem, we will follow these steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "Identify the total number of pages in the book, which is given as 260 pages.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Identify the total number of pages in the book, which is given as 260 pages.",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "Identify the number of pages Tom reads per day, which is given as 13 pages.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Identify the number of pages Tom reads per day, which is given as 13 pages.",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "To find out how many days it will take Tom to finish the book, we need to divide the total number of pages by the number of pages he reads per day.",
+            "action": null,
+            "observation": null,
+            "raw_output": "To find out how many days it will take Tom to finish the book, we need to divide the total number of pages by the number of pages he reads per day.",
+            "is_final": false
+          },
+          {
+            "step": 5,
+            "thought": "Perform the division: \\( \\frac{260}{13} \\).",
+            "action": null,
+            "observation": null,
+            "raw_output": "Perform the division: \\( \\frac{260}{13} \\).",
+            "is_final": false
+          },
+          {
+            "step": 6,
+            "thought": "Calculate the result of the division to find the number of days.\n\nLet's do the calculation:\n\n\\[ \\frac{260}{13} = 20 \\]\n\nSo, it will take Tom 20 days to finish the book.\n\nFinal Answer: 20",
+            "action": null,
+            "observation": null,
+            "raw_output": "Calculate the result of the division to find the number of days.\n\nLet's do the calculation:\n\n\\[ \\frac{260}{13} = 20 \\]\n\nSo, it will take Tom 20 days to finish the book.\n\nFinal Answer: 20",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "format",
+      "variant_question": "- Tom reads 13 pages per day.\n- The book has 260 pages.\nQuestion: How many days will it take Tom to finish the book?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (format; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "20",
+        "n_steps": 6,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve this problem, we will follow these steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve this problem, we will follow these steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "Identify the total number of pages in the book, which is given as 260 pages.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Identify the total number of pages in the book, which is given as 260 pages.",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "Identify the number of pages Tom reads per day, which is given as 13 pages per day.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Identify the number of pages Tom reads per day, which is given as 13 pages per day.",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "To find out how many days it will take Tom to finish the book, we need to divide the total number of pages by the number of pages he reads per day.",
+            "action": null,
+            "observation": null,
+            "raw_output": "To find out how many days it will take Tom to finish the book, we need to divide the total number of pages by the number of pages he reads per day.",
+            "is_final": false
+          },
+          {
+            "step": 5,
+            "thought": "Perform the division: 260 pages ÷ 13 pages/day.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Perform the division: 260 pages ÷ 13 pages/day.",
+            "is_final": false
+          },
+          {
+            "step": 6,
+            "thought": "Calculate the result of the division to find the number of days.\n\nLet's do the calculation:\n\n260 ÷ 13 = 20\n\nTherefore, it will take Tom 20 days to finish the book.\n\nFinal Answer: 20",
+            "action": null,
+            "observation": null,
+            "raw_output": "Calculate the result of the division to find the number of days.\n\nLet's do the calculation:\n\n260 ÷ 13 = 20\n\nTherefore, it will take Tom 20 days to finish the book.\n\nFinal Answer: 20",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "distractor",
+      "variant_question": "Note: the following sentence is unrelated to the question. Several other researchers had studied similar topics in the past decade. Now, tom reads 13 pages per day. The book has 260 pages. How many days will it take Tom to finish the book?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (distractor; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "20",
+        "n_steps": 6,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the problem of how many days it will take Tom to finish the book, we can follow these steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the problem of how many days it will take Tom to finish the book, we can follow these steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "Identify the total number of pages in the book. According to the problem, the book has 260 pages.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Identify the total number of pages in the book. According to the problem, the book has 260 pages.",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "Identify the number of pages Tom reads per day. The problem states that Tom reads 13 pages per day.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Identify the number of pages Tom reads per day. The problem states that Tom reads 13 pages per day.",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "To find out how many days it will take Tom to finish the book, we need to divide the total number of pages by the number of pages Tom reads per day. This can be expressed as:\n   \\[\n   \\text{Number of days} = \\frac{\\text{Total number of pages}}{\\text{Number of pages read per day}}\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "To find out how many days it will take Tom to finish the book, we need to divide the total number of pages by the number of pages Tom reads per day. This can be expressed as:\n   \\[\n   \\text{Number of days} = \\frac{\\text{Total number of pages}}{\\text{Number of pages read per day}}\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 5,
+            "thought": "Substitute the given values into the equation:\n   \\[\n   \\text{Number of days} = \\frac{260 \\text{ pages}}{13 \\text{ pages/day}}\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "Substitute the given values into the equation:\n   \\[\n   \\text{Number of days} = \\frac{260 \\text{ pages}}{13 \\text{ pages/day}}\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 6,
+            "thought": "Perform the division:\n   \\[\n   \\frac{260}{13} = 20\n   \\]\n\nFinal Answer: 20",
+            "action": null,
+            "observation": null,
+            "raw_output": "Perform the division:\n   \\[\n   \\frac{260}{13} = 20\n   \\]\n\nFinal Answer: 20",
+            "is_final": true
+          }
+        ]
+      }
+    }
+  ],
+  "patch_results": null,
+  "n_variants_generated": 5,
+  "n_variants_valid": 5,
+  "n_variants_rejected": 0,
+  "elapsed_seconds": 27.752923727035522
+}

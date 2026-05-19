@@ -1,0 +1,256 @@
+{
+  "sample_id": "hotpotqa_0002",
+  "agent_type": "direct",
+  "sample_question": "In what year did the scientist born in Warsaw win her first Nobel Prize?",
+  "sample_context": "Marie Curie discovered radium in 1898 while working in Paris. She was born Maria Sklodowska in Warsaw, Poland in 1867. Curie won the Nobel Prize in Physics in 1903 and the Nobel Prize in Chemistry in 1911.",
+  "sample_gold_answer": "1903",
+  "original_result": {
+    "final_answer": "1903",
+    "n_steps": 1,
+    "is_correct": true,
+    "trace": [
+      {
+        "step": 1,
+        "thought": "1903",
+        "action": null,
+        "observation": null,
+        "raw_output": "1903",
+        "is_final": true
+      }
+    ]
+  },
+  "consistency_analysis": {
+    "consistency_rate": 1.0,
+    "is_consistent": true,
+    "inconsistent_count": 0,
+    "per_type_inconsistency": {
+      "paraphrase": 0.0,
+      "synonym": 0.0,
+      "reorder": 0.0,
+      "format": 0.0,
+      "distractor": 0.0
+    },
+    "propagation_patterns": {
+      "consistent": 5
+    }
+  },
+  "propagation_details": [
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "paraphrase",
+      "variant_answer": "1903"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "synonym",
+      "variant_answer": "1903"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "reorder",
+      "variant_answer": "1903"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "format",
+      "variant_answer": "1903"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "distractor",
+      "variant_answer": "1903"
+    }
+  ],
+  "perturbation_variants": [
+    {
+      "perturbation_type": "paraphrase",
+      "variant_question": "Which year did the scientist born in Warsaw win her Nobel Prize for the first time?",
+      "variant_context": "Marie Curie discovered radium in 1898 while working in Paris. She was born Maria Sklodowska in Warsaw, Poland in 1867. Curie won the Nobel Prize in Physics in 1903 and the Nobel Prize in Chemistry in 1911.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking for the same information: the year a scientist born in Warsaw won her Nobel Prize for the first time. The minor differences in wording do not change the core of the quest"
+      },
+      "agent_run": {
+        "final_answer": "1903",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "1903",
+            "action": null,
+            "observation": null,
+            "raw_output": "1903",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "synonym",
+      "variant_question": "In what annum did the researcher born in Warsaw gain her initial Nobel Prize?",
+      "variant_context": "Marie Curie discovered radium in 1898 while working in Paris. She was born Maria Sklodowska in Warsaw, Poland in 1867. Curie won the Nobel Prize in Physics in 1903 and the Nobel Prize in Chemistry in 1911.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking for the same information: the year a scientist/researcher born in Warsaw won their first Nobel Prize. The use of \"annum\" instead of \"year\" and \"initial\" instead of \"first"
+      },
+      "agent_run": {
+        "final_answer": "1903",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "1903",
+            "action": null,
+            "observation": null,
+            "raw_output": "1903",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "reorder",
+      "variant_question": "In what year did the scientist born in Warsaw win her first Nobel Prize? Please reason step by step.",
+      "variant_context": "Marie Curie discovered radium in 1898 while working in Paris. She was born Maria Sklodowska in Warsaw, Poland in 1867. Curie won the Nobel Prize in Physics in 1903 and the Nobel Prize in Chemistry in 1911.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (reorder; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "1903",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "1903",
+            "action": null,
+            "observation": null,
+            "raw_output": "1903\n\nStep 1: Identify the scientist born in Warsaw - Marie Curie (born Maria Sklodowska).\nStep 2: Determine the years she won her Nobel Prizes - 1903 (Physics) and 1911 (Chemistry).\nStep 3: Identify the first Nobel Prize year - 1903.",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "format",
+      "variant_question": "> In what year did the scientist born in Warsaw win her first Nobel Prize?",
+      "variant_context": "• Marie Curie discovered radium in 1898 while working in Paris.\n• She was born Maria Sklodowska in Warsaw, Poland in 1867.\n• Curie won the Nobel Prize in Physics in 1903 and the Nobel Prize in Chemistry in 1911.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (format; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "1903",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "1903",
+            "action": null,
+            "observation": null,
+            "raw_output": "1903",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "distractor",
+      "variant_question": "Note: the following sentence is unrelated to the question. Several other researchers had studied similar topics in the past decade. Now, in what year did the scientist born in Warsaw win her first Nobel Prize?",
+      "variant_context": "Marie Curie discovered radium in 1898 while working in Paris. She was born Maria Sklodowska in Warsaw, Poland in 1867. Curie won the Nobel Prize in Physics in 1903 and the Nobel Prize in Chemistry in 1911. Several other researchers had studied similar topics in the past decade.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (distractor; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "1903",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "1903",
+            "action": null,
+            "observation": null,
+            "raw_output": "1903",
+            "is_final": true
+          }
+        ]
+      }
+    }
+  ],
+  "patch_results": null,
+  "n_variants_generated": 5,
+  "n_variants_valid": 5,
+  "n_variants_rejected": 0,
+  "elapsed_seconds": 5.821245908737183
+}

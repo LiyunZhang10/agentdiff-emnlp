@@ -1,0 +1,624 @@
+{
+  "sample_id": "math_0184",
+  "agent_type": "cot",
+  "sample_question": "If a rectangle has length 20 and width 11, what is its area?",
+  "sample_context": null,
+  "sample_gold_answer": "220",
+  "original_result": {
+    "final_answer": "220",
+    "n_steps": 6,
+    "is_correct": true,
+    "trace": [
+      {
+        "step": 1,
+        "thought": "To solve the problem of finding the area of a rectangle with a length of 20 and a width of 11, we can follow these steps:",
+        "action": null,
+        "observation": null,
+        "raw_output": "To solve the problem of finding the area of a rectangle with a length of 20 and a width of 11, we can follow these steps:",
+        "is_final": false
+      },
+      {
+        "step": 2,
+        "thought": "Recall the formula for the area of a rectangle. The area \\(A\\) of a rectangle is given by the product of its length \\(l\\) and its width \\(w\\). Mathematically, this is expressed as:\n   \\[\n   A = l \\times w\n   \\]",
+        "action": null,
+        "observation": null,
+        "raw_output": "Recall the formula for the area of a rectangle. The area \\(A\\) of a rectangle is given by the product of its length \\(l\\) and its width \\(w\\). Mathematically, this is expressed as:\n   \\[\n   A = l \\times w\n   \\]",
+        "is_final": false
+      },
+      {
+        "step": 3,
+        "thought": "Identify the given dimensions of the rectangle. The length \\(l\\) is 20, and the width \\(w\\) is 11.",
+        "action": null,
+        "observation": null,
+        "raw_output": "Identify the given dimensions of the rectangle. The length \\(l\\) is 20, and the width \\(w\\) is 11.",
+        "is_final": false
+      },
+      {
+        "step": 4,
+        "thought": "Substitute the given values into the formula for the area:\n   \\[\n   A = 20 \\times 11\n   \\]",
+        "action": null,
+        "observation": null,
+        "raw_output": "Substitute the given values into the formula for the area:\n   \\[\n   A = 20 \\times 11\n   \\]",
+        "is_final": false
+      },
+      {
+        "step": 5,
+        "thought": "Perform the multiplication:\n   \\[\n   20 \\times 11 = 220\n   \\]",
+        "action": null,
+        "observation": null,
+        "raw_output": "Perform the multiplication:\n   \\[\n   20 \\times 11 = 220\n   \\]",
+        "is_final": false
+      },
+      {
+        "step": 6,
+        "thought": "Conclude that the area of the rectangle is 220 square units.\n\nFinal Answer: 220",
+        "action": null,
+        "observation": null,
+        "raw_output": "Conclude that the area of the rectangle is 220 square units.\n\nFinal Answer: 220",
+        "is_final": true
+      }
+    ]
+  },
+  "consistency_analysis": {
+    "consistency_rate": 1.0,
+    "is_consistent": true,
+    "inconsistent_count": 0,
+    "per_type_inconsistency": {
+      "paraphrase": 0.0,
+      "synonym": 0.0,
+      "reorder": 0.0,
+      "format": 0.0,
+      "distractor": 0.0
+    },
+    "propagation_patterns": {
+      "early_diverge": 1,
+      "cascade": 1,
+      "consistent": 3
+    }
+  },
+  "propagation_details": [
+    {
+      "divergence_step": 1,
+      "cascade_depth": 5,
+      "self_corrections": 0,
+      "propagation_pattern": "early_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.35135135135135137,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.20588235294117646,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.07692307692307693,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.35,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 5,
+          "thought_similarity": 0.0,
+          "action_match": false,
+          "is_divergent": true
+        },
+        {
+          "step": 6,
+          "thought_similarity": 0.0,
+          "action_match": false,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 6,
+      "n_steps_variant": 4,
+      "perturbation_type": "paraphrase",
+      "variant_answer": "220"
+    },
+    {
+      "divergence_step": 3,
+      "cascade_depth": 3,
+      "self_corrections": 0,
+      "propagation_pattern": "cascade",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.6666666666666666,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.5555555555555556,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.16129032258064516,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.3888888888888889,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 5,
+          "thought_similarity": 0.1,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 6,
+          "thought_similarity": 0.0,
+          "action_match": false,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 6,
+      "n_steps_variant": 5,
+      "perturbation_type": "synonym",
+      "variant_answer": "220"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 4,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 5,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 6,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 6,
+      "n_steps_variant": 6,
+      "perturbation_type": "reorder",
+      "variant_answer": "220"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 4,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 5,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 6,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 6,
+      "n_steps_variant": 6,
+      "perturbation_type": "format",
+      "variant_answer": "220"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.8181818181818182,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.6666666666666666,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.75,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 5,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 6,
+          "thought_similarity": 0.7692307692307693,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 6,
+      "n_steps_variant": 6,
+      "perturbation_type": "distractor",
+      "variant_answer": "220"
+    }
+  ],
+  "perturbation_variants": [
+    {
+      "perturbation_type": "paraphrase",
+      "variant_question": "What is the area of a rectangle with length 20 and width 11?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking for the same information and would yield the same answer. The only difference is in the wording and the order in which the information is presented, which does not affect"
+      },
+      "agent_run": {
+        "final_answer": "220",
+        "n_steps": 4,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To find the area of a rectangle, we use the formula:\n\n\\[ \\text{Area} = \\text{length} \\times \\text{width} \\]\n\nGiven the length is 20 and the width is 11, we can substitute these values into the formula.",
+            "action": null,
+            "observation": null,
+            "raw_output": "To find the area of a rectangle, we use the formula:\n\n\\[ \\text{Area} = \\text{length} \\times \\text{width} \\]\n\nGiven the length is 20 and the width is 11, we can substitute these values into the formula.",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "Identify the length and width of the rectangle.\n- Length = 20\n- Width = 11",
+            "action": null,
+            "observation": null,
+            "raw_output": "Identify the length and width of the rectangle.\n- Length = 20\n- Width = 11",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "Substitute the given values into the area formula.\n\\[ \\text{Area} = 20 \\times 11 \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "Substitute the given values into the area formula.\n\\[ \\text{Area} = 20 \\times 11 \\]",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "Perform the multiplication.\n\\[ 20 \\times 11 = 220 \\]\n\nFinal Answer: 220",
+            "action": null,
+            "observation": null,
+            "raw_output": "Perform the multiplication.\n\\[ 20 \\times 11 = 220 \\]\n\nFinal Answer: 220",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "synonym",
+      "variant_question": "If a rectangle possesses length 20 and breadth 11, what is its extent?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe terms \"width\" and \"breadth\" are synonymous in this context, and \"area\" and \"extent\" can be considered equivalent when referring to the measurement of a rectangle's space. Thus, both questions"
+      },
+      "agent_run": {
+        "final_answer": "220",
+        "n_steps": 5,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the problem of finding the extent (area) of a rectangle with given length and breadth, we can follow these steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the problem of finding the extent (area) of a rectangle with given length and breadth, we can follow these steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "Identify the formula for the area of a rectangle. The area \\( A \\) of a rectangle is given by the product of its length \\( l \\) and breadth \\( b \\):\n   \\[\n   A = l \\times b\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "Identify the formula for the area of a rectangle. The area \\( A \\) of a rectangle is given by the product of its length \\( l \\) and breadth \\( b \\):\n   \\[\n   A = l \\times b\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "Substitute the given values into the formula. The length \\( l \\) is 20 and the breadth \\( b \\) is 11:\n   \\[\n   A = 20 \\times 11\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "Substitute the given values into the formula. The length \\( l \\) is 20 and the breadth \\( b \\) is 11:\n   \\[\n   A = 20 \\times 11\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "Perform the multiplication:\n   \\[\n   20 \\times 11 = 220\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "Perform the multiplication:\n   \\[\n   20 \\times 11 = 220\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 5,
+            "thought": "Conclude that the area of the rectangle is 220 square units.\n\nFinal Answer: 220",
+            "action": null,
+            "observation": null,
+            "raw_output": "Conclude that the area of the rectangle is 220 square units.\n\nFinal Answer: 220",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "reorder",
+      "variant_question": "If a rectangle has length 20 and width 11, what is its area? Please reason step by step.",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (reorder; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "220",
+        "n_steps": 6,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the problem of finding the area of a rectangle with a length of 20 and a width of 11, we can follow these steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the problem of finding the area of a rectangle with a length of 20 and a width of 11, we can follow these steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "Recall the formula for the area of a rectangle. The area \\(A\\) of a rectangle is given by the product of its length \\(l\\) and its width \\(w\\). Mathematically, this is expressed as:\n   \\[\n   A = l \\times w\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "Recall the formula for the area of a rectangle. The area \\(A\\) of a rectangle is given by the product of its length \\(l\\) and its width \\(w\\). Mathematically, this is expressed as:\n   \\[\n   A = l \\times w\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "Identify the given dimensions of the rectangle. The length \\(l\\) is 20, and the width \\(w\\) is 11.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Identify the given dimensions of the rectangle. The length \\(l\\) is 20, and the width \\(w\\) is 11.",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "Substitute the given values into the formula for the area:\n   \\[\n   A = 20 \\times 11\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "Substitute the given values into the formula for the area:\n   \\[\n   A = 20 \\times 11\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 5,
+            "thought": "Perform the multiplication:\n   \\[\n   20 \\times 11 = 220\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "Perform the multiplication:\n   \\[\n   20 \\times 11 = 220\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 6,
+            "thought": "Conclude that the area of the rectangle is 220 square units.\n\nFinal Answer: 220",
+            "action": null,
+            "observation": null,
+            "raw_output": "Conclude that the area of the rectangle is 220 square units.\n\nFinal Answer: 220",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "format",
+      "variant_question": "> If a rectangle has length 20 and width 11, what is its area?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (format; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "220",
+        "n_steps": 6,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the problem of finding the area of a rectangle with a length of 20 and a width of 11, we can follow these steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the problem of finding the area of a rectangle with a length of 20 and a width of 11, we can follow these steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "Recall the formula for the area of a rectangle. The area \\(A\\) of a rectangle is given by the product of its length \\(l\\) and its width \\(w\\). Mathematically, this is expressed as:\n   \\[\n   A = l \\times w\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "Recall the formula for the area of a rectangle. The area \\(A\\) of a rectangle is given by the product of its length \\(l\\) and its width \\(w\\). Mathematically, this is expressed as:\n   \\[\n   A = l \\times w\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "Identify the given dimensions of the rectangle. The length \\(l\\) is 20, and the width \\(w\\) is 11.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Identify the given dimensions of the rectangle. The length \\(l\\) is 20, and the width \\(w\\) is 11.",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "Substitute the given values into the formula for the area:\n   \\[\n   A = 20 \\times 11\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "Substitute the given values into the formula for the area:\n   \\[\n   A = 20 \\times 11\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 5,
+            "thought": "Perform the multiplication:\n   \\[\n   20 \\times 11 = 220\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "Perform the multiplication:\n   \\[\n   20 \\times 11 = 220\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 6,
+            "thought": "Conclude that the area of the rectangle is 220 square units.\n\nFinal Answer: 220",
+            "action": null,
+            "observation": null,
+            "raw_output": "Conclude that the area of the rectangle is 220 square units.\n\nFinal Answer: 220",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "distractor",
+      "variant_question": "Note: the following sentence is unrelated to the question. Meanwhile, advances in technology continued to reshape daily life. Now, if a rectangle has length 20 and width 11, what is its area?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (distractor; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "220",
+        "n_steps": 6,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the problem of finding the area of a rectangle with a length of 20 and a width of 11, we can follow these steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the problem of finding the area of a rectangle with a length of 20 and a width of 11, we can follow these steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "Recall the formula for the area of a rectangle. The area \\( A \\) of a rectangle is given by the product of its length \\( l \\) and its width \\( w \\). Mathematically, this is expressed as:\n   \\[\n   A = l \\times w\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "Recall the formula for the area of a rectangle. The area \\( A \\) of a rectangle is given by the product of its length \\( l \\) and its width \\( w \\). Mathematically, this is expressed as:\n   \\[\n   A = l \\times w\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "Identify the given dimensions of the rectangle. The length \\( l \\) is 20, and the width \\( w \\) is 11.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Identify the given dimensions of the rectangle. The length \\( l \\) is 20, and the width \\( w \\) is 11.",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "Substitute the given values into the formula:\n   \\[\n   A = 20 \\times 11\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "Substitute the given values into the formula:\n   \\[\n   A = 20 \\times 11\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 5,
+            "thought": "Perform the multiplication:\n   \\[\n   20 \\times 11 = 220\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "Perform the multiplication:\n   \\[\n   20 \\times 11 = 220\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 6,
+            "thought": "Therefore, the area of the rectangle is 220 square units.\n\nFinal Answer: 220",
+            "action": null,
+            "observation": null,
+            "raw_output": "Therefore, the area of the rectangle is 220 square units.\n\nFinal Answer: 220",
+            "is_final": true
+          }
+        ]
+      }
+    }
+  ],
+  "patch_results": null,
+  "n_variants_generated": 5,
+  "n_variants_valid": 5,
+  "n_variants_rejected": 0,
+  "elapsed_seconds": 28.43963074684143
+}

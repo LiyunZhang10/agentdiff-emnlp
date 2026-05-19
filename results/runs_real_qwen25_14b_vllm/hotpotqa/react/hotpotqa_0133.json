@@ -1,0 +1,338 @@
+{
+  "sample_id": "hotpotqa_0133",
+  "agent_type": "react",
+  "sample_question": "In which city was the creator of On the Origin of Species born?",
+  "sample_context": "Charles Darwin was born in Shrewsbury, England in 1809. Charles Darwin created On the Origin of Species in 1859. Meanwhile, Isaac Newton was working on similar topics in England.",
+  "sample_gold_answer": "Shrewsbury",
+  "original_result": {
+    "final_answer": "Shrewsbury",
+    "n_steps": 2,
+    "is_correct": true,
+    "trace": [
+      {
+        "step": 1,
+        "input_length": 1128,
+        "thought": "I need to find out the birthplace of Charles Darwin, who created On the Origin of Species.",
+        "action": "search(\"Charles Darwin birthplace\")",
+        "observation": "Charles Darwin was born in Shrewsbury, England in 1809. Charles Darwin created On the Origin of Species in 1859. Meanwhile, Isaac Newton was working on similar topics in England.",
+        "raw_output": "Thought: I need to find out the birthplace of Charles Darwin, who created On the Origin of Species.\nAction: search(\"Charles Darwin birthplace\")",
+        "is_final": false
+      },
+      {
+        "step": 2,
+        "input_length": 1465,
+        "thought": "The search result directly provides the birthplace of Charles Darwin.",
+        "action": null,
+        "observation": null,
+        "raw_output": "Thought: The search result directly provides the birthplace of Charles Darwin.\nFinal Answer: Shrewsbury",
+        "is_final": true
+      }
+    ]
+  },
+  "consistency_analysis": {
+    "consistency_rate": 1.0,
+    "is_consistent": true,
+    "inconsistent_count": 0,
+    "per_type_inconsistency": {
+      "paraphrase": 0.0,
+      "synonym": 0.0,
+      "reorder": 0.0,
+      "format": 0.0,
+      "distractor": 0.0
+    },
+    "propagation_patterns": {
+      "early_diverge": 4,
+      "late_diverge": 1
+    }
+  },
+  "propagation_details": [
+    {
+      "divergence_step": 1,
+      "cascade_depth": 1,
+      "self_corrections": 0,
+      "propagation_pattern": "early_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.6470588235294118,
+          "action_match": false,
+          "is_divergent": true
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.23529411764705882,
+          "action_match": true,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 2,
+      "n_steps_variant": 2,
+      "perturbation_type": "paraphrase",
+      "variant_answer": "Shrewsbury"
+    },
+    {
+      "divergence_step": 1,
+      "cascade_depth": 1,
+      "self_corrections": 0,
+      "propagation_pattern": "early_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.8235294117647058,
+          "action_match": false,
+          "is_divergent": true
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.23529411764705882,
+          "action_match": true,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 2,
+      "n_steps_variant": 2,
+      "perturbation_type": "synonym",
+      "variant_answer": "Shrewsbury"
+    },
+    {
+      "divergence_step": 1,
+      "cascade_depth": 1,
+      "self_corrections": 0,
+      "propagation_pattern": "early_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.3333333333333333,
+          "action_match": false,
+          "is_divergent": true
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.0,
+          "action_match": false,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 2,
+      "n_steps_variant": 1,
+      "perturbation_type": "reorder",
+      "variant_answer": "Shrewsbury"
+    },
+    {
+      "divergence_step": 2,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "late_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.23529411764705882,
+          "action_match": true,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 2,
+      "n_steps_variant": 2,
+      "perturbation_type": "format",
+      "variant_answer": "Shrewsbury"
+    },
+    {
+      "divergence_step": 1,
+      "cascade_depth": 1,
+      "self_corrections": 0,
+      "propagation_pattern": "early_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.55,
+          "action_match": false,
+          "is_divergent": true
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.17647058823529413,
+          "action_match": true,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 2,
+      "n_steps_variant": 2,
+      "perturbation_type": "distractor",
+      "variant_answer": "Shrewsbury"
+    }
+  ],
+  "perturbation_variants": [
+    {
+      "perturbation_type": "paraphrase",
+      "variant_question": "Where was the author of On the Origin of Species born in terms of city?",
+      "variant_context": "Charles Darwin was born in Shrewsbury, England in 1809. Charles Darwin created On the Origin of Species in 1859. Meanwhile, Isaac Newton was working on similar topics in England.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking for the same information: the city of birth of the author of \"On the Origin of Species.\" The minor differences in wording do not change the core of the question or the ex"
+      },
+      "agent_run": {
+        "final_answer": "Shrewsbury",
+        "n_steps": 2,
+        "trace": [
+          {
+            "step": 1,
+            "input_length": 1136,
+            "thought": "I need to confirm the birthplace of Charles Darwin, the author of On the Origin of Species.",
+            "action": "search(\"birthplace of Charles Darwin\")",
+            "observation": "Charles Darwin created On the Origin of Species in 1859. Charles Darwin was born in Shrewsbury, England in 1809. Meanwhile, Isaac Newton was working on similar topics in England.",
+            "raw_output": "Thought: I need to confirm the birthplace of Charles Darwin, the author of On the Origin of Species.\nAction: search(\"birthplace of Charles Darwin\")",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "input_length": 1477,
+            "thought": "The search result confirms that Charles Darwin was born in Shrewsbury, England.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Thought: The search result confirms that Charles Darwin was born in Shrewsbury, England.\nFinal Answer: Shrewsbury",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "synonym",
+      "variant_question": "In which metropolis was the originator of On the Origin of Species born?",
+      "variant_context": "Charles Darwin was born in Shrewsbury, England in 1809. Charles Darwin created On the Origin of Species in 1859. Meanwhile, Isaac Newton was working on similar topics in England.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe wording in Question B uses \"metropolis\" instead of \"city\" and \"originator\" instead of \"creator,\" but these are minor variations that do not change the core meaning or the answer. Both questio"
+      },
+      "agent_run": {
+        "final_answer": "Shrewsbury",
+        "n_steps": 2,
+        "trace": [
+          {
+            "step": 1,
+            "input_length": 1137,
+            "thought": "I need to find out the birthplace of Charles Darwin, who is the originator of On the Origin of Species.",
+            "action": "search(\"birthplace of Charles Darwin\")",
+            "observation": "Charles Darwin created On the Origin of Species in 1859. Charles Darwin was born in Shrewsbury, England in 1809. Meanwhile, Isaac Newton was working on similar topics in England.",
+            "raw_output": "Thought: I need to find out the birthplace of Charles Darwin, who is the originator of On the Origin of Species.\nAction: search(\"birthplace of Charles Darwin\")",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "input_length": 1490,
+            "thought": "The search result confirms that Charles Darwin was born in Shrewsbury, England.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Thought: The search result confirms that Charles Darwin was born in Shrewsbury, England.\nFinal Answer: Shrewsbury",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "reorder",
+      "variant_question": "In which city was the creator of On the Origin of Species born? Please reason step by step.",
+      "variant_context": "Charles Darwin was born in Shrewsbury, England in 1809. Charles Darwin created On the Origin of Species in 1859. Meanwhile, Isaac Newton was working on similar topics in England.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (reorder; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "Shrewsbury",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "input_length": 1156,
+            "thought": "I know Charles Darwin created On the Origin of Species and I have been given the birthplace of Charles Darwin. I don't need to use any tools for this question.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Thought: I know Charles Darwin created On the Origin of Species and I have been given the birthplace of Charles Darwin. I don't need to use any tools for this question.\nFinal Answer: Shrewsbury",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "format",
+      "variant_question": "> In which city was the creator of On the Origin of Species born?",
+      "variant_context": "• Charles Darwin was born in Shrewsbury, England in 1809.\n• Charles Darwin created On the Origin of Species in 1859.\n• Meanwhile, Isaac Newton was working on similar topics in England.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (format; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "Shrewsbury",
+        "n_steps": 2,
+        "trace": [
+          {
+            "step": 1,
+            "input_length": 1136,
+            "thought": "I need to find out the birthplace of Charles Darwin, who created On the Origin of Species.",
+            "action": "search(\"Charles Darwin birthplace\")",
+            "observation": "• Charles Darwin was born in Shrewsbury, England in 1809. • Charles Darwin created On the Origin of Species in 1859. • Meanwhile, Isaac Newton was working on similar topics in England.",
+            "raw_output": "Thought: I need to find out the birthplace of Charles Darwin, who created On the Origin of Species.\nAction: search(\"Charles Darwin birthplace\")",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "input_length": 1479,
+            "thought": "The search result confirms that Charles Darwin was born in Shrewsbury, England.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Thought: The search result confirms that Charles Darwin was born in Shrewsbury, England.\nFinal Answer: Shrewsbury",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "distractor",
+      "variant_question": "Note: the following sentence is unrelated to the question. The weather that day was particularly sunny with clear skies. Now, in which city was the creator of On the Origin of Species born?",
+      "variant_context": "Charles Darwin was born in Shrewsbury, England in 1809. Charles Darwin created On the Origin of Species in 1859. Meanwhile, Isaac Newton was working on similar topics in England. The weather that day was particularly sunny with clear skies.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (distractor; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "Shrewsbury",
+        "n_steps": 2,
+        "trace": [
+          {
+            "step": 1,
+            "input_length": 1316,
+            "thought": "I need to find out the birthplace of the creator of On the Origin of Species, which is Charles Darwin.",
+            "action": "lookup(Charles Darwin)",
+            "observation": "Charles Darwin was born in Shrewsbury, England in 1809. Charles Darwin created On the Origin of Species in 1859. The weather that day was particularly sunny with clear skies.",
+            "raw_output": "Thought: I need to find out the birthplace of the creator of On the Origin of Species, which is Charles Darwin.\nAction: lookup(Charles Darwin)",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "input_length": 1648,
+            "thought": "The information about Charles Darwin's birthplace is already provided in the observation.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Thought: The information about Charles Darwin's birthplace is already provided in the observation.\nFinal Answer: Shrewsbury",
+            "is_final": true
+          }
+        ]
+      }
+    }
+  ],
+  "patch_results": null,
+  "n_variants_generated": 5,
+  "n_variants_valid": 5,
+  "n_variants_rejected": 0,
+  "elapsed_seconds": 11.877718687057495
+}

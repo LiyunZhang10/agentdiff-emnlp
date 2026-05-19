@@ -1,0 +1,682 @@
+{
+  "sample_id": "math_0119",
+  "agent_type": "cot",
+  "sample_question": "What is the sum of the first 11 positive integers?",
+  "sample_context": null,
+  "sample_gold_answer": "66",
+  "original_result": {
+    "final_answer": "66",
+    "n_steps": 6,
+    "is_correct": true,
+    "trace": [
+      {
+        "step": 1,
+        "thought": "To find the sum of the first 11 positive integers, we can use the formula for the sum of the first \\(n\\) positive integers, which is given by:\n\n\\[ S = \\frac{n(n + 1)}{2} \\]\n\nwhere \\(S\\) is the sum and \\(n\\) is the number of terms.",
+        "action": null,
+        "observation": null,
+        "raw_output": "To find the sum of the first 11 positive integers, we can use the formula for the sum of the first \\(n\\) positive integers, which is given by:\n\n\\[ S = \\frac{n(n + 1)}{2} \\]\n\nwhere \\(S\\) is the sum and \\(n\\) is the number of terms.",
+        "is_final": false
+      },
+      {
+        "step": 2,
+        "thought": "Identify the value of \\(n\\).\nIn this case, \\(n = 11\\), as we are looking for the sum of the first 11 positive integers.",
+        "action": null,
+        "observation": null,
+        "raw_output": "Identify the value of \\(n\\).\nIn this case, \\(n = 11\\), as we are looking for the sum of the first 11 positive integers.",
+        "is_final": false
+      },
+      {
+        "step": 3,
+        "thought": "Substitute \\(n = 11\\) into the formula.\n\\[ S = \\frac{11(11 + 1)}{2} \\]",
+        "action": null,
+        "observation": null,
+        "raw_output": "Substitute \\(n = 11\\) into the formula.\n\\[ S = \\frac{11(11 + 1)}{2} \\]",
+        "is_final": false
+      },
+      {
+        "step": 4,
+        "thought": "Simplify the expression inside the parentheses.\n\\[ S = \\frac{11 \\times 12}{2} \\]",
+        "action": null,
+        "observation": null,
+        "raw_output": "Simplify the expression inside the parentheses.\n\\[ S = \\frac{11 \\times 12}{2} \\]",
+        "is_final": false
+      },
+      {
+        "step": 5,
+        "thought": "Multiply 11 by 12.\n\\[ S = \\frac{132}{2} \\]",
+        "action": null,
+        "observation": null,
+        "raw_output": "Multiply 11 by 12.\n\\[ S = \\frac{132}{2} \\]",
+        "is_final": false
+      },
+      {
+        "step": 6,
+        "thought": "Divide 132 by 2.\n\\[ S = 66 \\]\n\nFinal Answer: 66",
+        "action": null,
+        "observation": null,
+        "raw_output": "Divide 132 by 2.\n\\[ S = 66 \\]\n\nFinal Answer: 66",
+        "is_final": true
+      }
+    ]
+  },
+  "consistency_analysis": {
+    "consistency_rate": 1.0,
+    "is_consistent": true,
+    "inconsistent_count": 0,
+    "per_type_inconsistency": {
+      "paraphrase": 0.0,
+      "synonym": 0.0,
+      "reorder": 0.0,
+      "format": 0.0,
+      "distractor": 0.0
+    },
+    "propagation_patterns": {
+      "early_diverge": 3,
+      "consistent": 1,
+      "self_correct": 1
+    }
+  },
+  "propagation_details": [
+    {
+      "divergence_step": 1,
+      "cascade_depth": 7,
+      "self_corrections": 0,
+      "propagation_pattern": "early_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.23684210526315788,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.17142857142857143,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.14705882352941177,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.07692307692307693,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 5,
+          "thought_similarity": 0.10526315789473684,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 6,
+          "thought_similarity": 0.045454545454545456,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 7,
+          "thought_similarity": 0.0,
+          "action_match": false,
+          "is_divergent": true
+        },
+        {
+          "step": 8,
+          "thought_similarity": 0.0,
+          "action_match": false,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 6,
+      "n_steps_variant": 8,
+      "perturbation_type": "paraphrase",
+      "variant_answer": "66"
+    },
+    {
+      "divergence_step": 1,
+      "cascade_depth": 6,
+      "self_corrections": 0,
+      "propagation_pattern": "early_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.20512820512820512,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.1388888888888889,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.1,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.07692307692307693,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 5,
+          "thought_similarity": 0.10526315789473684,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 6,
+          "thought_similarity": 0.16666666666666666,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 7,
+          "thought_similarity": 0.0,
+          "action_match": false,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 6,
+      "n_steps_variant": 7,
+      "perturbation_type": "synonym",
+      "variant_answer": "66"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 4,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 5,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 6,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 6,
+      "n_steps_variant": 6,
+      "perturbation_type": "reorder",
+      "variant_answer": "66"
+    },
+    {
+      "divergence_step": 2,
+      "cascade_depth": 0,
+      "self_corrections": 1,
+      "propagation_pattern": "self_correct",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.8235294117647058,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.375,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.6470588235294118,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 4,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 5,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 6,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 6,
+      "n_steps_variant": 6,
+      "perturbation_type": "format",
+      "variant_answer": "66"
+    },
+    {
+      "divergence_step": 1,
+      "cascade_depth": 5,
+      "self_corrections": 0,
+      "propagation_pattern": "early_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.2702702702702703,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.17142857142857143,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.1724137931034483,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.08333333333333333,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 5,
+          "thought_similarity": 0.19230769230769232,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 6,
+          "thought_similarity": 0.0,
+          "action_match": false,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 6,
+      "n_steps_variant": 5,
+      "perturbation_type": "distractor",
+      "variant_answer": "66"
+    }
+  ],
+  "perturbation_variants": [
+    {
+      "perturbation_type": "paraphrase",
+      "variant_question": "What would be the total of the first 11 positive integers?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking for the same information: the sum of the first 11 positive integers. The wording difference between \"sum\" and \"total\" does not change the meaning or the answer."
+      },
+      "agent_run": {
+        "final_answer": "66",
+        "n_steps": 8,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the problem of finding the total of the first 11 positive integers, we can follow these steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the problem of finding the total of the first 11 positive integers, we can follow these steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "Identify the first 11 positive integers. These are: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, and 11.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Identify the first 11 positive integers. These are: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, and 11.",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "Recognize that the sum of the first n positive integers can be calculated using the formula: \\( S = \\frac{n(n + 1)}{2} \\), where \\( n \\) is the number of terms.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Recognize that the sum of the first n positive integers can be calculated using the formula: \\( S = \\frac{n(n + 1)}{2} \\), where \\( n \\) is the number of terms.",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "Substitute \\( n = 11 \\) into the formula to find the sum of the first 11 positive integers.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Substitute \\( n = 11 \\) into the formula to find the sum of the first 11 positive integers.",
+            "is_final": false
+          },
+          {
+            "step": 5,
+            "thought": "Calculate the value of the expression: \\( S = \\frac{11(11 + 1)}{2} \\).",
+            "action": null,
+            "observation": null,
+            "raw_output": "Calculate the value of the expression: \\( S = \\frac{11(11 + 1)}{2} \\).",
+            "is_final": false
+          },
+          {
+            "step": 6,
+            "thought": "Simplify the expression inside the parentheses: \\( 11 + 1 = 12 \\).",
+            "action": null,
+            "observation": null,
+            "raw_output": "Simplify the expression inside the parentheses: \\( 11 + 1 = 12 \\).",
+            "is_final": false
+          },
+          {
+            "step": 7,
+            "thought": "Multiply 11 by 12: \\( 11 \\times 12 = 132 \\).",
+            "action": null,
+            "observation": null,
+            "raw_output": "Multiply 11 by 12: \\( 11 \\times 12 = 132 \\).",
+            "is_final": false
+          },
+          {
+            "step": 8,
+            "thought": "Divide the result by 2: \\( \\frac{132}{2} = 66 \\).\n\nFinal Answer: 66",
+            "action": null,
+            "observation": null,
+            "raw_output": "Divide the result by 2: \\( \\frac{132}{2} = 66 \\).\n\nFinal Answer: 66",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "synonym",
+      "variant_question": "What is the total of the first 11 positive numbers?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking for the same mathematical operation: the sum of the first 11 positive integers. The wording difference between \"sum\" and \"total\" does not change the meaning or the answer"
+      },
+      "agent_run": {
+        "final_answer": "66",
+        "n_steps": 7,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the problem of finding the total of the first 11 positive numbers, we can follow these steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the problem of finding the total of the first 11 positive numbers, we can follow these steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "Identify the first 11 positive numbers. These are: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, and 11.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Identify the first 11 positive numbers. These are: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, and 11.",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "Recognize that the sum of the first n positive numbers can be calculated using the formula for the sum of an arithmetic series, which is \\( S_n = \\frac{n(n + 1)}{2} \\), where \\( n \\) is the number of terms.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Recognize that the sum of the first n positive numbers can be calculated using the formula for the sum of an arithmetic series, which is \\( S_n = \\frac{n(n + 1)}{2} \\), where \\( n \\) is the number of terms.",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "In this case, \\( n = 11 \\). Substitute 11 into the formula: \\( S_{11} = \\frac{11(11 + 1)}{2} \\).",
+            "action": null,
+            "observation": null,
+            "raw_output": "In this case, \\( n = 11 \\). Substitute 11 into the formula: \\( S_{11} = \\frac{11(11 + 1)}{2} \\).",
+            "is_final": false
+          },
+          {
+            "step": 5,
+            "thought": "Simplify the expression inside the parentheses: \\( 11 + 1 = 12 \\).",
+            "action": null,
+            "observation": null,
+            "raw_output": "Simplify the expression inside the parentheses: \\( 11 + 1 = 12 \\).",
+            "is_final": false
+          },
+          {
+            "step": 6,
+            "thought": "Multiply 11 by 12: \\( 11 \\times 12 = 132 \\).",
+            "action": null,
+            "observation": null,
+            "raw_output": "Multiply 11 by 12: \\( 11 \\times 12 = 132 \\).",
+            "is_final": false
+          },
+          {
+            "step": 7,
+            "thought": "Divide the result by 2: \\( \\frac{132}{2} = 66 \\).\n\nFinal Answer: 66",
+            "action": null,
+            "observation": null,
+            "raw_output": "Divide the result by 2: \\( \\frac{132}{2} = 66 \\).\n\nFinal Answer: 66",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "reorder",
+      "variant_question": "What is the sum of the first 11 positive integers? Please reason step by step.",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (reorder; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "66",
+        "n_steps": 6,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To find the sum of the first 11 positive integers, we can use the formula for the sum of the first \\(n\\) positive integers, which is given by:\n\n\\[ S = \\frac{n(n + 1)}{2} \\]\n\nwhere \\(S\\) is the sum and \\(n\\) is the number of terms.",
+            "action": null,
+            "observation": null,
+            "raw_output": "To find the sum of the first 11 positive integers, we can use the formula for the sum of the first \\(n\\) positive integers, which is given by:\n\n\\[ S = \\frac{n(n + 1)}{2} \\]\n\nwhere \\(S\\) is the sum and \\(n\\) is the number of terms.",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "Identify the value of \\(n\\).\nIn this case, \\(n = 11\\), as we are looking for the sum of the first 11 positive integers.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Identify the value of \\(n\\).\nIn this case, \\(n = 11\\), as we are looking for the sum of the first 11 positive integers.",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "Substitute \\(n = 11\\) into the formula.\n\\[ S = \\frac{11(11 + 1)}{2} \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "Substitute \\(n = 11\\) into the formula.\n\\[ S = \\frac{11(11 + 1)}{2} \\]",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "Simplify the expression inside the parentheses.\n\\[ S = \\frac{11 \\times 12}{2} \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "Simplify the expression inside the parentheses.\n\\[ S = \\frac{11 \\times 12}{2} \\]",
+            "is_final": false
+          },
+          {
+            "step": 5,
+            "thought": "Multiply 11 by 12.\n\\[ S = \\frac{132}{2} \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "Multiply 11 by 12.\n\\[ S = \\frac{132}{2} \\]",
+            "is_final": false
+          },
+          {
+            "step": 6,
+            "thought": "Divide 132 by 2.\n\\[ S = 66 \\]\n\nFinal Answer: 66",
+            "action": null,
+            "observation": null,
+            "raw_output": "Divide 132 by 2.\n\\[ S = 66 \\]\n\nFinal Answer: 66",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "format",
+      "variant_question": "> What is the sum of the first 11 positive integers?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (format; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "66",
+        "n_steps": 6,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To find the sum of the first 11 positive integers, we can use the formula for the sum of the first \\( n \\) positive integers, which is given by:\n\n\\[ S = \\frac{n(n + 1)}{2} \\]\n\nwhere \\( n \\) is the number of terms.",
+            "action": null,
+            "observation": null,
+            "raw_output": "To find the sum of the first 11 positive integers, we can use the formula for the sum of the first \\( n \\) positive integers, which is given by:\n\n\\[ S = \\frac{n(n + 1)}{2} \\]\n\nwhere \\( n \\) is the number of terms.",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "Identify the value of \\( n \\).\nIn this case, \\( n = 11 \\).",
+            "action": null,
+            "observation": null,
+            "raw_output": "Identify the value of \\( n \\).\nIn this case, \\( n = 11 \\).",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "Substitute \\( n = 11 \\) into the formula.\n\\[ S = \\frac{11(11 + 1)}{2} \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "Substitute \\( n = 11 \\) into the formula.\n\\[ S = \\frac{11(11 + 1)}{2} \\]",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "Simplify the expression inside the parentheses.\n\\[ S = \\frac{11 \\times 12}{2} \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "Simplify the expression inside the parentheses.\n\\[ S = \\frac{11 \\times 12}{2} \\]",
+            "is_final": false
+          },
+          {
+            "step": 5,
+            "thought": "Multiply 11 by 12.\n\\[ S = \\frac{132}{2} \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "Multiply 11 by 12.\n\\[ S = \\frac{132}{2} \\]",
+            "is_final": false
+          },
+          {
+            "step": 6,
+            "thought": "Divide 132 by 2.\n\\[ S = 66 \\]\n\nFinal Answer: 66",
+            "action": null,
+            "observation": null,
+            "raw_output": "Divide 132 by 2.\n\\[ S = 66 \\]\n\nFinal Answer: 66",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "distractor",
+      "variant_question": "Note: the following sentence is unrelated to the question. The local newspaper reported extensively on unrelated events that week. Now, what is the sum of the first 11 positive integers?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (distractor; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "66",
+        "n_steps": 5,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the problem of finding the sum of the first 11 positive integers, we can follow these steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the problem of finding the sum of the first 11 positive integers, we can follow these steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "Identify the first 11 positive integers. These are: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, and 11.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Identify the first 11 positive integers. These are: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, and 11.",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "Recall the formula for the sum of the first n positive integers, which is given by \\( S = \\frac{n(n + 1)}{2} \\).",
+            "action": null,
+            "observation": null,
+            "raw_output": "Recall the formula for the sum of the first n positive integers, which is given by \\( S = \\frac{n(n + 1)}{2} \\).",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "Substitute n = 11 into the formula to find the sum of the first 11 positive integers.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Substitute n = 11 into the formula to find the sum of the first 11 positive integers.",
+            "is_final": false
+          },
+          {
+            "step": 5,
+            "thought": "Calculate the value of \\( S \\) using the formula:\n   \\[\n   S = \\frac{11(11 + 1)}{2} = \\frac{11 \\times 12}{2} = \\frac{132}{2} = 66\n   \\]\n\nFinal Answer: 66",
+            "action": null,
+            "observation": null,
+            "raw_output": "Calculate the value of \\( S \\) using the formula:\n   \\[\n   S = \\frac{11(11 + 1)}{2} = \\frac{11 \\times 12}{2} = \\frac{132}{2} = 66\n   \\]\n\nFinal Answer: 66",
+            "is_final": true
+          }
+        ]
+      }
+    }
+  ],
+  "patch_results": null,
+  "n_variants_generated": 5,
+  "n_variants_valid": 5,
+  "n_variants_rejected": 0,
+  "elapsed_seconds": 32.67244839668274
+}

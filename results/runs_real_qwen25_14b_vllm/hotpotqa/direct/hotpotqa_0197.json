@@ -1,0 +1,257 @@
+{
+  "sample_id": "hotpotqa_0197",
+  "agent_type": "direct",
+  "sample_question": "In which town was the creator of phonograph born?",
+  "sample_context": "Thomas Edison was born in Milan, Ohio, United States in 1847. Thomas Edison created phonograph in 1877. Meanwhile, Nikola Tesla was working on similar topics in Croatia.",
+  "sample_gold_answer": "Milan, Ohio",
+  "original_result": {
+    "final_answer": "Milan, Ohio",
+    "n_steps": 1,
+    "is_correct": true,
+    "trace": [
+      {
+        "step": 1,
+        "thought": "Milan, Ohio",
+        "action": null,
+        "observation": null,
+        "raw_output": "Milan, Ohio",
+        "is_final": true
+      }
+    ]
+  },
+  "consistency_analysis": {
+    "consistency_rate": 1.0,
+    "is_consistent": true,
+    "inconsistent_count": 0,
+    "per_type_inconsistency": {
+      "paraphrase": 0.0,
+      "synonym": 0.0,
+      "reorder": 0.0,
+      "format": 0.0,
+      "distractor": 0.0
+    },
+    "propagation_patterns": {
+      "early_diverge": 3,
+      "consistent": 2
+    }
+  },
+  "propagation_details": [
+    {
+      "divergence_step": 1,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "early_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.0,
+          "action_match": true,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "paraphrase",
+      "variant_answer": "Milan"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "synonym",
+      "variant_answer": "Milan, Ohio"
+    },
+    {
+      "divergence_step": 1,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "early_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.05555555555555555,
+          "action_match": true,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "reorder",
+      "variant_answer": "Thomas Edison was born in Milan, Ohio, and he created the phonograph in 1877. Therefore, the creator of the phonograph was born in Milan, Ohio."
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "format",
+      "variant_answer": "Milan, Ohio"
+    },
+    {
+      "divergence_step": 1,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "early_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.2,
+          "action_match": true,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "distractor",
+      "variant_answer": "Milan, Ohio, United States"
+    }
+  ],
+  "perturbation_variants": [
+    {
+      "perturbation_type": "paraphrase",
+      "variant_question": "Where was the creator of the phonograph born in terms of town?",
+      "variant_context": "Thomas Edison was born in Milan, Ohio, United States in 1847. Thomas Edison created phonograph in 1877. Meanwhile, Nikola Tesla was working on similar topics in Croatia.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe two questions are asking for the same information: the town where the creator of the phonograph was born. The minor differences in wording do not change the core of the question or the expect"
+      },
+      "agent_run": {
+        "final_answer": "Milan",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "Milan",
+            "action": null,
+            "observation": null,
+            "raw_output": "Milan",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "synonym",
+      "variant_question": "In which village was the inventor of phonograph born?",
+      "variant_context": "Thomas Edison was born in Milan, Ohio, United States in 1847. Thomas Edison created phonograph in 1877. Meanwhile, Nikola Tesla was working on similar topics in Croatia.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe core of both questions is asking about the birthplace of the inventor of the phonograph. The terms \"town\" and \"village\" are used interchangeably in this context, and both questions are seekin"
+      },
+      "agent_run": {
+        "final_answer": "Milan, Ohio",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "Milan, Ohio",
+            "action": null,
+            "observation": null,
+            "raw_output": "Milan, Ohio",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "reorder",
+      "variant_question": "In which town was the creator of phonograph born? Please reason step by step.",
+      "variant_context": "Thomas Edison was born in Milan, Ohio, United States in 1847. Thomas Edison created phonograph in 1877. Meanwhile, Nikola Tesla was working on similar topics in Croatia.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (reorder; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "Thomas Edison was born in Milan, Ohio, and he created the phonograph in 1877. Therefore, the creator of the phonograph was born in Milan, Ohio.",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "Thomas Edison was born in Milan, Ohio, and he created the phonograph in 1877. Therefore, the creator of the phonograph was born in Milan, Ohio.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Thomas Edison was born in Milan, Ohio, and he created the phonograph in 1877. Therefore, the creator of the phonograph was born in Milan, Ohio.",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "format",
+      "variant_question": "> In which town was the creator of phonograph born?",
+      "variant_context": "• Thomas Edison was born in Milan, Ohio, United States in 1847.\n• Thomas Edison created phonograph in 1877.\n• Meanwhile, Nikola Tesla was working on similar topics in Croatia.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (format; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "Milan, Ohio",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "Milan, Ohio",
+            "action": null,
+            "observation": null,
+            "raw_output": "Milan, Ohio",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "distractor",
+      "variant_question": "Note: the following sentence is unrelated to the question. Meanwhile, advances in technology continued to reshape daily life. Now, in which town was the creator of phonograph born?",
+      "variant_context": "Thomas Edison was born in Milan, Ohio, United States in 1847. Thomas Edison created phonograph in 1877. Meanwhile, Nikola Tesla was working on similar topics in Croatia. Meanwhile, advances in technology continued to reshape daily life.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (distractor; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "Milan, Ohio, United States",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "Milan, Ohio, United States",
+            "action": null,
+            "observation": null,
+            "raw_output": "Milan, Ohio, United States",
+            "is_final": true
+          }
+        ]
+      }
+    }
+  ],
+  "patch_results": null,
+  "n_variants_generated": 5,
+  "n_variants_valid": 5,
+  "n_variants_rejected": 0,
+  "elapsed_seconds": 4.560074329376221
+}

@@ -57,3 +57,7 @@ gpu_kit/_logs/
 .venv/
 venv/
 env/
+
+# Local-only safety snapshots (硬链接备份，不进仓库)
+results/_snapshot_*/
+

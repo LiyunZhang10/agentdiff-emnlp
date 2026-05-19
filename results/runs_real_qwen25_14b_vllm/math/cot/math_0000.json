@@ -1,0 +1,459 @@
+{
+  "sample_id": "math_0000",
+  "agent_type": "cot",
+  "sample_question": "If f(x) = 2x + 3 and g(x) = x^2 - 1, what is f(g(2))?",
+  "sample_context": null,
+  "sample_gold_answer": "9",
+  "original_result": {
+    "final_answer": "9",
+    "n_steps": 4,
+    "is_correct": true,
+    "trace": [
+      {
+        "step": 1,
+        "thought": "To solve the problem of finding \\( f(g(2)) \\), we need to follow these steps:",
+        "action": null,
+        "observation": null,
+        "raw_output": "To solve the problem of finding \\( f(g(2)) \\), we need to follow these steps:",
+        "is_final": false
+      },
+      {
+        "step": 2,
+        "thought": "**Evaluate \\( g(2) \\):**\n   - Given \\( g(x) = x^2 - 1 \\), substitute \\( x = 2 \\) into the function.\n   - \\( g(2) = 2^2 - 1 \\)\n   - Calculate \\( 2^2 \\), which is 4.\n   - Subtract 1 from 4: \\( 4 - 1 = 3 \\).\n   - Therefore, \\( g(2) = 3 \\).",
+        "action": null,
+        "observation": null,
+        "raw_output": "**Evaluate \\( g(2) \\):**\n   - Given \\( g(x) = x^2 - 1 \\), substitute \\( x = 2 \\) into the function.\n   - \\( g(2) = 2^2 - 1 \\)\n   - Calculate \\( 2^2 \\), which is 4.\n   - Subtract 1 from 4: \\( 4 - 1 = 3 \\).\n   - Therefore, \\( g(2) = 3 \\).",
+        "is_final": false
+      },
+      {
+        "step": 3,
+        "thought": "**Evaluate \\( f(g(2)) \\):**\n   - We have found that \\( g(2) = 3 \\).\n   - Now, substitute \\( x = 3 \\) into the function \\( f(x) \\).\n   - Given \\( f(x) = 2x + 3 \\), substitute \\( x = 3 \\).\n   - \\( f(3) = 2(3) + 3 \\)\n   - Calculate \\( 2 \\times 3 \\), which is 6.\n   - Add 3 to 6: \\( 6 + 3 = 9 \\).\n   - Therefore, \\( f(3) = 9 \\).",
+        "action": null,
+        "observation": null,
+        "raw_output": "**Evaluate \\( f(g(2)) \\):**\n   - We have found that \\( g(2) = 3 \\).\n   - Now, substitute \\( x = 3 \\) into the function \\( f(x) \\).\n   - Given \\( f(x) = 2x + 3 \\), substitute \\( x = 3 \\).\n   - \\( f(3) = 2(3) + 3 \\)\n   - Calculate \\( 2 \\times 3 \\), which is 6.\n   - Add 3 to 6: \\( 6 + 3 = 9 \\).\n   - Therefore, \\( f(3) = 9 \\).",
+        "is_final": false
+      },
+      {
+        "step": 4,
+        "thought": "**Conclusion:**\n   - Since \\( f(g(2)) = f(3) \\) and we have calculated \\( f(3) = 9 \\), the final answer is 9.\n\nFinal Answer: 9",
+        "action": null,
+        "observation": null,
+        "raw_output": "**Conclusion:**\n   - Since \\( f(g(2)) = f(3) \\) and we have calculated \\( f(3) = 9 \\), the final answer is 9.\n\nFinal Answer: 9",
+        "is_final": true
+      }
+    ]
+  },
+  "consistency_analysis": {
+    "consistency_rate": 1.0,
+    "is_consistent": true,
+    "inconsistent_count": 0,
+    "per_type_inconsistency": {
+      "paraphrase": 0.0,
+      "synonym": 0.0,
+      "reorder": 0.0,
+      "format": 0.0,
+      "distractor": 0.0
+    },
+    "propagation_patterns": {
+      "late_diverge": 4,
+      "consistent": 1
+    }
+  },
+  "propagation_details": [
+    {
+      "divergence_step": 4,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "late_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.4642857142857143,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.9032258064516129,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.7555555555555555,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.0,
+          "action_match": false,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 4,
+      "n_steps_variant": 3,
+      "perturbation_type": "paraphrase",
+      "variant_answer": "9"
+    },
+    {
+      "divergence_step": 4,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "late_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.9512195121951219,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.0,
+          "action_match": false,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 4,
+      "n_steps_variant": 3,
+      "perturbation_type": "synonym",
+      "variant_answer": "9"
+    },
+    {
+      "divergence_step": 4,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "late_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.7428571428571429,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.6530612244897959,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.0,
+          "action_match": false,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 4,
+      "n_steps_variant": 3,
+      "perturbation_type": "reorder",
+      "variant_answer": "9"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 4,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 4,
+      "n_steps_variant": 4,
+      "perturbation_type": "format",
+      "variant_answer": "9"
+    },
+    {
+      "divergence_step": 4,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "late_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.5555555555555556,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.509090909090909,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.0,
+          "action_match": false,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 4,
+      "n_steps_variant": 3,
+      "perturbation_type": "distractor",
+      "variant_answer": "9"
+    }
+  ],
+  "perturbation_variants": [
+    {
+      "perturbation_type": "paraphrase",
+      "variant_question": "What is f(g(2)) if f(x) = 2x + 3 and g(x) = x^2 - 1?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking for the same calculation with the same functions f(x) and g(x) and the same input value for g, which is 2. The order of the information provided is different, but the cor"
+      },
+      "agent_run": {
+        "final_answer": "9",
+        "n_steps": 3,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the problem of finding \\( f(g(2)) \\) given the functions \\( f(x) = 2x + 3 \\) and \\( g(x) = x^2 - 1 \\), we will follow these steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the problem of finding \\( f(g(2)) \\) given the functions \\( f(x) = 2x + 3 \\) and \\( g(x) = x^2 - 1 \\), we will follow these steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "**Evaluate \\( g(2) \\):**\n   - Substitute \\( x = 2 \\) into the function \\( g(x) = x^2 - 1 \\).\n   - \\( g(2) = 2^2 - 1 \\).\n   - Calculate \\( 2^2 \\), which is 4.\n   - Subtract 1 from 4: \\( 4 - 1 = 3 \\).\n   - Therefore, \\( g(2) = 3 \\).",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Evaluate \\( g(2) \\):**\n   - Substitute \\( x = 2 \\) into the function \\( g(x) = x^2 - 1 \\).\n   - \\( g(2) = 2^2 - 1 \\).\n   - Calculate \\( 2^2 \\), which is 4.\n   - Subtract 1 from 4: \\( 4 - 1 = 3 \\).\n   - Therefore, \\( g(2) = 3 \\).",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "**Evaluate \\( f(g(2)) \\):**\n   - From step 1, we know \\( g(2) = 3 \\).\n   - Substitute \\( x = 3 \\) into the function \\( f(x) = 2x + 3 \\).\n   - \\( f(3) = 2(3) + 3 \\).\n   - Calculate \\( 2 \\times 3 \\), which is 6.\n   - Add 3 to 6: \\( 6 + 3 = 9 \\).\n   - Therefore, \\( f(3) = 9 \\).\n\nFinal Answer: 9",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Evaluate \\( f(g(2)) \\):**\n   - From step 1, we know \\( g(2) = 3 \\).\n   - Substitute \\( x = 3 \\) into the function \\( f(x) = 2x + 3 \\).\n   - \\( f(3) = 2(3) + 3 \\).\n   - Calculate \\( 2 \\times 3 \\), which is 6.\n   - Add 3 to 6: \\( 6 + 3 = 9 \\).\n   - Therefore, \\( f(3) = 9 \\).\n\nFinal Answer: 9",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "synonym",
+      "variant_question": "If f(x) = 2x + 3 and g(x) = x^2 - 1, what is the result of f(g(2))?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking for the same calculation with only a minor wording difference (\"what is f(g(2))?\" vs \"what is the result of f(g(2))?\"). Both would yield the same answer, which is '9'."
+      },
+      "agent_run": {
+        "final_answer": "9",
+        "n_steps": 3,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the problem of finding \\( f(g(2)) \\), we need to follow these steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the problem of finding \\( f(g(2)) \\), we need to follow these steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "**Evaluate \\( g(2) \\):**\n   - Given \\( g(x) = x^2 - 1 \\), substitute \\( x = 2 \\) into the function.\n   - \\( g(2) = 2^2 - 1 \\)\n   - Calculate \\( 2^2 \\), which is 4.\n   - Subtract 1 from 4: \\( 4 - 1 = 3 \\).\n   - Therefore, \\( g(2) = 3 \\).",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Evaluate \\( g(2) \\):**\n   - Given \\( g(x) = x^2 - 1 \\), substitute \\( x = 2 \\) into the function.\n   - \\( g(2) = 2^2 - 1 \\)\n   - Calculate \\( 2^2 \\), which is 4.\n   - Subtract 1 from 4: \\( 4 - 1 = 3 \\).\n   - Therefore, \\( g(2) = 3 \\).",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "**Evaluate \\( f(g(2)) \\):**\n   - We have found that \\( g(2) = 3 \\).\n   - Now, substitute \\( x = 3 \\) into the function \\( f(x) \\).\n   - Given \\( f(x) = 2x + 3 \\), substitute \\( x = 3 \\).\n   - \\( f(3) = 2(3) + 3 \\)\n   - Calculate \\( 2 \\times 3 \\), which is 6.\n   - Add 3 to 6: \\( 6 + 3 = 9 \\).\n   - Therefore, \\( f(3) = 9 \\).\n\nFinal Answer: 9",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Evaluate \\( f(g(2)) \\):**\n   - We have found that \\( g(2) = 3 \\).\n   - Now, substitute \\( x = 3 \\) into the function \\( f(x) \\).\n   - Given \\( f(x) = 2x + 3 \\), substitute \\( x = 3 \\).\n   - \\( f(3) = 2(3) + 3 \\)\n   - Calculate \\( 2 \\times 3 \\), which is 6.\n   - Add 3 to 6: \\( 6 + 3 = 9 \\).\n   - Therefore, \\( f(3) = 9 \\).\n\nFinal Answer: 9",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "reorder",
+      "variant_question": "If f(x) = 2x + 3 and g(x) = x^2 - 1, what is f(g(2))? Please reason step by step.",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (reorder; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "9",
+        "n_steps": 3,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the problem of finding \\( f(g(2)) \\), we need to follow these steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the problem of finding \\( f(g(2)) \\), we need to follow these steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "**Evaluate \\( g(2) \\):**\n   - The function \\( g(x) \\) is given by \\( g(x) = x^2 - 1 \\).\n   - Substitute \\( x = 2 \\) into \\( g(x) \\):\n     \\[\n     g(2) = 2^2 - 1\n     \\]\n   - Calculate \\( 2^2 \\):\n     \\[\n     2^2 = 4\n     \\]\n   - Subtract 1 from 4:\n     \\[\n     4 - 1 = 3\n     \\]\n   - Therefore, \\( g(2) = 3 \\).",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Evaluate \\( g(2) \\):**\n   - The function \\( g(x) \\) is given by \\( g(x) = x^2 - 1 \\).\n   - Substitute \\( x = 2 \\) into \\( g(x) \\):\n     \\[\n     g(2) = 2^2 - 1\n     \\]\n   - Calculate \\( 2^2 \\):\n     \\[\n     2^2 = 4\n     \\]\n   - Subtract 1 from 4:\n     \\[\n     4 - 1 = 3\n     \\]\n   - Therefore, \\( g(2) = 3 \\).",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "**Evaluate \\( f(g(2)) \\):**\n   - From step 1, we know \\( g(2) = 3 \\).\n   - The function \\( f(x) \\) is given by \\( f(x) = 2x + 3 \\).\n   - Substitute \\( x = 3 \\) into \\( f(x) \\):\n     \\[\n     f(3) = 2(3) + 3\n     \\]\n   - Calculate \\( 2 \\times 3 \\):\n     \\[\n     2 \\times 3 = 6\n     \\]\n   - Add 3 to 6:\n     \\[\n     6 + 3 = 9\n     \\]\n   - Therefore, \\( f(3) = 9 \\).\n\nFinal Answer: 9",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Evaluate \\( f(g(2)) \\):**\n   - From step 1, we know \\( g(2) = 3 \\).\n   - The function \\( f(x) \\) is given by \\( f(x) = 2x + 3 \\).\n   - Substitute \\( x = 3 \\) into \\( f(x) \\):\n     \\[\n     f(3) = 2(3) + 3\n     \\]\n   - Calculate \\( 2 \\times 3 \\):\n     \\[\n     2 \\times 3 = 6\n     \\]\n   - Add 3 to 6:\n     \\[\n     6 + 3 = 9\n     \\]\n   - Therefore, \\( f(3) = 9 \\).\n\nFinal Answer: 9",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "format",
+      "variant_question": "> If f(x) = 2x + 3 and g(x) = x^2 - 1, what is f(g(2))?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (format; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "9",
+        "n_steps": 4,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the problem of finding \\( f(g(2)) \\), we need to follow these steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the problem of finding \\( f(g(2)) \\), we need to follow these steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "**Evaluate \\( g(2) \\):**\n   - Given \\( g(x) = x^2 - 1 \\), substitute \\( x = 2 \\) into the function.\n   - \\( g(2) = 2^2 - 1 \\)\n   - Calculate \\( 2^2 \\), which is 4.\n   - Subtract 1 from 4: \\( 4 - 1 = 3 \\).\n   - Therefore, \\( g(2) = 3 \\).",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Evaluate \\( g(2) \\):**\n   - Given \\( g(x) = x^2 - 1 \\), substitute \\( x = 2 \\) into the function.\n   - \\( g(2) = 2^2 - 1 \\)\n   - Calculate \\( 2^2 \\), which is 4.\n   - Subtract 1 from 4: \\( 4 - 1 = 3 \\).\n   - Therefore, \\( g(2) = 3 \\).",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "**Evaluate \\( f(g(2)) \\):**\n   - We have found that \\( g(2) = 3 \\).\n   - Now, substitute \\( x = 3 \\) into the function \\( f(x) \\).\n   - Given \\( f(x) = 2x + 3 \\), substitute \\( x = 3 \\).\n   - \\( f(3) = 2(3) + 3 \\)\n   - Calculate \\( 2 \\times 3 \\), which is 6.\n   - Add 3 to 6: \\( 6 + 3 = 9 \\).\n   - Therefore, \\( f(3) = 9 \\).",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Evaluate \\( f(g(2)) \\):**\n   - We have found that \\( g(2) = 3 \\).\n   - Now, substitute \\( x = 3 \\) into the function \\( f(x) \\).\n   - Given \\( f(x) = 2x + 3 \\), substitute \\( x = 3 \\).\n   - \\( f(3) = 2(3) + 3 \\)\n   - Calculate \\( 2 \\times 3 \\), which is 6.\n   - Add 3 to 6: \\( 6 + 3 = 9 \\).\n   - Therefore, \\( f(3) = 9 \\).",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "**Conclusion:**\n   - Since \\( f(g(2)) = f(3) \\) and we have calculated \\( f(3) = 9 \\), the final answer is 9.\n\nFinal Answer: 9",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Conclusion:**\n   - Since \\( f(g(2)) = f(3) \\) and we have calculated \\( f(3) = 9 \\), the final answer is 9.\n\nFinal Answer: 9",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "distractor",
+      "variant_question": "Note: the following sentence is unrelated to the question. Meanwhile, advances in technology continued to reshape daily life. Now, if f(x) = 2x + 3 and g(x) = x^2 - 1, what is f(g(2))?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (distractor; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "9",
+        "n_steps": 3,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the problem of finding \\( f(g(2)) \\), we need to follow these steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the problem of finding \\( f(g(2)) \\), we need to follow these steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "**Evaluate \\( g(2) \\)**:\n   - The function \\( g(x) \\) is given by \\( g(x) = x^2 - 1 \\).\n   - Substitute \\( x = 2 \\) into \\( g(x) \\):\n     \\[\n     g(2) = 2^2 - 1 = 4 - 1 = 3\n     \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Evaluate \\( g(2) \\)**:\n   - The function \\( g(x) \\) is given by \\( g(x) = x^2 - 1 \\).\n   - Substitute \\( x = 2 \\) into \\( g(x) \\):\n     \\[\n     g(2) = 2^2 - 1 = 4 - 1 = 3\n     \\]",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "**Use the result from step 1 to evaluate \\( f(g(2)) \\)**:\n   - We have found that \\( g(2) = 3 \\).\n   - The function \\( f(x) \\) is given by \\( f(x) = 2x + 3 \\).\n   - Substitute \\( x = 3 \\) into \\( f(x) \\):\n     \\[\n     f(3) = 2(3) + 3 = 6 + 3 = 9\n     \\]\n\nTherefore, the value of \\( f(g(2)) \\) is 9.\n\nFinal Answer: 9",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Use the result from step 1 to evaluate \\( f(g(2)) \\)**:\n   - We have found that \\( g(2) = 3 \\).\n   - The function \\( f(x) \\) is given by \\( f(x) = 2x + 3 \\).\n   - Substitute \\( x = 3 \\) into \\( f(x) \\):\n     \\[\n     f(3) = 2(3) + 3 = 6 + 3 = 9\n     \\]\n\nTherefore, the value of \\( f(g(2)) \\) is 9.\n\nFinal Answer: 9",
+            "is_final": true
+          }
+        ]
+      }
+    }
+  ],
+  "patch_results": null,
+  "n_variants_generated": 5,
+  "n_variants_valid": 5,
+  "n_variants_rejected": 0,
+  "elapsed_seconds": 42.1874840259552
+}

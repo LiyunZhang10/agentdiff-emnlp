@@ -1,0 +1,256 @@
+{
+  "sample_id": "hotpotqa_0126",
+  "agent_type": "direct",
+  "sample_question": "When was telephone created by the person born in Edinburgh?",
+  "sample_context": "Alexander Graham Bell was born in Edinburgh, Scotland in 1847. Alexander Graham Bell created telephone in 1876. Meanwhile, Frida Kahlo was working on similar topics in Mexico.",
+  "sample_gold_answer": "1876",
+  "original_result": {
+    "final_answer": "1876",
+    "n_steps": 1,
+    "is_correct": true,
+    "trace": [
+      {
+        "step": 1,
+        "thought": "1876",
+        "action": null,
+        "observation": null,
+        "raw_output": "1876",
+        "is_final": true
+      }
+    ]
+  },
+  "consistency_analysis": {
+    "consistency_rate": 1.0,
+    "is_consistent": true,
+    "inconsistent_count": 0,
+    "per_type_inconsistency": {
+      "paraphrase": 0.0,
+      "synonym": 0.0,
+      "reorder": 0.0,
+      "format": 0.0,
+      "distractor": 0.0
+    },
+    "propagation_patterns": {
+      "consistent": 5
+    }
+  },
+  "propagation_details": [
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "paraphrase",
+      "variant_answer": "1876"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "synonym",
+      "variant_answer": "1876"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "reorder",
+      "variant_answer": "1876"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "format",
+      "variant_answer": "1876"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "distractor",
+      "variant_answer": "1876"
+    }
+  ],
+  "perturbation_variants": [
+    {
+      "perturbation_type": "paraphrase",
+      "variant_question": "What is the creation date of the telephone by the individual born in Edinburgh?",
+      "variant_context": "Alexander Graham Bell was born in Edinburgh, Scotland in 1847. Alexander Graham Bell created telephone in 1876. Meanwhile, Frida Kahlo was working on similar topics in Mexico.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking for the same information: the creation date of the telephone by the individual born in Edinburgh. The minor differences in wording do not change the core of the question "
+      },
+      "agent_run": {
+        "final_answer": "1876",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "1876",
+            "action": null,
+            "observation": null,
+            "raw_output": "1876",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "synonym",
+      "variant_question": "When was telephone invented by the individual born in Edinburgh?",
+      "variant_context": "Alexander Graham Bell was born in Edinburgh, Scotland in 1847. Alexander Graham Bell created telephone in 1876. Meanwhile, Frida Kahlo was working on similar topics in Mexico.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking for the same information: the year the telephone was created/invented by someone born in Edinburgh. The minor wording differences ('created' vs 'invented', 'person' vs 'i"
+      },
+      "agent_run": {
+        "final_answer": "1876",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "1876",
+            "action": null,
+            "observation": null,
+            "raw_output": "1876",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "reorder",
+      "variant_question": "When was telephone created by the person born in Edinburgh? Please reason step by step.",
+      "variant_context": "Alexander Graham Bell was born in Edinburgh, Scotland in 1847. Alexander Graham Bell created telephone in 1876. Meanwhile, Frida Kahlo was working on similar topics in Mexico.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (reorder; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "1876",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "1876",
+            "action": null,
+            "observation": null,
+            "raw_output": "1876\n\nStep 1: Identify the person born in Edinburgh - Alexander Graham Bell.\nStep 2: Recall the year Alexander Graham Bell created the telephone - 1876.",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "format",
+      "variant_question": "> When was telephone created by the person born in Edinburgh?",
+      "variant_context": "• Alexander Graham Bell was born in Edinburgh, Scotland in 1847.\n• Alexander Graham Bell created telephone in 1876.\n• Meanwhile, Frida Kahlo was working on similar topics in Mexico.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (format; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "1876",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "1876",
+            "action": null,
+            "observation": null,
+            "raw_output": "1876",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "distractor",
+      "variant_question": "Note: the following sentence is unrelated to the question. Several other researchers had studied similar topics in the past decade. Now, when was telephone created by the person born in Edinburgh?",
+      "variant_context": "Alexander Graham Bell was born in Edinburgh, Scotland in 1847. Alexander Graham Bell created telephone in 1876. Meanwhile, Frida Kahlo was working on similar topics in Mexico. Several other researchers had studied similar topics in the past decade.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (distractor; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "1876",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "1876",
+            "action": null,
+            "observation": null,
+            "raw_output": "1876",
+            "is_final": true
+          }
+        ]
+      }
+    }
+  ],
+  "patch_results": null,
+  "n_variants_generated": 5,
+  "n_variants_valid": 5,
+  "n_variants_rejected": 0,
+  "elapsed_seconds": 4.625117778778076
+}

@@ -1,0 +1,257 @@
+{
+  "sample_id": "hotpotqa_0167",
+  "agent_type": "direct",
+  "sample_question": "In which city was the creator of Guernica born?",
+  "sample_context": "Pablo Picasso was born in Malaga, Spain in 1881. Pablo Picasso created Guernica in 1937. Meanwhile, Nikola Tesla was working on similar topics in Croatia.",
+  "sample_gold_answer": "Malaga",
+  "original_result": {
+    "final_answer": "Malaga",
+    "n_steps": 1,
+    "is_correct": true,
+    "trace": [
+      {
+        "step": 1,
+        "thought": "Malaga",
+        "action": null,
+        "observation": null,
+        "raw_output": "Malaga",
+        "is_final": true
+      }
+    ]
+  },
+  "consistency_analysis": {
+    "consistency_rate": 1.0,
+    "is_consistent": true,
+    "inconsistent_count": 0,
+    "per_type_inconsistency": {
+      "paraphrase": 0.0,
+      "synonym": 0.0,
+      "reorder": 0.0,
+      "format": 0.0,
+      "distractor": 0.0
+    },
+    "propagation_patterns": {
+      "early_diverge": 2,
+      "consistent": 3
+    }
+  },
+  "propagation_details": [
+    {
+      "divergence_step": 1,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "early_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.0,
+          "action_match": true,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "paraphrase",
+      "variant_answer": "Malaga, Spain"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "synonym",
+      "variant_answer": "Malaga"
+    },
+    {
+      "divergence_step": 1,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "early_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.0,
+          "action_match": true,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "reorder",
+      "variant_answer": "Pablo Picasso was born in Malaga, Spain. He created Guernica in 1937. Therefore, the creator of Guernica was born in Malaga."
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "format",
+      "variant_answer": "Malaga"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "distractor",
+      "variant_answer": "Malaga"
+    }
+  ],
+  "perturbation_variants": [
+    {
+      "perturbation_type": "paraphrase",
+      "variant_question": "Where was the creator of Guernica born?",
+      "variant_context": "Pablo Picasso was born in Malaga, Spain in 1881. Pablo Picasso created Guernica in 1937. Meanwhile, Nikola Tesla was working on similar topics in Croatia.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe two questions are asking for the same information and would yield the same answer. The minor difference in wording does not change the core of the question or the expected answer."
+      },
+      "agent_run": {
+        "final_answer": "Malaga, Spain",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "Malaga, Spain",
+            "action": null,
+            "observation": null,
+            "raw_output": "Malaga, Spain",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "synonym",
+      "variant_question": "In which metropolis was the originator of Guernica born?",
+      "variant_context": "Pablo Picasso was born in Malaga, Spain in 1881. Pablo Picasso created Guernica in 1937. Meanwhile, Nikola Tesla was working on similar topics in Croatia.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe terms \"city\" and \"metropolis\" are used interchangeably in this context, and \"creator\" and \"originator\" also convey the same meaning. Therefore, Question B is equivalent to Question A and woul"
+      },
+      "agent_run": {
+        "final_answer": "Malaga",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "Malaga",
+            "action": null,
+            "observation": null,
+            "raw_output": "Malaga",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "reorder",
+      "variant_question": "In which city was the creator of Guernica born? Please reason step by step.",
+      "variant_context": "Pablo Picasso was born in Malaga, Spain in 1881. Pablo Picasso created Guernica in 1937. Meanwhile, Nikola Tesla was working on similar topics in Croatia.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (reorder; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "Pablo Picasso was born in Malaga, Spain. He created Guernica in 1937. Therefore, the creator of Guernica was born in Malaga.",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "Pablo Picasso was born in Malaga, Spain. He created Guernica in 1937. Therefore, the creator of Guernica was born in Malaga.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Pablo Picasso was born in Malaga, Spain. He created Guernica in 1937. Therefore, the creator of Guernica was born in Malaga.",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "format",
+      "variant_question": "> In which city was the creator of Guernica born?",
+      "variant_context": "• Pablo Picasso was born in Malaga, Spain in 1881.\n• Pablo Picasso created Guernica in 1937.\n• Meanwhile, Nikola Tesla was working on similar topics in Croatia.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (format; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "Malaga",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "Malaga",
+            "action": null,
+            "observation": null,
+            "raw_output": "Malaga",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "distractor",
+      "variant_question": "Note: the following sentence is unrelated to the question. The weather that day was particularly sunny with clear skies. Now, in which city was the creator of Guernica born?",
+      "variant_context": "Pablo Picasso was born in Malaga, Spain in 1881. Pablo Picasso created Guernica in 1937. Meanwhile, Nikola Tesla was working on similar topics in Croatia. The weather that day was particularly sunny with clear skies.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (distractor; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "Malaga",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "Malaga",
+            "action": null,
+            "observation": null,
+            "raw_output": "Malaga",
+            "is_final": true
+          }
+        ]
+      }
+    }
+  ],
+  "patch_results": null,
+  "n_variants_generated": 5,
+  "n_variants_valid": 5,
+  "n_variants_rejected": 0,
+  "elapsed_seconds": 4.235316514968872
+}

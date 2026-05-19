@@ -1,0 +1,225 @@
+{
+  "sample_id": "hotpotqa_0129",
+  "agent_type": "direct",
+  "sample_question": "In which town was the creator of alternating current system born?",
+  "sample_context": "Nikola Tesla was born in Smiljan, Croatia in 1856. Nikola Tesla created alternating current system in 1888. Meanwhile, Galileo Galilei was working on similar topics in Italy.",
+  "sample_gold_answer": "Smiljan",
+  "original_result": {
+    "final_answer": "Smiljan",
+    "n_steps": 1,
+    "is_correct": true,
+    "trace": [
+      {
+        "step": 1,
+        "thought": "Smiljan",
+        "action": null,
+        "observation": null,
+        "raw_output": "Smiljan",
+        "is_final": true
+      }
+    ]
+  },
+  "consistency_analysis": {
+    "consistency_rate": 1.0,
+    "is_consistent": true,
+    "inconsistent_count": 0,
+    "per_type_inconsistency": {
+      "paraphrase": 0.0,
+      "reorder": 0.0,
+      "format": 0.0,
+      "distractor": 0.0
+    },
+    "propagation_patterns": {
+      "consistent": 3,
+      "early_diverge": 1
+    }
+  },
+  "propagation_details": [
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "paraphrase",
+      "variant_answer": "Smiljan"
+    },
+    {
+      "divergence_step": 1,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "early_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.0,
+          "action_match": true,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "reorder",
+      "variant_answer": "Nikola Tesla, the creator of the alternating current system, was born in Smiljan, Croatia."
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "format",
+      "variant_answer": "Smiljan"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "distractor",
+      "variant_answer": "Smiljan"
+    }
+  ],
+  "perturbation_variants": [
+    {
+      "perturbation_type": "paraphrase",
+      "variant_question": "Where was the person who created the alternating current system born, in terms of town?",
+      "variant_context": "Nikola Tesla was born in Smiljan, Croatia in 1856. Nikola Tesla created alternating current system in 1888. Meanwhile, Galileo Galilei was working on similar topics in Italy.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe two questions are asking for the same information: the town where the creator of the alternating current system was born. The minor differences in wording do not change the core of the questi"
+      },
+      "agent_run": {
+        "final_answer": "Smiljan",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "Smiljan",
+            "action": null,
+            "observation": null,
+            "raw_output": "Smiljan",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "synonym",
+      "variant_question": "In which borough was the inventor of alternating current system born?",
+      "variant_context": "Nikola Tesla was born in Smiljan, Croatia in 1856. Nikola Tesla created alternating current system in 1888. Meanwhile, Galileo Galilei was working on similar topics in Italy.",
+      "validation": {
+        "is_equivalent": false,
+        "confidence": 0.2,
+        "reason": "NO\nThe key difference is that Question A asks about a \"town\" while Question B asks about a \"borough\". These are different administrative divisions, and the answer to a question about a borough might n"
+      },
+      "agent_run": null
+    },
+    {
+      "perturbation_type": "reorder",
+      "variant_question": "In which town was the creator of alternating current system born? Please reason step by step.",
+      "variant_context": "Nikola Tesla was born in Smiljan, Croatia in 1856. Nikola Tesla created alternating current system in 1888. Meanwhile, Galileo Galilei was working on similar topics in Italy.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (reorder; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "Nikola Tesla, the creator of the alternating current system, was born in Smiljan, Croatia.",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "Nikola Tesla, the creator of the alternating current system, was born in Smiljan, Croatia.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Nikola Tesla, the creator of the alternating current system, was born in Smiljan, Croatia.",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "format",
+      "variant_question": "> In which town was the creator of alternating current system born?",
+      "variant_context": "• Nikola Tesla was born in Smiljan, Croatia in 1856.\n• Nikola Tesla created alternating current system in 1888.\n• Meanwhile, Galileo Galilei was working on similar topics in Italy.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (format; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "Smiljan",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "Smiljan",
+            "action": null,
+            "observation": null,
+            "raw_output": "Smiljan",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "distractor",
+      "variant_question": "Note: the following sentence is unrelated to the question. Historical records from that era are preserved in multiple archives. Now, in which town was the creator of alternating current system born?",
+      "variant_context": "Nikola Tesla was born in Smiljan, Croatia in 1856. Nikola Tesla created alternating current system in 1888. Meanwhile, Galileo Galilei was working on similar topics in Italy. Historical records from that era are preserved in multiple archives.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (distractor; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "Smiljan",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "Smiljan",
+            "action": null,
+            "observation": null,
+            "raw_output": "Smiljan",
+            "is_final": true
+          }
+        ]
+      }
+    }
+  ],
+  "patch_results": null,
+  "n_variants_generated": 5,
+  "n_variants_valid": 4,
+  "n_variants_rejected": 1,
+  "elapsed_seconds": 4.3016111850738525
+}

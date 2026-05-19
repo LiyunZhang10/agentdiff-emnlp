@@ -1,0 +1,277 @@
+{
+  "sample_id": "gsm8k_0043",
+  "agent_type": "direct",
+  "sample_question": "A train travels at 17 km/h for 4 hours, then at 11 km/h for 4 hours. What is the total distance?",
+  "sample_context": null,
+  "sample_gold_answer": "112",
+  "original_result": {
+    "final_answer": "104 km",
+    "n_steps": 1,
+    "is_correct": false,
+    "trace": [
+      {
+        "step": 1,
+        "thought": "104 km",
+        "action": null,
+        "observation": null,
+        "raw_output": "104 km",
+        "is_final": true
+      }
+    ]
+  },
+  "consistency_analysis": {
+    "consistency_rate": 0.6,
+    "is_consistent": false,
+    "inconsistent_count": 2,
+    "per_type_inconsistency": {
+      "paraphrase": 0.0,
+      "synonym": 0.0,
+      "reorder": 1.0,
+      "format": 0.0,
+      "distractor": 1.0
+    },
+    "propagation_patterns": {
+      "consistent": 3,
+      "early_diverge": 2
+    }
+  },
+  "propagation_details": [
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "paraphrase",
+      "variant_answer": "104 km"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "synonym",
+      "variant_answer": "104 km"
+    },
+    {
+      "divergence_step": 1,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "early_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.0,
+          "action_match": true,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "reorder",
+      "variant_answer": "First part of the journey: \\(17 \\, \\text{km/h} \\times 4 \\, \\text{hours} = 68 \\, \\text{km}\\)."
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "format",
+      "variant_answer": "104 km"
+    },
+    {
+      "divergence_step": 1,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "early_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.3333333333333333,
+          "action_match": true,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "distractor",
+      "variant_answer": "108 km"
+    }
+  ],
+  "perturbation_variants": [
+    {
+      "perturbation_type": "paraphrase",
+      "variant_question": "What is the total distance a train travels at 17 km/h for 4 hours and then at 11 km/h for 4 hours?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking for the same information with only minor wording differences, which do not change the core of the question or the calculation required to find the answer. Both questions "
+      },
+      "agent_run": {
+        "final_answer": "104 km",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "104 km",
+            "action": null,
+            "observation": null,
+            "raw_output": "104 km",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "synonym",
+      "variant_question": "A locomotive moves at 17 km/h for 4 hours, then at 11 km/h for 4 hours. What is the overall distance?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking for the same information with only minor wording differences ('train' vs 'locomotive', 'total distance' vs 'overall distance'), which do not change the answer. Both quest"
+      },
+      "agent_run": {
+        "final_answer": "104 km",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "104 km",
+            "action": null,
+            "observation": null,
+            "raw_output": "104 km",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "reorder",
+      "variant_question": "A train travels at 17 km/h for 4 hours, then at 11 km/h for 4 hours. What is the total distance? Please reason step by step.",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (reorder; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "First part of the journey: \\(17 \\, \\text{km/h} \\times 4 \\, \\text{hours} = 68 \\, \\text{km}\\).",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "First part of the journey: \\(17 \\, \\text{km/h} \\times 4 \\, \\text{hours} = 68 \\, \\text{km}\\).",
+            "action": null,
+            "observation": null,
+            "raw_output": "First part of the journey: \\(17 \\, \\text{km/h} \\times 4 \\, \\text{hours} = 68 \\, \\text{km}\\).\n\nSecond part of the journey: \\(11 \\, \\text{km/h} \\times 4 \\, \\text{hours} = 44 \\, \\text{km}\\).\n\nTotal distance: \\(68 \\, \\text{km} + 44 \\, \\text{km} = 112 \\, \\text{km}\\).",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "format",
+      "variant_question": "- A train travels at 17 km/h for 4 hours, then at 11 km/h for 4 hours.\nQuestion: What is the total distance?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (format; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "104 km",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "104 km",
+            "action": null,
+            "observation": null,
+            "raw_output": "104 km",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "distractor",
+      "variant_question": "Note: the following sentence is unrelated to the question. Historical records from that era are preserved in multiple archives. Now, a train travels at 17 km/h for 4 hours, then at 11 km/h for 4 hours. What is the total distance?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (distractor; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "108 km",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "108 km",
+            "action": null,
+            "observation": null,
+            "raw_output": "108 km",
+            "is_final": true
+          }
+        ]
+      }
+    }
+  ],
+  "patch_results": {
+    "step_patch": {
+      "consistency_rate": 0.4,
+      "inconsistent_count": 3,
+      "is_correct": false,
+      "intervention_step": 1,
+      "target_types": [
+        "reorder",
+        "distractor"
+      ]
+    },
+    "system_patch": {
+      "consistency_rate": 0.19999999999999996,
+      "inconsistent_count": 4,
+      "is_correct": false,
+      "target_types": [
+        "reorder",
+        "distractor"
+      ]
+    }
+  },
+  "n_variants_generated": 5,
+  "n_variants_valid": 5,
+  "n_variants_rejected": 0,
+  "elapsed_seconds": 16.593185424804688
+}

@@ -63,7 +63,7 @@ def run_one(pipeline, sample, idx, out_dir, logger):
     if os.path.exists(out_path):
         return  # resume support
     try:
-        result = pipeline.run(sample)
+        result = pipeline.run_single(sample, do_patch=True, validate_variants=True)
         with open(out_path, "w") as f:
             json.dump(result, f, ensure_ascii=False, indent=2)
     except Exception as e:

@@ -1,0 +1,591 @@
+{
+  "sample_id": "hotpotqa_0020",
+  "agent_type": "cot",
+  "sample_question": "When was first computer program created by the person born in London?",
+  "sample_context": "Ada Lovelace was born in London, England in 1815. Ada Lovelace created first computer program in 1843. Meanwhile, Frida Kahlo was working on similar topics in Mexico.",
+  "sample_gold_answer": "1843",
+  "original_result": {
+    "final_answer": "1843",
+    "n_steps": 5,
+    "is_correct": true,
+    "trace": [
+      {
+        "step": 1,
+        "thought": "To solve the problem, let's break it down into clear steps:",
+        "action": null,
+        "observation": null,
+        "raw_output": "To solve the problem, let's break it down into clear steps:",
+        "is_final": false
+      },
+      {
+        "step": 2,
+        "thought": "Identify the person born in London mentioned in the context: Ada Lovelace was born in London, England in 1815.",
+        "action": null,
+        "observation": null,
+        "raw_output": "Identify the person born in London mentioned in the context: Ada Lovelace was born in London, England in 1815.",
+        "is_final": false
+      },
+      {
+        "step": 3,
+        "thought": "Determine the action performed by this person: Ada Lovelace created the first computer program in 1843.",
+        "action": null,
+        "observation": null,
+        "raw_output": "Determine the action performed by this person: Ada Lovelace created the first computer program in 1843.",
+        "is_final": false
+      },
+      {
+        "step": 4,
+        "thought": "Connect the birthplace to the action: Since the question asks about the first computer program created by the person born in London, and Ada Lovelace fits this description, we focus on the year she created the first computer program.",
+        "action": null,
+        "observation": null,
+        "raw_output": "Connect the birthplace to the action: Since the question asks about the first computer program created by the person born in London, and Ada Lovelace fits this description, we focus on the year she created the first computer program.",
+        "is_final": false
+      },
+      {
+        "step": 5,
+        "thought": "Extract the year of the creation of the first computer program: According to the context, Ada Lovelace created the first computer program in 1843.\n\nFinal Answer: 1843",
+        "action": null,
+        "observation": null,
+        "raw_output": "Extract the year of the creation of the first computer program: According to the context, Ada Lovelace created the first computer program in 1843.\n\nFinal Answer: 1843",
+        "is_final": true
+      }
+    ]
+  },
+  "consistency_analysis": {
+    "consistency_rate": 1.0,
+    "is_consistent": true,
+    "inconsistent_count": 0,
+    "per_type_inconsistency": {
+      "paraphrase": 0.0,
+      "synonym": 0.0,
+      "reorder": 0.0,
+      "format": 0.0,
+      "distractor": 0.0
+    },
+    "propagation_patterns": {
+      "self_correct": 1,
+      "cascade": 2,
+      "early_diverge": 1,
+      "late_diverge": 1
+    }
+  },
+  "propagation_details": [
+    {
+      "divergence_step": 4,
+      "cascade_depth": 0,
+      "self_corrections": 1,
+      "propagation_pattern": "self_correct",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.9090909090909091,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.5238095238095238,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.4,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.16666666666666666,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 5,
+          "thought_similarity": 0.5925925925925926,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 5,
+      "n_steps_variant": 5,
+      "perturbation_type": "paraphrase",
+      "variant_answer": "1843"
+    },
+    {
+      "divergence_step": 3,
+      "cascade_depth": 3,
+      "self_corrections": 0,
+      "propagation_pattern": "cascade",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.4,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.19230769230769232,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.1388888888888889,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 5,
+          "thought_similarity": 0.38461538461538464,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 6,
+          "thought_similarity": 0.0,
+          "action_match": false,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 5,
+      "n_steps_variant": 6,
+      "perturbation_type": "synonym",
+      "variant_answer": "1843"
+    },
+    {
+      "divergence_step": 1,
+      "cascade_depth": 0,
+      "self_corrections": 2,
+      "propagation_pattern": "early_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.2857142857142857,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.4444444444444444,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.47368421052631576,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.34210526315789475,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 5,
+          "thought_similarity": 0.40625,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 5,
+      "n_steps_variant": 5,
+      "perturbation_type": "reorder",
+      "variant_answer": "1843"
+    },
+    {
+      "divergence_step": 4,
+      "cascade_depth": 1,
+      "self_corrections": 0,
+      "propagation_pattern": "late_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.6842105263157895,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.5217391304347826,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.24489795918367346,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 5,
+          "thought_similarity": 0.0,
+          "action_match": false,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 5,
+      "n_steps_variant": 4,
+      "perturbation_type": "format",
+      "variant_answer": "1843"
+    },
+    {
+      "divergence_step": 2,
+      "cascade_depth": 4,
+      "self_corrections": 0,
+      "propagation_pattern": "cascade",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.3,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.2916666666666667,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.3055555555555556,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 5,
+          "thought_similarity": 0.375,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 6,
+          "thought_similarity": 0.0,
+          "action_match": false,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 5,
+      "n_steps_variant": 6,
+      "perturbation_type": "distractor",
+      "variant_answer": "1843"
+    }
+  ],
+  "perturbation_variants": [
+    {
+      "perturbation_type": "paraphrase",
+      "variant_question": "What is the creation date of the first computer program by the individual born in London?",
+      "variant_context": "Ada Lovelace was born in London, England in 1815. Ada Lovelace created first computer program in 1843. Meanwhile, Frida Kahlo was working on similar topics in Mexico.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking for the same information: the creation date of the first computer program by an individual born in London. The minor differences in wording do not change the core of the "
+      },
+      "agent_run": {
+        "final_answer": "1843",
+        "n_steps": 5,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the problem, let's break it down into steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the problem, let's break it down into steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "Identify the individual born in London from the given context.\n   - The context mentions Ada Lovelace was born in London, England in 1815.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Identify the individual born in London from the given context.\n   - The context mentions Ada Lovelace was born in London, England in 1815.",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "Determine if the individual identified in step 1 created the first computer program.\n   - The context states that Ada Lovelace created the first computer program in 1843.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Determine if the individual identified in step 1 created the first computer program.\n   - The context states that Ada Lovelace created the first computer program in 1843.",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "Confirm that no other individual mentioned in the context is relevant to the question.\n   - The context also mentions Frida Kahlo, but she is not relevant to the question as she is not from London and is not associated with the creation of the first computer program.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Confirm that no other individual mentioned in the context is relevant to the question.\n   - The context also mentions Frida Kahlo, but she is not relevant to the question as she is not from London and is not associated with the creation of the first computer program.",
+            "is_final": false
+          },
+          {
+            "step": 5,
+            "thought": "Extract the creation date of the first computer program from the context.\n   - According to the context, the first computer program was created in 1843 by Ada Lovelace.\n\nFinal Answer: 1843",
+            "action": null,
+            "observation": null,
+            "raw_output": "Extract the creation date of the first computer program from the context.\n   - According to the context, the first computer program was created in 1843 by Ada Lovelace.\n\nFinal Answer: 1843",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "synonym",
+      "variant_question": "When was initial computer program devised by the individual born in London?",
+      "variant_context": "Ada Lovelace was born in London, England in 1815. Ada Lovelace created first computer program in 1843. Meanwhile, Frida Kahlo was working on similar topics in Mexico.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking for the same information: the year the first (or initial) computer program was created by someone born in London. The minor differences in wording ('first' vs 'initial', "
+      },
+      "agent_run": {
+        "final_answer": "1843",
+        "n_steps": 6,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the problem, let's break it down into clear steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the problem, let's break it down into clear steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "Identify the individual mentioned in the question: The individual is Ada Lovelace, who was born in London, England.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Identify the individual mentioned in the question: The individual is Ada Lovelace, who was born in London, England.",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "Determine the birth year of Ada Lovelace: According to the context provided, Ada Lovelace was born in 1815.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Determine the birth year of Ada Lovelace: According to the context provided, Ada Lovelace was born in 1815.",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "Identify the event in question: The event is the creation of the first computer program.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Identify the event in question: The event is the creation of the first computer program.",
+            "is_final": false
+          },
+          {
+            "step": 5,
+            "thought": "Determine the year the first computer program was created: The context states that Ada Lovelace created the first computer program in 1843.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Determine the year the first computer program was created: The context states that Ada Lovelace created the first computer program in 1843.",
+            "is_final": false
+          },
+          {
+            "step": 6,
+            "thought": "Formulate the answer: The initial computer program was devised by Ada Lovelace in 1843.\n\nFinal Answer: 1843",
+            "action": null,
+            "observation": null,
+            "raw_output": "Formulate the answer: The initial computer program was devised by Ada Lovelace in 1843.\n\nFinal Answer: 1843",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "reorder",
+      "variant_question": "When was first computer program created by the person born in London? Please reason step by step.",
+      "variant_context": "Ada Lovelace was born in London, England in 1815. Ada Lovelace created first computer program in 1843. Meanwhile, Frida Kahlo was working on similar topics in Mexico.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (reorder; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "1843",
+        "n_steps": 5,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the problem step by step, let's break down the information provided and reason through it:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the problem step by step, let's break down the information provided and reason through it:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "The context mentions Ada Lovelace, who was born in London, England in 1815.",
+            "action": null,
+            "observation": null,
+            "raw_output": "The context mentions Ada Lovelace, who was born in London, England in 1815.",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "It also states that Ada Lovelace created the first computer program in 1843.",
+            "action": null,
+            "observation": null,
+            "raw_output": "It also states that Ada Lovelace created the first computer program in 1843.",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "The question asks for the year the first computer program was created by the person born in London.\n\nGiven these points, we can conclude:",
+            "action": null,
+            "observation": null,
+            "raw_output": "The question asks for the year the first computer program was created by the person born in London.\n\nGiven these points, we can conclude:",
+            "is_final": false
+          },
+          {
+            "step": 5,
+            "thought": "Since Ada Lovelace is the person born in London and she created the first computer program in 1843, the year we are looking for is 1843.\n\nFinal Answer: 1843",
+            "action": null,
+            "observation": null,
+            "raw_output": "Since Ada Lovelace is the person born in London and she created the first computer program in 1843, the year we are looking for is 1843.\n\nFinal Answer: 1843",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "format",
+      "variant_question": "> When was first computer program created by the person born in London?",
+      "variant_context": "• Ada Lovelace was born in London, England in 1815.\n• Ada Lovelace created first computer program in 1843.\n• Meanwhile, Frida Kahlo was working on similar topics in Mexico.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (format; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "1843",
+        "n_steps": 4,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the problem, let's break it down into clear steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the problem, let's break it down into clear steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "Identify the person born in London mentioned in the context.\n   - According to the context, Ada Lovelace was born in London, England in 1815.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Identify the person born in London mentioned in the context.\n   - According to the context, Ada Lovelace was born in London, England in 1815.",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "Determine the year when the first computer program was created by this person.\n   - The context states that Ada Lovelace created the first computer program in 1843.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Determine the year when the first computer program was created by this person.\n   - The context states that Ada Lovelace created the first computer program in 1843.",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "Combine the information from steps 1 and 2 to answer the question.\n   - The person born in London who created the first computer program is Ada Lovelace, and she did so in 1843.\n\nFinal Answer: 1843",
+            "action": null,
+            "observation": null,
+            "raw_output": "Combine the information from steps 1 and 2 to answer the question.\n   - The person born in London who created the first computer program is Ada Lovelace, and she did so in 1843.\n\nFinal Answer: 1843",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "distractor",
+      "variant_question": "Note: the following sentence is unrelated to the question. Historical records from that era are preserved in multiple archives. Now, when was first computer program created by the person born in London?",
+      "variant_context": "Ada Lovelace was born in London, England in 1815. Ada Lovelace created first computer program in 1843. Meanwhile, Frida Kahlo was working on similar topics in Mexico. Historical records from that era are preserved in multiple archives.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (distractor; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "1843",
+        "n_steps": 6,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the problem, let's break it down into clear steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the problem, let's break it down into clear steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "Identify the key information provided in the context:\n   - Ada Lovelace was born in London, England in 1815.\n   - Ada Lovelace created the first computer program in 1843.\n   - Frida Kahlo is mentioned but is not relevant to the question.\n   - Historical records from that era are preserved in multiple archives.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Identify the key information provided in the context:\n   - Ada Lovelace was born in London, England in 1815.\n   - Ada Lovelace created the first computer program in 1843.\n   - Frida Kahlo is mentioned but is not relevant to the question.\n   - Historical records from that era are preserved in multiple archives.",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "Focus on the question: \"Now, when was the first computer program created by the person born in London?\"",
+            "action": null,
+            "observation": null,
+            "raw_output": "Focus on the question: \"Now, when was the first computer program created by the person born in London?\"",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "From the context, we know that Ada Lovelace was born in London and created the first computer program.",
+            "action": null,
+            "observation": null,
+            "raw_output": "From the context, we know that Ada Lovelace was born in London and created the first computer program.",
+            "is_final": false
+          },
+          {
+            "step": 5,
+            "thought": "The context explicitly states that Ada Lovelace created the first computer program in 1843.",
+            "action": null,
+            "observation": null,
+            "raw_output": "The context explicitly states that Ada Lovelace created the first computer program in 1843.",
+            "is_final": false
+          },
+          {
+            "step": 6,
+            "thought": "Therefore, the first computer program was created by Ada Lovelace, who was born in London, in 1843.\n\nFinal Answer: 1843",
+            "action": null,
+            "observation": null,
+            "raw_output": "Therefore, the first computer program was created by Ada Lovelace, who was born in London, in 1843.\n\nFinal Answer: 1843",
+            "is_final": true
+          }
+        ]
+      }
+    }
+  ],
+  "patch_results": null,
+  "n_variants_generated": 5,
+  "n_variants_valid": 5,
+  "n_variants_rejected": 0,
+  "elapsed_seconds": 25.140133380889893
+}

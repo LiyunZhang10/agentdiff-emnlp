@@ -1,0 +1,257 @@
+{
+  "sample_id": "hotpotqa_0113",
+  "agent_type": "direct",
+  "sample_question": "What nationality was the person who created The Two Fridas?",
+  "sample_context": "Frida Kahlo was born in Coyoacan, Mexico in 1907. Frida Kahlo created The Two Fridas in 1939. Meanwhile, Thomas Edison was working on similar topics in United States.",
+  "sample_gold_answer": "Mexico",
+  "original_result": {
+    "final_answer": "Mexican",
+    "n_steps": 1,
+    "is_correct": false,
+    "trace": [
+      {
+        "step": 1,
+        "thought": "Mexican",
+        "action": null,
+        "observation": null,
+        "raw_output": "Mexican",
+        "is_final": true
+      }
+    ]
+  },
+  "consistency_analysis": {
+    "consistency_rate": 1.0,
+    "is_consistent": true,
+    "inconsistent_count": 0,
+    "per_type_inconsistency": {
+      "paraphrase": 0.0,
+      "synonym": 0.0,
+      "reorder": 0.0,
+      "format": 0.0,
+      "distractor": 0.0
+    },
+    "propagation_patterns": {
+      "consistent": 4,
+      "early_diverge": 1
+    }
+  },
+  "propagation_details": [
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "paraphrase",
+      "variant_answer": "Mexican"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "synonym",
+      "variant_answer": "Mexican"
+    },
+    {
+      "divergence_step": 1,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "early_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.0,
+          "action_match": true,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "reorder",
+      "variant_answer": "Frida Kahlo, who created \"The Two Fridas\" in 1939, was Mexican."
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "format",
+      "variant_answer": "Mexican"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "distractor",
+      "variant_answer": "Mexican"
+    }
+  ],
+  "perturbation_variants": [
+    {
+      "perturbation_type": "paraphrase",
+      "variant_question": "Who was the nationality of the creator of The Two Fridas?",
+      "variant_context": "Frida Kahlo was born in Coyoacan, Mexico in 1907. Frida Kahlo created The Two Fridas in 1939. Meanwhile, Thomas Edison was working on similar topics in United States.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe two questions are asking for the same information: the nationality of the creator of The Two Fridas. The slight reordering of the words does not change the core information being sought, and "
+      },
+      "agent_run": {
+        "final_answer": "Mexican",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "Mexican",
+            "action": null,
+            "observation": null,
+            "raw_output": "Mexican",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "synonym",
+      "variant_question": "What ethnic origin was the individual who devised The Two Fridas?",
+      "variant_context": "Frida Kahlo was born in Coyoacan, Mexico in 1907. Frida Kahlo created The Two Fridas in 1939. Meanwhile, Thomas Edison was working on similar topics in United States.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe two questions are asking for the same information: the nationality/ethnic origin of the creator of \"The Two Fridas\". The slight variations in wording do not change the core of the question or"
+      },
+      "agent_run": {
+        "final_answer": "Mexican",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "Mexican",
+            "action": null,
+            "observation": null,
+            "raw_output": "Mexican",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "reorder",
+      "variant_question": "What nationality was the person who created The Two Fridas? Please reason step by step.",
+      "variant_context": "Frida Kahlo was born in Coyoacan, Mexico in 1907. Frida Kahlo created The Two Fridas in 1939. Meanwhile, Thomas Edison was working on similar topics in United States.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (reorder; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "Frida Kahlo, who created \"The Two Fridas\" in 1939, was Mexican.",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "Frida Kahlo, who created \"The Two Fridas\" in 1939, was Mexican.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Frida Kahlo, who created \"The Two Fridas\" in 1939, was Mexican.",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "format",
+      "variant_question": "> What nationality was the person who created The Two Fridas?",
+      "variant_context": "• Frida Kahlo was born in Coyoacan, Mexico in 1907.\n• Frida Kahlo created The Two Fridas in 1939.\n• Meanwhile, Thomas Edison was working on similar topics in United States.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (format; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "Mexican",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "Mexican",
+            "action": null,
+            "observation": null,
+            "raw_output": "Mexican",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "distractor",
+      "variant_question": "Note: the following sentence is unrelated to the question. Meanwhile, advances in technology continued to reshape daily life. Now, what nationality was the person who created The Two Fridas?",
+      "variant_context": "Frida Kahlo was born in Coyoacan, Mexico in 1907. Frida Kahlo created The Two Fridas in 1939. Meanwhile, Thomas Edison was working on similar topics in United States. Meanwhile, advances in technology continued to reshape daily life.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (distractor; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "Mexican",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "Mexican",
+            "action": null,
+            "observation": null,
+            "raw_output": "Mexican",
+            "is_final": true
+          }
+        ]
+      }
+    }
+  ],
+  "patch_results": null,
+  "n_variants_generated": 5,
+  "n_variants_valid": 5,
+  "n_variants_rejected": 0,
+  "elapsed_seconds": 3.9343230724334717
+}

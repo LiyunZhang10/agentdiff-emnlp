@@ -1,0 +1,514 @@
+{
+  "sample_id": "math_0134",
+  "agent_type": "cot",
+  "sample_question": "Solve for x: 8x + 7 = 7x + 6",
+  "sample_context": null,
+  "sample_gold_answer": "-1",
+  "original_result": {
+    "final_answer": "\\(-1\\)",
+    "n_steps": 5,
+    "is_correct": true,
+    "trace": [
+      {
+        "step": 1,
+        "thought": "To solve the equation \\(8x + 7 = 7x + 6\\) for \\(x\\), follow these steps:",
+        "action": null,
+        "observation": null,
+        "raw_output": "To solve the equation \\(8x + 7 = 7x + 6\\) for \\(x\\), follow these steps:",
+        "is_final": false
+      },
+      {
+        "step": 2,
+        "thought": "**Start with the given equation:**\n   \\[\n   8x + 7 = 7x + 6\n   \\]",
+        "action": null,
+        "observation": null,
+        "raw_output": "**Start with the given equation:**\n   \\[\n   8x + 7 = 7x + 6\n   \\]",
+        "is_final": false
+      },
+      {
+        "step": 3,
+        "thought": "**Subtract \\(7x\\) from both sides of the equation to isolate the \\(x\\) terms on one side:**\n   \\[\n   8x + 7 - 7x = 7x + 6 - 7x\n   \\]\n   Simplifying both sides, we get:\n   \\[\n   x + 7 = 6\n   \\]",
+        "action": null,
+        "observation": null,
+        "raw_output": "**Subtract \\(7x\\) from both sides of the equation to isolate the \\(x\\) terms on one side:**\n   \\[\n   8x + 7 - 7x = 7x + 6 - 7x\n   \\]\n   Simplifying both sides, we get:\n   \\[\n   x + 7 = 6\n   \\]",
+        "is_final": false
+      },
+      {
+        "step": 4,
+        "thought": "**Subtract 7 from both sides of the equation to isolate \\(x\\):**\n   \\[\n   x + 7 - 7 = 6 - 7\n   \\]\n   Simplifying both sides, we get:\n   \\[\n   x = -1\n   \\]",
+        "action": null,
+        "observation": null,
+        "raw_output": "**Subtract 7 from both sides of the equation to isolate \\(x\\):**\n   \\[\n   x + 7 - 7 = 6 - 7\n   \\]\n   Simplifying both sides, we get:\n   \\[\n   x = -1\n   \\]",
+        "is_final": false
+      },
+      {
+        "step": 5,
+        "thought": "**Verify the solution by substituting \\(x = -1\\) back into the original equation:**\n   \\[\n   8(-1) + 7 = 7(-1) + 6\n   \\]\n   Simplifying both sides, we get:\n   \\[\n   -8 + 7 = -7 + 6\n   \\]\n   \\[\n   -1 = -1\n   \\]\n   The equation holds true, confirming that \\(x = -1\\) is the correct solution.\n\nFinal Answer: \\(-1\\)",
+        "action": null,
+        "observation": null,
+        "raw_output": "**Verify the solution by substituting \\(x = -1\\) back into the original equation:**\n   \\[\n   8(-1) + 7 = 7(-1) + 6\n   \\]\n   Simplifying both sides, we get:\n   \\[\n   -8 + 7 = -7 + 6\n   \\]\n   \\[\n   -1 = -1\n   \\]\n   The equation holds true, confirming that \\(x = -1\\) is the correct solution.\n\nFinal Answer: \\(-1\\)",
+        "is_final": true
+      }
+    ]
+  },
+  "consistency_analysis": {
+    "consistency_rate": 1.0,
+    "is_consistent": true,
+    "inconsistent_count": 0,
+    "per_type_inconsistency": {
+      "paraphrase": 0.0,
+      "synonym": 0.0,
+      "reorder": 0.0,
+      "format": 0.0,
+      "distractor": 0.0
+    },
+    "propagation_patterns": {
+      "cascade": 1,
+      "self_correct": 2,
+      "late_diverge": 2
+    }
+  },
+  "propagation_details": [
+    {
+      "divergence_step": 2,
+      "cascade_depth": 3,
+      "self_corrections": 0,
+      "propagation_pattern": "cascade",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.6666666666666666,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.21951219512195122,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.38,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.0,
+          "action_match": false,
+          "is_divergent": true
+        },
+        {
+          "step": 5,
+          "thought_similarity": 0.0,
+          "action_match": false,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 5,
+      "n_steps_variant": 3,
+      "perturbation_type": "paraphrase",
+      "variant_answer": "\\(-1\\)"
+    },
+    {
+      "divergence_step": 2,
+      "cascade_depth": 1,
+      "self_corrections": 1,
+      "propagation_pattern": "self_correct",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.8823529411764706,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.225,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.4166666666666667,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.0,
+          "action_match": false,
+          "is_divergent": true
+        },
+        {
+          "step": 5,
+          "thought_similarity": 0.0,
+          "action_match": false,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 5,
+      "n_steps_variant": 3,
+      "perturbation_type": "synonym",
+      "variant_answer": "\\(-1\\)"
+    },
+    {
+      "divergence_step": 2,
+      "cascade_depth": 1,
+      "self_corrections": 1,
+      "propagation_pattern": "self_correct",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.8823529411764706,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.21951219512195122,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.40425531914893614,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.3076923076923077,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 5,
+          "thought_similarity": 0.0,
+          "action_match": false,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 5,
+      "n_steps_variant": 4,
+      "perturbation_type": "reorder",
+      "variant_answer": "\\(-1\\)"
+    },
+    {
+      "divergence_step": 5,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "late_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.8666666666666667,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.6296296296296297,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 5,
+          "thought_similarity": 0.0,
+          "action_match": false,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 5,
+      "n_steps_variant": 4,
+      "perturbation_type": "format",
+      "variant_answer": "\\(-1\\)"
+    },
+    {
+      "divergence_step": 5,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "late_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.7857142857142857,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.75,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.5862068965517241,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 5,
+          "thought_similarity": 0.0,
+          "action_match": false,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 5,
+      "n_steps_variant": 4,
+      "perturbation_type": "distractor",
+      "variant_answer": "\\(-1\\)"
+    }
+  ],
+  "perturbation_variants": [
+    {
+      "perturbation_type": "paraphrase",
+      "variant_question": "Find x: 8x + 7 = 7x + 6",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking for the same solution, with only a minor wording difference in the instruction (\"Solve for x\" vs \"Find x\"). These differences do not change the answer."
+      },
+      "agent_run": {
+        "final_answer": "\\(-1\\)",
+        "n_steps": 3,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the equation \\(8x + 7 = 7x + 6\\), we will follow these steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the equation \\(8x + 7 = 7x + 6\\), we will follow these steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "**Isolate the variable terms on one side of the equation**: To do this, we can subtract \\(7x\\) from both sides of the equation to get all the \\(x\\) terms on one side.\n   \\[\n   8x + 7 - 7x = 7x + 6 - 7x\n   \\]\n   Simplifying both sides, we get:\n   \\[\n   x + 7 = 6\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Isolate the variable terms on one side of the equation**: To do this, we can subtract \\(7x\\) from both sides of the equation to get all the \\(x\\) terms on one side.\n   \\[\n   8x + 7 - 7x = 7x + 6 - 7x\n   \\]\n   Simplifying both sides, we get:\n   \\[\n   x + 7 = 6\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "**Isolate the constant terms on the other side of the equation**: Now, we need to move the constant term \\(7\\) to the right side of the equation. We do this by subtracting \\(7\\) from both sides.\n   \\[\n   x + 7 - 7 = 6 - 7\n   \\]\n   Simplifying both sides, we get:\n   \\[\n   x = -1\n   \\]\n\nFinal Answer: \\(-1\\)",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Isolate the constant terms on the other side of the equation**: Now, we need to move the constant term \\(7\\) to the right side of the equation. We do this by subtracting \\(7\\) from both sides.\n   \\[\n   x + 7 - 7 = 6 - 7\n   \\]\n   Simplifying both sides, we get:\n   \\[\n   x = -1\n   \\]\n\nFinal Answer: \\(-1\\)",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "synonym",
+      "variant_question": "Determine for x: 8x + 7 = 7x + 6",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe wording difference between \"Solve for x\" and \"Determine for x\" is minor and does not change the meaning or the solution of the equation. Therefore, these two questions are equivalent."
+      },
+      "agent_run": {
+        "final_answer": "\\(-1\\)",
+        "n_steps": 3,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the equation \\(8x + 7 = 7x + 6\\) for \\(x\\), we will follow these steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the equation \\(8x + 7 = 7x + 6\\) for \\(x\\), we will follow these steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "**Isolate the variable \\(x\\) on one side of the equation**: To do this, we can subtract \\(7x\\) from both sides of the equation to eliminate \\(7x\\) from the right side.\n   \\[\n   8x + 7 - 7x = 7x + 6 - 7x\n   \\]\n   Simplifying both sides, we get:\n   \\[\n   x + 7 = 6\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Isolate the variable \\(x\\) on one side of the equation**: To do this, we can subtract \\(7x\\) from both sides of the equation to eliminate \\(7x\\) from the right side.\n   \\[\n   8x + 7 - 7x = 7x + 6 - 7x\n   \\]\n   Simplifying both sides, we get:\n   \\[\n   x + 7 = 6\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "**Isolate \\(x\\) completely**: Now, we need to get rid of the constant term on the left side. We do this by subtracting 7 from both sides of the equation.\n   \\[\n   x + 7 - 7 = 6 - 7\n   \\]\n   Simplifying both sides, we get:\n   \\[\n   x = -1\n   \\]\n\nFinal Answer: \\(-1\\)",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Isolate \\(x\\) completely**: Now, we need to get rid of the constant term on the left side. We do this by subtracting 7 from both sides of the equation.\n   \\[\n   x + 7 - 7 = 6 - 7\n   \\]\n   Simplifying both sides, we get:\n   \\[\n   x = -1\n   \\]\n\nFinal Answer: \\(-1\\)",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "reorder",
+      "variant_question": "Solve for x: 8x + 7 = 7x + 6 Please reason step by step.",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (reorder; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "\\(-1\\)",
+        "n_steps": 4,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the equation \\(8x + 7 = 7x + 6\\) for \\(x\\), we will follow these steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the equation \\(8x + 7 = 7x + 6\\) for \\(x\\), we will follow these steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "**Isolate the variable terms on one side of the equation**: To do this, we can subtract \\(7x\\) from both sides of the equation to get all the \\(x\\)-terms on one side.\n   \\[\n   8x + 7 - 7x = 7x + 6 - 7x\n   \\]\n   Simplifying both sides, we get:\n   \\[\n   x + 7 = 6\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Isolate the variable terms on one side of the equation**: To do this, we can subtract \\(7x\\) from both sides of the equation to get all the \\(x\\)-terms on one side.\n   \\[\n   8x + 7 - 7x = 7x + 6 - 7x\n   \\]\n   Simplifying both sides, we get:\n   \\[\n   x + 7 = 6\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "**Isolate the constant terms on the other side of the equation**: Now, we need to move the constant term \\(7\\) to the right side of the equation. We do this by subtracting \\(7\\) from both sides.\n   \\[\n   x + 7 - 7 = 6 - 7\n   \\]\n   Simplifying both sides, we get:\n   \\[\n   x = -1\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Isolate the constant terms on the other side of the equation**: Now, we need to move the constant term \\(7\\) to the right side of the equation. We do this by subtracting \\(7\\) from both sides.\n   \\[\n   x + 7 - 7 = 6 - 7\n   \\]\n   Simplifying both sides, we get:\n   \\[\n   x = -1\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "**Verify the solution**: To ensure our solution is correct, we can substitute \\(x = -1\\) back into the original equation and check if both sides are equal.\n   \\[\n   8(-1) + 7 = 7(-1) + 6\n   \\]\n   Simplifying both sides, we get:\n   \\[\n   -8 + 7 = -7 + 6\n   \\]\n   \\[\n   -1 = -1\n   \\]\n   Since both sides are equal, our solution is correct.\n\nFinal Answer: \\(-1\\)",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Verify the solution**: To ensure our solution is correct, we can substitute \\(x = -1\\) back into the original equation and check if both sides are equal.\n   \\[\n   8(-1) + 7 = 7(-1) + 6\n   \\]\n   Simplifying both sides, we get:\n   \\[\n   -8 + 7 = -7 + 6\n   \\]\n   \\[\n   -1 = -1\n   \\]\n   Since both sides are equal, our solution is correct.\n\nFinal Answer: \\(-1\\)",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "format",
+      "variant_question": "> Solve for x: 8x + 7 = 7x + 6",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (format; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "\\(-1\\)",
+        "n_steps": 4,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the equation \\(8x + 7 = 7x + 6\\) for \\(x\\), follow these steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the equation \\(8x + 7 = 7x + 6\\) for \\(x\\), follow these steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "**Start with the given equation:**\n   \\[\n   8x + 7 = 7x + 6\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Start with the given equation:**\n   \\[\n   8x + 7 = 7x + 6\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "**Subtract \\(7x\\) from both sides of the equation to isolate the \\(x\\) terms on one side:**\n   \\[\n   8x + 7 - 7x = 7x + 6 - 7x\n   \\]\n   Simplifying both sides:\n   \\[\n   x + 7 = 6\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Subtract \\(7x\\) from both sides of the equation to isolate the \\(x\\) terms on one side:**\n   \\[\n   8x + 7 - 7x = 7x + 6 - 7x\n   \\]\n   Simplifying both sides:\n   \\[\n   x + 7 = 6\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "**Subtract 7 from both sides to isolate \\(x\\):**\n   \\[\n   x + 7 - 7 = 6 - 7\n   \\]\n   Simplifying both sides:\n   \\[\n   x = -1\n   \\]\n\nFinal Answer: \\(-1\\)",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Subtract 7 from both sides to isolate \\(x\\):**\n   \\[\n   x + 7 - 7 = 6 - 7\n   \\]\n   Simplifying both sides:\n   \\[\n   x = -1\n   \\]\n\nFinal Answer: \\(-1\\)",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "distractor",
+      "variant_question": "Note: the following sentence is unrelated to the question. Meanwhile, advances in technology continued to reshape daily life. Now, solve for x: 8x + 7 = 7x + 6",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (distractor; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "\\(-1\\)",
+        "n_steps": 4,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the equation \\(8x + 7 = 7x + 6\\) for \\(x\\), follow these steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the equation \\(8x + 7 = 7x + 6\\) for \\(x\\), follow these steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "**Start with the equation**: \n   \\[\n   8x + 7 = 7x + 6\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Start with the equation**: \n   \\[\n   8x + 7 = 7x + 6\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "**Subtract \\(7x\\) from both sides** to isolate the \\(x\\) terms on one side:\n   \\[\n   8x + 7 - 7x = 7x + 6 - 7x\n   \\]\n   Simplifying this, we get:\n   \\[\n   x + 7 = 6\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Subtract \\(7x\\) from both sides** to isolate the \\(x\\) terms on one side:\n   \\[\n   8x + 7 - 7x = 7x + 6 - 7x\n   \\]\n   Simplifying this, we get:\n   \\[\n   x + 7 = 6\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "**Subtract 7 from both sides** to isolate \\(x\\):\n   \\[\n   x + 7 - 7 = 6 - 7\n   \\]\n   Simplifying this, we get:\n   \\[\n   x = -1\n   \\]\n\nFinal Answer: \\(-1\\)",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Subtract 7 from both sides** to isolate \\(x\\):\n   \\[\n   x + 7 - 7 = 6 - 7\n   \\]\n   Simplifying this, we get:\n   \\[\n   x = -1\n   \\]\n\nFinal Answer: \\(-1\\)",
+            "is_final": true
+          }
+        ]
+      }
+    }
+  ],
+  "patch_results": null,
+  "n_variants_generated": 5,
+  "n_variants_valid": 5,
+  "n_variants_rejected": 0,
+  "elapsed_seconds": 34.95545792579651
+}

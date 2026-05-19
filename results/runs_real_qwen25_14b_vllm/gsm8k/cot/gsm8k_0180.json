@@ -1,0 +1,538 @@
+{
+  "sample_id": "gsm8k_0180",
+  "agent_type": "cot",
+  "sample_question": "Alice has 11 apples. She gives 4 to Bob and buys 10 more. How many apples does Alice have now?",
+  "sample_context": null,
+  "sample_gold_answer": "17",
+  "original_result": {
+    "final_answer": "17",
+    "n_steps": 4,
+    "is_correct": true,
+    "trace": [
+      {
+        "step": 1,
+        "thought": "Let's solve the problem step by step.",
+        "action": null,
+        "observation": null,
+        "raw_output": "Let's solve the problem step by step.",
+        "is_final": false
+      },
+      {
+        "step": 2,
+        "thought": "**Initial Number of Apples**: Alice starts with 11 apples.",
+        "action": null,
+        "observation": null,
+        "raw_output": "**Initial Number of Apples**: Alice starts with 11 apples.",
+        "is_final": false
+      },
+      {
+        "step": 3,
+        "thought": "**Giving Apples to Bob**: Alice gives 4 apples to Bob. So, we subtract 4 from the initial number of apples.\n   - Calculation: \\( 11 - 4 = 7 \\)\n   - After giving 4 apples to Bob, Alice has 7 apples left.",
+        "action": null,
+        "observation": null,
+        "raw_output": "**Giving Apples to Bob**: Alice gives 4 apples to Bob. So, we subtract 4 from the initial number of apples.\n   - Calculation: \\( 11 - 4 = 7 \\)\n   - After giving 4 apples to Bob, Alice has 7 apples left.",
+        "is_final": false
+      },
+      {
+        "step": 4,
+        "thought": "**Buying More Apples**: Alice then buys 10 more apples. We add these 10 apples to the number of apples she has left after giving some to Bob.\n   - Calculation: \\( 7 + 10 = 17 \\)\n   - After buying 10 more apples, Alice has 17 apples.\n\nFinal Answer: 17",
+        "action": null,
+        "observation": null,
+        "raw_output": "**Buying More Apples**: Alice then buys 10 more apples. We add these 10 apples to the number of apples she has left after giving some to Bob.\n   - Calculation: \\( 7 + 10 = 17 \\)\n   - After buying 10 more apples, Alice has 17 apples.\n\nFinal Answer: 17",
+        "is_final": true
+      }
+    ]
+  },
+  "consistency_analysis": {
+    "consistency_rate": 0.8,
+    "is_consistent": false,
+    "inconsistent_count": 1,
+    "per_type_inconsistency": {
+      "paraphrase": 0.0,
+      "synonym": 0.0,
+      "reorder": 1.0,
+      "format": 0.0,
+      "distractor": 0.0
+    },
+    "propagation_patterns": {
+      "consistent": 2,
+      "late_diverge": 1,
+      "early_diverge": 2
+    }
+  },
+  "propagation_details": [
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.6666666666666666,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.5555555555555556,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.47058823529411764,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.5263157894736842,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 4,
+      "n_steps_variant": 4,
+      "perturbation_type": "paraphrase",
+      "variant_answer": "17"
+    },
+    {
+      "divergence_step": 3,
+      "cascade_depth": 1,
+      "self_corrections": 0,
+      "propagation_pattern": "late_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.7777777777777778,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.32432432432432434,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.3409090909090909,
+          "action_match": true,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 4,
+      "n_steps_variant": 4,
+      "perturbation_type": "synonym",
+      "variant_answer": "17"
+    },
+    {
+      "divergence_step": 1,
+      "cascade_depth": 5,
+      "self_corrections": 0,
+      "propagation_pattern": "early_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.125,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.0967741935483871,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.2,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.24,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 5,
+          "thought_similarity": 0.0,
+          "action_match": false,
+          "is_divergent": true
+        },
+        {
+          "step": 6,
+          "thought_similarity": 0.0,
+          "action_match": false,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 4,
+      "n_steps_variant": 6,
+      "perturbation_type": "reorder",
+      "variant_answer": "11"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.5151515151515151,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.5238095238095238,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 4,
+      "n_steps_variant": 4,
+      "perturbation_type": "format",
+      "variant_answer": "17"
+    },
+    {
+      "divergence_step": 1,
+      "cascade_depth": 0,
+      "self_corrections": 1,
+      "propagation_pattern": "early_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.375,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.6,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.6857142857142857,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.7631578947368421,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 4,
+      "n_steps_variant": 4,
+      "perturbation_type": "distractor",
+      "variant_answer": "17"
+    }
+  ],
+  "perturbation_variants": [
+    {
+      "perturbation_type": "paraphrase",
+      "variant_question": "How many apples does Alice have now after she starts with 11, gives 4 to Bob, and buys 10 more?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking for the same information and would yield the same answer despite minor differences in wording and structure."
+      },
+      "agent_run": {
+        "final_answer": "17",
+        "n_steps": 4,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "Let's break down the problem step by step.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Let's break down the problem step by step.",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "Alice starts with 11 apples.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Alice starts with 11 apples.",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "Alice gives 4 apples to Bob. After giving away 4 apples, the number of apples Alice has is:\n   \\[\n   11 - 4 = 7\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "Alice gives 4 apples to Bob. After giving away 4 apples, the number of apples Alice has is:\n   \\[\n   11 - 4 = 7\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "Alice then buys 10 more apples. After buying 10 more apples, the number of apples Alice has is:\n   \\[\n   7 + 10 = 17\n   \\]\n\nFinal Answer: 17",
+            "action": null,
+            "observation": null,
+            "raw_output": "Alice then buys 10 more apples. After buying 10 more apples, the number of apples Alice has is:\n   \\[\n   7 + 10 = 17\n   \\]\n\nFinal Answer: 17",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "synonym",
+      "variant_question": "Alice possesses 11 apples. She bestows 4 to Bob and purchases 10 more. How many apples does Alice have now?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are phrased differently but contain the same core information and operations: starting with 11 apples, giving away 4, and then acquiring 10 more. The changes in wording do not alter"
+      },
+      "agent_run": {
+        "final_answer": "17",
+        "n_steps": 4,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "Let's solve the problem step by step.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Let's solve the problem step by step.",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "**Initial Apples**: Alice starts with 11 apples.",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Initial Apples**: Alice starts with 11 apples.",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "**Apples Given Away**: Alice gives 4 apples to Bob. Therefore, the number of apples Alice has now is \\(11 - 4 = 7\\).",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Apples Given Away**: Alice gives 4 apples to Bob. Therefore, the number of apples Alice has now is \\(11 - 4 = 7\\).",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "**Apples Purchased**: Alice then buys 10 more apples. Adding these to her current total, she now has \\(7 + 10 = 17\\) apples.\n\nFinal Answer: 17",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Apples Purchased**: Alice then buys 10 more apples. Adding these to her current total, she now has \\(7 + 10 = 17\\) apples.\n\nFinal Answer: 17",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "reorder",
+      "variant_question": "She gives 4 to Bob and buys 10 more. Alice has 11 apples. How many apples does Alice have now?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (reorder; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "11",
+        "n_steps": 6,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve this problem, let's break it down into clear steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve this problem, let's break it down into clear steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "Identify the initial number of apples Alice has before any transactions. The problem does not directly state this, but we can work backwards from the information given.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Identify the initial number of apples Alice has before any transactions. The problem does not directly state this, but we can work backwards from the information given.",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "According to the problem, after giving 4 apples to Bob and buying 10 more, Alice ends up with 11 apples. We need to reverse these actions to find out how many apples she had initially.",
+            "action": null,
+            "observation": null,
+            "raw_output": "According to the problem, after giving 4 apples to Bob and buying 10 more, Alice ends up with 11 apples. We need to reverse these actions to find out how many apples she had initially.",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "Reverse the action of buying 10 more apples. If Alice ends up with 11 apples after buying 10, she must have had 11 - 10 = 1 apple before buying.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Reverse the action of buying 10 more apples. If Alice ends up with 11 apples after buying 10, she must have had 11 - 10 = 1 apple before buying.",
+            "is_final": false
+          },
+          {
+            "step": 5,
+            "thought": "Reverse the action of giving 4 apples to Bob. If Alice had 1 apple before buying and ended up with 11 after buying and giving away 4, she must have had 1 + 4 = 5 apples before giving any away.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Reverse the action of giving 4 apples to Bob. If Alice had 1 apple before buying and ended up with 11 after buying and giving away 4, she must have had 1 + 4 = 5 apples before giving any away.",
+            "is_final": false
+          },
+          {
+            "step": 6,
+            "thought": "Therefore, Alice initially had 5 apples before any transactions occurred. After giving 4 to Bob and buying 10 more, she now has 11 apples.\n\nFinal Answer: 11",
+            "action": null,
+            "observation": null,
+            "raw_output": "Therefore, Alice initially had 5 apples before any transactions occurred. After giving 4 to Bob and buying 10 more, she now has 11 apples.\n\nFinal Answer: 11",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "format",
+      "variant_question": "- Alice has 11 apples.\n- She gives 4 to Bob and buys 10 more.\nQuestion: How many apples does Alice have now?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (format; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "17",
+        "n_steps": 4,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "Let's solve the problem step by step.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Let's solve the problem step by step.",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "**Initial Number of Apples**: Alice starts with 11 apples.",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Initial Number of Apples**: Alice starts with 11 apples.",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "**Giving Apples to Bob**: Alice gives 4 apples to Bob. Therefore, the number of apples Alice has now is \\( 11 - 4 = 7 \\).",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Giving Apples to Bob**: Alice gives 4 apples to Bob. Therefore, the number of apples Alice has now is \\( 11 - 4 = 7 \\).",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "**Buying More Apples**: Alice then buys 10 more apples. Adding these to her current total, the number of apples Alice has now is \\( 7 + 10 = 17 \\).\n\nFinal Answer: 17",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Buying More Apples**: Alice then buys 10 more apples. Adding these to her current total, the number of apples Alice has now is \\( 7 + 10 = 17 \\).\n\nFinal Answer: 17",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "distractor",
+      "variant_question": "Note: the following sentence is unrelated to the question. Meanwhile, advances in technology continued to reshape daily life. Now, alice has 11 apples. She gives 4 to Bob and buys 10 more. How many apples does Alice have now?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (distractor; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "17",
+        "n_steps": 4,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the problem step by step, let's break it down into clear, numbered steps.",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the problem step by step, let's break it down into clear, numbered steps.",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "**Initial Count**: Alice starts with 11 apples.",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Initial Count**: Alice starts with 11 apples.",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "**Giving Away Apples**: Alice gives 4 apples to Bob. Therefore, we subtract 4 from the initial count of 11.\n   - Calculation: \\( 11 - 4 = 7 \\)\n   - After giving away 4 apples, Alice has 7 apples left.",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Giving Away Apples**: Alice gives 4 apples to Bob. Therefore, we subtract 4 from the initial count of 11.\n   - Calculation: \\( 11 - 4 = 7 \\)\n   - After giving away 4 apples, Alice has 7 apples left.",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "**Buying More Apples**: Alice then buys 10 more apples. We add these 10 apples to the 7 apples she has left.\n   - Calculation: \\( 7 + 10 = 17 \\)\n   - After buying 10 more apples, Alice has 17 apples in total.\n\nFinal Answer: 17",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Buying More Apples**: Alice then buys 10 more apples. We add these 10 apples to the 7 apples she has left.\n   - Calculation: \\( 7 + 10 = 17 \\)\n   - After buying 10 more apples, Alice has 17 apples in total.\n\nFinal Answer: 17",
+            "is_final": true
+          }
+        ]
+      }
+    }
+  ],
+  "patch_results": {
+    "step_patch": {
+      "consistency_rate": 0.8,
+      "inconsistent_count": 1,
+      "is_correct": true,
+      "intervention_step": 1,
+      "target_types": [
+        "reorder"
+      ]
+    },
+    "system_patch": {
+      "consistency_rate": 0.8,
+      "inconsistent_count": 1,
+      "is_correct": true,
+      "target_types": [
+        "reorder"
+      ]
+    }
+  },
+  "n_variants_generated": 5,
+  "n_variants_valid": 5,
+  "n_variants_rejected": 0,
+  "elapsed_seconds": 68.1348021030426
+}

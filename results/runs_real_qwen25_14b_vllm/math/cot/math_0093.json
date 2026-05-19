@@ -1,0 +1,639 @@
+{
+  "sample_id": "math_0093",
+  "agent_type": "cot",
+  "sample_question": "What is 4 + 9 * 4?",
+  "sample_context": null,
+  "sample_gold_answer": "40",
+  "original_result": {
+    "final_answer": "40",
+    "n_steps": 6,
+    "is_correct": true,
+    "trace": [
+      {
+        "step": 1,
+        "thought": "To solve the problem 4 + 9 * 4, we need to follow the order of operations, often remembered by the acronym PEMDAS (Parentheses, Exponents, Multiplication and Division (from left to right), Addition and Subtraction (from left to right)).",
+        "action": null,
+        "observation": null,
+        "raw_output": "To solve the problem 4 + 9 * 4, we need to follow the order of operations, often remembered by the acronym PEMDAS (Parentheses, Exponents, Multiplication and Division (from left to right), Addition and Subtraction (from left to right)).",
+        "is_final": false
+      },
+      {
+        "step": 2,
+        "thought": "Identify the operations in the expression.\nThe expression contains addition (+) and multiplication (*).",
+        "action": null,
+        "observation": null,
+        "raw_output": "Identify the operations in the expression.\nThe expression contains addition (+) and multiplication (*).",
+        "is_final": false
+      },
+      {
+        "step": 3,
+        "thought": "Apply the order of operations.\nAccording to PEMDAS, multiplication should be performed before addition.",
+        "action": null,
+        "observation": null,
+        "raw_output": "Apply the order of operations.\nAccording to PEMDAS, multiplication should be performed before addition.",
+        "is_final": false
+      },
+      {
+        "step": 4,
+        "thought": "Perform the multiplication first.\n9 * 4 = 36",
+        "action": null,
+        "observation": null,
+        "raw_output": "Perform the multiplication first.\n9 * 4 = 36",
+        "is_final": false
+      },
+      {
+        "step": 5,
+        "thought": "Substitute the result of the multiplication back into the expression.\nThe expression now becomes 4 + 36.",
+        "action": null,
+        "observation": null,
+        "raw_output": "Substitute the result of the multiplication back into the expression.\nThe expression now becomes 4 + 36.",
+        "is_final": false
+      },
+      {
+        "step": 6,
+        "thought": "Perform the addition.\n4 + 36 = 40\n\nFinal Answer: 40",
+        "action": null,
+        "observation": null,
+        "raw_output": "Perform the addition.\n4 + 36 = 40\n\nFinal Answer: 40",
+        "is_final": true
+      }
+    ]
+  },
+  "consistency_analysis": {
+    "consistency_rate": 1.0,
+    "is_consistent": true,
+    "inconsistent_count": 0,
+    "per_type_inconsistency": {
+      "paraphrase": 0.0,
+      "synonym": 0.0,
+      "reorder": 0.0,
+      "format": 0.0,
+      "distractor": 0.0
+    },
+    "propagation_patterns": {
+      "consistent": 4,
+      "cascade": 1
+    }
+  },
+  "propagation_details": [
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 4,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 5,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 6,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 6,
+      "n_steps_variant": 6,
+      "perturbation_type": "paraphrase",
+      "variant_answer": "40"
+    },
+    {
+      "divergence_step": 2,
+      "cascade_depth": 2,
+      "self_corrections": 1,
+      "propagation_pattern": "cascade",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.7777777777777778,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.2222222222222222,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.2727272727272727,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.5454545454545454,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 5,
+          "thought_similarity": 0.24,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 6,
+          "thought_similarity": 0.0,
+          "action_match": false,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 6,
+      "n_steps_variant": 5,
+      "perturbation_type": "synonym",
+      "variant_answer": "40"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 4,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 5,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 6,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 6,
+      "n_steps_variant": 6,
+      "perturbation_type": "reorder",
+      "variant_answer": "40"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 4,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 5,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 6,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 6,
+      "n_steps_variant": 6,
+      "perturbation_type": "format",
+      "variant_answer": "40"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.45454545454545453,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.42857142857142855,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.5,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 5,
+          "thought_similarity": 0.875,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 6,
+          "thought_similarity": 0.8333333333333334,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 6,
+      "n_steps_variant": 6,
+      "perturbation_type": "distractor",
+      "variant_answer": "40"
+    }
+  ],
+  "perturbation_variants": [
+    {
+      "perturbation_type": "paraphrase",
+      "variant_question": "What is the result of 4 + 9 * 4?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking for the same mathematical operation and would yield the same answer. The minor difference in wording does not change the answer."
+      },
+      "agent_run": {
+        "final_answer": "40",
+        "n_steps": 6,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the problem 4 + 9 * 4, we need to follow the order of operations, often remembered by the acronym PEMDAS (Parentheses, Exponents, Multiplication and Division (from left to right), Addition and Subtraction (from left to right)).",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the problem 4 + 9 * 4, we need to follow the order of operations, often remembered by the acronym PEMDAS (Parentheses, Exponents, Multiplication and Division (from left to right), Addition and Subtraction (from left to right)).",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "Identify the operations in the expression.\nThe expression contains addition (+) and multiplication (*).",
+            "action": null,
+            "observation": null,
+            "raw_output": "Identify the operations in the expression.\nThe expression contains addition (+) and multiplication (*).",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "Apply the order of operations.\nAccording to PEMDAS, multiplication should be performed before addition.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Apply the order of operations.\nAccording to PEMDAS, multiplication should be performed before addition.",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "Perform the multiplication first.\n9 * 4 = 36",
+            "action": null,
+            "observation": null,
+            "raw_output": "Perform the multiplication first.\n9 * 4 = 36",
+            "is_final": false
+          },
+          {
+            "step": 5,
+            "thought": "Substitute the result of the multiplication back into the expression.\nThe expression now becomes 4 + 36.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Substitute the result of the multiplication back into the expression.\nThe expression now becomes 4 + 36.",
+            "is_final": false
+          },
+          {
+            "step": 6,
+            "thought": "Perform the addition.\n4 + 36 = 40\n\nFinal Answer: 40",
+            "action": null,
+            "observation": null,
+            "raw_output": "Perform the addition.\n4 + 36 = 40\n\nFinal Answer: 40",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "synonym",
+      "variant_question": "What is 4 plus 9 times 4?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are phrased differently but ask for the same mathematical operation, thus they are equivalent."
+      },
+      "agent_run": {
+        "final_answer": "40",
+        "n_steps": 5,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the problem \"What is 4 plus 9 times 4?\", we need to follow the order of operations, often remembered by the acronym PEMDAS (Parentheses, Exponents, Multiplication and Division (from left to right), Addition and Subtraction (from left to right)).",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the problem \"What is 4 plus 9 times 4?\", we need to follow the order of operations, often remembered by the acronym PEMDAS (Parentheses, Exponents, Multiplication and Division (from left to right), Addition and Subtraction (from left to right)).",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "Identify the operations in the expression.\nThe expression is \"4 plus 9 times 4\", which can be written as 4 + 9 * 4.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Identify the operations in the expression.\nThe expression is \"4 plus 9 times 4\", which can be written as 4 + 9 * 4.",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "According to PEMDAS, multiplication comes before addition.\nSo, we first calculate 9 * 4.",
+            "action": null,
+            "observation": null,
+            "raw_output": "According to PEMDAS, multiplication comes before addition.\nSo, we first calculate 9 * 4.",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "Perform the multiplication.\n9 * 4 = 36.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Perform the multiplication.\n9 * 4 = 36.",
+            "is_final": false
+          },
+          {
+            "step": 5,
+            "thought": "Now, we add the result of the multiplication to 4.\n4 + 36 = 40.\n\nFinal Answer: 40",
+            "action": null,
+            "observation": null,
+            "raw_output": "Now, we add the result of the multiplication to 4.\n4 + 36 = 40.\n\nFinal Answer: 40",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "reorder",
+      "variant_question": "What is 4 + 9 * 4? Please reason step by step.",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (reorder; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "40",
+        "n_steps": 6,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the problem 4 + 9 * 4, we need to follow the order of operations, often remembered by the acronym PEMDAS (Parentheses, Exponents, Multiplication and Division (from left to right), Addition and Subtraction (from left to right)).",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the problem 4 + 9 * 4, we need to follow the order of operations, often remembered by the acronym PEMDAS (Parentheses, Exponents, Multiplication and Division (from left to right), Addition and Subtraction (from left to right)).",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "Identify the operations in the expression.\nThe expression contains addition (+) and multiplication (*).",
+            "action": null,
+            "observation": null,
+            "raw_output": "Identify the operations in the expression.\nThe expression contains addition (+) and multiplication (*).",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "Apply the order of operations.\nAccording to PEMDAS, multiplication should be performed before addition.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Apply the order of operations.\nAccording to PEMDAS, multiplication should be performed before addition.",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "Perform the multiplication first.\n9 * 4 = 36",
+            "action": null,
+            "observation": null,
+            "raw_output": "Perform the multiplication first.\n9 * 4 = 36",
+            "is_final": false
+          },
+          {
+            "step": 5,
+            "thought": "Substitute the result of the multiplication back into the expression.\nThe expression now becomes 4 + 36.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Substitute the result of the multiplication back into the expression.\nThe expression now becomes 4 + 36.",
+            "is_final": false
+          },
+          {
+            "step": 6,
+            "thought": "Perform the addition.\n4 + 36 = 40\n\nFinal Answer: 40",
+            "action": null,
+            "observation": null,
+            "raw_output": "Perform the addition.\n4 + 36 = 40\n\nFinal Answer: 40",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "format",
+      "variant_question": "> What is 4 + 9 * 4?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (format; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "40",
+        "n_steps": 6,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the problem 4 + 9 * 4, we need to follow the order of operations, often remembered by the acronym PEMDAS (Parentheses, Exponents, Multiplication and Division (from left to right), Addition and Subtraction (from left to right)).",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the problem 4 + 9 * 4, we need to follow the order of operations, often remembered by the acronym PEMDAS (Parentheses, Exponents, Multiplication and Division (from left to right), Addition and Subtraction (from left to right)).",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "Identify the operations in the expression.\nThe expression contains addition (+) and multiplication (*).",
+            "action": null,
+            "observation": null,
+            "raw_output": "Identify the operations in the expression.\nThe expression contains addition (+) and multiplication (*).",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "Apply the order of operations.\nAccording to PEMDAS, multiplication should be performed before addition.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Apply the order of operations.\nAccording to PEMDAS, multiplication should be performed before addition.",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "Perform the multiplication first.\n9 * 4 = 36",
+            "action": null,
+            "observation": null,
+            "raw_output": "Perform the multiplication first.\n9 * 4 = 36",
+            "is_final": false
+          },
+          {
+            "step": 5,
+            "thought": "Substitute the result of the multiplication back into the expression.\nThe expression now becomes 4 + 36.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Substitute the result of the multiplication back into the expression.\nThe expression now becomes 4 + 36.",
+            "is_final": false
+          },
+          {
+            "step": 6,
+            "thought": "Perform the addition.\n4 + 36 = 40\n\nFinal Answer: 40",
+            "action": null,
+            "observation": null,
+            "raw_output": "Perform the addition.\n4 + 36 = 40\n\nFinal Answer: 40",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "distractor",
+      "variant_question": "Note: the following sentence is unrelated to the question. The weather that day was particularly sunny with clear skies. Now, what is 4 + 9 * 4?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (distractor; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "40",
+        "n_steps": 6,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the problem 4 + 9 * 4, we need to follow the order of operations, often remembered by the acronym PEMDAS (Parentheses, Exponents, Multiplication and Division (from left to right), Addition and Subtraction (from left to right)).",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the problem 4 + 9 * 4, we need to follow the order of operations, often remembered by the acronym PEMDAS (Parentheses, Exponents, Multiplication and Division (from left to right), Addition and Subtraction (from left to right)).",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "Identify the operations in the expression 4 + 9 * 4.\n- There is one addition operation (+) and one multiplication operation (*).",
+            "action": null,
+            "observation": null,
+            "raw_output": "Identify the operations in the expression 4 + 9 * 4.\n- There is one addition operation (+) and one multiplication operation (*).",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "According to PEMDAS, multiplication should be performed before addition.\n- First, we calculate 9 * 4.",
+            "action": null,
+            "observation": null,
+            "raw_output": "According to PEMDAS, multiplication should be performed before addition.\n- First, we calculate 9 * 4.",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "Perform the multiplication.\n- 9 * 4 = 36.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Perform the multiplication.\n- 9 * 4 = 36.",
+            "is_final": false
+          },
+          {
+            "step": 5,
+            "thought": "Now, substitute the result of the multiplication back into the expression.\n- The expression now becomes 4 + 36.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Now, substitute the result of the multiplication back into the expression.\n- The expression now becomes 4 + 36.",
+            "is_final": false
+          },
+          {
+            "step": 6,
+            "thought": "Perform the addition.\n- 4 + 36 = 40.\n\nFinal Answer: 40",
+            "action": null,
+            "observation": null,
+            "raw_output": "Perform the addition.\n- 4 + 36 = 40.\n\nFinal Answer: 40",
+            "is_final": true
+          }
+        ]
+      }
+    }
+  ],
+  "patch_results": null,
+  "n_variants_generated": 5,
+  "n_variants_valid": 5,
+  "n_variants_rejected": 0,
+  "elapsed_seconds": 24.696756601333618
+}

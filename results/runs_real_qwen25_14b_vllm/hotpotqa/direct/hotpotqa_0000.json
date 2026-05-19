@@ -1,0 +1,257 @@
+{
+  "sample_id": "hotpotqa_0000",
+  "agent_type": "direct",
+  "sample_question": "In which country was the physicist who published the theory of special relativity born?",
+  "sample_context": "Albert Einstein was born in Ulm, Germany in 1879. He later moved to Switzerland where he studied at ETH Zurich. Einstein published his theory of special relativity in 1905 while working at the Swiss Patent Office in Bern.",
+  "sample_gold_answer": "Germany",
+  "original_result": {
+    "final_answer": "Germany",
+    "n_steps": 1,
+    "is_correct": true,
+    "trace": [
+      {
+        "step": 1,
+        "thought": "Germany",
+        "action": null,
+        "observation": null,
+        "raw_output": "Germany",
+        "is_final": true
+      }
+    ]
+  },
+  "consistency_analysis": {
+    "consistency_rate": 1.0,
+    "is_consistent": true,
+    "inconsistent_count": 0,
+    "per_type_inconsistency": {
+      "paraphrase": 0.0,
+      "synonym": 0.0,
+      "reorder": 0.0,
+      "format": 0.0,
+      "distractor": 0.0
+    },
+    "propagation_patterns": {
+      "consistent": 4,
+      "early_diverge": 1
+    }
+  },
+  "propagation_details": [
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "paraphrase",
+      "variant_answer": "Germany"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "synonym",
+      "variant_answer": "Germany"
+    },
+    {
+      "divergence_step": 1,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "early_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.0,
+          "action_match": true,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "reorder",
+      "variant_answer": "Albert Einstein was born in Germany. He was born in Ulm, which is in Germany, in 1879 and published his theory of special relativity in 1905 while working in Switzerland."
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "format",
+      "variant_answer": "Germany"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "distractor",
+      "variant_answer": "Germany"
+    }
+  ],
+  "perturbation_variants": [
+    {
+      "perturbation_type": "paraphrase",
+      "variant_question": "Which country was the physicist born in who published the theory of special relativity?",
+      "variant_context": "Albert Einstein was born in Ulm, Germany in 1879. He later moved to Switzerland where he studied at ETH Zurich. Einstein published his theory of special relativity in 1905 while working at the Swiss Patent Office in Bern.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe two questions are asking for the same information and would yield the same answer. The only difference is in the wording and sentence structure, which does not change the core of the question"
+      },
+      "agent_run": {
+        "final_answer": "Germany",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "Germany",
+            "action": null,
+            "observation": null,
+            "raw_output": "Germany",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "synonym",
+      "variant_question": "In what nation was the scientist who released the theory of special relativity brought into the world?",
+      "variant_context": "Albert Einstein was born in Ulm, Germany in 1879. He later moved to Switzerland where he studied at ETH Zurich. Einstein published his theory of special relativity in 1905 while working at the Swiss Patent Office in Bern.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking for the same information, just with different wording. Both are asking about the birthplace of the physicist who published the theory of special relativity. The reference"
+      },
+      "agent_run": {
+        "final_answer": "Germany",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "Germany",
+            "action": null,
+            "observation": null,
+            "raw_output": "Germany",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "reorder",
+      "variant_question": "In which country was the physicist who published the theory of special relativity born? Please reason step by step.",
+      "variant_context": "Albert Einstein was born in Ulm, Germany in 1879. He later moved to Switzerland where he studied at ETH Zurich. Einstein published his theory of special relativity in 1905 while working at the Swiss Patent Office in Bern.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (reorder; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "Albert Einstein was born in Germany. He was born in Ulm, which is in Germany, in 1879 and published his theory of special relativity in 1905 while working in Switzerland.",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "Albert Einstein was born in Germany. He was born in Ulm, which is in Germany, in 1879 and published his theory of special relativity in 1905 while working in Switzerland.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Albert Einstein was born in Germany. He was born in Ulm, which is in Germany, in 1879 and published his theory of special relativity in 1905 while working in Switzerland.",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "format",
+      "variant_question": "> In which country was the physicist who published the theory of special relativity born?",
+      "variant_context": "• Albert Einstein was born in Ulm, Germany in 1879.\n• He later moved to Switzerland where he studied at ETH Zurich.\n• Einstein published his theory of special relativity in 1905 while working at the Swiss Patent Office in Bern.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (format; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "Germany",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "Germany",
+            "action": null,
+            "observation": null,
+            "raw_output": "Germany",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "distractor",
+      "variant_question": "Note: the following sentence is unrelated to the question. The local newspaper reported extensively on unrelated events that week. Now, in which country was the physicist who published the theory of special relativity born?",
+      "variant_context": "Albert Einstein was born in Ulm, Germany in 1879. He later moved to Switzerland where he studied at ETH Zurich. Einstein published his theory of special relativity in 1905 while working at the Swiss Patent Office in Bern. The local newspaper reported extensively on unrelated events that week.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (distractor; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "Germany",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "Germany",
+            "action": null,
+            "observation": null,
+            "raw_output": "Germany",
+            "is_final": true
+          }
+        ]
+      }
+    }
+  ],
+  "patch_results": null,
+  "n_variants_generated": 5,
+  "n_variants_valid": 5,
+  "n_variants_rejected": 0,
+  "elapsed_seconds": 4.396167039871216
+}
