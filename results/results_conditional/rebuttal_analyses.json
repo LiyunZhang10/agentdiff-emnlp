@@ -1,0 +1,16 @@
+{
+  "n_cells": 36,
+  "auc_topology": {
+    "PromptBench-style (mean var-acc drop)": 1.0,
+    "PromptBench-style (raw, sign flip)": 1.0,
+    "AgentDiff \u0394 (sem-sur gap)": 0.8368055555555556,
+    "AgentDiff cascade-depth gap": 0.5833333333333334,
+    "AgentDiff \u0394 + cascade-depth (sum)": 0.8576388888888888
+  },
+  "loo_prediction_topology_cap": "see stdout \u2014 accuracy printed above",
+  "bootstrap_r": {
+    "mean": 0.3859901698981383,
+    "95_lo": 0.06353297822344486,
+    "95_hi": 0.6683378693937116
+  }
+}

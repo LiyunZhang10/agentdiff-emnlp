@@ -1,0 +1,34 @@
+{
+  "n_cells_main": 36,
+  "by_per_cell_n": {
+    "20": 21,
+    "30": 10,
+    "50": 5
+  },
+  "total_originals": 970,
+  "total_variants_sem_sur": 4114,
+  "total_failures": 2517,
+  "total_pattern_consistent": 661,
+  "pattern_answer_crosstab": {
+    "consistent_and_match": 343,
+    "consistent_but_differ": 318,
+    "self_correct_and_match": 35,
+    "self_correct_but_differ": 45,
+    "early_diverge_and_match": 1005,
+    "early_diverge_but_differ": 1577,
+    "cascade_and_match": 146,
+    "cascade_but_differ": 462,
+    "late_diverge_and_match": 68,
+    "late_diverge_but_differ": 115
+  },
+  "genswap": {
+    "n_pairs": 8,
+    "mean_dd": -12.300938979392926,
+    "sd": 10.457629646891975,
+    "t": -3.3269785452292244,
+    "df": 7,
+    "p_two_sided_correct": 0.012643362480695492,
+    "p_reported_in_paper": 0.0009,
+    "reviewer_claim_correct": true
+  }
+}

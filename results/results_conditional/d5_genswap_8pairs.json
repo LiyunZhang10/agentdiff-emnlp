@@ -1,0 +1,103 @@
+{
+  "n_pairs": 8,
+  "delta_delta_mean": -12.300938979392926,
+  "delta_delta_sd": 10.457629646891975,
+  "pairs": [
+    {
+      "model": "llama31_8b",
+      "bench": "gsm8k",
+      "scaf": "cot",
+      "orig_delta": 14.999999999999991,
+      "swap_delta": 8.333333333333325,
+      "orig_acc": 0.7,
+      "swap_acc": 0.7,
+      "orig_n": 20,
+      "swap_n": 20,
+      "delta_delta": -6.666666666666666
+    },
+    {
+      "model": "llama32_3b",
+      "bench": "gsm8k",
+      "scaf": "cot",
+      "orig_delta": 8.333333333333325,
+      "swap_delta": -2.3684210526315863,
+      "orig_acc": 0.75,
+      "swap_acc": 0.75,
+      "orig_n": 20,
+      "swap_n": 20,
+      "delta_delta": -10.701754385964911
+    },
+    {
+      "model": "mimo_v25_pro",
+      "bench": "gsm8k",
+      "scaf": "cot",
+      "orig_delta": -5.166666666666664,
+      "swap_delta": -5.6140350877192935,
+      "orig_acc": 0.96,
+      "swap_acc": 0.95,
+      "orig_n": 50,
+      "swap_n": 20,
+      "delta_delta": -0.4473684210526292
+    },
+    {
+      "model": "mimo_v25_pro",
+      "bench": "gsm8k",
+      "scaf": "react",
+      "orig_delta": 17.125000000000004,
+      "swap_delta": -6.842105263157894,
+      "orig_acc": 1.0,
+      "swap_acc": 1.0,
+      "orig_n": 50,
+      "swap_n": 20,
+      "delta_delta": -23.967105263157897
+    },
+    {
+      "model": "mimo_v25_pro",
+      "bench": "hotpotqa",
+      "scaf": "cot",
+      "orig_delta": 1.6613756613756636,
+      "swap_delta": 5.482456140350878,
+      "orig_acc": 0.84,
+      "swap_acc": 0.85,
+      "orig_n": 50,
+      "swap_n": 20,
+      "delta_delta": 3.821080478975214
+    },
+    {
+      "model": "mimo_v25_pro",
+      "bench": "hotpotqa",
+      "scaf": "react",
+      "orig_delta": 13.238095238095237,
+      "swap_delta": -7.953216374268996,
+      "orig_acc": 0.84,
+      "swap_acc": 0.8,
+      "orig_n": 50,
+      "swap_n": 20,
+      "delta_delta": -21.19131161236423
+    },
+    {
+      "model": "qwen25_3b",
+      "bench": "gsm8k",
+      "scaf": "cot",
+      "orig_delta": 25.000000000000007,
+      "swap_delta": 3.3333333333333384,
+      "orig_acc": 0.7,
+      "swap_acc": 0.7,
+      "orig_n": 20,
+      "swap_n": 20,
+      "delta_delta": -21.666666666666668
+    },
+    {
+      "model": "qwen25_7b",
+      "bench": "gsm8k",
+      "scaf": "cot",
+      "orig_delta": 29.999999999999993,
+      "swap_delta": 12.412280701754375,
+      "orig_acc": 0.9,
+      "swap_acc": 0.9,
+      "orig_n": 20,
+      "swap_n": 20,
+      "delta_delta": -17.587719298245617
+    }
+  ]
+}

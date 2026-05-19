@@ -1,0 +1,8 @@
+{
+  "directional_test": {
+    "multi_pb_drop_mean": 59.888888888888886,
+    "multi_delta_drop_mean": 0.0,
+    "single_pb_drop_mean": 41.5,
+    "single_delta_drop_mean": 0.0
+  }
+}
