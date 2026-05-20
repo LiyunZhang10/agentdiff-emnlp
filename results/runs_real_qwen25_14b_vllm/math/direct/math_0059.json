@@ -1,0 +1,275 @@
+{
+  "sample_id": "math_0059",
+  "agent_type": "direct",
+  "sample_question": "Solve for x: 20x + 9 = 4x + 8",
+  "sample_context": null,
+  "sample_gold_answer": "-0.06",
+  "original_result": {
+    "final_answer": "x = -\\frac{1}{16}",
+    "n_steps": 1,
+    "is_correct": false,
+    "trace": [
+      {
+        "step": 1,
+        "thought": "x = -\\frac{1}{16}",
+        "action": null,
+        "observation": null,
+        "raw_output": "x = -\\frac{1}{16}",
+        "is_final": true
+      }
+    ]
+  },
+  "consistency_analysis": {
+    "consistency_rate": 0.8,
+    "is_consistent": false,
+    "inconsistent_count": 1,
+    "per_type_inconsistency": {
+      "paraphrase": 0.0,
+      "synonym": 0.0,
+      "reorder": 1.0,
+      "format": 0.0,
+      "distractor": 0.0
+    },
+    "propagation_patterns": {
+      "consistent": 4,
+      "early_diverge": 1
+    }
+  },
+  "propagation_details": [
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "paraphrase",
+      "variant_answer": "x = -\\frac{1}{16}"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "synonym",
+      "variant_answer": "x = -\\frac{1}{16}"
+    },
+    {
+      "divergence_step": 1,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "early_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.07692307692307693,
+          "action_match": true,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "reorder",
+      "variant_answer": "First, subtract 4x from both sides: 16x + 9 = 8."
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "format",
+      "variant_answer": "x = -\\frac{1}{16}"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "distractor",
+      "variant_answer": "x = -\\frac{1}{16}"
+    }
+  ],
+  "perturbation_variants": [
+    {
+      "perturbation_type": "paraphrase",
+      "variant_question": "Find x: 20x + 9 = 4x + 8",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking for the same solution, with only a minor wording difference ('Solve for x' vs 'Find x'). Therefore, they are equivalent."
+      },
+      "agent_run": {
+        "final_answer": "x = -\\frac{1}{16}",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "x = -\\frac{1}{16}",
+            "action": null,
+            "observation": null,
+            "raw_output": "x = -\\frac{1}{16}",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "synonym",
+      "variant_question": "Resolve for x: 20x + 9 = 4x + 8",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe wording difference between \"Solve for x\" and \"Resolve for x\" is minor and does not change the meaning or the solution of the equation. Therefore, these two questions are equivalent."
+      },
+      "agent_run": {
+        "final_answer": "x = -\\frac{1}{16}",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "x = -\\frac{1}{16}",
+            "action": null,
+            "observation": null,
+            "raw_output": "x = -\\frac{1}{16}",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "reorder",
+      "variant_question": "Solve for x: 20x + 9 = 4x + 8 Please reason step by step.",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (reorder; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "First, subtract 4x from both sides: 16x + 9 = 8.",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "First, subtract 4x from both sides: 16x + 9 = 8.",
+            "action": null,
+            "observation": null,
+            "raw_output": "First, subtract 4x from both sides: 16x + 9 = 8.  \nThen, subtract 9 from both sides: 16x = -1.  \nFinally, divide both sides by 16: x = -1/16.",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "format",
+      "variant_question": "> Solve for x: 20x + 9 = 4x + 8",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (format; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "x = -\\frac{1}{16}",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "x = -\\frac{1}{16}",
+            "action": null,
+            "observation": null,
+            "raw_output": "x = -\\frac{1}{16}",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "distractor",
+      "variant_question": "Note: the following sentence is unrelated to the question. The local newspaper reported extensively on unrelated events that week. Now, solve for x: 20x + 9 = 4x + 8",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (distractor; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "x = -\\frac{1}{16}",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "x = -\\frac{1}{16}",
+            "action": null,
+            "observation": null,
+            "raw_output": "x = -\\frac{1}{16}",
+            "is_final": true
+          }
+        ]
+      }
+    }
+  ],
+  "patch_results": {
+    "step_patch": {
+      "consistency_rate": 0.8,
+      "inconsistent_count": 1,
+      "is_correct": false,
+      "intervention_step": 1,
+      "target_types": [
+        "reorder"
+      ]
+    },
+    "system_patch": {
+      "consistency_rate": 0.8,
+      "inconsistent_count": 1,
+      "is_correct": false,
+      "target_types": [
+        "reorder"
+      ]
+    }
+  },
+  "n_variants_generated": 5,
+  "n_variants_valid": 5,
+  "n_variants_rejected": 0,
+  "elapsed_seconds": 12.45543384552002
+}
