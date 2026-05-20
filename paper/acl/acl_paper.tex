@@ -9,6 +9,7 @@
 \usepackage{inconsolata}
 \usepackage{graphicx}
 \usepackage{booktabs}
+\usepackage{array}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{xcolor}
@@ -22,7 +23,7 @@ A 44-Cell Measurement Study with a Held-Out Trace-Level Validation}
 \maketitle
 
 \begin{abstract}
-We document an empirical phenomenon in chain-of-thought and ReAct agents driven by six large language models from three architecture families: when an input is perturbed by a meaning-bearing operator (paraphrase, synonym), the agent's final answer changes more often than when it is perturbed by a presentation operator (reordering, formatting, distractor) of comparable severity. Across 44 cells covering three benchmarks (GSM8K, MATH, HotpotQA), 970 originals and 8{,}350 variants, the inconsistency rate gap averages $+14.32$~pp after severity matching (paired $t=6.76$, $p<0.0001$; 40/44 positive). The gap survives a four-way severity-proxy audit (edit distance, token Jaccard, Sentence-BERT cosine, length-change ratio) at $p<0.0001$. On the 24 non-qwen cells alone the gap remains $+5.54$~pp ($p=0.0002$), and several stress tests fail honestly: wild cluster bootstrap is non-significant at $K{=}6$ ($p=0.165$) and $K{=}3$ ($p=0.241$); within-benchmark tractability proxies show $0/3$ significant contrasts; cross-architecture generator swaps destroy per-cell ranking; a second LLM judge agrees at Cohen's $\kappa=0.50$. We then validate the headline on a fully held-out 7th model (qwen2.5-14B-Instruct, $n=200$ originals per cell $\times$ 9 cells $\times$ 1{,}800 trajectories) and use the trajectories to (i) re-test a pre-registered capability$\times$tractability partition (held-out Group A: 4/4 positive; pooled Welch $t=3.81$, $p=9.6\!\times\!10^{-4}$) and (ii) probe four trace-level mechanism signals. Two prior mechanism claims do not replicate and are explicitly retracted; two new probes converge on a \emph{stealth-divergence} picture in which semantic perturbations leave the agent's first action intact but corrupt intermediate thought content from step 2 onward (per-step similarity gap $-5.6$ to $-10.5$~pp) and cascade $0.17$ steps deeper (paired $t=7.69$, $p=2.5\!\times\!10^{-14}$). We position this as a measurement contribution with a held-out replication of the capability-conditional structure and a partial trace-level account of how the gap propagates.
+We document an empirical phenomenon in chain-of-thought and ReAct agents driven by six large language models from three architecture families: when an input is perturbed by a meaning-bearing operator (paraphrase, synonym), the agent's final answer changes more often than when it is perturbed by a presentation operator (reordering, formatting, distractor) of comparable severity. Across 44 cells covering three benchmarks (GSM8K, MATH, HotpotQA), 970 originals and 8{,}350 variants, the inconsistency rate gap averages $+14.32$~pp after severity matching (paired $t=6.76$, $p<0.0001$; 40/44 positive). The gap survives a four-way severity-proxy audit (edit distance, token Jaccard, Sentence-BERT cosine, length-change ratio) at $p<0.0001$. On the 24 non-qwen cells alone the gap remains $+5.54$~pp ($p=0.0002$), and several stress tests fail honestly: wild cluster bootstrap is non-significant at $K{=}6$ ($p=0.165$) and $K{=}3$ ($p=0.241$); within-benchmark tractability proxies show $0/3$ significant contrasts; cross-architecture generator swaps destroy per-cell ranking; a second LLM judge agrees at Cohen's $\kappa=0.50$. We then validate the headline on a fully held-out 7th model (qwen2.5-14B-Instruct, $n=200$ originals per cell $\times$ 9 cells $\times$ 1{,}800 trajectories) and use the trajectories to (i) re-test a pre-registered capability$\times$tractability partition (held-out Group A: 3/4 positive, mean $+1.08$~pp; pooled Welch $t=3.81$, $p=9.6\!\times\!10^{-4}$) and (ii) probe four trace-level mechanism signals. Two prior mechanism claims do not replicate and are explicitly retracted; two new probes converge on a \emph{stealth-divergence} picture in which semantic perturbations leave the agent's first action intact but corrupt intermediate thought content from step 2 onward (per-step similarity gap $-5.6$ to $-10.5$~pp) and cascade $0.17$ steps deeper (paired $t=7.69$, $p=2.5\!\times\!10^{-14}$). We position this as a measurement contribution with a held-out replication of the capability-conditional structure and a partial trace-level account of how the gap propagates.
 \end{abstract}
 
 \section{Introduction}
@@ -40,7 +41,7 @@ Our contributions are:
 \item \textbf{An honest boundary on small-cluster identification.} Wild cluster bootstrap with $K{=}6$ model clusters gives multi-path coefficient $p=0.165$; with $K{=}3$ family clusters it rises to $p=0.241$. Within-benchmark tractability proxies fail in 0/3 contrasts. We therefore explicitly retract earlier ``topology gates the dichotomy'' framings: at the cluster counts available to us, the cross-benchmark $\Delta$ heterogeneity is descriptive, not identified.
 \item \textbf{A generator-family-conditional generalisation claim.} Cross-family generator swap (qwen vs.\ MiMo) destroys per-cell ranking (Spearman $\rho=+0.14$, $n{=}8$); within-family swap (qwen 3B vs.\ qwen 14B) preserves it ($\rho=+0.71$). The paper does not claim cross-family generalisation.
 \item \textbf{A judge-replacement audit.} A second LLM judge from a different family (MiMo vs.\ qwen2.5-7B) agrees with the primary judge at Cohen's $\kappa=0.50$, uniform across benchmarks (0.50, 0.44, 0.55) and operators (0.48--0.52). The disagreement is therefore moderate but unbiased.
-\item \textbf{A held-out validation on a 7th model that confirms the capability-conditional structure and updates the mechanism story.} A fully independent run on qwen2.5-14B-Instruct (1{,}800 trajectories, 9 cells, never used to tune any analysis on the original panel) replicates the partition-test direction on capable-and-tractable cells (held-out Group A: 4/6 positive, mean $+1.62$~pp; pooled with the original panel: 13/16 positive, Welch $t=3.81$, $p=9.6\!\times\!10^{-4}$; \S\ref{sec:held_out}). Trace-level analysis on the held-out trajectories yields a clean \emph{stealth-divergence} mechanism (intermediate thought content corrupted from step 2 onward, paired $t=-7.0$ to $-8.9$, $p<10^{-11}$; cascade 0.17 steps deeper, paired $t=7.69$, $p=2.5\!\times\!10^{-14}$; \S\ref{sec:mechanism}, Figure~\ref{fig:fig6}) and a principled retraction of two earlier mechanism claims (M1: sem diverges earlier; M2: sem self-corrects rarer) that fail to replicate on the held-out model.
+\item \textbf{A held-out validation on a 7th model that confirms the capability-conditional structure and updates the mechanism story.} A fully independent run on qwen2.5-14B-Instruct (1{,}800 trajectories, 9 cells, never used to tune any analysis on the original panel) replicates the partition-test direction on capable-and-tractable cells (held-out Group A: 3/4 positive, mean $+1.08$~pp; pooled with the original panel: 13/16 positive, Welch $t=3.81$, $p=9.6\!\times\!10^{-4}$; \S\ref{sec:held_out}). Trace-level analysis on the held-out trajectories yields a clean \emph{stealth-divergence} mechanism (intermediate thought content corrupted from step 2 onward, paired $t=-7.1$ to $-9.1$, $p<10^{-11}$; cascade 0.17 steps deeper, paired $t=7.69$, $p=2.5\!\times\!10^{-14}$; \S\ref{sec:mechanism}, Figure~\ref{fig:fig6}) and a principled retraction of two earlier mechanism claims (M1: sem diverges earlier; M2: sem self-corrects rarer) that fail to replicate on the held-out model.
 \end{enumerate}
 
 The remainder of the paper presents the measurement framework (\S\ref{sec:method}), the eight robustness tests including the held-out validation and trace-level mechanism (\S\ref{sec:experiments}), the prototype diagnostic tool AgentDiff-Probe v2 (\S\ref{sec:probe}), and a careful discussion of limitations (\S\ref{sec:discussion}).
@@ -67,8 +68,9 @@ We label perturbation operators by what they target rather than by whether they 
 
 \begin{table}[t]
 \centering
-\small
-\begin{tabular}{@{}lll@{}}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}llp{3.0cm}@{}}
 \toprule
 \textbf{Side} & \textbf{Operator} & \textbf{Targets} \\
 \midrule
@@ -129,7 +131,8 @@ To match severity within each cell, we bin all variants of that cell into ten qu
 
 \begin{table}[t]
 \centering
-\small
+\footnotesize
+\setlength{\tabcolsep}{4pt}
 \begin{tabular}{@{}lcc@{}}
 \toprule
 \textbf{Statistic} & $\Delta_{\text{raw}}$ & $\Delta_{\text{matched}}$ \\
@@ -137,8 +140,9 @@ To match severity within each cell, we bin all variants of that cell into ten qu
 Mean across 44 cells (pp) & $+14.53$ & $+14.32$ \\
 Cells with $\Delta>0$     & 39 / 44 & 40 / 44 \\
 Median (pp)               & $+12.84$ & $+13.43$ \\
-Paired $t$-test vs.\ zero & $t{=}6.78$, $p{<}10^{-4}$ & $t{=}6.76$, $p{<}10^{-4}$ \\
-Wilcoxon signed-rank      & $p{<}10^{-4}$  & $p{<}10^{-4}$ \\
+Paired $t$ vs.\ zero, $t$ & $6.78$ & $6.76$ \\
+Paired $t$, $p$           & $<10^{-4}$ & $<10^{-4}$ \\
+Wilcoxon, $p$             & $<10^{-4}$ & $<10^{-4}$ \\
 \bottomrule
 \end{tabular}
 \caption{Severity-matched and unmatched inconsistency rate gaps $\Delta$ across the 44 cells. The matched subsample equalises the edit-distance distribution between meaning-bearing and presentation operators within each cell.}
@@ -158,8 +162,9 @@ A stronger version of the same concern is that \emph{edit distance itself} is th
 
 \begin{table}[t]
 \centering
-\small
-\begin{tabular}{@{}lcccc@{}}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}p{3.0cm}cccc@{}}
 \toprule
 \textbf{Severity proxy} & \textbf{Mean $\Delta$} & $t$ & $p$ & $\Delta>0$ \\
 \midrule
@@ -184,7 +189,8 @@ where $\mathrm{multi\text{-}path}$ is 1 for GSM8K and HotpotQA cells and 0 for M
 
 \begin{table}[t]
 \centering
-\small
+\footnotesize
+\setlength{\tabcolsep}{4pt}
 \begin{tabular}{@{}lccccc@{}}
 \toprule
 \textbf{Coefficient} & $\beta$ (pp) & CR1 SE & $t$ & wild $p$ & BH $q$ \\
@@ -263,7 +269,8 @@ We apply a $2\times 2$ partition that was pre-registered on the original panel b
 
 \begin{table}[t]
 \centering
-\small
+\footnotesize
+\setlength{\tabcolsep}{4pt}
 \begin{tabular}{@{}llcccc@{}}
 \toprule
 \textbf{Subset} & \textbf{Grp} & $n$ & \textbf{$\Delta$ (pp)} & \textbf{pos.} & \textbf{Welch $p$} \\
@@ -271,20 +278,20 @@ We apply a $2\times 2$ partition that was pre-registered on the original panel b
 Orig. panel (28)         & A & 12 & $+13.0$ & 10/12 & $6\!\times\!10^{-4}$ \\
 Orig. panel (28)         & B & 16 & $-1.6$  & 4/16  & --- \\
 \midrule
-Held-out 14B (6)         & A & 4  & $+1.62$ & 4/4   & --- \\
+Held-out 14B (6)         & A & 4  & $+1.08$ & 3/4   & --- \\
 Held-out 14B (6)         & B & 2  & $+0.38$ & 1/2   & --- \\
 \midrule
 \textbf{Pooled (34)}     & \textbf{A} & \textbf{16} & $\mathbf{+10.0}$ & \textbf{13/16} & $\mathbf{9.6\!\times\!10^{-4}}$ \\
 \textbf{Pooled (34)}     & \textbf{B} & \textbf{18} & $\mathbf{-1.4}$  & \textbf{5/18}  & --- \\
 \bottomrule
 \end{tabular}
-\caption{Pre-registered $2\times 2$ partition test on the original 28 cot/react cells, the 6 held-out qwen2.5-14B cot/react cells, and the pooled set. Held-out cells alone are too few for an internal Welch test, but every held-out Group A cell is in the predicted direction (4/4 positive); pooling preserves the pattern (Welch $t{=}3.81$; Mann--Whitney $U{=}237.0$, $p{=}1.4\!\times\!10^{-3}$). A $2\times 2$ Fisher exact on (capable: acc${\geq}0.65$ vs.\ weak) $\times$ ($\Delta>0$ vs.\ $\Delta\leq 0$) on the pooled set gives $[[16,3],[9,14]]$ with $p{=}4.5\!\times\!10^{-3}$.}
+\caption{Pre-registered $2\times 2$ partition test on the original 28 cot/react cells, the 6 held-out qwen2.5-14B cot/react cells, and the pooled set. Held-out cells alone are too few for an internal Welch test; 3 of the 4 held-out Group A cells are in the predicted direction (the exception is gsm8k$\times$cot at $\Delta=-2.08$~pp, where qwen2.5-14B's sur-IR is $0.113$ and sem-IR is $0.092$, so the gap is small and within bootstrap noise). Pooling with the original panel preserves the pattern (Welch $t{=}3.81$; Mann--Whitney $U{=}237.0$, $p{=}1.4\!\times\!10^{-3}$). A $2\times 2$ Fisher exact on (capable: acc${\geq}0.65$ vs.\ weak) $\times$ ($\Delta>0$ vs.\ $\Delta\leq 0$) on the pooled set gives $[[16,3],[9,14]]$ with $p{=}4.5\!\times\!10^{-3}$.}
 \label{tab:partition}
 \end{table}
 
 \paragraph{The dichotomy is a threshold gate, not a linear ramp.} Within the capable subset of the pooled 34-cell set (acc $\geq 0.65$, $n{=}19$), the Pearson correlation between accuracy and $\Delta$ is $r{=}+0.13$, $p{=}0.60$ --- once a cell crosses the capability threshold, the magnitude of $\Delta$ no longer scales with accuracy. Across the full 34-cell pool the unconditional correlation is $r{=}+0.32$, $p{=}0.034$, but this whole-range effect is driven by the categorical jump from weak to capable, not by smooth scaling within the capable regime. We therefore retract the linear-monotonicity claim from prior versions and restate the result as: capability functions as a \emph{binary gate} on tractable benchmarks; on intractable benchmarks (deep\_math) the gate does not open even for the held-out 14B model.
 
-\paragraph{Held-out within-model results.} Across all 6 cot/react cells of qwen2.5-14B alone, the mean $\Delta$ is $+0.84$~pp ($4/6$ positive). The signal is much smaller than on the original panel ($+14.32$~pp) because qwen2.5-14B is a highly capable instruction-tuned model: its sur-IR is already near zero on GSM8K cot ($0.113$) and on MATH cot ($0.003$), so even a positive directional gap leaves limited headroom. The held-out validation is therefore best read as a \emph{replication of direction}, not of magnitude: the predicted sign holds in every Group A cell (4/4 positive) and the within-Group-A magnitude is $+1.62$~pp; on Group B cells the model exhibits the predicted gate-closure (mean $+0.38$~pp, $1/2$ positive). We report this without rescue: a strong reviewer should read the held-out evidence as confirming \emph{when} the gap appears (capable + tractable), not as inflating \emph{how large} it is.
+\paragraph{Held-out within-model results.} Across all 6 cot/react cells of qwen2.5-14B alone, the mean $\Delta$ is $+0.84$~pp ($4/6$ positive). The signal is much smaller than on the original panel ($+14.32$~pp) because qwen2.5-14B is a highly capable instruction-tuned model: its sur-IR is already low on GSM8K cot ($0.113$) and near zero on MATH cot ($0.003$), so even a positive directional gap leaves limited headroom. The held-out validation is therefore best read as a \emph{replication of direction}, not of magnitude: the predicted sign holds in 3 of 4 Group A cells, and the within-Group-A magnitude is $+1.08$~pp; on Group B cells the model exhibits the predicted gate-closure (mean $+0.38$~pp, $1/2$ positive). We report this without rescue: a strong reviewer should read the held-out evidence as confirming \emph{when} the gap appears (capable + tractable), not as inflating \emph{how large} it is.
 
 \subsection{Trace-level mechanism: stealth divergence}
 \label{sec:mechanism}
@@ -301,20 +308,22 @@ The partition test in \S\ref{sec:held_out} establishes a \emph{threshold gate} f
 
 \begin{table}[t]
 \centering
-\footnotesize
-\begin{tabular}{@{}p{0.20\columnwidth}p{0.21\columnwidth}p{0.20\columnwidth}p{0.20\columnwidth}@{}}
+\scriptsize
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.1}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.16\columnwidth}>{\raggedright\arraybackslash}p{0.50\columnwidth}>{\raggedright\arraybackslash}p{0.24\columnwidth}@{}}
 \toprule
-\textbf{Probe} & \textbf{Predicted (sem$-$sur)} & \textbf{Observed (sem$-$sur)} & \textbf{Verdict} \\
+\textbf{Probe} & \textbf{Observed (sem$-$sur)} & \textbf{Verdict} \\
 \midrule
-M1 div.\ step      & negative   & $\mathbf{+0.156}$ steps; $t{=}7.40$, $p{=}2.1{\times}10^{-13}$ & opposite sign --- \textbf{retracted} \\
-M2 self\_correct   & negative   & $+0.40$~pp (sem 2.40\%, sur 2.00\%); Fisher $p{=}0.230$ & null --- \textbf{retracted} \\
-M3 cascade depth   & positive   & $+0.167$ steps; $t{=}7.69$, $p{=}2.5{\times}10^{-14}$ & \textbf{confirmed} \\
-M4 sim, step 2     & negative   & $-0.056$; $t{=}-7.0$, $p{=}2.0{\times}10^{-12}$ & \textbf{confirmed} \\
-M4 sim, step 3     & negative   & $-0.093$; $t{=}-8.9$, $p{=}1.1{\times}10^{-18}$ & \textbf{confirmed} \\
-M4 sim, step 4     & negative   & $-0.088$; $t{=}-8.5$, $p{=}1.5{\times}10^{-16}$ & \textbf{confirmed} \\
+M1 div.\ step      & $\mathbf{+0.156}$ steps; $t{=}7.40$, $p{=}2.1{\times}10^{-13}$ & sign flipped --- \textbf{retracted} \\
+M2 self\_correct   & $+0.40$~pp (sem $2.40$\%, sur $2.00$\%); Fisher $p{=}0.230$ & null --- \textbf{retracted} \\
+M3 cascade depth   & $+0.167$ steps; $t{=}7.69$, $p{=}2.5{\times}10^{-14}$ & \textbf{confirmed} \\
+M4 sim, step 2     & $-0.056$; $t{=}-7.12$, $p{=}2.0{\times}10^{-12}$ & \textbf{confirmed} \\
+M4 sim, step 3     & $-0.093$; $t{=}-9.12$, $p{=}1.1{\times}10^{-18}$ & \textbf{confirmed} \\
+M4 sim, step 4     & $-0.088$; $t{=}-8.50$, $p{=}1.5{\times}10^{-16}$ & \textbf{confirmed} \\
 \bottomrule
 \end{tabular}
-\caption{Four trace-level mechanism probes on the held-out qwen2.5-14B run ($n{=}1{,}800$ trajectories). Confirmed: M3 + M4. Retracted: M1 (sign flipped versus prior versions of this work), M2 (effect size collapsed to near-zero on the held-out model). Probes M1 and M2 are reported as an honest non-replication.}
+\caption{Four trace-level mechanism probes on the held-out qwen2.5-14B run ($n{=}1{,}800$ trajectories). Predicted directions: M1 negative (sem diverges earlier), M2 negative (sem self-corrects rarer), M3 positive (sem cascades deeper), M4 negative (sem decays faster per step). Confirmed: M3 + M4. Retracted: M1 (sign flipped versus prior versions of this work), M2 (effect size collapsed to near-zero on the held-out model). Probes M1 and M2 are reported as an honest non-replication.}
 \label{tab:mechanism}
 \end{table}
 
@@ -355,7 +364,7 @@ We have established a robust empirical phenomenon and explicitly bounded what cu
 
 \paragraph{L7. Effect-size halving outside the most-sampled family.} The headline $+14.32$~pp shrinks to $+5.54$~pp when restricted to the 24 non-qwen cells of the original panel. The directional sign holds across families, but practitioners deploying agents from families other than qwen should expect roughly half the directional gap we report on average. This remains the most actionable single number in the paper for downstream calibration.
 
-\paragraph{L8. The held-out validation confirms direction but not magnitude.} \S\ref{sec:held_out} reports that on the qwen2.5-14B held-out run the within-Group-A mean $\Delta$ is only $+1.62$~pp ($4/4$ positive), an order of magnitude smaller than the $+13.0$~pp Group A mean on the original panel. Two factors plausibly contribute: (i) qwen2.5-14B is a highly capable instruction-tuned model whose sur-IR is already near zero on GSM8K cot ($0.113$) and MATH cot ($0.003$), leaving limited headroom for a positive gap; and (ii) the held-out variants are generated by a different perturbation generator regime ($n{=}200$ pipeline) than the original panel ($n{=}20$--$50$). The held-out evidence is therefore best read as a \emph{replication of direction}, not of magnitude.
+\paragraph{L8. The held-out validation confirms direction but not magnitude.} \S\ref{sec:held_out} reports that on the qwen2.5-14B held-out run the within-Group-A mean $\Delta$ is only $+1.08$~pp ($3/4$ positive), an order of magnitude smaller than the $+13.0$~pp Group A mean on the original panel. Two factors plausibly contribute: (i) qwen2.5-14B is a highly capable instruction-tuned model whose sur-IR is already low on GSM8K cot ($0.113$) and near zero on MATH cot ($0.003$), leaving limited headroom for a positive gap; and (ii) the held-out variants are generated by a different perturbation generator regime ($n{=}200$ pipeline) than the original panel ($n{=}20$--$50$). The held-out evidence is therefore best read as a \emph{replication of direction}, not of magnitude.
 
 \paragraph{L9. Two earlier mechanism claims do not replicate on the held-out instruction-tuned 14B model.} \S\ref{sec:mechanism} reports that M1 (semantic perturbations diverge earlier) reverses sign on qwen2.5-14B and M2 (semantic perturbations are 3$\times$ less likely to self-correct) collapses to a non-significant $+0.40$~pp gap ($p{=}0.230$). The current data cannot distinguish between an artefact-of-the-older-panel reading and a substantive interpretation in which RLHF-tuned models suppress visible early action divergence in favour of silent thought drift. We retract M1 and M2 from the mechanism story and base the account on M3 (cascade depth) and M4 (per-step thought similarity decay), which replicate at much higher $n$ and stronger effect sizes.
 
@@ -365,13 +374,13 @@ We have established a robust empirical phenomenon and explicitly bounded what cu
 
 Across 44 cells covering six LLMs from three architecture families, three benchmarks, and two scaffolds, the gap between meaning-bearing and presentation perturbation inconsistency rates averages $+14.32$~pp after edit-distance severity matching, with $40$ of $44$ cells positive (paired $t{=}6.76$, $p{<}10^{-4}$). The gap is robust to severity definition: matched $\Delta$ stays in the $+13.7$ to $+15.4$~pp range across edit distance, token Jaccard, Sentence-BERT cosine, and length-change ratio. It is accompanied by a step-level cascade gap on GSM8K that survives a TF-IDF redefinition ($+0.66$ steps, $p{<}10^{-3}$). On the 24 non-qwen cells alone, the gap halves to $+5.54$~pp but remains highly significant (paired $t{=}4.41$, $p{=}2{\times}10^{-4}$), so the phenomenon is not a single-family artefact. The phenomenon does not survive every test we ran: the multi-path regression coefficient fails wild cluster bootstrap at $K{=}6$ model and $K{=}3$ family clusters, within-benchmark tractability proxies show zero significant contrasts, and the cross-architecture generator swap destroys per-cell ranking.
 
-A fully held-out 7th model run on qwen2.5-14B (1{,}800 trajectories never used to tune the analysis on the original panel) sharpens the picture in two ways. First, it confirms the \emph{direction} of the capability$\times$tractability partition: every held-out cell in Group A is in the predicted direction (4/4 positive), and pooling with the original panel gives Welch $t{=}3.81$, $p{=}9.6\!\times\!10^{-4}$. The within-capable Pearson correlation between accuracy and $\Delta$ collapses to $r{=}+0.13$, so the gate is \emph{threshold-style}, not a linear function of capability --- we retract the linear-monotonicity framing. Second, the held-out trajectories reveal a clean trace-level mechanism we call \textbf{stealth divergence}: a semantic perturbation does not change the agent's first surface action, but corrupts intermediate thought content from step 2 onward (per-step similarity gap $-5.6$ to $-10.5$~pp, paired $t{=}-7.0$ to $-8.9$, $p{<}10^{-11}$) and cascades $0.17$ steps deeper than a presentation-level edit (paired $t{=}7.69$, $p{=}2.5\!\times\!10^{-14}$). Two earlier mechanism claims do not replicate on the held-out model and are explicitly retracted.
+A fully held-out 7th model run on qwen2.5-14B (1{,}800 trajectories never used to tune the analysis on the original panel) sharpens the picture in two ways. First, it confirms the \emph{direction} of the capability$\times$tractability partition: 3 of the 4 held-out Group A cells are in the predicted direction (the single exception is gsm8k$\times$cot at $\Delta=-2.08$~pp, within the bootstrap 95\% CI bracketing zero), and pooling with the original panel gives Welch $t{=}3.81$, $p{=}9.6\!\times\!10^{-4}$. The within-capable Pearson correlation between accuracy and $\Delta$ collapses to $r{=}+0.13$, so the gate is \emph{threshold-style}, not a linear function of capability --- we retract the linear-monotonicity framing. Second, the held-out trajectories reveal a clean trace-level mechanism we call \textbf{stealth divergence}: a semantic perturbation does not change the agent's first surface action, but corrupts intermediate thought content from step 2 onward (per-step similarity gap $-5.6$ to $-10.5$~pp, paired $t{=}-7.1$ to $-9.1$, $p{<}10^{-11}$) and cascades $0.17$ steps deeper than a presentation-level edit (paired $t{=}7.69$, $p{=}2.5\!\times\!10^{-14}$). Two earlier mechanism claims do not replicate on the held-out model and are explicitly retracted.
 
 The contribution is a measurement --- a robust directional gap on a 6-model panel, a held-out replication of the capability-conditional structure on a 7th model, and a partial trace-level account of how the gap propagates. We deliberately update the mechanism story relative to prior versions of this work as the held-out evidence justifies. We hope future work with substantially more architecture families and white-box access can identify whether the stealth-divergence pattern reflects a generic property of instruction-tuned reasoners or an artefact of the present panel.
 
 \section*{Limitations}
 
-This paper documents a measurement and explicitly bounds what current data can support; the resulting limitations are detailed in \S\ref{sec:discussion} (L1--L10). In short: (i) within-benchmark tractability proxies fail in $0/3$ contrasts, so the cross-benchmark $\Delta$ heterogeneity is not identified at the mechanism level; (ii) the multi-path regression coefficient does not survive a wild cluster bootstrap with $K{=}6$ model clusters or $K{=}3$ family clusters, so the regression is descriptive rather than causal, and the categorical partition test is the inferential anchor; (iii) cross-architecture generator swaps destroy per-cell ranking, so the precise $\Delta$ value of any individual cell is generator-conditional; (iv) the second-judge audit gives Cohen's $\kappa{=}0.50$, which is moderate, not strong; (v) AgentDiff-Probe v2 is a prototype whose sign accuracy ties the trivial-mean baseline; (vi) the ``meaning-bearing'' label refers to which tokens the operator targets rather than to whether the operator is label-changing; (vii) the headline effect halves outside the qwen family ($+5.54$~pp on the 24 non-qwen cells), so practitioners on llama- or mimo-class agents should expect roughly half the directional gap on average; (viii) the held-out qwen2.5-14B run replicates the \emph{direction} of the capability-conditional pattern (4/4 Group A cells positive) but not its \emph{magnitude} (within-Group-A mean $+1.62$~pp) because the held-out model has near-zero sur-IR on its strongest cells; (ix) two earlier mechanism claims (M1: earlier divergence step; M2: lower self-correction rate) do not replicate on the held-out qwen2.5-14B run and are retracted, with the trace-level mechanism account based solely on M3 (cascade depth) and M4 (per-step thought similarity); and (x) capability functions as a \emph{binary gate} on $\Delta$ once the threshold is crossed, not as a linear predictor, and the linear-correlation framing from prior versions is retracted.
+This paper documents a measurement and explicitly bounds what current data can support; the resulting limitations are detailed in \S\ref{sec:discussion} (L1--L10). In short: (i) within-benchmark tractability proxies fail in $0/3$ contrasts, so the cross-benchmark $\Delta$ heterogeneity is not identified at the mechanism level; (ii) the multi-path regression coefficient does not survive a wild cluster bootstrap with $K{=}6$ model clusters or $K{=}3$ family clusters, so the regression is descriptive rather than causal, and the categorical partition test is the inferential anchor; (iii) cross-architecture generator swaps destroy per-cell ranking, so the precise $\Delta$ value of any individual cell is generator-conditional; (iv) the second-judge audit gives Cohen's $\kappa{=}0.50$, which is moderate, not strong; (v) AgentDiff-Probe v2 is a prototype whose sign accuracy ties the trivial-mean baseline; (vi) the ``meaning-bearing'' label refers to which tokens the operator targets rather than to whether the operator is label-changing; (vii) the headline effect halves outside the qwen family ($+5.54$~pp on the 24 non-qwen cells), so practitioners on llama- or mimo-class agents should expect roughly half the directional gap on average; (viii) the held-out qwen2.5-14B run replicates the \emph{direction} of the capability-conditional pattern (3/4 Group A cells positive; the single exception sits within the bootstrap 95\% CI bracketing zero) but not its \emph{magnitude} (within-Group-A mean $+1.08$~pp) because the held-out model has low sur-IR on its strongest cells; (ix) two earlier mechanism claims (M1: earlier divergence step; M2: lower self-correction rate) do not replicate on the held-out qwen2.5-14B run and are retracted, with the trace-level mechanism account based solely on M3 (cascade depth) and M4 (per-step thought similarity); and (x) capability functions as a \emph{binary gate} on $\Delta$ once the threshold is crossed, not as a linear predictor, and the linear-correlation framing from prior versions is retracted.
 
 \section*{Ethics Statement}
 
