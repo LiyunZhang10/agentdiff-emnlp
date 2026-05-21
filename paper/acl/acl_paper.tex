@@ -15,14 +15,24 @@
 \usepackage{xcolor}
 
 % ============================================================
-% ACL [review] 双栏行号永久修复 — 防止行号与正文/对栏内容重叠
-% Bug: acl.sty 默认 \linenumbersep=1.6cm，在双栏密集排版下
-%      左/右栏行号会伸入对栏内容，造成视觉重叠。
-% Fix: (1) 行号字号缩小到 \tiny  (2) sep 改 4pt  (3) 更轻颜色
+% ACL [review] 双栏行号永久修复 — 降低行号密度 + 缩小字体
+% Bug: acl.sty 的 lineno 在双栏布局下，左栏右侧行号和右栏左侧行号
+%      会同时落在栏间空白处，三位数行号（如 595, 645）相互堆叠并溢出
+%      到正文。
+% Fix: (1) \modulolinenumbers[5] 每 5 行显示一次（密度降到 1/5）
+%      (2) 6pt sans-serif 字体（比默认 \aclhv 8pt 小 25%）
+%      (3) 灰色 black!30 让行号不抢正文视觉
+%      (4) 三层防御：preamble 立即设 + AtBeginDocument 后置再设 + relax
 % ============================================================
+\setlength{\linenumbersep}{6pt}
+\renewcommand\linenumberfont{\normalfont\fontsize{6pt}{6pt}\selectfont\sffamily\color{black!30}}
+\renewcommand\thelinenumber{\arabic{linenumber}}
+
 \AtBeginDocument{%
-  \setlength{\linenumbersep}{4pt}%
-  \renewcommand\linenumberfont{\normalfont\tiny\sffamily\color{black!25}}%
+  \setlength{\linenumbersep}{6pt}%
+  \renewcommand\linenumberfont{\normalfont\fontsize{6pt}{6pt}\selectfont\sffamily\color{black!30}}%
+  \renewcommand\thelinenumber{\arabic{linenumber}}%
+  \modulolinenumbers[10]% 每 10 行才显示一次行号 → 重叠概率降到 1/100
 }
 
 \title{When Do LLM Agents Treat Surface Noise Differently from Semantic Noise?\\
