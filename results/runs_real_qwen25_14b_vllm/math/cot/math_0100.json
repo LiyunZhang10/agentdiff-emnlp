@@ -1,0 +1,523 @@
+{
+  "sample_id": "math_0100",
+  "agent_type": "cot",
+  "sample_question": "Solve for x: 6x + 5 = 5x + 7",
+  "sample_context": null,
+  "sample_gold_answer": "2",
+  "original_result": {
+    "final_answer": "\\(x = 2\\)",
+    "n_steps": 5,
+    "is_correct": true,
+    "trace": [
+      {
+        "step": 1,
+        "thought": "To solve the equation \\(6x + 5 = 5x + 7\\) for \\(x\\), follow these steps:",
+        "action": null,
+        "observation": null,
+        "raw_output": "To solve the equation \\(6x + 5 = 5x + 7\\) for \\(x\\), follow these steps:",
+        "is_final": false
+      },
+      {
+        "step": 2,
+        "thought": "**Start with the given equation:**\n   \\[\n   6x + 5 = 5x + 7\n   \\]",
+        "action": null,
+        "observation": null,
+        "raw_output": "**Start with the given equation:**\n   \\[\n   6x + 5 = 5x + 7\n   \\]",
+        "is_final": false
+      },
+      {
+        "step": 3,
+        "thought": "**Subtract \\(5x\\) from both sides of the equation to isolate the \\(x\\) terms on one side:**\n   \\[\n   6x + 5 - 5x = 5x + 7 - 5x\n   \\]\n   Simplifying this, we get:\n   \\[\n   x + 5 = 7\n   \\]",
+        "action": null,
+        "observation": null,
+        "raw_output": "**Subtract \\(5x\\) from both sides of the equation to isolate the \\(x\\) terms on one side:**\n   \\[\n   6x + 5 - 5x = 5x + 7 - 5x\n   \\]\n   Simplifying this, we get:\n   \\[\n   x + 5 = 7\n   \\]",
+        "is_final": false
+      },
+      {
+        "step": 4,
+        "thought": "**Subtract 5 from both sides of the equation to isolate \\(x\\):**\n   \\[\n   x + 5 - 5 = 7 - 5\n   \\]\n   Simplifying this, we get:\n   \\[\n   x = 2\n   \\]",
+        "action": null,
+        "observation": null,
+        "raw_output": "**Subtract 5 from both sides of the equation to isolate \\(x\\):**\n   \\[\n   x + 5 - 5 = 7 - 5\n   \\]\n   Simplifying this, we get:\n   \\[\n   x = 2\n   \\]",
+        "is_final": false
+      },
+      {
+        "step": 5,
+        "thought": "**Verify the solution by substituting \\(x = 2\\) back into the original equation:**\n   \\[\n   6(2) + 5 = 5(2) + 7\n   \\]\n   Simplifying both sides:\n   \\[\n   12 + 5 = 10 + 7\n   \\]\n   \\[\n   17 = 17\n   \\]\n   Since both sides are equal, the solution is correct.\n\nFinal Answer: \\(x = 2\\)",
+        "action": null,
+        "observation": null,
+        "raw_output": "**Verify the solution by substituting \\(x = 2\\) back into the original equation:**\n   \\[\n   6(2) + 5 = 5(2) + 7\n   \\]\n   Simplifying both sides:\n   \\[\n   12 + 5 = 10 + 7\n   \\]\n   \\[\n   17 = 17\n   \\]\n   Since both sides are equal, the solution is correct.\n\nFinal Answer: \\(x = 2\\)",
+        "is_final": true
+      }
+    ]
+  },
+  "consistency_analysis": {
+    "consistency_rate": 1.0,
+    "is_consistent": true,
+    "inconsistent_count": 0,
+    "per_type_inconsistency": {
+      "paraphrase": 0.0,
+      "synonym": 0.0,
+      "reorder": 0.0,
+      "format": 0.0,
+      "distractor": 0.0
+    },
+    "propagation_patterns": {
+      "self_correct": 2,
+      "consistent": 1,
+      "cascade": 1,
+      "late_diverge": 1
+    }
+  },
+  "propagation_details": [
+    {
+      "divergence_step": 2,
+      "cascade_depth": 1,
+      "self_corrections": 1,
+      "propagation_pattern": "self_correct",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.24390243902439024,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.4418604651162791,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.0,
+          "action_match": false,
+          "is_divergent": true
+        },
+        {
+          "step": 5,
+          "thought_similarity": 0.0,
+          "action_match": false,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 5,
+      "n_steps_variant": 3,
+      "perturbation_type": "paraphrase",
+      "variant_answer": "\\(2\\)"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.8666666666666667,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.7083333333333334,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 5,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 5,
+      "n_steps_variant": 5,
+      "perturbation_type": "synonym",
+      "variant_answer": "\\(x = 2\\)"
+    },
+    {
+      "divergence_step": 2,
+      "cascade_depth": 3,
+      "self_corrections": 0,
+      "propagation_pattern": "cascade",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.8823529411764706,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.225,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.375,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.2641509433962264,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 5,
+          "thought_similarity": 0.0,
+          "action_match": false,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 5,
+      "n_steps_variant": 4,
+      "perturbation_type": "reorder",
+      "variant_answer": "\\(x = 2\\)"
+    },
+    {
+      "divergence_step": 2,
+      "cascade_depth": 1,
+      "self_corrections": 1,
+      "propagation_pattern": "self_correct",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.24390243902439024,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.45652173913043476,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.0,
+          "action_match": false,
+          "is_divergent": true
+        },
+        {
+          "step": 5,
+          "thought_similarity": 0.0,
+          "action_match": false,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 5,
+      "n_steps_variant": 3,
+      "perturbation_type": "format",
+      "variant_answer": "\\(x = 2\\)"
+    },
+    {
+      "divergence_step": 5,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "late_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.7857142857142857,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.8064516129032258,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.6428571428571429,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 5,
+          "thought_similarity": 0.0,
+          "action_match": false,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 5,
+      "n_steps_variant": 4,
+      "perturbation_type": "distractor",
+      "variant_answer": "\\(2\\)"
+    }
+  ],
+  "perturbation_variants": [
+    {
+      "perturbation_type": "paraphrase",
+      "variant_question": "Find x: 6x + 5 = 5x + 7",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking for the same operation, which is to solve for x in the equation 6x + 5 = 5x + 7. The wording difference between \"Solve for x\" and \"Find x\" does not change the nature of t"
+      },
+      "agent_run": {
+        "final_answer": "\\(2\\)",
+        "n_steps": 3,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the equation \\(6x + 5 = 5x + 7\\) for \\(x\\), follow these steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the equation \\(6x + 5 = 5x + 7\\) for \\(x\\), follow these steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "**Isolate the variable terms on one side of the equation**: To do this, subtract \\(5x\\) from both sides of the equation to move all terms with \\(x\\) to the left side.\n   \\[\n   6x + 5 - 5x = 5x + 7 - 5x\n   \\]\n   Simplifying both sides, we get:\n   \\[\n   x + 5 = 7\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Isolate the variable terms on one side of the equation**: To do this, subtract \\(5x\\) from both sides of the equation to move all terms with \\(x\\) to the left side.\n   \\[\n   6x + 5 - 5x = 5x + 7 - 5x\n   \\]\n   Simplifying both sides, we get:\n   \\[\n   x + 5 = 7\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "**Isolate the constant terms on the other side of the equation**: Subtract 5 from both sides to move the constant to the right side.\n   \\[\n   x + 5 - 5 = 7 - 5\n   \\]\n   Simplifying both sides, we get:\n   \\[\n   x = 2\n   \\]\n\nFinal Answer: \\(2\\)",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Isolate the constant terms on the other side of the equation**: Subtract 5 from both sides to move the constant to the right side.\n   \\[\n   x + 5 - 5 = 7 - 5\n   \\]\n   Simplifying both sides, we get:\n   \\[\n   x = 2\n   \\]\n\nFinal Answer: \\(2\\)",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "synonym",
+      "variant_question": "Resolve for x: 6x + 5 = 5x + 7",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe wording difference between \"solve for x\" and \"resolve for x\" is minor and does not change the meaning or the solution of the equation. Therefore, these two questions are equivalent."
+      },
+      "agent_run": {
+        "final_answer": "\\(x = 2\\)",
+        "n_steps": 5,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the equation \\(6x + 5 = 5x + 7\\) for \\(x\\), follow these steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the equation \\(6x + 5 = 5x + 7\\) for \\(x\\), follow these steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "**Start with the given equation:**\n   \\[\n   6x + 5 = 5x + 7\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Start with the given equation:**\n   \\[\n   6x + 5 = 5x + 7\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "**Subtract \\(5x\\) from both sides of the equation to isolate the \\(x\\) terms on one side:**\n   \\[\n   6x + 5 - 5x = 5x + 7 - 5x\n   \\]\n   Simplifying both sides:\n   \\[\n   x + 5 = 7\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Subtract \\(5x\\) from both sides of the equation to isolate the \\(x\\) terms on one side:**\n   \\[\n   6x + 5 - 5x = 5x + 7 - 5x\n   \\]\n   Simplifying both sides:\n   \\[\n   x + 5 = 7\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "**Subtract 5 from both sides to isolate \\(x\\):**\n   \\[\n   x + 5 - 5 = 7 - 5\n   \\]\n   Simplifying both sides:\n   \\[\n   x = 2\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Subtract 5 from both sides to isolate \\(x\\):**\n   \\[\n   x + 5 - 5 = 7 - 5\n   \\]\n   Simplifying both sides:\n   \\[\n   x = 2\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 5,
+            "thought": "**Verify the solution by substituting \\(x = 2\\) back into the original equation:**\n   \\[\n   6(2) + 5 = 5(2) + 7\n   \\]\n   Simplifying both sides:\n   \\[\n   12 + 5 = 10 + 7\n   \\]\n   \\[\n   17 = 17\n   \\]\n   Since both sides are equal, the solution is correct.\n\nFinal Answer: \\(x = 2\\)",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Verify the solution by substituting \\(x = 2\\) back into the original equation:**\n   \\[\n   6(2) + 5 = 5(2) + 7\n   \\]\n   Simplifying both sides:\n   \\[\n   12 + 5 = 10 + 7\n   \\]\n   \\[\n   17 = 17\n   \\]\n   Since both sides are equal, the solution is correct.\n\nFinal Answer: \\(x = 2\\)",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "reorder",
+      "variant_question": "Solve for x: 6x + 5 = 5x + 7 Please reason step by step.",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (reorder; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "\\(x = 2\\)",
+        "n_steps": 4,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the equation \\(6x + 5 = 5x + 7\\) for \\(x\\), we will follow these steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the equation \\(6x + 5 = 5x + 7\\) for \\(x\\), we will follow these steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "**Isolate the variable terms on one side of the equation**: To do this, we can subtract \\(5x\\) from both sides of the equation to eliminate \\(5x\\) from the right side.\n   \\[\n   6x + 5 - 5x = 5x + 7 - 5x\n   \\]\n   Simplifying both sides, we get:\n   \\[\n   x + 5 = 7\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Isolate the variable terms on one side of the equation**: To do this, we can subtract \\(5x\\) from both sides of the equation to eliminate \\(5x\\) from the right side.\n   \\[\n   6x + 5 - 5x = 5x + 7 - 5x\n   \\]\n   Simplifying both sides, we get:\n   \\[\n   x + 5 = 7\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "**Isolate the constant terms on the other side of the equation**: Now, we need to move the constant term \\(5\\) to the right side of the equation. We do this by subtracting \\(5\\) from both sides.\n   \\[\n   x + 5 - 5 = 7 - 5\n   \\]\n   Simplifying both sides, we get:\n   \\[\n   x = 2\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Isolate the constant terms on the other side of the equation**: Now, we need to move the constant term \\(5\\) to the right side of the equation. We do this by subtracting \\(5\\) from both sides.\n   \\[\n   x + 5 - 5 = 7 - 5\n   \\]\n   Simplifying both sides, we get:\n   \\[\n   x = 2\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "**Verify the solution**: To ensure our solution is correct, we can substitute \\(x = 2\\) back into the original equation and check if both sides are equal.\n   \\[\n   6(2) + 5 = 5(2) + 7\n   \\]\n   Simplifying both sides, we get:\n   \\[\n   12 + 5 = 10 + 7\n   \\]\n   \\[\n   17 = 17\n   \\]\n   Since both sides are equal, our solution is correct.\n\nFinal Answer: \\(x = 2\\)",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Verify the solution**: To ensure our solution is correct, we can substitute \\(x = 2\\) back into the original equation and check if both sides are equal.\n   \\[\n   6(2) + 5 = 5(2) + 7\n   \\]\n   Simplifying both sides, we get:\n   \\[\n   12 + 5 = 10 + 7\n   \\]\n   \\[\n   17 = 17\n   \\]\n   Since both sides are equal, our solution is correct.\n\nFinal Answer: \\(x = 2\\)",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "format",
+      "variant_question": "> Solve for x: 6x + 5 = 5x + 7",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (format; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "\\(x = 2\\)",
+        "n_steps": 3,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the equation \\(6x + 5 = 5x + 7\\) for \\(x\\), follow these steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the equation \\(6x + 5 = 5x + 7\\) for \\(x\\), follow these steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "**Isolate the variable terms on one side of the equation**: To do this, subtract \\(5x\\) from both sides of the equation to move all terms with \\(x\\) to the left side.\n   \\[\n   6x + 5 - 5x = 5x + 7 - 5x\n   \\]\n   Simplifying both sides, we get:\n   \\[\n   x + 5 = 7\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Isolate the variable terms on one side of the equation**: To do this, subtract \\(5x\\) from both sides of the equation to move all terms with \\(x\\) to the left side.\n   \\[\n   6x + 5 - 5x = 5x + 7 - 5x\n   \\]\n   Simplifying both sides, we get:\n   \\[\n   x + 5 = 7\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "**Isolate the constant terms on the other side of the equation**: To do this, subtract 5 from both sides of the equation to move all constant terms to the right side.\n   \\[\n   x + 5 - 5 = 7 - 5\n   \\]\n   Simplifying both sides, we get:\n   \\[\n   x = 2\n   \\]\n\nFinal Answer: \\(x = 2\\)",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Isolate the constant terms on the other side of the equation**: To do this, subtract 5 from both sides of the equation to move all constant terms to the right side.\n   \\[\n   x + 5 - 5 = 7 - 5\n   \\]\n   Simplifying both sides, we get:\n   \\[\n   x = 2\n   \\]\n\nFinal Answer: \\(x = 2\\)",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "distractor",
+      "variant_question": "Note: the following sentence is unrelated to the question. Meanwhile, advances in technology continued to reshape daily life. Now, solve for x: 6x + 5 = 5x + 7",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (distractor; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "\\(2\\)",
+        "n_steps": 4,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the equation \\(6x + 5 = 5x + 7\\) for \\(x\\), follow these steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the equation \\(6x + 5 = 5x + 7\\) for \\(x\\), follow these steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "**Start with the equation**: \n   \\[\n   6x + 5 = 5x + 7\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Start with the equation**: \n   \\[\n   6x + 5 = 5x + 7\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "**Subtract \\(5x\\) from both sides** to isolate the \\(x\\) terms on one side:\n   \\[\n   6x + 5 - 5x = 5x + 7 - 5x\n   \\]\n   Simplifying this, we get:\n   \\[\n   x + 5 = 7\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Subtract \\(5x\\) from both sides** to isolate the \\(x\\) terms on one side:\n   \\[\n   6x + 5 - 5x = 5x + 7 - 5x\n   \\]\n   Simplifying this, we get:\n   \\[\n   x + 5 = 7\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "**Subtract 5 from both sides** to isolate \\(x\\):\n   \\[\n   x + 5 - 5 = 7 - 5\n   \\]\n   Simplifying this, we get:\n   \\[\n   x = 2\n   \\]\n\nFinal Answer: \\(2\\)",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Subtract 5 from both sides** to isolate \\(x\\):\n   \\[\n   x + 5 - 5 = 7 - 5\n   \\]\n   Simplifying this, we get:\n   \\[\n   x = 2\n   \\]\n\nFinal Answer: \\(2\\)",
+            "is_final": true
+          }
+        ]
+      }
+    }
+  ],
+  "patch_results": null,
+  "n_variants_generated": 5,
+  "n_variants_valid": 5,
+  "n_variants_rejected": 0,
+  "elapsed_seconds": 36.98968744277954
+}

@@ -1,0 +1,256 @@
+{
+  "sample_id": "math_0002",
+  "agent_type": "direct",
+  "sample_question": "How many ways can you arrange the letters in the word MATH?",
+  "sample_context": null,
+  "sample_gold_answer": "24",
+  "original_result": {
+    "final_answer": "24",
+    "n_steps": 1,
+    "is_correct": true,
+    "trace": [
+      {
+        "step": 1,
+        "thought": "24",
+        "action": null,
+        "observation": null,
+        "raw_output": "24",
+        "is_final": true
+      }
+    ]
+  },
+  "consistency_analysis": {
+    "consistency_rate": 1.0,
+    "is_consistent": true,
+    "inconsistent_count": 0,
+    "per_type_inconsistency": {
+      "paraphrase": 0.0,
+      "synonym": 0.0,
+      "reorder": 0.0,
+      "format": 0.0,
+      "distractor": 0.0
+    },
+    "propagation_patterns": {
+      "consistent": 5
+    }
+  },
+  "propagation_details": [
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "paraphrase",
+      "variant_answer": "24"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "synonym",
+      "variant_answer": "24"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "reorder",
+      "variant_answer": "24"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "format",
+      "variant_answer": "24"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "distractor",
+      "variant_answer": "24"
+    }
+  ],
+  "perturbation_variants": [
+    {
+      "perturbation_type": "paraphrase",
+      "variant_question": "What is the number of ways to arrange the letters in the word MATH?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking for the same information: the number of ways to arrange the letters in the word \"MATH\". The slight variation in wording does not change the answer, which is '24'."
+      },
+      "agent_run": {
+        "final_answer": "24",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "24",
+            "action": null,
+            "observation": null,
+            "raw_output": "24",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "synonym",
+      "variant_question": "How numerous ways can you organize the letters in the word MATH?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe wording difference between \"How many ways\" and \"How numerous ways\" as well as \"arrange\" and \"organize\" does not change the meaning or the answer to the question. Therefore, these questions ar"
+      },
+      "agent_run": {
+        "final_answer": "24",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "24",
+            "action": null,
+            "observation": null,
+            "raw_output": "24",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "reorder",
+      "variant_question": "How many ways can you arrange the letters in the word MATH? Please reason step by step.",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (reorder; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "24",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "24",
+            "action": null,
+            "observation": null,
+            "raw_output": "24\n\nStep-by-step reasoning: The word MATH consists of 4 distinct letters. The number of ways to arrange n distinct items is given by n!. For MATH, this is 4! = 4 × 3 × 2 × 1 = 24.",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "format",
+      "variant_question": "> How many ways can you arrange the letters in the word MATH?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (format; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "24",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "24",
+            "action": null,
+            "observation": null,
+            "raw_output": "24",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "distractor",
+      "variant_question": "Note: the following sentence is unrelated to the question. The weather that day was particularly sunny with clear skies. Now, how many ways can you arrange the letters in the word MATH?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (distractor; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "24",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "24",
+            "action": null,
+            "observation": null,
+            "raw_output": "24",
+            "is_final": true
+          }
+        ]
+      }
+    }
+  ],
+  "patch_results": null,
+  "n_variants_generated": 5,
+  "n_variants_valid": 5,
+  "n_variants_rejected": 0,
+  "elapsed_seconds": 4.694294452667236
+}

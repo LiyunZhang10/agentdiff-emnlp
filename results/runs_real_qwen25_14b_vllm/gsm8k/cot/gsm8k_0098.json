@@ -1,0 +1,548 @@
+{
+  "sample_id": "gsm8k_0098",
+  "agent_type": "cot",
+  "sample_question": "A train travels at 11 km/h for 1 hours, then at 9 km/h for 1 hours. What is the total distance?",
+  "sample_context": null,
+  "sample_gold_answer": "20",
+  "original_result": {
+    "final_answer": "20 km",
+    "n_steps": 4,
+    "is_correct": true,
+    "trace": [
+      {
+        "step": 1,
+        "thought": "To solve this problem, we will break it down into steps and calculate the total distance traveled by the train.",
+        "action": null,
+        "observation": null,
+        "raw_output": "To solve this problem, we will break it down into steps and calculate the total distance traveled by the train.",
+        "is_final": false
+      },
+      {
+        "step": 2,
+        "thought": "Calculate the distance traveled during the first part of the journey.\n- The train travels at 11 km/h for 1 hour.\n- Distance = Speed × Time\n- Distance for the first part = 11 km/h × 1 h = 11 km",
+        "action": null,
+        "observation": null,
+        "raw_output": "Calculate the distance traveled during the first part of the journey.\n- The train travels at 11 km/h for 1 hour.\n- Distance = Speed × Time\n- Distance for the first part = 11 km/h × 1 h = 11 km",
+        "is_final": false
+      },
+      {
+        "step": 3,
+        "thought": "Calculate the distance traveled during the second part of the journey.\n- The train travels at 9 km/h for 1 hour.\n- Distance = Speed × Time\n- Distance for the second part = 9 km/h × 1 h = 9 km",
+        "action": null,
+        "observation": null,
+        "raw_output": "Calculate the distance traveled during the second part of the journey.\n- The train travels at 9 km/h for 1 hour.\n- Distance = Speed × Time\n- Distance for the second part = 9 km/h × 1 h = 9 km",
+        "is_final": false
+      },
+      {
+        "step": 4,
+        "thought": "Add the distances from both parts of the journey to get the total distance.\n- Total distance = Distance for the first part + Distance for the second part\n- Total distance = 11 km + 9 km = 20 km\n\nFinal Answer: 20 km",
+        "action": null,
+        "observation": null,
+        "raw_output": "Add the distances from both parts of the journey to get the total distance.\n- Total distance = Distance for the first part + Distance for the second part\n- Total distance = 11 km + 9 km = 20 km\n\nFinal Answer: 20 km",
+        "is_final": true
+      }
+    ]
+  },
+  "consistency_analysis": {
+    "consistency_rate": 1.0,
+    "is_consistent": true,
+    "inconsistent_count": 0,
+    "per_type_inconsistency": {
+      "paraphrase": 0.0,
+      "synonym": 0.0,
+      "reorder": 0.0,
+      "format": 0.0,
+      "distractor": 0.0
+    },
+    "propagation_patterns": {
+      "consistent": 1,
+      "self_correct": 2,
+      "cascade": 2
+    }
+  },
+  "propagation_details": [
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.5483870967741935,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.64,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.64,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.42857142857142855,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 4,
+      "n_steps_variant": 4,
+      "perturbation_type": "paraphrase",
+      "variant_answer": "20 km"
+    },
+    {
+      "divergence_step": 2,
+      "cascade_depth": 1,
+      "self_corrections": 1,
+      "propagation_pattern": "self_correct",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.4230769230769231,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.25806451612903225,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.5,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.2857142857142857,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 5,
+          "thought_similarity": 0.0,
+          "action_match": false,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 4,
+      "n_steps_variant": 5,
+      "perturbation_type": "synonym",
+      "variant_answer": "20 km"
+    },
+    {
+      "divergence_step": 2,
+      "cascade_depth": 1,
+      "self_corrections": 1,
+      "propagation_pattern": "self_correct",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.48,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.3333333333333333,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.43333333333333335,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.22857142857142856,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 5,
+          "thought_similarity": 0.0,
+          "action_match": false,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 4,
+      "n_steps_variant": 5,
+      "perturbation_type": "reorder",
+      "variant_answer": "20 km"
+    },
+    {
+      "divergence_step": 2,
+      "cascade_depth": 3,
+      "self_corrections": 0,
+      "propagation_pattern": "cascade",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.48,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.3333333333333333,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.36666666666666664,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.24242424242424243,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 5,
+          "thought_similarity": 0.0,
+          "action_match": false,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 4,
+      "n_steps_variant": 5,
+      "perturbation_type": "format",
+      "variant_answer": "20 km"
+    },
+    {
+      "divergence_step": 2,
+      "cascade_depth": 3,
+      "self_corrections": 0,
+      "propagation_pattern": "cascade",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.48,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.3333333333333333,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.36666666666666664,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.24242424242424243,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 5,
+          "thought_similarity": 0.0,
+          "action_match": false,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 4,
+      "n_steps_variant": 5,
+      "perturbation_type": "distractor",
+      "variant_answer": "20 km"
+    }
+  ],
+  "perturbation_variants": [
+    {
+      "perturbation_type": "paraphrase",
+      "variant_question": "What is the total distance a train travels at 11 km/h for 1 hour, then at 9 km/h for 1 hour?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking for the same information with only minor wording differences, which do not change the core of the question or the answer. Both questions are asking for the total distance"
+      },
+      "agent_run": {
+        "final_answer": "20 km",
+        "n_steps": 4,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve this problem, we will break it down into steps and calculate the distance traveled during each part of the journey separately, then sum these distances to find the total distance traveled.",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve this problem, we will break it down into steps and calculate the distance traveled during each part of the journey separately, then sum these distances to find the total distance traveled.",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "Calculate the distance traveled at 11 km/h for 1 hour.\n- Distance = Speed × Time\n- Distance at 11 km/h = 11 km/h × 1 hour = 11 km",
+            "action": null,
+            "observation": null,
+            "raw_output": "Calculate the distance traveled at 11 km/h for 1 hour.\n- Distance = Speed × Time\n- Distance at 11 km/h = 11 km/h × 1 hour = 11 km",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "Calculate the distance traveled at 9 km/h for 1 hour.\n- Distance = Speed × Time\n- Distance at 9 km/h = 9 km/h × 1 hour = 9 km",
+            "action": null,
+            "observation": null,
+            "raw_output": "Calculate the distance traveled at 9 km/h for 1 hour.\n- Distance = Speed × Time\n- Distance at 9 km/h = 9 km/h × 1 hour = 9 km",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "Sum the distances from Step 1 and Step 2 to find the total distance traveled.\n- Total distance = Distance at 11 km/h + Distance at 9 km/h\n- Total distance = 11 km + 9 km = 20 km\n\nFinal Answer: 20 km",
+            "action": null,
+            "observation": null,
+            "raw_output": "Sum the distances from Step 1 and Step 2 to find the total distance traveled.\n- Total distance = Distance at 11 km/h + Distance at 9 km/h\n- Total distance = 11 km + 9 km = 20 km\n\nFinal Answer: 20 km",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "synonym",
+      "variant_question": "A locomotive moves at 11 km/h for 1 hours, then at 9 km/h for 1 hours. What is the overall distance?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking for the same information with only minor wording differences ('train' vs 'locomotive', 'total distance' vs 'overall distance'). The core of the questions and the numbers "
+      },
+      "agent_run": {
+        "final_answer": "20 km",
+        "n_steps": 5,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the problem of finding the overall distance traveled by the locomotive, we can break it down into steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the problem of finding the overall distance traveled by the locomotive, we can break it down into steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "**Identify the given information:**\n   - The locomotive moves at 11 km/h for 1 hour.\n   - The locomotive then moves at 9 km/h for 1 hour.",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Identify the given information:**\n   - The locomotive moves at 11 km/h for 1 hour.\n   - The locomotive then moves at 9 km/h for 1 hour.",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "**Calculate the distance traveled during the first part of the journey:**\n   - Distance = Speed × Time\n   - For the first part: Distance = 11 km/h × 1 hour = 11 km",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Calculate the distance traveled during the first part of the journey:**\n   - Distance = Speed × Time\n   - For the first part: Distance = 11 km/h × 1 hour = 11 km",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "**Calculate the distance traveled during the second part of the journey:**\n   - For the second part: Distance = 9 km/h × 1 hour = 9 km",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Calculate the distance traveled during the second part of the journey:**\n   - For the second part: Distance = 9 km/h × 1 hour = 9 km",
+            "is_final": false
+          },
+          {
+            "step": 5,
+            "thought": "**Add the distances from both parts of the journey to find the overall distance:**\n   - Overall Distance = Distance from first part + Distance from second part\n   - Overall Distance = 11 km + 9 km = 20 km\n\nFinal Answer: 20 km",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Add the distances from both parts of the journey to find the overall distance:**\n   - Overall Distance = Distance from first part + Distance from second part\n   - Overall Distance = 11 km + 9 km = 20 km\n\nFinal Answer: 20 km",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "reorder",
+      "variant_question": "A train travels at 11 km/h for 1 hours, then at 9 km/h for 1 hours. What is the total distance? Please reason step by step.",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (reorder; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "20 km",
+        "n_steps": 5,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the problem of finding the total distance traveled by the train, we can break it down into steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the problem of finding the total distance traveled by the train, we can break it down into steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "**Identify the speeds and times for each segment of the journey:**\n   - The train travels at 11 km/h for 1 hour.\n   - The train then travels at 9 km/h for 1 hour.",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Identify the speeds and times for each segment of the journey:**\n   - The train travels at 11 km/h for 1 hour.\n   - The train then travels at 9 km/h for 1 hour.",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "**Calculate the distance traveled during the first segment:**\n   - Distance = Speed × Time\n   - For the first segment: Distance = 11 km/h × 1 hour = 11 km",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Calculate the distance traveled during the first segment:**\n   - Distance = Speed × Time\n   - For the first segment: Distance = 11 km/h × 1 hour = 11 km",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "**Calculate the distance traveled during the second segment:**\n   - For the second segment: Distance = 9 km/h × 1 hour = 9 km",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Calculate the distance traveled during the second segment:**\n   - For the second segment: Distance = 9 km/h × 1 hour = 9 km",
+            "is_final": false
+          },
+          {
+            "step": 5,
+            "thought": "**Add the distances from both segments to find the total distance:**\n   - Total Distance = Distance of first segment + Distance of second segment\n   - Total Distance = 11 km + 9 km = 20 km\n\nFinal Answer: 20 km",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Add the distances from both segments to find the total distance:**\n   - Total Distance = Distance of first segment + Distance of second segment\n   - Total Distance = 11 km + 9 km = 20 km\n\nFinal Answer: 20 km",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "format",
+      "variant_question": "- A train travels at 11 km/h for 1 hours, then at 9 km/h for 1 hours.\nQuestion: What is the total distance?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (format; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "20 km",
+        "n_steps": 5,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the problem of finding the total distance traveled by the train, we can break it down into steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the problem of finding the total distance traveled by the train, we can break it down into steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "**Identify the speeds and times for each segment of the journey:**\n   - The train travels at 11 km/h for 1 hour.\n   - The train then travels at 9 km/h for 1 hour.",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Identify the speeds and times for each segment of the journey:**\n   - The train travels at 11 km/h for 1 hour.\n   - The train then travels at 9 km/h for 1 hour.",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "**Calculate the distance for the first segment:**\n   - Distance = Speed × Time\n   - For the first segment: Distance = 11 km/h × 1 hour = 11 km",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Calculate the distance for the first segment:**\n   - Distance = Speed × Time\n   - For the first segment: Distance = 11 km/h × 1 hour = 11 km",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "**Calculate the distance for the second segment:**\n   - For the second segment: Distance = 9 km/h × 1 hour = 9 km",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Calculate the distance for the second segment:**\n   - For the second segment: Distance = 9 km/h × 1 hour = 9 km",
+            "is_final": false
+          },
+          {
+            "step": 5,
+            "thought": "**Add the distances from both segments to find the total distance:**\n   - Total Distance = Distance of first segment + Distance of second segment\n   - Total Distance = 11 km + 9 km = 20 km\n\nFinal Answer: 20 km",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Add the distances from both segments to find the total distance:**\n   - Total Distance = Distance of first segment + Distance of second segment\n   - Total Distance = 11 km + 9 km = 20 km\n\nFinal Answer: 20 km",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "distractor",
+      "variant_question": "Note: the following sentence is unrelated to the question. Several other researchers had studied similar topics in the past decade. Now, a train travels at 11 km/h for 1 hours, then at 9 km/h for 1 hours. What is the total distance?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (distractor; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "20 km",
+        "n_steps": 5,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the problem of finding the total distance traveled by the train, we can break it down into steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the problem of finding the total distance traveled by the train, we can break it down into steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "**Identify the speeds and times for each segment of the journey:**\n   - The train travels at 11 km/h for 1 hour.\n   - The train then travels at 9 km/h for 1 hour.",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Identify the speeds and times for each segment of the journey:**\n   - The train travels at 11 km/h for 1 hour.\n   - The train then travels at 9 km/h for 1 hour.",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "**Calculate the distance for the first segment:**\n   - Distance = Speed × Time\n   - For the first segment: Distance = 11 km/h × 1 hour = 11 km",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Calculate the distance for the first segment:**\n   - Distance = Speed × Time\n   - For the first segment: Distance = 11 km/h × 1 hour = 11 km",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "**Calculate the distance for the second segment:**\n   - For the second segment: Distance = 9 km/h × 1 hour = 9 km",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Calculate the distance for the second segment:**\n   - For the second segment: Distance = 9 km/h × 1 hour = 9 km",
+            "is_final": false
+          },
+          {
+            "step": 5,
+            "thought": "**Add the distances from both segments to find the total distance:**\n   - Total Distance = Distance of first segment + Distance of second segment\n   - Total Distance = 11 km + 9 km = 20 km\n\nFinal Answer: 20 km",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Add the distances from both segments to find the total distance:**\n   - Total Distance = Distance of first segment + Distance of second segment\n   - Total Distance = 11 km + 9 km = 20 km\n\nFinal Answer: 20 km",
+            "is_final": true
+          }
+        ]
+      }
+    }
+  ],
+  "patch_results": null,
+  "n_variants_generated": 5,
+  "n_variants_valid": 5,
+  "n_variants_rejected": 0,
+  "elapsed_seconds": 31.1694176197052
+}

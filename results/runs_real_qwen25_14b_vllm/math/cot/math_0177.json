@@ -1,0 +1,490 @@
+{
+  "sample_id": "math_0177",
+  "agent_type": "cot",
+  "sample_question": "Solve for x: 13x + 4 = 2x + 2",
+  "sample_context": null,
+  "sample_gold_answer": "-0.18",
+  "original_result": {
+    "final_answer": "\\(-\\frac{2}{11}\\)",
+    "n_steps": 4,
+    "is_correct": false,
+    "trace": [
+      {
+        "step": 1,
+        "thought": "To solve the equation \\(13x + 4 = 2x + 2\\) for \\(x\\), follow these steps:",
+        "action": null,
+        "observation": null,
+        "raw_output": "To solve the equation \\(13x + 4 = 2x + 2\\) for \\(x\\), follow these steps:",
+        "is_final": false
+      },
+      {
+        "step": 2,
+        "thought": "**Isolate the variable terms on one side of the equation**: Start by subtracting \\(2x\\) from both sides of the equation to get all the \\(x\\)-terms on one side.\n   \\[\n   13x + 4 - 2x = 2x + 2 - 2x\n   \\]\n   Simplifying this, we get:\n   \\[\n   11x + 4 = 2\n   \\]",
+        "action": null,
+        "observation": null,
+        "raw_output": "**Isolate the variable terms on one side of the equation**: Start by subtracting \\(2x\\) from both sides of the equation to get all the \\(x\\)-terms on one side.\n   \\[\n   13x + 4 - 2x = 2x + 2 - 2x\n   \\]\n   Simplifying this, we get:\n   \\[\n   11x + 4 = 2\n   \\]",
+        "is_final": false
+      },
+      {
+        "step": 3,
+        "thought": "**Isolate the constant terms on the other side of the equation**: Subtract 4 from both sides to get all the constant terms on the other side.\n   \\[\n   11x + 4 - 4 = 2 - 4\n   \\]\n   Simplifying this, we get:\n   \\[\n   11x = -2\n   \\]",
+        "action": null,
+        "observation": null,
+        "raw_output": "**Isolate the constant terms on the other side of the equation**: Subtract 4 from both sides to get all the constant terms on the other side.\n   \\[\n   11x + 4 - 4 = 2 - 4\n   \\]\n   Simplifying this, we get:\n   \\[\n   11x = -2\n   \\]",
+        "is_final": false
+      },
+      {
+        "step": 4,
+        "thought": "**Solve for \\(x\\)**: Divide both sides of the equation by 11 to isolate \\(x\\).\n   \\[\n   \\frac{11x}{11} = \\frac{-2}{11}\n   \\]\n   Simplifying this, we get:\n   \\[\n   x = -\\frac{2}{11}\n   \\]\n\nFinal Answer: \\(-\\frac{2}{11}\\)",
+        "action": null,
+        "observation": null,
+        "raw_output": "**Solve for \\(x\\)**: Divide both sides of the equation by 11 to isolate \\(x\\).\n   \\[\n   \\frac{11x}{11} = \\frac{-2}{11}\n   \\]\n   Simplifying this, we get:\n   \\[\n   x = -\\frac{2}{11}\n   \\]\n\nFinal Answer: \\(-\\frac{2}{11}\\)",
+        "is_final": true
+      }
+    ]
+  },
+  "consistency_analysis": {
+    "consistency_rate": 1.0,
+    "is_consistent": true,
+    "inconsistent_count": 0,
+    "per_type_inconsistency": {
+      "paraphrase": 0.0,
+      "synonym": 0.0,
+      "reorder": 0.0,
+      "format": 0.0,
+      "distractor": 0.0
+    },
+    "propagation_patterns": {
+      "consistent": 5
+    }
+  },
+  "propagation_details": [
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 4,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 4,
+      "n_steps_variant": 4,
+      "perturbation_type": "paraphrase",
+      "variant_answer": "\\(-\\frac{2}{11}\\)"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.7241379310344828,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 4,
+      "n_steps_variant": 4,
+      "perturbation_type": "synonym",
+      "variant_answer": "\\(-\\frac{2}{11}\\)"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.8823529411764706,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.7045454545454546,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.75,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.696969696969697,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 4,
+      "n_steps_variant": 4,
+      "perturbation_type": "reorder",
+      "variant_answer": "\\(-\\frac{2}{11}\\)"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.9310344827586207,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 4,
+      "n_steps_variant": 4,
+      "perturbation_type": "format",
+      "variant_answer": "\\(-\\frac{2}{11}\\)"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.7560975609756098,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.8484848484848485,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.6206896551724138,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 4,
+      "n_steps_variant": 4,
+      "perturbation_type": "distractor",
+      "variant_answer": "\\(\\frac{-2}{11}\\)"
+    }
+  ],
+  "perturbation_variants": [
+    {
+      "perturbation_type": "paraphrase",
+      "variant_question": "Find x: 13x + 4 = 2x + 2",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking for the same solution, with only a minor wording difference ('Solve for x' vs 'Find x'). Therefore, they are equivalent."
+      },
+      "agent_run": {
+        "final_answer": "\\(-\\frac{2}{11}\\)",
+        "n_steps": 4,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the equation \\(13x + 4 = 2x + 2\\) for \\(x\\), follow these steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the equation \\(13x + 4 = 2x + 2\\) for \\(x\\), follow these steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "**Isolate the variable terms on one side of the equation**: Start by subtracting \\(2x\\) from both sides of the equation to get all the \\(x\\)-terms on one side.\n   \\[\n   13x + 4 - 2x = 2x + 2 - 2x\n   \\]\n   Simplifying this, we get:\n   \\[\n   11x + 4 = 2\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Isolate the variable terms on one side of the equation**: Start by subtracting \\(2x\\) from both sides of the equation to get all the \\(x\\)-terms on one side.\n   \\[\n   13x + 4 - 2x = 2x + 2 - 2x\n   \\]\n   Simplifying this, we get:\n   \\[\n   11x + 4 = 2\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "**Isolate the constant terms on the other side of the equation**: Subtract 4 from both sides to get all the constant terms on the other side.\n   \\[\n   11x + 4 - 4 = 2 - 4\n   \\]\n   Simplifying this, we get:\n   \\[\n   11x = -2\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Isolate the constant terms on the other side of the equation**: Subtract 4 from both sides to get all the constant terms on the other side.\n   \\[\n   11x + 4 - 4 = 2 - 4\n   \\]\n   Simplifying this, we get:\n   \\[\n   11x = -2\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "**Solve for \\(x\\)**: Divide both sides of the equation by 11 to isolate \\(x\\).\n   \\[\n   \\frac{11x}{11} = \\frac{-2}{11}\n   \\]\n   Simplifying this, we get:\n   \\[\n   x = -\\frac{2}{11}\n   \\]\n\nFinal Answer: \\(-\\frac{2}{11}\\)",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Solve for \\(x\\)**: Divide both sides of the equation by 11 to isolate \\(x\\).\n   \\[\n   \\frac{11x}{11} = \\frac{-2}{11}\n   \\]\n   Simplifying this, we get:\n   \\[\n   x = -\\frac{2}{11}\n   \\]\n\nFinal Answer: \\(-\\frac{2}{11}\\)",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "synonym",
+      "variant_question": "Determine for x: 13x + 4 = 2x + 2",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are phrased differently but ask for the same solution, with \"Solve for x\" and \"Determine for x\" being minor wording differences that do not change the core of the question or its an"
+      },
+      "agent_run": {
+        "final_answer": "\\(-\\frac{2}{11}\\)",
+        "n_steps": 4,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the equation \\(13x + 4 = 2x + 2\\) for \\(x\\), follow these steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the equation \\(13x + 4 = 2x + 2\\) for \\(x\\), follow these steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "**Isolate the variable terms on one side of the equation**: Start by subtracting \\(2x\\) from both sides of the equation to get all the \\(x\\)-terms on one side.\n   \\[\n   13x + 4 - 2x = 2x + 2 - 2x\n   \\]\n   Simplifying this, we get:\n   \\[\n   11x + 4 = 2\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Isolate the variable terms on one side of the equation**: Start by subtracting \\(2x\\) from both sides of the equation to get all the \\(x\\)-terms on one side.\n   \\[\n   13x + 4 - 2x = 2x + 2 - 2x\n   \\]\n   Simplifying this, we get:\n   \\[\n   11x + 4 = 2\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "**Isolate the constant terms on the other side of the equation**: Subtract 4 from both sides to get all the constant terms on the other side.\n   \\[\n   11x + 4 - 4 = 2 - 4\n   \\]\n   Simplifying this, we get:\n   \\[\n   11x = -2\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Isolate the constant terms on the other side of the equation**: Subtract 4 from both sides to get all the constant terms on the other side.\n   \\[\n   11x + 4 - 4 = 2 - 4\n   \\]\n   Simplifying this, we get:\n   \\[\n   11x = -2\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "**Solve for \\(x\\)**: Divide both sides of the equation by 11 to solve for \\(x\\).\n   \\[\n   x = \\frac{-2}{11}\n   \\]\n\nFinal Answer: \\(-\\frac{2}{11}\\)",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Solve for \\(x\\)**: Divide both sides of the equation by 11 to solve for \\(x\\).\n   \\[\n   x = \\frac{-2}{11}\n   \\]\n\nFinal Answer: \\(-\\frac{2}{11}\\)",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "reorder",
+      "variant_question": "Solve for x: 13x + 4 = 2x + 2 Please reason step by step.",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (reorder; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "\\(-\\frac{2}{11}\\)",
+        "n_steps": 4,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the equation \\(13x + 4 = 2x + 2\\) for \\(x\\), we will follow these steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the equation \\(13x + 4 = 2x + 2\\) for \\(x\\), we will follow these steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "**Isolate the variable terms on one side of the equation**: To do this, we need to subtract \\(2x\\) from both sides of the equation to move all terms with \\(x\\) to the left side.\n   \\[\n   13x + 4 - 2x = 2x + 2 - 2x\n   \\]\n   Simplifying both sides, we get:\n   \\[\n   11x + 4 = 2\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Isolate the variable terms on one side of the equation**: To do this, we need to subtract \\(2x\\) from both sides of the equation to move all terms with \\(x\\) to the left side.\n   \\[\n   13x + 4 - 2x = 2x + 2 - 2x\n   \\]\n   Simplifying both sides, we get:\n   \\[\n   11x + 4 = 2\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "**Isolate the constant terms on the other side of the equation**: Now, we need to subtract 4 from both sides to move the constant term to the right side.\n   \\[\n   11x + 4 - 4 = 2 - 4\n   \\]\n   Simplifying both sides, we get:\n   \\[\n   11x = -2\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Isolate the constant terms on the other side of the equation**: Now, we need to subtract 4 from both sides to move the constant term to the right side.\n   \\[\n   11x + 4 - 4 = 2 - 4\n   \\]\n   Simplifying both sides, we get:\n   \\[\n   11x = -2\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "**Solve for \\(x\\)**: To find the value of \\(x\\), we divide both sides of the equation by 11.\n   \\[\n   \\frac{11x}{11} = \\frac{-2}{11}\n   \\]\n   Simplifying, we get:\n   \\[\n   x = -\\frac{2}{11}\n   \\]\n\nFinal Answer: \\(-\\frac{2}{11}\\)",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Solve for \\(x\\)**: To find the value of \\(x\\), we divide both sides of the equation by 11.\n   \\[\n   \\frac{11x}{11} = \\frac{-2}{11}\n   \\]\n   Simplifying, we get:\n   \\[\n   x = -\\frac{2}{11}\n   \\]\n\nFinal Answer: \\(-\\frac{2}{11}\\)",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "format",
+      "variant_question": "> Solve for x: 13x + 4 = 2x + 2",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (format; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "\\(-\\frac{2}{11}\\)",
+        "n_steps": 4,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the equation \\(13x + 4 = 2x + 2\\) for \\(x\\), follow these steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the equation \\(13x + 4 = 2x + 2\\) for \\(x\\), follow these steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "**Isolate the variable terms on one side of the equation**: Start by subtracting \\(2x\\) from both sides of the equation to get all the \\(x\\)-terms on one side.\n   \\[\n   13x + 4 - 2x = 2x + 2 - 2x\n   \\]\n   Simplifying this, we get:\n   \\[\n   11x + 4 = 2\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Isolate the variable terms on one side of the equation**: Start by subtracting \\(2x\\) from both sides of the equation to get all the \\(x\\)-terms on one side.\n   \\[\n   13x + 4 - 2x = 2x + 2 - 2x\n   \\]\n   Simplifying this, we get:\n   \\[\n   11x + 4 = 2\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "**Isolate the constant terms on the other side of the equation**: Subtract 4 from both sides to get all the constant terms on the other side.\n   \\[\n   11x + 4 - 4 = 2 - 4\n   \\]\n   Simplifying this, we get:\n   \\[\n   11x = -2\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Isolate the constant terms on the other side of the equation**: Subtract 4 from both sides to get all the constant terms on the other side.\n   \\[\n   11x + 4 - 4 = 2 - 4\n   \\]\n   Simplifying this, we get:\n   \\[\n   11x = -2\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "**Solve for \\(x\\)**: Divide both sides of the equation by 11 to solve for \\(x\\).\n   \\[\n   \\frac{11x}{11} = \\frac{-2}{11}\n   \\]\n   Simplifying this, we get:\n   \\[\n   x = -\\frac{2}{11}\n   \\]\n\nFinal Answer: \\(-\\frac{2}{11}\\)",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Solve for \\(x\\)**: Divide both sides of the equation by 11 to solve for \\(x\\).\n   \\[\n   \\frac{11x}{11} = \\frac{-2}{11}\n   \\]\n   Simplifying this, we get:\n   \\[\n   x = -\\frac{2}{11}\n   \\]\n\nFinal Answer: \\(-\\frac{2}{11}\\)",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "distractor",
+      "variant_question": "Note: the following sentence is unrelated to the question. Several other researchers had studied similar topics in the past decade. Now, solve for x: 13x + 4 = 2x + 2",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (distractor; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "\\(\\frac{-2}{11}\\)",
+        "n_steps": 4,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the equation \\(13x + 4 = 2x + 2\\) for \\(x\\), follow these steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the equation \\(13x + 4 = 2x + 2\\) for \\(x\\), follow these steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "**Isolate the variable terms on one side of the equation**: Subtract \\(2x\\) from both sides of the equation to move all terms with \\(x\\) to the left side.\n   \\[\n   13x + 4 - 2x = 2x + 2 - 2x\n   \\]\n   Simplifying this, we get:\n   \\[\n   11x + 4 = 2\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Isolate the variable terms on one side of the equation**: Subtract \\(2x\\) from both sides of the equation to move all terms with \\(x\\) to the left side.\n   \\[\n   13x + 4 - 2x = 2x + 2 - 2x\n   \\]\n   Simplifying this, we get:\n   \\[\n   11x + 4 = 2\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "**Isolate the constant terms on the other side of the equation**: Subtract 4 from both sides to move the constant term to the right side.\n   \\[\n   11x + 4 - 4 = 2 - 4\n   \\]\n   Simplifying this, we get:\n   \\[\n   11x = -2\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Isolate the constant terms on the other side of the equation**: Subtract 4 from both sides to move the constant term to the right side.\n   \\[\n   11x + 4 - 4 = 2 - 4\n   \\]\n   Simplifying this, we get:\n   \\[\n   11x = -2\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "**Solve for \\(x\\)**: Divide both sides by 11 to isolate \\(x\\).\n   \\[\n   x = \\frac{-2}{11}\n   \\]\n\nFinal Answer: \\(\\frac{-2}{11}\\)",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Solve for \\(x\\)**: Divide both sides by 11 to isolate \\(x\\).\n   \\[\n   x = \\frac{-2}{11}\n   \\]\n\nFinal Answer: \\(\\frac{-2}{11}\\)",
+            "is_final": true
+          }
+        ]
+      }
+    }
+  ],
+  "patch_results": null,
+  "n_variants_generated": 5,
+  "n_variants_valid": 5,
+  "n_variants_rejected": 0,
+  "elapsed_seconds": 40.25918960571289
+}

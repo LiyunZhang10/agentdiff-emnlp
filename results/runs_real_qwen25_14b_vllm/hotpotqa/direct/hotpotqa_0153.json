@@ -1,0 +1,257 @@
+{
+  "sample_id": "hotpotqa_0153",
+  "agent_type": "direct",
+  "sample_question": "When was Mona Lisa created by the person born in Vinci?",
+  "sample_context": "Leonardo da Vinci was born in Vinci, Italy in 1452. Leonardo da Vinci created Mona Lisa in 1503. Meanwhile, Thomas Edison was working on similar topics in United States.",
+  "sample_gold_answer": "1503",
+  "original_result": {
+    "final_answer": "1503",
+    "n_steps": 1,
+    "is_correct": true,
+    "trace": [
+      {
+        "step": 1,
+        "thought": "1503",
+        "action": null,
+        "observation": null,
+        "raw_output": "1503",
+        "is_final": true
+      }
+    ]
+  },
+  "consistency_analysis": {
+    "consistency_rate": 1.0,
+    "is_consistent": true,
+    "inconsistent_count": 0,
+    "per_type_inconsistency": {
+      "paraphrase": 0.0,
+      "synonym": 0.0,
+      "reorder": 0.0,
+      "format": 0.0,
+      "distractor": 0.0
+    },
+    "propagation_patterns": {
+      "consistent": 4,
+      "early_diverge": 1
+    }
+  },
+  "propagation_details": [
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "paraphrase",
+      "variant_answer": "1503"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "synonym",
+      "variant_answer": "1503"
+    },
+    {
+      "divergence_step": 1,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "early_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.0,
+          "action_match": true,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "reorder",
+      "variant_answer": "Mona Lisa was created by Leonardo da Vinci, who was born in Vinci, in 1503."
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "format",
+      "variant_answer": "1503"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "distractor",
+      "variant_answer": "1503"
+    }
+  ],
+  "perturbation_variants": [
+    {
+      "perturbation_type": "paraphrase",
+      "variant_question": "What is the creation date of the Mona Lisa by the individual born in Vinci?",
+      "variant_context": "Leonardo da Vinci was born in Vinci, Italy in 1452. Leonardo da Vinci created Mona Lisa in 1503. Meanwhile, Thomas Edison was working on similar topics in United States.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking for the same information: the creation date of the Mona Lisa by the person born in Vinci. The minor differences in wording do not change the core of the question or the e"
+      },
+      "agent_run": {
+        "final_answer": "1503",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "1503",
+            "action": null,
+            "observation": null,
+            "raw_output": "1503",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "synonym",
+      "variant_question": "When was Mona Lisa painted by the individual born in Vinci?",
+      "variant_context": "Leonardo da Vinci was born in Vinci, Italy in 1452. Leonardo da Vinci created Mona Lisa in 1503. Meanwhile, Thomas Edison was working on similar topics in United States.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking for the same information: the year the Mona Lisa was created/painted by the person born in Vinci, which is Leonardo da Vinci. The minor wording differences ('created' vs "
+      },
+      "agent_run": {
+        "final_answer": "1503",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "1503",
+            "action": null,
+            "observation": null,
+            "raw_output": "1503",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "reorder",
+      "variant_question": "When was Mona Lisa created by the person born in Vinci? Please reason step by step.",
+      "variant_context": "Leonardo da Vinci was born in Vinci, Italy in 1452. Leonardo da Vinci created Mona Lisa in 1503. Meanwhile, Thomas Edison was working on similar topics in United States.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (reorder; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "Mona Lisa was created by Leonardo da Vinci, who was born in Vinci, in 1503.",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "Mona Lisa was created by Leonardo da Vinci, who was born in Vinci, in 1503.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Mona Lisa was created by Leonardo da Vinci, who was born in Vinci, in 1503.",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "format",
+      "variant_question": "> When was Mona Lisa created by the person born in Vinci?",
+      "variant_context": "• Leonardo da Vinci was born in Vinci, Italy in 1452.\n• Leonardo da Vinci created Mona Lisa in 1503.\n• Meanwhile, Thomas Edison was working on similar topics in United States.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (format; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "1503",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "1503",
+            "action": null,
+            "observation": null,
+            "raw_output": "1503",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "distractor",
+      "variant_question": "Note: the following sentence is unrelated to the question. Meanwhile, advances in technology continued to reshape daily life. Now, when was Mona Lisa created by the person born in Vinci?",
+      "variant_context": "Leonardo da Vinci was born in Vinci, Italy in 1452. Leonardo da Vinci created Mona Lisa in 1503. Meanwhile, Thomas Edison was working on similar topics in United States. Meanwhile, advances in technology continued to reshape daily life.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (distractor; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "1503",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "1503",
+            "action": null,
+            "observation": null,
+            "raw_output": "1503",
+            "is_final": true
+          }
+        ]
+      }
+    }
+  ],
+  "patch_results": null,
+  "n_variants_generated": 5,
+  "n_variants_valid": 5,
+  "n_variants_rejected": 0,
+  "elapsed_seconds": 4.409799098968506
+}

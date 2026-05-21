@@ -1,0 +1,277 @@
+{
+  "sample_id": "math_0031",
+  "agent_type": "direct",
+  "sample_question": "What is the sum of the first 14 positive integers?",
+  "sample_context": null,
+  "sample_gold_answer": "105",
+  "original_result": {
+    "final_answer": "91",
+    "n_steps": 1,
+    "is_correct": false,
+    "trace": [
+      {
+        "step": 1,
+        "thought": "91",
+        "action": null,
+        "observation": null,
+        "raw_output": "91",
+        "is_final": true
+      }
+    ]
+  },
+  "consistency_analysis": {
+    "consistency_rate": 0.4,
+    "is_consistent": false,
+    "inconsistent_count": 3,
+    "per_type_inconsistency": {
+      "paraphrase": 1.0,
+      "synonym": 1.0,
+      "reorder": 1.0,
+      "format": 0.0,
+      "distractor": 0.0
+    },
+    "propagation_patterns": {
+      "early_diverge": 3,
+      "consistent": 2
+    }
+  },
+  "propagation_details": [
+    {
+      "divergence_step": 1,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "early_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.0,
+          "action_match": true,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "paraphrase",
+      "variant_answer": "105"
+    },
+    {
+      "divergence_step": 1,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "early_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.0,
+          "action_match": true,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "synonym",
+      "variant_answer": "105"
+    },
+    {
+      "divergence_step": 1,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "early_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.0,
+          "action_match": true,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "reorder",
+      "variant_answer": "Step 1: Identify the formula for the sum of the first n positive integers, which is \\( S = \\frac{n(n + 1)}{2} \\)."
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "format",
+      "variant_answer": "91"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "distractor",
+      "variant_answer": "91"
+    }
+  ],
+  "perturbation_variants": [
+    {
+      "perturbation_type": "paraphrase",
+      "variant_question": "What would be the total of the first 14 positive integers?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking for the same information: the sum of the first 14 positive integers. The wording difference between \"sum\" and \"total\" does not change the meaning or the answer."
+      },
+      "agent_run": {
+        "final_answer": "105",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "105",
+            "action": null,
+            "observation": null,
+            "raw_output": "105",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "synonym",
+      "variant_question": "What is the total of the first 14 positive numbers?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking for the same mathematical operation: the sum of the first 14 positive integers. The wording difference between \"sum\" and \"total\" does not change the meaning or the answer"
+      },
+      "agent_run": {
+        "final_answer": "105",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "105",
+            "action": null,
+            "observation": null,
+            "raw_output": "105",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "reorder",
+      "variant_question": "What is the sum of the first 14 positive integers? Please reason step by step.",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (reorder; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "Step 1: Identify the formula for the sum of the first n positive integers, which is \\( S = \\frac{n(n + 1)}{2} \\).",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "Step 1: Identify the formula for the sum of the first n positive integers, which is \\( S = \\frac{n(n + 1)}{2} \\).",
+            "action": null,
+            "observation": null,
+            "raw_output": "Step 1: Identify the formula for the sum of the first n positive integers, which is \\( S = \\frac{n(n + 1)}{2} \\).\nStep 2: Substitute \\( n = 14 \\) into the formula.\nStep 3: Calculate \\( S = \\frac{14(14 + 1)}{2} = \\frac{14 \\times 15}{2} = 7 \\times 15 = 105 \\).\n\nAnswer: 105",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "format",
+      "variant_question": "> What is the sum of the first 14 positive integers?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (format; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "91",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "91",
+            "action": null,
+            "observation": null,
+            "raw_output": "91",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "distractor",
+      "variant_question": "Note: the following sentence is unrelated to the question. Historical records from that era are preserved in multiple archives. Now, what is the sum of the first 14 positive integers?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (distractor; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "91",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "91",
+            "action": null,
+            "observation": null,
+            "raw_output": "91",
+            "is_final": true
+          }
+        ]
+      }
+    }
+  ],
+  "patch_results": {
+    "step_patch": {
+      "consistency_rate": 0.4,
+      "inconsistent_count": 3,
+      "is_correct": false,
+      "intervention_step": 1,
+      "target_types": [
+        "paraphrase",
+        "synonym"
+      ]
+    },
+    "system_patch": {
+      "consistency_rate": 0.4,
+      "inconsistent_count": 3,
+      "is_correct": false,
+      "target_types": [
+        "paraphrase",
+        "synonym"
+      ]
+    }
+  },
+  "n_variants_generated": 5,
+  "n_variants_valid": 5,
+  "n_variants_rejected": 0,
+  "elapsed_seconds": 11.149261951446533
+}

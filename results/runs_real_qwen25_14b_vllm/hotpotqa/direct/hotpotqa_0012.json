@@ -1,0 +1,275 @@
+{
+  "sample_id": "hotpotqa_0012",
+  "agent_type": "direct",
+  "sample_question": "In which city was the creator of On the Origin of Species born?",
+  "sample_context": "Charles Darwin was born in Shrewsbury, England in 1809. Charles Darwin created On the Origin of Species in 1859. Meanwhile, Thomas Edison was working on similar topics in United States.",
+  "sample_gold_answer": "Shrewsbury",
+  "original_result": {
+    "final_answer": "Shrewsbury",
+    "n_steps": 1,
+    "is_correct": true,
+    "trace": [
+      {
+        "step": 1,
+        "thought": "Shrewsbury",
+        "action": null,
+        "observation": null,
+        "raw_output": "Shrewsbury",
+        "is_final": true
+      }
+    ]
+  },
+  "consistency_analysis": {
+    "consistency_rate": 0.8,
+    "is_consistent": false,
+    "inconsistent_count": 1,
+    "per_type_inconsistency": {
+      "paraphrase": 0.0,
+      "synonym": 0.0,
+      "reorder": 1.0,
+      "format": 0.0,
+      "distractor": 0.0
+    },
+    "propagation_patterns": {
+      "consistent": 4,
+      "early_diverge": 1
+    }
+  },
+  "propagation_details": [
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "paraphrase",
+      "variant_answer": "Shrewsbury"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "synonym",
+      "variant_answer": "Shrewsbury"
+    },
+    {
+      "divergence_step": 1,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "early_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.0,
+          "action_match": true,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "reorder",
+      "variant_answer": "Step 1: Identify the creator of \"On the Origin of Species\" - Charles Darwin."
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "format",
+      "variant_answer": "Shrewsbury"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "distractor",
+      "variant_answer": "Shrewsbury"
+    }
+  ],
+  "perturbation_variants": [
+    {
+      "perturbation_type": "paraphrase",
+      "variant_question": "Where was the author of On the Origin of Species born in terms of city?",
+      "variant_context": "Charles Darwin was born in Shrewsbury, England in 1809. Charles Darwin created On the Origin of Species in 1859. Meanwhile, Thomas Edison was working on similar topics in United States.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking for the same information: the city of birth of the author of \"On the Origin of Species.\" The minor differences in wording do not change the core of the question or the ex"
+      },
+      "agent_run": {
+        "final_answer": "Shrewsbury",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "Shrewsbury",
+            "action": null,
+            "observation": null,
+            "raw_output": "Shrewsbury",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "synonym",
+      "variant_question": "In which metropolis was the originator of On the Origin of Species born?",
+      "variant_context": "Charles Darwin was born in Shrewsbury, England in 1809. Charles Darwin created On the Origin of Species in 1859. Meanwhile, Thomas Edison was working on similar topics in United States.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe wording in Question B uses \"metropolis\" instead of \"city\" and \"originator\" instead of \"creator,\" but these are minor variations that do not change the core meaning or the answer. Both questio"
+      },
+      "agent_run": {
+        "final_answer": "Shrewsbury",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "Shrewsbury",
+            "action": null,
+            "observation": null,
+            "raw_output": "Shrewsbury",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "reorder",
+      "variant_question": "In which city was the creator of On the Origin of Species born? Please reason step by step.",
+      "variant_context": "Charles Darwin was born in Shrewsbury, England in 1809. Charles Darwin created On the Origin of Species in 1859. Meanwhile, Thomas Edison was working on similar topics in United States.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (reorder; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "Step 1: Identify the creator of \"On the Origin of Species\" - Charles Darwin.",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "Step 1: Identify the creator of \"On the Origin of Species\" - Charles Darwin.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Step 1: Identify the creator of \"On the Origin of Species\" - Charles Darwin.\nStep 2: Recall the birthplace of Charles Darwin - Shrewsbury, England.\nAnswer: Shrewsbury, England.",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "format",
+      "variant_question": "> In which city was the creator of On the Origin of Species born?",
+      "variant_context": "• Charles Darwin was born in Shrewsbury, England in 1809.\n• Charles Darwin created On the Origin of Species in 1859.\n• Meanwhile, Thomas Edison was working on similar topics in United States.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (format; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "Shrewsbury",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "Shrewsbury",
+            "action": null,
+            "observation": null,
+            "raw_output": "Shrewsbury",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "distractor",
+      "variant_question": "Note: the following sentence is unrelated to the question. The weather that day was particularly sunny with clear skies. Now, in which city was the creator of On the Origin of Species born?",
+      "variant_context": "Charles Darwin was born in Shrewsbury, England in 1809. Charles Darwin created On the Origin of Species in 1859. Meanwhile, Thomas Edison was working on similar topics in United States. The weather that day was particularly sunny with clear skies.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (distractor; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "Shrewsbury",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "Shrewsbury",
+            "action": null,
+            "observation": null,
+            "raw_output": "Shrewsbury",
+            "is_final": true
+          }
+        ]
+      }
+    }
+  ],
+  "patch_results": {
+    "step_patch": {
+      "consistency_rate": 1.0,
+      "inconsistent_count": 0,
+      "is_correct": true,
+      "intervention_step": 1,
+      "target_types": [
+        "reorder"
+      ]
+    },
+    "system_patch": {
+      "consistency_rate": 1.0,
+      "inconsistent_count": 0,
+      "is_correct": true,
+      "target_types": [
+        "reorder"
+      ]
+    }
+  },
+  "n_variants_generated": 5,
+  "n_variants_valid": 5,
+  "n_variants_rejected": 0,
+  "elapsed_seconds": 11.25354528427124
+}

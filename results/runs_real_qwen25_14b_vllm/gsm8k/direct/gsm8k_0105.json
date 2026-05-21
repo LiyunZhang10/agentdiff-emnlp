@@ -1,0 +1,275 @@
+{
+  "sample_id": "gsm8k_0105",
+  "agent_type": "direct",
+  "sample_question": "Alice has 43 apples. She gives 42 to Bob and buys 5 more. How many apples does Alice have now?",
+  "sample_context": null,
+  "sample_gold_answer": "6",
+  "original_result": {
+    "final_answer": "6",
+    "n_steps": 1,
+    "is_correct": true,
+    "trace": [
+      {
+        "step": 1,
+        "thought": "6",
+        "action": null,
+        "observation": null,
+        "raw_output": "6",
+        "is_final": true
+      }
+    ]
+  },
+  "consistency_analysis": {
+    "consistency_rate": 0.8,
+    "is_consistent": false,
+    "inconsistent_count": 1,
+    "per_type_inconsistency": {
+      "paraphrase": 1.0,
+      "synonym": 0.0,
+      "reorder": 0.0,
+      "format": 0.0,
+      "distractor": 0.0
+    },
+    "propagation_patterns": {
+      "early_diverge": 1,
+      "consistent": 4
+    }
+  },
+  "propagation_details": [
+    {
+      "divergence_step": 1,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "early_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.0,
+          "action_match": true,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "paraphrase",
+      "variant_answer": "3"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "synonym",
+      "variant_answer": "6"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "reorder",
+      "variant_answer": "6"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "format",
+      "variant_answer": "6"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "distractor",
+      "variant_answer": "6"
+    }
+  ],
+  "perturbation_variants": [
+    {
+      "perturbation_type": "paraphrase",
+      "variant_question": "How many apples does Alice have now after she gives 42 to Bob and buys 5 more, starting with 43 apples?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking for the same information and would yield the same answer. The only difference is in the wording and the order in which the information is presented, which does not affect"
+      },
+      "agent_run": {
+        "final_answer": "3",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "3",
+            "action": null,
+            "observation": null,
+            "raw_output": "3",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "synonym",
+      "variant_question": "Alice possesses 43 apples. She bestows 42 to Bob and purchases 5 more. How many apples does Alice have now?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are phrased differently but contain the same core information and operations: Alice starts with 43 apples, gives away 42, and then buys 5 more. The slight variations in wording do n"
+      },
+      "agent_run": {
+        "final_answer": "6",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "6",
+            "action": null,
+            "observation": null,
+            "raw_output": "6",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "reorder",
+      "variant_question": "Alice has 43 apples. She gives 42 to Bob and buys 5 more. How many apples does Alice have now?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Variant identical to original (no-op); auto-equiv."
+      },
+      "agent_run": {
+        "final_answer": "6",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "6",
+            "action": null,
+            "observation": null,
+            "raw_output": "6",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "format",
+      "variant_question": "- Alice has 43 apples.\n- She gives 42 to Bob and buys 5 more.\nQuestion: How many apples does Alice have now?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (format; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "6",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "6",
+            "action": null,
+            "observation": null,
+            "raw_output": "6",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "distractor",
+      "variant_question": "Note: the following sentence is unrelated to the question. Meanwhile, advances in technology continued to reshape daily life. Now, alice has 43 apples. She gives 42 to Bob and buys 5 more. How many apples does Alice have now?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (distractor; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "6",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "6",
+            "action": null,
+            "observation": null,
+            "raw_output": "6",
+            "is_final": true
+          }
+        ]
+      }
+    }
+  ],
+  "patch_results": {
+    "step_patch": {
+      "consistency_rate": 0.8,
+      "inconsistent_count": 1,
+      "is_correct": true,
+      "intervention_step": 1,
+      "target_types": [
+        "paraphrase"
+      ]
+    },
+    "system_patch": {
+      "consistency_rate": 0.8,
+      "inconsistent_count": 1,
+      "is_correct": true,
+      "target_types": [
+        "paraphrase"
+      ]
+    }
+  },
+  "n_variants_generated": 5,
+  "n_variants_valid": 5,
+  "n_variants_rejected": 0,
+  "elapsed_seconds": 5.269492864608765
+}

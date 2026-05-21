@@ -1,0 +1,257 @@
+{
+  "sample_id": "hotpotqa_0107",
+  "agent_type": "direct",
+  "sample_question": "When was Principia Mathematica created by the person born in Woolsthorpe?",
+  "sample_context": "Isaac Newton was born in Woolsthorpe, England in 1643. Isaac Newton created Principia Mathematica in 1687. Meanwhile, Frida Kahlo was working on similar topics in Mexico.",
+  "sample_gold_answer": "1687",
+  "original_result": {
+    "final_answer": "1687",
+    "n_steps": 1,
+    "is_correct": true,
+    "trace": [
+      {
+        "step": 1,
+        "thought": "1687",
+        "action": null,
+        "observation": null,
+        "raw_output": "1687",
+        "is_final": true
+      }
+    ]
+  },
+  "consistency_analysis": {
+    "consistency_rate": 1.0,
+    "is_consistent": true,
+    "inconsistent_count": 0,
+    "per_type_inconsistency": {
+      "paraphrase": 0.0,
+      "synonym": 0.0,
+      "reorder": 0.0,
+      "format": 0.0,
+      "distractor": 0.0
+    },
+    "propagation_patterns": {
+      "consistent": 4,
+      "early_diverge": 1
+    }
+  },
+  "propagation_details": [
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "paraphrase",
+      "variant_answer": "1687"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "synonym",
+      "variant_answer": "1687"
+    },
+    {
+      "divergence_step": 1,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "early_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.07692307692307693,
+          "action_match": true,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "reorder",
+      "variant_answer": "Principia Mathematica was created in 1687 by Isaac Newton, who was born in Woolsthorpe in 1643."
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "format",
+      "variant_answer": "1687"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "distractor",
+      "variant_answer": "1687"
+    }
+  ],
+  "perturbation_variants": [
+    {
+      "perturbation_type": "paraphrase",
+      "variant_question": "What is the creation date of Principia Mathematica by the individual born in Woolsthorpe?",
+      "variant_context": "Isaac Newton was born in Woolsthorpe, England in 1643. Isaac Newton created Principia Mathematica in 1687. Meanwhile, Frida Kahlo was working on similar topics in Mexico.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking for the same information: the creation date of \"Principia Mathematica\" by the person born in Woolsthorpe. The minor differences in wording do not change the core of the q"
+      },
+      "agent_run": {
+        "final_answer": "1687",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "1687",
+            "action": null,
+            "observation": null,
+            "raw_output": "1687",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "synonym",
+      "variant_question": "When was Principia Mathematica authored by the individual born in Woolsthorpe?",
+      "variant_context": "Isaac Newton was born in Woolsthorpe, England in 1643. Isaac Newton created Principia Mathematica in 1687. Meanwhile, Frida Kahlo was working on similar topics in Mexico.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking for the same information: the year when the Principia Mathematica was created/authored by the person/individual born in Woolsthorpe. The minor differences in wording ('cr"
+      },
+      "agent_run": {
+        "final_answer": "1687",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "1687",
+            "action": null,
+            "observation": null,
+            "raw_output": "1687",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "reorder",
+      "variant_question": "When was Principia Mathematica created by the person born in Woolsthorpe? Please reason step by step.",
+      "variant_context": "Isaac Newton was born in Woolsthorpe, England in 1643. Isaac Newton created Principia Mathematica in 1687. Meanwhile, Frida Kahlo was working on similar topics in Mexico.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (reorder; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "Principia Mathematica was created in 1687 by Isaac Newton, who was born in Woolsthorpe in 1643.",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "Principia Mathematica was created in 1687 by Isaac Newton, who was born in Woolsthorpe in 1643.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Principia Mathematica was created in 1687 by Isaac Newton, who was born in Woolsthorpe in 1643.",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "format",
+      "variant_question": "> When was Principia Mathematica created by the person born in Woolsthorpe?",
+      "variant_context": "• Isaac Newton was born in Woolsthorpe, England in 1643.\n• Isaac Newton created Principia Mathematica in 1687.\n• Meanwhile, Frida Kahlo was working on similar topics in Mexico.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (format; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "1687",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "1687",
+            "action": null,
+            "observation": null,
+            "raw_output": "1687",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "distractor",
+      "variant_question": "Note: the following sentence is unrelated to the question. The weather that day was particularly sunny with clear skies. Now, when was Principia Mathematica created by the person born in Woolsthorpe?",
+      "variant_context": "Isaac Newton was born in Woolsthorpe, England in 1643. Isaac Newton created Principia Mathematica in 1687. Meanwhile, Frida Kahlo was working on similar topics in Mexico. The weather that day was particularly sunny with clear skies.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (distractor; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "1687",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "1687",
+            "action": null,
+            "observation": null,
+            "raw_output": "1687",
+            "is_final": true
+          }
+        ]
+      }
+    }
+  ],
+  "patch_results": null,
+  "n_variants_generated": 5,
+  "n_variants_valid": 5,
+  "n_variants_rejected": 0,
+  "elapsed_seconds": 5.013480186462402
+}

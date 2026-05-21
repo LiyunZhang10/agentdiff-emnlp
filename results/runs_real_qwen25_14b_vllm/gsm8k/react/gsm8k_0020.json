@@ -1,0 +1,348 @@
+{
+  "sample_id": "gsm8k_0020",
+  "agent_type": "react",
+  "sample_question": "Alice has 41 apples. She gives 12 to Bob and buys 3 more. How many apples does Alice have now?",
+  "sample_context": null,
+  "sample_gold_answer": "32",
+  "original_result": {
+    "final_answer": "32",
+    "n_steps": 2,
+    "is_correct": true,
+    "trace": [
+      {
+        "step": 1,
+        "input_length": 969,
+        "thought": "We need to calculate the number of apples Alice has after giving some to Bob and buying more. We can use the calculate tool for this.",
+        "action": "calculate(\"41 - 12 + 3\")",
+        "observation": "32",
+        "raw_output": "Thought: We need to calculate the number of apples Alice has after giving some to Bob and buying more. We can use the calculate tool for this.\nAction: calculate(\"41 - 12 + 3\")",
+        "is_final": false
+      },
+      {
+        "step": 2,
+        "input_length": 1162,
+        "thought": "The calculation result shows that Alice now has 32 apples.",
+        "action": null,
+        "observation": null,
+        "raw_output": "Thought: The calculation result shows that Alice now has 32 apples.\nFinal Answer: 32",
+        "is_final": true
+      }
+    ]
+  },
+  "consistency_analysis": {
+    "consistency_rate": 1.0,
+    "is_consistent": true,
+    "inconsistent_count": 0,
+    "per_type_inconsistency": {
+      "paraphrase": 0.0,
+      "synonym": 0.0,
+      "reorder": 0.0,
+      "format": 0.0,
+      "distractor": 0.0
+    },
+    "propagation_patterns": {
+      "late_diverge": 2,
+      "consistent": 2,
+      "early_diverge": 1
+    }
+  },
+  "propagation_details": [
+    {
+      "divergence_step": 2,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "late_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.4444444444444444,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.23529411764705882,
+          "action_match": true,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 2,
+      "n_steps_variant": 2,
+      "perturbation_type": "paraphrase",
+      "variant_answer": "32"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 2,
+      "n_steps_variant": 2,
+      "perturbation_type": "synonym",
+      "variant_answer": "32"
+    },
+    {
+      "divergence_step": 1,
+      "cascade_depth": 1,
+      "self_corrections": 0,
+      "propagation_pattern": "early_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.35135135135135137,
+          "action_match": false,
+          "is_divergent": true
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.29411764705882354,
+          "action_match": true,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 2,
+      "n_steps_variant": 2,
+      "perturbation_type": "reorder",
+      "variant_answer": "32"
+    },
+    {
+      "divergence_step": 2,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "late_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.23529411764705882,
+          "action_match": true,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 2,
+      "n_steps_variant": 2,
+      "perturbation_type": "format",
+      "variant_answer": "32"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 2,
+      "n_steps_variant": 2,
+      "perturbation_type": "distractor",
+      "variant_answer": "32"
+    }
+  ],
+  "perturbation_variants": [
+    {
+      "perturbation_type": "paraphrase",
+      "variant_question": "How many apples does Alice have now after she starts with 41, gives 12 to Bob, and buys 3 more?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking for the same information and can be solved using the same steps, with only minor differences in wording. Both questions start with Alice having 41 apples, then give away "
+      },
+      "agent_run": {
+        "final_answer": "32",
+        "n_steps": 2,
+        "trace": [
+          {
+            "step": 1,
+            "input_length": 970,
+            "thought": "We need to calculate the final number of apples Alice has. We can use the calculate tool to perform the arithmetic operation.",
+            "action": "calculate(\"41 - 12 + 3\")",
+            "observation": "32",
+            "raw_output": "Thought: We need to calculate the final number of apples Alice has. We can use the calculate tool to perform the arithmetic operation.\nAction: calculate(\"41 - 12 + 3\")",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "input_length": 1155,
+            "thought": "The calculation result gives us the final number of apples Alice has.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Thought: The calculation result gives us the final number of apples Alice has.\nFinal Answer: 32",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "synonym",
+      "variant_question": "Alice possesses 41 apples. She bestows 12 to Bob and purchases 3 more. How many apples does Alice have now?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are phrased differently but contain the same core information and operations: Alice starts with 41 apples, gives away 12, and then buys 3 more. The slight variations in wording do n"
+      },
+      "agent_run": {
+        "final_answer": "32",
+        "n_steps": 2,
+        "trace": [
+          {
+            "step": 1,
+            "input_length": 982,
+            "thought": "We need to calculate the number of apples Alice has after giving some to Bob and buying more. We can use the calculate tool for this.",
+            "action": "calculate(\"41 - 12 + 3\")",
+            "observation": "32",
+            "raw_output": "Thought: We need to calculate the number of apples Alice has after giving some to Bob and buying more. We can use the calculate tool for this.\nAction: calculate(\"41 - 12 + 3\")",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "input_length": 1175,
+            "thought": "The calculation result shows that Alice now has 32 apples.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Thought: The calculation result shows that Alice now has 32 apples.\nFinal Answer: 32",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "reorder",
+      "variant_question": "She gives 12 to Bob and buys 3 more. Alice has 41 apples. How many apples does Alice have now?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (reorder; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "32",
+        "n_steps": 2,
+        "trace": [
+          {
+            "step": 1,
+            "input_length": 969,
+            "thought": "We need to calculate the number of apples Alice has now. We know she had 41 apples, gave 12 to Bob, and then bought 3 more. We can calculate this using the calculate tool.",
+            "action": "calculate(41 - 12 + 3)",
+            "observation": "32",
+            "raw_output": "Thought: We need to calculate the number of apples Alice has now. We know she had 41 apples, gave 12 to Bob, and then bought 3 more. We can calculate this using the calculate tool.\nAction: calculate(41 - 12 + 3)",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "input_length": 1198,
+            "thought": "The calculation result is 32, which is the number of apples Alice has now.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Thought: The calculation result is 32, which is the number of apples Alice has now.\nFinal Answer: 32",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "format",
+      "variant_question": "- Alice has 41 apples.\n- She gives 12 to Bob and buys 3 more.\nQuestion: How many apples does Alice have now?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (format; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "32",
+        "n_steps": 2,
+        "trace": [
+          {
+            "step": 1,
+            "input_length": 983,
+            "thought": "We need to calculate the number of apples Alice has after giving some to Bob and buying more. We can use the calculate tool for this.",
+            "action": "calculate(\"41 - 12 + 3\")",
+            "observation": "32",
+            "raw_output": "Thought: We need to calculate the number of apples Alice has after giving some to Bob and buying more. We can use the calculate tool for this.\nAction: calculate(\"41 - 12 + 3\")",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "input_length": 1176,
+            "thought": "The calculation result gives us the final number of apples Alice has.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Thought: The calculation result gives us the final number of apples Alice has.\nFinal Answer: 32",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "distractor",
+      "variant_question": "Note: the following sentence is unrelated to the question. The weather that day was particularly sunny with clear skies. Now, alice has 41 apples. She gives 12 to Bob and buys 3 more. How many apples does Alice have now?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (distractor; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "32",
+        "n_steps": 2,
+        "trace": [
+          {
+            "step": 1,
+            "input_length": 1095,
+            "thought": "We need to calculate the number of apples Alice has after giving some to Bob and buying more. We can use the calculate tool for this.",
+            "action": "calculate(\"41 - 12 + 3\")",
+            "observation": "32",
+            "raw_output": "Thought: We need to calculate the number of apples Alice has after giving some to Bob and buying more. We can use the calculate tool for this.\nAction: calculate(\"41 - 12 + 3\")",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "input_length": 1288,
+            "thought": "The calculation result shows that Alice now has 32 apples.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Thought: The calculation result shows that Alice now has 32 apples.\nFinal Answer: 32",
+            "is_final": true
+          }
+        ]
+      }
+    }
+  ],
+  "patch_results": null,
+  "n_variants_generated": 5,
+  "n_variants_valid": 5,
+  "n_variants_rejected": 0,
+  "elapsed_seconds": 14.12885308265686
+}

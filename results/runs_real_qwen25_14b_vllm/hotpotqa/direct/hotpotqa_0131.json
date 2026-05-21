@@ -1,0 +1,224 @@
+{
+  "sample_id": "hotpotqa_0131",
+  "agent_type": "direct",
+  "sample_question": "In what year was the creator of Mona Lisa born?",
+  "sample_context": "Leonardo da Vinci was born in Vinci, Italy in 1452. Leonardo da Vinci created Mona Lisa in 1503. Meanwhile, Galileo Galilei was working on similar topics in Italy.",
+  "sample_gold_answer": "1452",
+  "original_result": {
+    "final_answer": "1452",
+    "n_steps": 1,
+    "is_correct": true,
+    "trace": [
+      {
+        "step": 1,
+        "thought": "1452",
+        "action": null,
+        "observation": null,
+        "raw_output": "1452",
+        "is_final": true
+      }
+    ]
+  },
+  "consistency_analysis": {
+    "consistency_rate": 1.0,
+    "is_consistent": true,
+    "inconsistent_count": 0,
+    "per_type_inconsistency": {
+      "paraphrase": 0.0,
+      "reorder": 0.0,
+      "format": 0.0,
+      "distractor": 0.0
+    },
+    "propagation_patterns": {
+      "consistent": 4
+    }
+  },
+  "propagation_details": [
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "paraphrase",
+      "variant_answer": "1452"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "reorder",
+      "variant_answer": "1452"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "format",
+      "variant_answer": "1452"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "distractor",
+      "variant_answer": "1452"
+    }
+  ],
+  "perturbation_variants": [
+    {
+      "perturbation_type": "paraphrase",
+      "variant_question": "What year was the artist who created Mona Lisa born in?",
+      "variant_context": "Leonardo da Vinci was born in Vinci, Italy in 1452. Leonardo da Vinci created Mona Lisa in 1503. Meanwhile, Galileo Galilei was working on similar topics in Italy.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking for the same information: the birth year of the artist who created the Mona Lisa. The minor differences in wording do not change the core of the question or the answer."
+      },
+      "agent_run": {
+        "final_answer": "1452",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "1452",
+            "action": null,
+            "observation": null,
+            "raw_output": "1452",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "synonym",
+      "variant_question": "In what era was the maker of Mona Lisa born?",
+      "variant_context": "Leonardo da Vinci was born in Vinci, Italy in 1452. Leonardo da Vinci created Mona Lisa in 1503. Meanwhile, Galileo Galilei was working on similar topics in Italy.",
+      "validation": {
+        "is_equivalent": false,
+        "confidence": 0.2,
+        "reason": "NO\nThe reference answer to the year Leonardo da Vinci, the creator of the Mona Lisa, was born is indeed '1452'. However, the question \"In what era was the maker of Mona Lisa born?\" introduces a differ"
+      },
+      "agent_run": null
+    },
+    {
+      "perturbation_type": "reorder",
+      "variant_question": "In what year was the creator of Mona Lisa born? Please reason step by step.",
+      "variant_context": "Leonardo da Vinci was born in Vinci, Italy in 1452. Leonardo da Vinci created Mona Lisa in 1503. Meanwhile, Galileo Galilei was working on similar topics in Italy.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (reorder; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "1452",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "1452",
+            "action": null,
+            "observation": null,
+            "raw_output": "1452\n\nStep 1: Identify the creator of the Mona Lisa, which is Leonardo da Vinci.\nStep 2: Recall the birth year of Leonardo da Vinci, which is given as 1452.",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "format",
+      "variant_question": "> In what year was the creator of Mona Lisa born?",
+      "variant_context": "• Leonardo da Vinci was born in Vinci, Italy in 1452.\n• Leonardo da Vinci created Mona Lisa in 1503.\n• Meanwhile, Galileo Galilei was working on similar topics in Italy.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (format; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "1452",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "1452",
+            "action": null,
+            "observation": null,
+            "raw_output": "1452",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "distractor",
+      "variant_question": "Note: the following sentence is unrelated to the question. Several other researchers had studied similar topics in the past decade. Now, in what year was the creator of Mona Lisa born?",
+      "variant_context": "Leonardo da Vinci was born in Vinci, Italy in 1452. Leonardo da Vinci created Mona Lisa in 1503. Meanwhile, Galileo Galilei was working on similar topics in Italy. Several other researchers had studied similar topics in the past decade.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (distractor; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "1452",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "1452",
+            "action": null,
+            "observation": null,
+            "raw_output": "1452",
+            "is_final": true
+          }
+        ]
+      }
+    }
+  ],
+  "patch_results": null,
+  "n_variants_generated": 5,
+  "n_variants_valid": 4,
+  "n_variants_rejected": 1,
+  "elapsed_seconds": 5.532742738723755
+}

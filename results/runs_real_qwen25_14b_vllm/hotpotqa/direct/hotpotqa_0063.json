@@ -1,0 +1,257 @@
+{
+  "sample_id": "hotpotqa_0063",
+  "agent_type": "direct",
+  "sample_question": "In which place was the creator of alternating current system born?",
+  "sample_context": "Nikola Tesla was born in Smiljan, Croatia in 1856. Nikola Tesla created alternating current system in 1888. Meanwhile, Charles Darwin was working on similar topics in England.",
+  "sample_gold_answer": "Smiljan",
+  "original_result": {
+    "final_answer": "Smiljan, Croatia",
+    "n_steps": 1,
+    "is_correct": true,
+    "trace": [
+      {
+        "step": 1,
+        "thought": "Smiljan, Croatia",
+        "action": null,
+        "observation": null,
+        "raw_output": "Smiljan, Croatia",
+        "is_final": true
+      }
+    ]
+  },
+  "consistency_analysis": {
+    "consistency_rate": 1.0,
+    "is_consistent": true,
+    "inconsistent_count": 0,
+    "per_type_inconsistency": {
+      "paraphrase": 0.0,
+      "synonym": 0.0,
+      "reorder": 0.0,
+      "format": 0.0,
+      "distractor": 0.0
+    },
+    "propagation_patterns": {
+      "consistent": 4,
+      "early_diverge": 1
+    }
+  },
+  "propagation_details": [
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "paraphrase",
+      "variant_answer": "Smiljan, Croatia"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "synonym",
+      "variant_answer": "Smiljan, Croatia"
+    },
+    {
+      "divergence_step": 1,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "early_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.07142857142857142,
+          "action_match": true,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "reorder",
+      "variant_answer": "Nikola Tesla, the creator of the alternating current system, was born in Smiljan, Croatia."
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "format",
+      "variant_answer": "Smiljan, Croatia"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "distractor",
+      "variant_answer": "Smiljan, Croatia"
+    }
+  ],
+  "perturbation_variants": [
+    {
+      "perturbation_type": "paraphrase",
+      "variant_question": "Where was the person who created the alternating current system born?",
+      "variant_context": "Nikola Tesla was born in Smiljan, Croatia in 1856. Nikola Tesla created alternating current system in 1888. Meanwhile, Charles Darwin was working on similar topics in England.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking for the same information: the birthplace of the creator of the alternating current system. The minor differences in wording do not change the core of the question or the "
+      },
+      "agent_run": {
+        "final_answer": "Smiljan, Croatia",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "Smiljan, Croatia",
+            "action": null,
+            "observation": null,
+            "raw_output": "Smiljan, Croatia",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "synonym",
+      "variant_question": "In what location was the inventor of alternating current system born?",
+      "variant_context": "Nikola Tesla was born in Smiljan, Croatia in 1856. Nikola Tesla created alternating current system in 1888. Meanwhile, Charles Darwin was working on similar topics in England.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking for the same information: the birthplace of the inventor of the alternating current system. The minor differences in wording do not change the core of the question or the"
+      },
+      "agent_run": {
+        "final_answer": "Smiljan, Croatia",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "Smiljan, Croatia",
+            "action": null,
+            "observation": null,
+            "raw_output": "Smiljan, Croatia",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "reorder",
+      "variant_question": "In which place was the creator of alternating current system born? Please reason step by step.",
+      "variant_context": "Nikola Tesla was born in Smiljan, Croatia in 1856. Nikola Tesla created alternating current system in 1888. Meanwhile, Charles Darwin was working on similar topics in England.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (reorder; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "Nikola Tesla, the creator of the alternating current system, was born in Smiljan, Croatia.",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "Nikola Tesla, the creator of the alternating current system, was born in Smiljan, Croatia.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Nikola Tesla, the creator of the alternating current system, was born in Smiljan, Croatia.",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "format",
+      "variant_question": "> In which place was the creator of alternating current system born?",
+      "variant_context": "• Nikola Tesla was born in Smiljan, Croatia in 1856.\n• Nikola Tesla created alternating current system in 1888.\n• Meanwhile, Charles Darwin was working on similar topics in England.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (format; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "Smiljan, Croatia",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "Smiljan, Croatia",
+            "action": null,
+            "observation": null,
+            "raw_output": "Smiljan, Croatia",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "distractor",
+      "variant_question": "Note: the following sentence is unrelated to the question. Several other researchers had studied similar topics in the past decade. Now, in which place was the creator of alternating current system born?",
+      "variant_context": "Nikola Tesla was born in Smiljan, Croatia in 1856. Nikola Tesla created alternating current system in 1888. Meanwhile, Charles Darwin was working on similar topics in England. Several other researchers had studied similar topics in the past decade.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (distractor; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "Smiljan, Croatia",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "Smiljan, Croatia",
+            "action": null,
+            "observation": null,
+            "raw_output": "Smiljan, Croatia",
+            "is_final": true
+          }
+        ]
+      }
+    }
+  ],
+  "patch_results": null,
+  "n_variants_generated": 5,
+  "n_variants_valid": 5,
+  "n_variants_rejected": 0,
+  "elapsed_seconds": 3.9746880531311035
+}

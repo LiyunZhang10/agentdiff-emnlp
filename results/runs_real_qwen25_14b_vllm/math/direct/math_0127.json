@@ -1,0 +1,256 @@
+{
+  "sample_id": "math_0127",
+  "agent_type": "direct",
+  "sample_question": "Solve for x: 18x + 2 = 7x + 7",
+  "sample_context": null,
+  "sample_gold_answer": "0.45",
+  "original_result": {
+    "final_answer": "x = 1/5",
+    "n_steps": 1,
+    "is_correct": false,
+    "trace": [
+      {
+        "step": 1,
+        "thought": "x = 1/5",
+        "action": null,
+        "observation": null,
+        "raw_output": "x = 1/5",
+        "is_final": true
+      }
+    ]
+  },
+  "consistency_analysis": {
+    "consistency_rate": 1.0,
+    "is_consistent": true,
+    "inconsistent_count": 0,
+    "per_type_inconsistency": {
+      "paraphrase": 0.0,
+      "synonym": 0.0,
+      "reorder": 0.0,
+      "format": 0.0,
+      "distractor": 0.0
+    },
+    "propagation_patterns": {
+      "consistent": 5
+    }
+  },
+  "propagation_details": [
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.5,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "paraphrase",
+      "variant_answer": "x = 1"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "synonym",
+      "variant_answer": "x = 1/5"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "reorder",
+      "variant_answer": "x = 1/5"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "format",
+      "variant_answer": "x = 1/5"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "distractor",
+      "variant_answer": "x = 1/5"
+    }
+  ],
+  "perturbation_variants": [
+    {
+      "perturbation_type": "paraphrase",
+      "variant_question": "Find x: 18x + 2 = 7x + 7",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking for the same solution, with only a minor wording difference in the instruction ('solve for x' vs 'find x'). This does not change the answer."
+      },
+      "agent_run": {
+        "final_answer": "x = 1",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "x = 1",
+            "action": null,
+            "observation": null,
+            "raw_output": "x = 1",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "synonym",
+      "variant_question": "Determine for x: 18x + 2 = 7x + 7",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking for the same solution, with only a minor wording difference ('Solve for x' vs 'Determine for x'). Therefore, they are equivalent."
+      },
+      "agent_run": {
+        "final_answer": "x = 1/5",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "x = 1/5",
+            "action": null,
+            "observation": null,
+            "raw_output": "x = 1/5",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "reorder",
+      "variant_question": "Solve for x: 18x + 2 = 7x + 7 Please reason step by step.",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (reorder; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "x = 1/5",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "x = 1/5",
+            "action": null,
+            "observation": null,
+            "raw_output": "x = 1/5\n\nStep-by-step:\n1. Start with the equation: 18x + 2 = 7x + 7\n2. Subtract 7x from both sides: 11x + 2 = 7\n3. Subtract 2 from both sides: 11x = 5\n4. Divide both sides by 11: x = 5/11\n\nCorrection: The correct answer is x = 5/11, not x = 1/5.",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "format",
+      "variant_question": "> Solve for x: 18x + 2 = 7x + 7",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (format; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "x = 1/5",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "x = 1/5",
+            "action": null,
+            "observation": null,
+            "raw_output": "x = 1/5",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "distractor",
+      "variant_question": "Note: the following sentence is unrelated to the question. The weather that day was particularly sunny with clear skies. Now, solve for x: 18x + 2 = 7x + 7",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (distractor; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "x = 1/5",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "x = 1/5",
+            "action": null,
+            "observation": null,
+            "raw_output": "x = 1/5",
+            "is_final": true
+          }
+        ]
+      }
+    }
+  ],
+  "patch_results": null,
+  "n_variants_generated": 5,
+  "n_variants_valid": 5,
+  "n_variants_rejected": 0,
+  "elapsed_seconds": 5.956669807434082
+}

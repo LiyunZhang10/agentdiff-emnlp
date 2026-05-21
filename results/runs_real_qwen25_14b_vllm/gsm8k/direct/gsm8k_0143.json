@@ -1,0 +1,277 @@
+{
+  "sample_id": "gsm8k_0143",
+  "agent_type": "direct",
+  "sample_question": "A train travels at 12 km/h for 3 hours, then at 5 km/h for 5 hours. What is the total distance?",
+  "sample_context": null,
+  "sample_gold_answer": "61",
+  "original_result": {
+    "final_answer": "61 km",
+    "n_steps": 1,
+    "is_correct": true,
+    "trace": [
+      {
+        "step": 1,
+        "thought": "61 km",
+        "action": null,
+        "observation": null,
+        "raw_output": "61 km",
+        "is_final": true
+      }
+    ]
+  },
+  "consistency_analysis": {
+    "consistency_rate": 0.19999999999999996,
+    "is_consistent": false,
+    "inconsistent_count": 4,
+    "per_type_inconsistency": {
+      "paraphrase": 1.0,
+      "synonym": 1.0,
+      "reorder": 1.0,
+      "format": 0.0,
+      "distractor": 1.0
+    },
+    "propagation_patterns": {
+      "early_diverge": 4,
+      "consistent": 1
+    }
+  },
+  "propagation_details": [
+    {
+      "divergence_step": 1,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "early_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.3333333333333333,
+          "action_match": true,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "paraphrase",
+      "variant_answer": "31 km"
+    },
+    {
+      "divergence_step": 1,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "early_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.3333333333333333,
+          "action_match": true,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "synonym",
+      "variant_answer": "41 km"
+    },
+    {
+      "divergence_step": 1,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "early_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.0,
+          "action_match": true,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "reorder",
+      "variant_answer": "Step 1: Calculate the distance traveled at 12 km/h for 3 hours."
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "format",
+      "variant_answer": "61 km"
+    },
+    {
+      "divergence_step": 1,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "early_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.3333333333333333,
+          "action_match": true,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "distractor",
+      "variant_answer": "41 km"
+    }
+  ],
+  "perturbation_variants": [
+    {
+      "perturbation_type": "paraphrase",
+      "variant_question": "What is the total distance a train travels if it goes at 12 km/h for 3 hours and then at 5 km/h for 5 hours?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking for the same information with only minor wording differences, which do not change the core of the question or the answer. Both questions are asking for the total distance"
+      },
+      "agent_run": {
+        "final_answer": "31 km",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "31 km",
+            "action": null,
+            "observation": null,
+            "raw_output": "31 km",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "synonym",
+      "variant_question": "A locomotive moves at 12 km/h for 3 hours, then at 5 km/h for 5 hours. What is the overall distance?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking for the same information with only minor wording differences ('train' vs 'locomotive', 'total distance' vs 'overall distance'), which do not change the answer."
+      },
+      "agent_run": {
+        "final_answer": "41 km",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "41 km",
+            "action": null,
+            "observation": null,
+            "raw_output": "41 km",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "reorder",
+      "variant_question": "A train travels at 12 km/h for 3 hours, then at 5 km/h for 5 hours. What is the total distance? Please reason step by step.",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (reorder; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "Step 1: Calculate the distance traveled at 12 km/h for 3 hours.",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "Step 1: Calculate the distance traveled at 12 km/h for 3 hours.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Step 1: Calculate the distance traveled at 12 km/h for 3 hours.\nDistance = Speed × Time = 12 km/h × 3 h = 36 km\n\nStep 2: Calculate the distance traveled at 5 km/h for 5 hours.\nDistance = Speed × Time = 5 km/h × 5 h = 25 km\n\nStep 3: Add the distances from both parts of the journey.\nTotal Distance = 36 km + 25 km = 61 km\n\nAnswer: 61 km",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "format",
+      "variant_question": "- A train travels at 12 km/h for 3 hours, then at 5 km/h for 5 hours.\nQuestion: What is the total distance?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (format; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "61 km",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "61 km",
+            "action": null,
+            "observation": null,
+            "raw_output": "61 km",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "distractor",
+      "variant_question": "Note: the following sentence is unrelated to the question. Historical records from that era are preserved in multiple archives. Now, a train travels at 12 km/h for 3 hours, then at 5 km/h for 5 hours. What is the total distance?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (distractor; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "41 km",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "41 km",
+            "action": null,
+            "observation": null,
+            "raw_output": "41 km",
+            "is_final": true
+          }
+        ]
+      }
+    }
+  ],
+  "patch_results": {
+    "step_patch": {
+      "consistency_rate": 0.6,
+      "inconsistent_count": 2,
+      "is_correct": true,
+      "intervention_step": 1,
+      "target_types": [
+        "paraphrase",
+        "synonym"
+      ]
+    },
+    "system_patch": {
+      "consistency_rate": 0.4,
+      "inconsistent_count": 3,
+      "is_correct": true,
+      "target_types": [
+        "paraphrase",
+        "synonym"
+      ]
+    }
+  },
+  "n_variants_generated": 5,
+  "n_variants_valid": 5,
+  "n_variants_rejected": 0,
+  "elapsed_seconds": 13.348255634307861
+}

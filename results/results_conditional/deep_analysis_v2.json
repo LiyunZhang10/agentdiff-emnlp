@@ -1,0 +1,107 @@
+{
+  "n_cells_main": 36,
+  "n_cells_genswap": 8,
+  "D1": {
+    "r_acc_delta": 0.3844390286621077,
+    "p": 0.015171629030959366,
+    "ols_slope": 16.20791847374044,
+    "intercept": -2.593600871398582,
+    "ss_bench": 1137.3992572555364,
+    "ss_scaf": 3.1999239521129788,
+    "ss_model": 851.979236012981,
+    "ss_capband": 871.4385637714524,
+    "ss_total": 3562.6045732507255,
+    "by_bench": {
+      "gsm8k": {
+        "mean": 11.82986111111111,
+        "n": 12,
+        "n_pos": 10
+      },
+      "math": {
+        "mean": -1.5246848739495809,
+        "n": 12,
+        "n_pos": 6
+      },
+      "hotpotqa": {
+        "mean": 8.05379188712522,
+        "n": 12,
+        "n_pos": 10
+      }
+    }
+  },
+  "D2": {
+    "T_full": 0.7,
+    "boot_median": 0.7,
+    "boot_ci": [
+      0.15,
+      1.0
+    ],
+    "loo_mean": 0.7319444444444444,
+    "loo_sd": 0.1469464323086953,
+    "auc": 0.6653846153846154,
+    "fisher_at_065": 0.05959755055155151,
+    "hi_pos": 12,
+    "hi_n": 13,
+    "lo_pos": 14,
+    "lo_n": 23,
+    "hi_mean": 12.663898465369053,
+    "lo_mean": 2.4207364105062297
+  },
+  "D4": {
+    "paraphrase": 0.7099770463741053,
+    "reorder": 0.6362731481481482,
+    "format": 0.6312037037037037,
+    "distractor": 0.6391666666666667,
+    "synonym": 0.6835117534668186
+  },
+  "D5": {
+    "n_pairs": 4,
+    "delta_delta_mean": -10.446176204399887,
+    "pairs": [
+      {
+        "model": "mimo_v25_pro",
+        "bench": "gsm8k",
+        "scaf": "cot",
+        "orig_delta": -5.166666666666664,
+        "swap_delta": -5.6140350877192935,
+        "orig_acc": 0.96,
+        "swap_acc": 0.95,
+        "orig_n": 50,
+        "swap_n": 20
+      },
+      {
+        "model": "mimo_v25_pro",
+        "bench": "gsm8k",
+        "scaf": "react",
+        "orig_delta": 17.125000000000004,
+        "swap_delta": -6.842105263157894,
+        "orig_acc": 1.0,
+        "swap_acc": 1.0,
+        "orig_n": 50,
+        "swap_n": 20
+      },
+      {
+        "model": "mimo_v25_pro",
+        "bench": "hotpotqa",
+        "scaf": "cot",
+        "orig_delta": 1.6613756613756636,
+        "swap_delta": 5.482456140350878,
+        "orig_acc": 0.84,
+        "swap_acc": 0.85,
+        "orig_n": 50,
+        "swap_n": 20
+      },
+      {
+        "model": "mimo_v25_pro",
+        "bench": "hotpotqa",
+        "scaf": "react",
+        "orig_delta": 13.238095238095237,
+        "swap_delta": -7.953216374268996,
+        "orig_acc": 0.84,
+        "swap_acc": 0.8,
+        "orig_n": 50,
+        "swap_n": 20
+      }
+    ]
+  }
+}

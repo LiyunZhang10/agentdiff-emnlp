@@ -1,0 +1,275 @@
+{
+  "sample_id": "math_0093",
+  "agent_type": "direct",
+  "sample_question": "What is 4 + 9 * 4?",
+  "sample_context": null,
+  "sample_gold_answer": "40",
+  "original_result": {
+    "final_answer": "40",
+    "n_steps": 1,
+    "is_correct": true,
+    "trace": [
+      {
+        "step": 1,
+        "thought": "40",
+        "action": null,
+        "observation": null,
+        "raw_output": "40",
+        "is_final": true
+      }
+    ]
+  },
+  "consistency_analysis": {
+    "consistency_rate": 0.8,
+    "is_consistent": false,
+    "inconsistent_count": 1,
+    "per_type_inconsistency": {
+      "paraphrase": 0.0,
+      "synonym": 0.0,
+      "reorder": 1.0,
+      "format": 0.0,
+      "distractor": 0.0
+    },
+    "propagation_patterns": {
+      "consistent": 4,
+      "early_diverge": 1
+    }
+  },
+  "propagation_details": [
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "paraphrase",
+      "variant_answer": "40"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "synonym",
+      "variant_answer": "40"
+    },
+    {
+      "divergence_step": 1,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "early_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.0,
+          "action_match": true,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "reorder",
+      "variant_answer": "36"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "format",
+      "variant_answer": "40"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "distractor",
+      "variant_answer": "40"
+    }
+  ],
+  "perturbation_variants": [
+    {
+      "perturbation_type": "paraphrase",
+      "variant_question": "What is the result of 4 + 9 * 4?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking for the same mathematical operation and would yield the same answer. The minor difference in wording does not change the answer."
+      },
+      "agent_run": {
+        "final_answer": "40",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "40",
+            "action": null,
+            "observation": null,
+            "raw_output": "40",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "synonym",
+      "variant_question": "What is 4 plus 9 times 4?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are phrased differently but ask for the same mathematical operation, thus they are equivalent."
+      },
+      "agent_run": {
+        "final_answer": "40",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "40",
+            "action": null,
+            "observation": null,
+            "raw_output": "40",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "reorder",
+      "variant_question": "What is 4 + 9 * 4? Please reason step by step.",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (reorder; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "36",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "36",
+            "action": null,
+            "observation": null,
+            "raw_output": "36\n\nStep by step reasoning:\n1. According to the order of operations (PEMDAS/BODMAS), multiplication comes before addition.\n2. First, calculate 9 * 4 = 36.\n3. Then, add 4 + 36 = 40.\n\nHowever, the direct answer based on the correct mathematical operations is 40, not 36. My initial direct answer was incorrect. Correcting it:\n\nAnswer: 40",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "format",
+      "variant_question": "> What is 4 + 9 * 4?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (format; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "40",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "40",
+            "action": null,
+            "observation": null,
+            "raw_output": "40",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "distractor",
+      "variant_question": "Note: the following sentence is unrelated to the question. The weather that day was particularly sunny with clear skies. Now, what is 4 + 9 * 4?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (distractor; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "40",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "40",
+            "action": null,
+            "observation": null,
+            "raw_output": "40",
+            "is_final": true
+          }
+        ]
+      }
+    }
+  ],
+  "patch_results": {
+    "step_patch": {
+      "consistency_rate": 0.8,
+      "inconsistent_count": 1,
+      "is_correct": true,
+      "intervention_step": 1,
+      "target_types": [
+        "reorder"
+      ]
+    },
+    "system_patch": {
+      "consistency_rate": 0.8,
+      "inconsistent_count": 1,
+      "is_correct": true,
+      "target_types": [
+        "reorder"
+      ]
+    }
+  },
+  "n_variants_generated": 5,
+  "n_variants_valid": 5,
+  "n_variants_rejected": 0,
+  "elapsed_seconds": 10.439153909683228
+}

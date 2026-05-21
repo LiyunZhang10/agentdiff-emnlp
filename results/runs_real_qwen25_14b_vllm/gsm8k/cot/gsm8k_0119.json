@@ -1,0 +1,756 @@
+{
+  "sample_id": "gsm8k_0119",
+  "agent_type": "cot",
+  "sample_question": "Sarah has $38. She spends $14 on lunch and $18 on a book. How much money does she have left?",
+  "sample_context": null,
+  "sample_gold_answer": "6",
+  "original_result": {
+    "final_answer": "$6",
+    "n_steps": 8,
+    "is_correct": true,
+    "trace": [
+      {
+        "step": 1,
+        "thought": "To solve this problem, we will follow these steps:",
+        "action": null,
+        "observation": null,
+        "raw_output": "To solve this problem, we will follow these steps:",
+        "is_final": false
+      },
+      {
+        "step": 2,
+        "thought": "Start with the initial amount of money Sarah has, which is $38.",
+        "action": null,
+        "observation": null,
+        "raw_output": "Start with the initial amount of money Sarah has, which is $38.",
+        "is_final": false
+      },
+      {
+        "step": 3,
+        "thought": "Subtract the amount she spends on lunch, which is $14, from her initial amount.",
+        "action": null,
+        "observation": null,
+        "raw_output": "Subtract the amount she spends on lunch, which is $14, from her initial amount.",
+        "is_final": false
+      },
+      {
+        "step": 4,
+        "thought": "Subtract the amount she spends on a book, which is $18, from the remaining amount after buying lunch.",
+        "action": null,
+        "observation": null,
+        "raw_output": "Subtract the amount she spends on a book, which is $18, from the remaining amount after buying lunch.",
+        "is_final": false
+      },
+      {
+        "step": 5,
+        "thought": "The result from step 3 will be the amount of money Sarah has left.\n\nLet's go through these steps in detail:",
+        "action": null,
+        "observation": null,
+        "raw_output": "The result from step 3 will be the amount of money Sarah has left.\n\nLet's go through these steps in detail:",
+        "is_final": false
+      },
+      {
+        "step": 6,
+        "thought": "Initial amount: $38",
+        "action": null,
+        "observation": null,
+        "raw_output": "Initial amount: $38",
+        "is_final": false
+      },
+      {
+        "step": 7,
+        "thought": "After buying lunch: $38 - $14 = $24",
+        "action": null,
+        "observation": null,
+        "raw_output": "After buying lunch: $38 - $14 = $24",
+        "is_final": false
+      },
+      {
+        "step": 8,
+        "thought": "After buying a book: $24 - $18 = $6\n\nFinal Answer: $6",
+        "action": null,
+        "observation": null,
+        "raw_output": "After buying a book: $24 - $18 = $6\n\nFinal Answer: $6",
+        "is_final": true
+      }
+    ]
+  },
+  "consistency_analysis": {
+    "consistency_rate": 1.0,
+    "is_consistent": true,
+    "inconsistent_count": 0,
+    "per_type_inconsistency": {
+      "paraphrase": 0.0,
+      "synonym": 0.0,
+      "reorder": 0.0,
+      "format": 0.0,
+      "distractor": 0.0
+    },
+    "propagation_patterns": {
+      "cascade": 3,
+      "consistent": 1,
+      "early_diverge": 1
+    }
+  },
+  "propagation_details": [
+    {
+      "divergence_step": 3,
+      "cascade_depth": 5,
+      "self_corrections": 0,
+      "propagation_pattern": "cascade",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.42857142857142855,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.1,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.14285714285714285,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 5,
+          "thought_similarity": 0.18518518518518517,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 6,
+          "thought_similarity": 0.0,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 7,
+          "thought_similarity": 0.10344827586206896,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 8,
+          "thought_similarity": 0.0,
+          "action_match": false,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 8,
+      "n_steps_variant": 7,
+      "perturbation_type": "paraphrase",
+      "variant_answer": "$6"
+    },
+    {
+      "divergence_step": 6,
+      "cascade_depth": 2,
+      "self_corrections": 0,
+      "propagation_pattern": "cascade",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.8,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.42857142857142855,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.4375,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.4444444444444444,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 5,
+          "thought_similarity": 0.4782608695652174,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 6,
+          "thought_similarity": 0.0,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 7,
+          "thought_similarity": 0.17391304347826086,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 8,
+          "thought_similarity": 0.2647058823529412,
+          "action_match": true,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 8,
+      "n_steps_variant": 8,
+      "perturbation_type": "synonym",
+      "variant_answer": "$6"
+    },
+    {
+      "divergence_step": 2,
+      "cascade_depth": 6,
+      "self_corrections": 0,
+      "propagation_pattern": "cascade",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.3125,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.1,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.18518518518518517,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 5,
+          "thought_similarity": 0.2222222222222222,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 6,
+          "thought_similarity": 0.0,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 7,
+          "thought_similarity": 0.10344827586206896,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 8,
+          "thought_similarity": 0.0,
+          "action_match": false,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 8,
+      "n_steps_variant": 7,
+      "perturbation_type": "reorder",
+      "variant_answer": "$6"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.9375,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 5,
+          "thought_similarity": 0.6666666666666666,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 6,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 7,
+          "thought_similarity": 0.7,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 8,
+          "thought_similarity": 0.7692307692307693,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 8,
+      "n_steps_variant": 8,
+      "perturbation_type": "format",
+      "variant_answer": "$6"
+    },
+    {
+      "divergence_step": 1,
+      "cascade_depth": 3,
+      "self_corrections": 1,
+      "propagation_pattern": "early_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.2727272727272727,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 2,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.7,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.625,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 5,
+          "thought_similarity": 0.0,
+          "action_match": false,
+          "is_divergent": true
+        },
+        {
+          "step": 6,
+          "thought_similarity": 0.0,
+          "action_match": false,
+          "is_divergent": true
+        },
+        {
+          "step": 7,
+          "thought_similarity": 0.0,
+          "action_match": false,
+          "is_divergent": true
+        },
+        {
+          "step": 8,
+          "thought_similarity": 0.0,
+          "action_match": false,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 8,
+      "n_steps_variant": 4,
+      "perturbation_type": "distractor",
+      "variant_answer": "$6"
+    }
+  ],
+  "perturbation_variants": [
+    {
+      "perturbation_type": "paraphrase",
+      "variant_question": "How much money does Sarah have left after spending $14 on lunch and $18 on a book, if she initially had $38?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking for the same information and would yield the same answer. The only difference is in the wording and the order in which the information is presented, which does not change"
+      },
+      "agent_run": {
+        "final_answer": "$6",
+        "n_steps": 7,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve this problem, we will follow these steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve this problem, we will follow these steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "Identify the initial amount of money Sarah had.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Identify the initial amount of money Sarah had.",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "Calculate the total amount of money Sarah spent.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Calculate the total amount of money Sarah spent.",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "Subtract the total amount spent from the initial amount to find out how much money Sarah has left.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Subtract the total amount spent from the initial amount to find out how much money Sarah has left.",
+            "is_final": false
+          },
+          {
+            "step": 5,
+            "thought": "Identify the initial amount of money Sarah had.\n- Sarah initially had $38.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Identify the initial amount of money Sarah had.\n- Sarah initially had $38.",
+            "is_final": false
+          },
+          {
+            "step": 6,
+            "thought": "Calculate the total amount of money Sarah spent.\n- Sarah spent $14 on lunch and $18 on a book.\n- Total amount spent = $14 + $18 = $32.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Calculate the total amount of money Sarah spent.\n- Sarah spent $14 on lunch and $18 on a book.\n- Total amount spent = $14 + $18 = $32.",
+            "is_final": false
+          },
+          {
+            "step": 7,
+            "thought": "Subtract the total amount spent from the initial amount to find out how much money Sarah has left.\n- Initial amount = $38\n- Total amount spent = $32\n- Amount left = $38 - $32 = $6\n\nFinal Answer: $6",
+            "action": null,
+            "observation": null,
+            "raw_output": "Subtract the total amount spent from the initial amount to find out how much money Sarah has left.\n- Initial amount = $38\n- Total amount spent = $32\n- Amount left = $38 - $32 = $6\n\nFinal Answer: $6",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "synonym",
+      "variant_question": "Sarah possesses $38. She utilizes $14 on lunch and $18 on a book. How much money does she retain?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking for the same information with only minor wording differences, which do not change the meaning or the answer. Both questions are about how much money Sarah has left after "
+      },
+      "agent_run": {
+        "final_answer": "$6",
+        "n_steps": 8,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the problem, we will follow these steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the problem, we will follow these steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "Identify the initial amount of money Sarah has.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Identify the initial amount of money Sarah has.",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "Subtract the amount spent on lunch from the initial amount.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Subtract the amount spent on lunch from the initial amount.",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "Subtract the amount spent on the book from the remaining amount after lunch.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Subtract the amount spent on the book from the remaining amount after lunch.",
+            "is_final": false
+          },
+          {
+            "step": 5,
+            "thought": "The result will be the amount of money Sarah retains.\n\nLet's go through each step:",
+            "action": null,
+            "observation": null,
+            "raw_output": "The result will be the amount of money Sarah retains.\n\nLet's go through each step:",
+            "is_final": false
+          },
+          {
+            "step": 6,
+            "thought": "Sarah initially has $38.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Sarah initially has $38.",
+            "is_final": false
+          },
+          {
+            "step": 7,
+            "thought": "She spends $14 on lunch. So, the remaining amount after lunch is:\n   \\[\n   38 - 14 = 24\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "She spends $14 on lunch. So, the remaining amount after lunch is:\n   \\[\n   38 - 14 = 24\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 8,
+            "thought": "She then spends $18 on a book. So, the remaining amount after buying the book is:\n   \\[\n   24 - 18 = 6\n   \\]\n\nTherefore, the amount of money Sarah retains is $6.\n\nFinal Answer: $6",
+            "action": null,
+            "observation": null,
+            "raw_output": "She then spends $18 on a book. So, the remaining amount after buying the book is:\n   \\[\n   24 - 18 = 6\n   \\]\n\nTherefore, the amount of money Sarah retains is $6.\n\nFinal Answer: $6",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "reorder",
+      "variant_question": "She spends $14 on lunch and $18 on a book. Sarah has $38. How much money does she have left?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (reorder; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "$6",
+        "n_steps": 7,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve this problem, we will follow these steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve this problem, we will follow these steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "Identify the total amount of money Sarah initially has.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Identify the total amount of money Sarah initially has.",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "Calculate the total amount of money Sarah spends.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Calculate the total amount of money Sarah spends.",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "Subtract the total amount spent from the initial amount to find out how much money she has left.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Subtract the total amount spent from the initial amount to find out how much money she has left.",
+            "is_final": false
+          },
+          {
+            "step": 5,
+            "thought": "Identify the total amount of money Sarah initially has.\n- Sarah has $38 initially.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Identify the total amount of money Sarah initially has.\n- Sarah has $38 initially.",
+            "is_final": false
+          },
+          {
+            "step": 6,
+            "thought": "Calculate the total amount of money Sarah spends.\n- She spends $14 on lunch and $18 on a book.\n- Total amount spent = $14 + $18 = $32.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Calculate the total amount of money Sarah spends.\n- She spends $14 on lunch and $18 on a book.\n- Total amount spent = $14 + $18 = $32.",
+            "is_final": false
+          },
+          {
+            "step": 7,
+            "thought": "Subtract the total amount spent from the initial amount to find out how much money she has left.\n- Initial amount = $38\n- Total amount spent = $32\n- Amount left = $38 - $32 = $6\n\nFinal Answer: $6",
+            "action": null,
+            "observation": null,
+            "raw_output": "Subtract the total amount spent from the initial amount to find out how much money she has left.\n- Initial amount = $38\n- Total amount spent = $32\n- Amount left = $38 - $32 = $6\n\nFinal Answer: $6",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "format",
+      "variant_question": "- Sarah has $38.\n- She spends $14 on lunch and $18 on a book.\nQuestion: How much money does she have left?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (format; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "$6",
+        "n_steps": 8,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve this problem, we will follow these steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve this problem, we will follow these steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "Start with the initial amount of money Sarah has, which is $38.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Start with the initial amount of money Sarah has, which is $38.",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "Subtract the amount she spends on lunch, which is $14, from her initial amount.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Subtract the amount she spends on lunch, which is $14, from her initial amount.",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "Subtract the amount she spends on a book, which is $18, from the remaining amount after lunch.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Subtract the amount she spends on a book, which is $18, from the remaining amount after lunch.",
+            "is_final": false
+          },
+          {
+            "step": 5,
+            "thought": "The result will be the amount of money Sarah has left after her expenses.\n\nLet's go through these steps in detail:",
+            "action": null,
+            "observation": null,
+            "raw_output": "The result will be the amount of money Sarah has left after her expenses.\n\nLet's go through these steps in detail:",
+            "is_final": false
+          },
+          {
+            "step": 6,
+            "thought": "Initial amount: $38",
+            "action": null,
+            "observation": null,
+            "raw_output": "Initial amount: $38",
+            "is_final": false
+          },
+          {
+            "step": 7,
+            "thought": "After spending on lunch: $38 - $14 = $24",
+            "action": null,
+            "observation": null,
+            "raw_output": "After spending on lunch: $38 - $14 = $24",
+            "is_final": false
+          },
+          {
+            "step": 8,
+            "thought": "After spending on a book: $24 - $18 = $6\n\nFinal Answer: $6",
+            "action": null,
+            "observation": null,
+            "raw_output": "After spending on a book: $24 - $18 = $6\n\nFinal Answer: $6",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "distractor",
+      "variant_question": "Note: the following sentence is unrelated to the question. Meanwhile, advances in technology continued to reshape daily life. Now, sarah has $38. She spends $14 on lunch and $18 on a book. How much money does she have left?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (distractor; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "$6",
+        "n_steps": 4,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the problem of how much money Sarah has left after her expenses, we can follow these steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the problem of how much money Sarah has left after her expenses, we can follow these steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "Start with the initial amount of money Sarah has, which is $38.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Start with the initial amount of money Sarah has, which is $38.",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "Subtract the amount she spends on lunch, which is $14, from her initial amount.\n   - Calculation: $38 - $14 = $24",
+            "action": null,
+            "observation": null,
+            "raw_output": "Subtract the amount she spends on lunch, which is $14, from her initial amount.\n   - Calculation: $38 - $14 = $24",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "Subtract the amount she spends on a book, which is $18, from the remaining amount after lunch.\n   - Calculation: $24 - $18 = $6\n\nFinal Answer: $6",
+            "action": null,
+            "observation": null,
+            "raw_output": "Subtract the amount she spends on a book, which is $18, from the remaining amount after lunch.\n   - Calculation: $24 - $18 = $6\n\nFinal Answer: $6",
+            "is_final": true
+          }
+        ]
+      }
+    }
+  ],
+  "patch_results": null,
+  "n_variants_generated": 5,
+  "n_variants_valid": 5,
+  "n_variants_rejected": 0,
+  "elapsed_seconds": 24.536277532577515
+}

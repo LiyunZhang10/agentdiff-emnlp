@@ -1,0 +1,402 @@
+{
+  "sample_id": "hotpotqa_0123",
+  "agent_type": "cot",
+  "sample_question": "In what year was the creator of Mona Lisa born?",
+  "sample_context": "Leonardo da Vinci was born in Vinci, Italy in 1452. Leonardo da Vinci created Mona Lisa in 1503. Meanwhile, Thomas Edison was working on similar topics in United States.",
+  "sample_gold_answer": "1452",
+  "original_result": {
+    "final_answer": "1452",
+    "n_steps": 4,
+    "is_correct": true,
+    "trace": [
+      {
+        "step": 1,
+        "thought": "To solve the problem of determining the birth year of the creator of the Mona Lisa, we can follow these steps:",
+        "action": null,
+        "observation": null,
+        "raw_output": "To solve the problem of determining the birth year of the creator of the Mona Lisa, we can follow these steps:",
+        "is_final": false
+      },
+      {
+        "step": 2,
+        "thought": "Identify the creator of the Mona Lisa from the given context. The context states that Leonardo da Vinci created the Mona Lisa in 1503.",
+        "action": null,
+        "observation": null,
+        "raw_output": "Identify the creator of the Mona Lisa from the given context. The context states that Leonardo da Vinci created the Mona Lisa in 1503.",
+        "is_final": false
+      },
+      {
+        "step": 3,
+        "thought": "From the context, we also know that Leonardo da Vinci was born in Vinci, Italy in 1452.",
+        "action": null,
+        "observation": null,
+        "raw_output": "From the context, we also know that Leonardo da Vinci was born in Vinci, Italy in 1452.",
+        "is_final": false
+      },
+      {
+        "step": 4,
+        "thought": "Since Leonardo da Vinci is the creator of the Mona Lisa and we have his birth year from the context, we can conclude that the creator of the Mona Lisa was born in 1452.\n\nFinal Answer: 1452",
+        "action": null,
+        "observation": null,
+        "raw_output": "Since Leonardo da Vinci is the creator of the Mona Lisa and we have his birth year from the context, we can conclude that the creator of the Mona Lisa was born in 1452.\n\nFinal Answer: 1452",
+        "is_final": true
+      }
+    ]
+  },
+  "consistency_analysis": {
+    "consistency_rate": 1.0,
+    "is_consistent": true,
+    "inconsistent_count": 0,
+    "per_type_inconsistency": {
+      "paraphrase": 0.0,
+      "reorder": 0.0,
+      "format": 0.0,
+      "distractor": 0.0
+    },
+    "propagation_patterns": {
+      "early_diverge": 1,
+      "late_diverge": 1,
+      "consistent": 2
+    }
+  },
+  "propagation_details": [
+    {
+      "divergence_step": 1,
+      "cascade_depth": 1,
+      "self_corrections": 1,
+      "propagation_pattern": "early_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.17391304347826086,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.4583333333333333,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.32432432432432434,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.0,
+          "action_match": false,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 4,
+      "n_steps_variant": 3,
+      "perturbation_type": "paraphrase",
+      "variant_answer": "1452"
+    },
+    {
+      "divergence_step": 3,
+      "cascade_depth": 1,
+      "self_corrections": 0,
+      "propagation_pattern": "late_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.7647058823529411,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.5909090909090909,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.37142857142857144,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.0,
+          "action_match": false,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 4,
+      "n_steps_variant": 3,
+      "perturbation_type": "reorder",
+      "variant_answer": "1452"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.9375,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 4,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 4,
+      "n_steps_variant": 4,
+      "perturbation_type": "format",
+      "variant_answer": "1452"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.7647058823529411,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.8823529411764706,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.8,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 4,
+      "n_steps_variant": 4,
+      "perturbation_type": "distractor",
+      "variant_answer": "1452"
+    }
+  ],
+  "perturbation_variants": [
+    {
+      "perturbation_type": "paraphrase",
+      "variant_question": "What year was the artist who created Mona Lisa born in?",
+      "variant_context": "Leonardo da Vinci was born in Vinci, Italy in 1452. Leonardo da Vinci created Mona Lisa in 1503. Meanwhile, Thomas Edison was working on similar topics in United States.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking for the same information: the birth year of the artist who created the Mona Lisa. The minor differences in wording do not change the core of the question or the answer."
+      },
+      "agent_run": {
+        "final_answer": "1452",
+        "n_steps": 3,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the problem, let's break it down into clear steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the problem, let's break it down into clear steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "Identify the artist who created the Mona Lisa. According to the context provided, Leonardo da Vinci created the Mona Lisa in 1503.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Identify the artist who created the Mona Lisa. According to the context provided, Leonardo da Vinci created the Mona Lisa in 1503.",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "Determine the birth year of Leonardo da Vinci. The context also provides this information, stating that Leonardo da Vinci was born in 1452 in Vinci, Italy.\n\nFrom these two pieces of information, we can directly answer the question.\n\nFinal Answer: 1452",
+            "action": null,
+            "observation": null,
+            "raw_output": "Determine the birth year of Leonardo da Vinci. The context also provides this information, stating that Leonardo da Vinci was born in 1452 in Vinci, Italy.\n\nFrom these two pieces of information, we can directly answer the question.\n\nFinal Answer: 1452",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "synonym",
+      "variant_question": "In what era was the maker of Mona Lisa born?",
+      "variant_context": "Leonardo da Vinci was born in Vinci, Italy in 1452. Leonardo da Vinci created Mona Lisa in 1503. Meanwhile, Thomas Edison was working on similar topics in United States.",
+      "validation": {
+        "is_equivalent": false,
+        "confidence": 0.2,
+        "reason": "NO\nThe reference answer to the year Leonardo da Vinci, the creator of the Mona Lisa, was born is indeed '1452'. However, the question \"In what era was the maker of Mona Lisa born?\" introduces a differ"
+      },
+      "agent_run": null
+    },
+    {
+      "perturbation_type": "reorder",
+      "variant_question": "In what year was the creator of Mona Lisa born? Please reason step by step.",
+      "variant_context": "Leonardo da Vinci was born in Vinci, Italy in 1452. Leonardo da Vinci created Mona Lisa in 1503. Meanwhile, Thomas Edison was working on similar topics in United States.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (reorder; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "1452",
+        "n_steps": 3,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To determine the birth year of the creator of the Mona Lisa, we can follow these steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To determine the birth year of the creator of the Mona Lisa, we can follow these steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "Identify the creator of the Mona Lisa: According to the context provided, Leonardo da Vinci created the Mona Lisa in 1503.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Identify the creator of the Mona Lisa: According to the context provided, Leonardo da Vinci created the Mona Lisa in 1503.",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "Find the birth year of Leonardo da Vinci: The context also states that Leonardo da Vinci was born in Vinci, Italy in 1452.\n\nBy following these steps, we can conclude that the creator of the Mona Lisa, Leonardo da Vinci, was born in 1452.\n\nFinal Answer: 1452",
+            "action": null,
+            "observation": null,
+            "raw_output": "Find the birth year of Leonardo da Vinci: The context also states that Leonardo da Vinci was born in Vinci, Italy in 1452.\n\nBy following these steps, we can conclude that the creator of the Mona Lisa, Leonardo da Vinci, was born in 1452.\n\nFinal Answer: 1452",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "format",
+      "variant_question": "> In what year was the creator of Mona Lisa born?",
+      "variant_context": "• Leonardo da Vinci was born in Vinci, Italy in 1452.\n• Leonardo da Vinci created Mona Lisa in 1503.\n• Meanwhile, Thomas Edison was working on similar topics in United States.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (format; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "1452",
+        "n_steps": 4,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the problem of determining the birth year of the creator of the Mona Lisa, we can follow these steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the problem of determining the birth year of the creator of the Mona Lisa, we can follow these steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "Identify the creator of the Mona Lisa from the given context. The context states that Leonardo da Vinci created the Mona Lisa in 1503.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Identify the creator of the Mona Lisa from the given context. The context states that Leonardo da Vinci created the Mona Lisa in 1503.",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "From the context, we know that Leonardo da Vinci was born in Vinci, Italy in 1452.",
+            "action": null,
+            "observation": null,
+            "raw_output": "From the context, we know that Leonardo da Vinci was born in Vinci, Italy in 1452.",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "Since Leonardo da Vinci is the creator of the Mona Lisa and we have his birth year from the context, we can conclude that the creator of the Mona Lisa was born in 1452.\n\nFinal Answer: 1452",
+            "action": null,
+            "observation": null,
+            "raw_output": "Since Leonardo da Vinci is the creator of the Mona Lisa and we have his birth year from the context, we can conclude that the creator of the Mona Lisa was born in 1452.\n\nFinal Answer: 1452",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "distractor",
+      "variant_question": "Note: the following sentence is unrelated to the question. Several other researchers had studied similar topics in the past decade. Now, in what year was the creator of Mona Lisa born?",
+      "variant_context": "Leonardo da Vinci was born in Vinci, Italy in 1452. Leonardo da Vinci created Mona Lisa in 1503. Meanwhile, Thomas Edison was working on similar topics in United States. Several other researchers had studied similar topics in the past decade.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (distractor; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "1452",
+        "n_steps": 4,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To determine the birth year of the creator of the Mona Lisa, we can follow these steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To determine the birth year of the creator of the Mona Lisa, we can follow these steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "Identify the creator of the Mona Lisa from the given context. The context states that Leonardo da Vinci created the Mona Lisa in 1503.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Identify the creator of the Mona Lisa from the given context. The context states that Leonardo da Vinci created the Mona Lisa in 1503.",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "From the context, we also learn that Leonardo da Vinci was born in Vinci, Italy in 1452.",
+            "action": null,
+            "observation": null,
+            "raw_output": "From the context, we also learn that Leonardo da Vinci was born in Vinci, Italy in 1452.",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "Since Leonardo da Vinci is the creator of the Mona Lisa and we know his birth year, we can conclude that the creator of the Mona Lisa was born in 1452.\n\nFinal Answer: 1452",
+            "action": null,
+            "observation": null,
+            "raw_output": "Since Leonardo da Vinci is the creator of the Mona Lisa and we know his birth year, we can conclude that the creator of the Mona Lisa was born in 1452.\n\nFinal Answer: 1452",
+            "is_final": true
+          }
+        ]
+      }
+    }
+  ],
+  "patch_results": null,
+  "n_variants_generated": 5,
+  "n_variants_valid": 4,
+  "n_variants_rejected": 1,
+  "elapsed_seconds": 17.31480574607849
+}

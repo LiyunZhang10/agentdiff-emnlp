@@ -1,0 +1,257 @@
+{
+  "sample_id": "hotpotqa_0172",
+  "agent_type": "direct",
+  "sample_question": "What nationality was the person who created first computer program?",
+  "sample_context": "Ada Lovelace was born in London, England in 1815. Ada Lovelace created first computer program in 1843. Meanwhile, Charles Darwin was working on similar topics in England.",
+  "sample_gold_answer": "England",
+  "original_result": {
+    "final_answer": "English",
+    "n_steps": 1,
+    "is_correct": false,
+    "trace": [
+      {
+        "step": 1,
+        "thought": "English",
+        "action": null,
+        "observation": null,
+        "raw_output": "English",
+        "is_final": true
+      }
+    ]
+  },
+  "consistency_analysis": {
+    "consistency_rate": 1.0,
+    "is_consistent": true,
+    "inconsistent_count": 0,
+    "per_type_inconsistency": {
+      "paraphrase": 0.0,
+      "synonym": 0.0,
+      "reorder": 0.0,
+      "format": 0.0,
+      "distractor": 0.0
+    },
+    "propagation_patterns": {
+      "early_diverge": 2,
+      "consistent": 3
+    }
+  },
+  "propagation_details": [
+    {
+      "divergence_step": 1,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "early_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.0,
+          "action_match": true,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "paraphrase",
+      "variant_answer": "Ada Lovelace created the first computer program, and her nationality was English."
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "synonym",
+      "variant_answer": "English"
+    },
+    {
+      "divergence_step": 1,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "early_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.0,
+          "action_match": true,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "reorder",
+      "variant_answer": "Ada Lovelace was English. She was born in London, England in 1815 and is credited with creating the first computer program in 1843."
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "format",
+      "variant_answer": "English"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "distractor",
+      "variant_answer": "English"
+    }
+  ],
+  "perturbation_variants": [
+    {
+      "perturbation_type": "paraphrase",
+      "variant_question": "Who created the first computer program, and what was their nationality?",
+      "variant_context": "Ada Lovelace was born in London, England in 1815. Ada Lovelace created first computer program in 1843. Meanwhile, Charles Darwin was working on similar topics in England.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe second question (B) includes the first question (A) and asks for additional information. However, the core inquiry about the nationality of the person who created the first computer program i"
+      },
+      "agent_run": {
+        "final_answer": "Ada Lovelace created the first computer program, and her nationality was English.",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "Ada Lovelace created the first computer program, and her nationality was English.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Ada Lovelace created the first computer program, and her nationality was English.",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "synonym",
+      "variant_question": "What ethnic origin was the individual who devised the first computer program?",
+      "variant_context": "Ada Lovelace was born in London, England in 1815. Ada Lovelace created first computer program in 1843. Meanwhile, Charles Darwin was working on similar topics in England.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking about the same information: the nationality/ethnic origin of the creator of the first computer program. The wording is different, but the core information requested is th"
+      },
+      "agent_run": {
+        "final_answer": "English",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "English",
+            "action": null,
+            "observation": null,
+            "raw_output": "English",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "reorder",
+      "variant_question": "What nationality was the person who created first computer program? Please reason step by step.",
+      "variant_context": "Ada Lovelace was born in London, England in 1815. Ada Lovelace created first computer program in 1843. Meanwhile, Charles Darwin was working on similar topics in England.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (reorder; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "Ada Lovelace was English. She was born in London, England in 1815 and is credited with creating the first computer program in 1843.",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "Ada Lovelace was English. She was born in London, England in 1815 and is credited with creating the first computer program in 1843.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Ada Lovelace was English. She was born in London, England in 1815 and is credited with creating the first computer program in 1843.",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "format",
+      "variant_question": "> What nationality was the person who created first computer program?",
+      "variant_context": "• Ada Lovelace was born in London, England in 1815.\n• Ada Lovelace created first computer program in 1843.\n• Meanwhile, Charles Darwin was working on similar topics in England.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (format; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "English",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "English",
+            "action": null,
+            "observation": null,
+            "raw_output": "English",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "distractor",
+      "variant_question": "Note: the following sentence is unrelated to the question. The local newspaper reported extensively on unrelated events that week. Now, what nationality was the person who created first computer program?",
+      "variant_context": "Ada Lovelace was born in London, England in 1815. Ada Lovelace created first computer program in 1843. Meanwhile, Charles Darwin was working on similar topics in England. The local newspaper reported extensively on unrelated events that week.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (distractor; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "English",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "English",
+            "action": null,
+            "observation": null,
+            "raw_output": "English",
+            "is_final": true
+          }
+        ]
+      }
+    }
+  ],
+  "patch_results": null,
+  "n_variants_generated": 5,
+  "n_variants_valid": 5,
+  "n_variants_rejected": 0,
+  "elapsed_seconds": 4.774570941925049
+}

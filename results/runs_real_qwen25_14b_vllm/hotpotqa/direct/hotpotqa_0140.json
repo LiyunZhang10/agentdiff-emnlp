@@ -1,0 +1,256 @@
+{
+  "sample_id": "hotpotqa_0140",
+  "agent_type": "direct",
+  "sample_question": "In which place was the creator of On the Origin of Species born?",
+  "sample_context": "Charles Darwin was born in Shrewsbury, England in 1809. Charles Darwin created On the Origin of Species in 1859. Meanwhile, Alexander Graham Bell was working on similar topics in Scotland.",
+  "sample_gold_answer": "Shrewsbury",
+  "original_result": {
+    "final_answer": "Shrewsbury, England",
+    "n_steps": 1,
+    "is_correct": true,
+    "trace": [
+      {
+        "step": 1,
+        "thought": "Shrewsbury, England",
+        "action": null,
+        "observation": null,
+        "raw_output": "Shrewsbury, England",
+        "is_final": true
+      }
+    ]
+  },
+  "consistency_analysis": {
+    "consistency_rate": 1.0,
+    "is_consistent": true,
+    "inconsistent_count": 0,
+    "per_type_inconsistency": {
+      "paraphrase": 0.0,
+      "synonym": 0.0,
+      "reorder": 0.0,
+      "format": 0.0,
+      "distractor": 0.0
+    },
+    "propagation_patterns": {
+      "consistent": 5
+    }
+  },
+  "propagation_details": [
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "paraphrase",
+      "variant_answer": "Shrewsbury, England"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "synonym",
+      "variant_answer": "Shrewsbury, England"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "reorder",
+      "variant_answer": "Shrewsbury, England"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "format",
+      "variant_answer": "Shrewsbury, England"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "distractor",
+      "variant_answer": "Shrewsbury, England"
+    }
+  ],
+  "perturbation_variants": [
+    {
+      "perturbation_type": "paraphrase",
+      "variant_question": "Where was the creator of On the Origin of Species born?",
+      "variant_context": "Charles Darwin was born in Shrewsbury, England in 1809. Charles Darwin created On the Origin of Species in 1859. Meanwhile, Alexander Graham Bell was working on similar topics in Scotland.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe two questions are asking for the same information and would yield the same answer. The minor difference in wording ('In which place' vs 'Where') does not change the core of the question or th"
+      },
+      "agent_run": {
+        "final_answer": "Shrewsbury, England",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "Shrewsbury, England",
+            "action": null,
+            "observation": null,
+            "raw_output": "Shrewsbury, England",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "synonym",
+      "variant_question": "In what location was the founder of On the Origin of Species born?",
+      "variant_context": "Charles Darwin was born in Shrewsbury, England in 1809. Charles Darwin created On the Origin of Species in 1859. Meanwhile, Alexander Graham Bell was working on similar topics in Scotland.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking for the same information: the birthplace of the author of \"On the Origin of Species.\" The minor differences in wording (\"place\" vs \"location,\" \"creator\" vs \"founder\") do "
+      },
+      "agent_run": {
+        "final_answer": "Shrewsbury, England",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "Shrewsbury, England",
+            "action": null,
+            "observation": null,
+            "raw_output": "Shrewsbury, England",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "reorder",
+      "variant_question": "In which place was the creator of On the Origin of Species born? Please reason step by step.",
+      "variant_context": "Charles Darwin was born in Shrewsbury, England in 1809. Charles Darwin created On the Origin of Species in 1859. Meanwhile, Alexander Graham Bell was working on similar topics in Scotland.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (reorder; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "Shrewsbury, England",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "Shrewsbury, England",
+            "action": null,
+            "observation": null,
+            "raw_output": "Shrewsbury, England\n\nStep-by-step reasoning:\n1. The context states that Charles Darwin was born in Shrewsbury, England in 1809.\n2. It also mentions that Charles Darwin created \"On the Origin of Species\" in 1859.\n3. Therefore, the creator of \"On the Origin of Species,\" Charles Darwin, was born in Shrewsbury, England.",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "format",
+      "variant_question": "> In which place was the creator of On the Origin of Species born?",
+      "variant_context": "• Charles Darwin was born in Shrewsbury, England in 1809.\n• Charles Darwin created On the Origin of Species in 1859.\n• Meanwhile, Alexander Graham Bell was working on similar topics in Scotland.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (format; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "Shrewsbury, England",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "Shrewsbury, England",
+            "action": null,
+            "observation": null,
+            "raw_output": "Shrewsbury, England",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "distractor",
+      "variant_question": "Note: the following sentence is unrelated to the question. The weather that day was particularly sunny with clear skies. Now, in which place was the creator of On the Origin of Species born?",
+      "variant_context": "Charles Darwin was born in Shrewsbury, England in 1809. Charles Darwin created On the Origin of Species in 1859. Meanwhile, Alexander Graham Bell was working on similar topics in Scotland. The weather that day was particularly sunny with clear skies.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (distractor; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "Shrewsbury, England",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "Shrewsbury, England",
+            "action": null,
+            "observation": null,
+            "raw_output": "Shrewsbury, England",
+            "is_final": true
+          }
+        ]
+      }
+    }
+  ],
+  "patch_results": null,
+  "n_variants_generated": 5,
+  "n_variants_valid": 5,
+  "n_variants_rejected": 0,
+  "elapsed_seconds": 6.006759405136108
+}

@@ -1,0 +1,257 @@
+{
+  "sample_id": "hotpotqa_0008",
+  "agent_type": "direct",
+  "sample_question": "In which city was the creator of first computer program born?",
+  "sample_context": "Ada Lovelace was born in London, England in 1815. Ada Lovelace created first computer program in 1843. Meanwhile, Pablo Picasso was working on similar topics in Spain.",
+  "sample_gold_answer": "London",
+  "original_result": {
+    "final_answer": "London",
+    "n_steps": 1,
+    "is_correct": true,
+    "trace": [
+      {
+        "step": 1,
+        "thought": "London",
+        "action": null,
+        "observation": null,
+        "raw_output": "London",
+        "is_final": true
+      }
+    ]
+  },
+  "consistency_analysis": {
+    "consistency_rate": 1.0,
+    "is_consistent": true,
+    "inconsistent_count": 0,
+    "per_type_inconsistency": {
+      "paraphrase": 0.0,
+      "synonym": 0.0,
+      "reorder": 0.0,
+      "format": 0.0,
+      "distractor": 0.0
+    },
+    "propagation_patterns": {
+      "early_diverge": 3,
+      "consistent": 2
+    }
+  },
+  "propagation_details": [
+    {
+      "divergence_step": 1,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "early_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.0,
+          "action_match": true,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "paraphrase",
+      "variant_answer": "London, England"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "synonym",
+      "variant_answer": "London"
+    },
+    {
+      "divergence_step": 1,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "early_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.0,
+          "action_match": true,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "reorder",
+      "variant_answer": "London, England"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "format",
+      "variant_answer": "London"
+    },
+    {
+      "divergence_step": 1,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "early_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.0,
+          "action_match": true,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "distractor",
+      "variant_answer": "London, England"
+    }
+  ],
+  "perturbation_variants": [
+    {
+      "perturbation_type": "paraphrase",
+      "variant_question": "Where was the creator of the first computer program born?",
+      "variant_context": "Ada Lovelace was born in London, England in 1815. Ada Lovelace created first computer program in 1843. Meanwhile, Pablo Picasso was working on similar topics in Spain.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking for the same information: the birthplace of the creator of the first computer program. The minor differences in wording do not change the core of the question or the expe"
+      },
+      "agent_run": {
+        "final_answer": "London, England",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "London, England",
+            "action": null,
+            "observation": null,
+            "raw_output": "London, England",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "synonym",
+      "variant_question": "In which metropolis was the inventor of the first computer program born?",
+      "variant_context": "Ada Lovelace was born in London, England in 1815. Ada Lovelace created first computer program in 1843. Meanwhile, Pablo Picasso was working on similar topics in Spain.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe core of both questions is asking about the birthplace of the inventor/creator of the first computer program. The use of \"city\" in Question A and \"metropolis\" in Question B are synonymous in t"
+      },
+      "agent_run": {
+        "final_answer": "London",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "London",
+            "action": null,
+            "observation": null,
+            "raw_output": "London",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "reorder",
+      "variant_question": "In which city was the creator of first computer program born? Please reason step by step.",
+      "variant_context": "Ada Lovelace was born in London, England in 1815. Ada Lovelace created first computer program in 1843. Meanwhile, Pablo Picasso was working on similar topics in Spain.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (reorder; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "London, England",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "London, England",
+            "action": null,
+            "observation": null,
+            "raw_output": "London, England\n\nReasoning: Ada Lovelace, who is credited with creating the first computer program in 1843, was born in London, England in 1815. The information about Pablo Picasso is irrelevant to the question.",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "format",
+      "variant_question": "> In which city was the creator of first computer program born?",
+      "variant_context": "• Ada Lovelace was born in London, England in 1815.\n• Ada Lovelace created first computer program in 1843.\n• Meanwhile, Pablo Picasso was working on similar topics in Spain.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (format; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "London",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "London",
+            "action": null,
+            "observation": null,
+            "raw_output": "London",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "distractor",
+      "variant_question": "Note: the following sentence is unrelated to the question. Several other researchers had studied similar topics in the past decade. Now, in which city was the creator of first computer program born?",
+      "variant_context": "Ada Lovelace was born in London, England in 1815. Ada Lovelace created first computer program in 1843. Meanwhile, Pablo Picasso was working on similar topics in Spain. Several other researchers had studied similar topics in the past decade.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (distractor; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "London, England",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "London, England",
+            "action": null,
+            "observation": null,
+            "raw_output": "London, England",
+            "is_final": true
+          }
+        ]
+      }
+    }
+  ],
+  "patch_results": null,
+  "n_variants_generated": 5,
+  "n_variants_valid": 5,
+  "n_variants_rejected": 0,
+  "elapsed_seconds": 5.159302234649658
+}

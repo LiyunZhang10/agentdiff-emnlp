@@ -1,0 +1,257 @@
+{
+  "sample_id": "hotpotqa_0007",
+  "agent_type": "direct",
+  "sample_question": "In which city was the creator of telephone born?",
+  "sample_context": "Alexander Graham Bell was born in Edinburgh, Scotland in 1847. Alexander Graham Bell created telephone in 1876. Meanwhile, Isaac Newton was working on similar topics in England.",
+  "sample_gold_answer": "Edinburgh",
+  "original_result": {
+    "final_answer": "Edinburgh",
+    "n_steps": 1,
+    "is_correct": true,
+    "trace": [
+      {
+        "step": 1,
+        "thought": "Edinburgh",
+        "action": null,
+        "observation": null,
+        "raw_output": "Edinburgh",
+        "is_final": true
+      }
+    ]
+  },
+  "consistency_analysis": {
+    "consistency_rate": 1.0,
+    "is_consistent": true,
+    "inconsistent_count": 0,
+    "per_type_inconsistency": {
+      "paraphrase": 0.0,
+      "synonym": 0.0,
+      "reorder": 0.0,
+      "format": 0.0,
+      "distractor": 0.0
+    },
+    "propagation_patterns": {
+      "consistent": 3,
+      "early_diverge": 2
+    }
+  },
+  "propagation_details": [
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "paraphrase",
+      "variant_answer": "Edinburgh"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "synonym",
+      "variant_answer": "Edinburgh"
+    },
+    {
+      "divergence_step": 1,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "early_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.0,
+          "action_match": true,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "reorder",
+      "variant_answer": "The creator of the telephone, Alexander Graham Bell, was born in Edinburgh, Scotland."
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "format",
+      "variant_answer": "Edinburgh"
+    },
+    {
+      "divergence_step": 1,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "early_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.0,
+          "action_match": true,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "distractor",
+      "variant_answer": "Edinburgh, Scotland"
+    }
+  ],
+  "perturbation_variants": [
+    {
+      "perturbation_type": "paraphrase",
+      "variant_question": "Where was the creator of the telephone born in terms of city?",
+      "variant_context": "Alexander Graham Bell was born in Edinburgh, Scotland in 1847. Alexander Graham Bell created telephone in 1876. Meanwhile, Isaac Newton was working on similar topics in England.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe two questions are asking for the same information: the city where the creator of the telephone was born. The minor differences in wording do not change the core of the question or the expecte"
+      },
+      "agent_run": {
+        "final_answer": "Edinburgh",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "Edinburgh",
+            "action": null,
+            "observation": null,
+            "raw_output": "Edinburgh",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "synonym",
+      "variant_question": "In which metropolis was the inventor of telephone born?",
+      "variant_context": "Alexander Graham Bell was born in Edinburgh, Scotland in 1847. Alexander Graham Bell created telephone in 1876. Meanwhile, Isaac Newton was working on similar topics in England.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe core of both questions is asking about the birthplace of the telephone's inventor. The terms \"city\" and \"metropolis\" are used interchangeably here, and the slight reordering and use of synony"
+      },
+      "agent_run": {
+        "final_answer": "Edinburgh",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "Edinburgh",
+            "action": null,
+            "observation": null,
+            "raw_output": "Edinburgh",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "reorder",
+      "variant_question": "In which city was the creator of telephone born? Please reason step by step.",
+      "variant_context": "Alexander Graham Bell was born in Edinburgh, Scotland in 1847. Alexander Graham Bell created telephone in 1876. Meanwhile, Isaac Newton was working on similar topics in England.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (reorder; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "The creator of the telephone, Alexander Graham Bell, was born in Edinburgh, Scotland.",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "The creator of the telephone, Alexander Graham Bell, was born in Edinburgh, Scotland.",
+            "action": null,
+            "observation": null,
+            "raw_output": "The creator of the telephone, Alexander Graham Bell, was born in Edinburgh, Scotland.",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "format",
+      "variant_question": "> In which city was the creator of telephone born?",
+      "variant_context": "• Alexander Graham Bell was born in Edinburgh, Scotland in 1847.\n• Alexander Graham Bell created telephone in 1876.\n• Meanwhile, Isaac Newton was working on similar topics in England.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (format; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "Edinburgh",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "Edinburgh",
+            "action": null,
+            "observation": null,
+            "raw_output": "Edinburgh",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "distractor",
+      "variant_question": "Note: the following sentence is unrelated to the question. The weather that day was particularly sunny with clear skies. Now, in which city was the creator of telephone born?",
+      "variant_context": "Alexander Graham Bell was born in Edinburgh, Scotland in 1847. Alexander Graham Bell created telephone in 1876. Meanwhile, Isaac Newton was working on similar topics in England. The weather that day was particularly sunny with clear skies.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (distractor; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "Edinburgh, Scotland",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "Edinburgh, Scotland",
+            "action": null,
+            "observation": null,
+            "raw_output": "Edinburgh, Scotland",
+            "is_final": true
+          }
+        ]
+      }
+    }
+  ],
+  "patch_results": null,
+  "n_variants_generated": 5,
+  "n_variants_valid": 5,
+  "n_variants_rejected": 0,
+  "elapsed_seconds": 3.9315896034240723
+}

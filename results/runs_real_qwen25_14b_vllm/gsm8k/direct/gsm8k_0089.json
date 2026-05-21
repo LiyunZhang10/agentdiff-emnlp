@@ -1,0 +1,275 @@
+{
+  "sample_id": "gsm8k_0089",
+  "agent_type": "direct",
+  "sample_question": "Sarah has $25. She spends $12 on lunch and $25 on a book. How much money does she have left?",
+  "sample_context": null,
+  "sample_gold_answer": "-12",
+  "original_result": {
+    "final_answer": "-2",
+    "n_steps": 1,
+    "is_correct": false,
+    "trace": [
+      {
+        "step": 1,
+        "thought": "-2",
+        "action": null,
+        "observation": null,
+        "raw_output": "-2",
+        "is_final": true
+      }
+    ]
+  },
+  "consistency_analysis": {
+    "consistency_rate": 0.8,
+    "is_consistent": false,
+    "inconsistent_count": 1,
+    "per_type_inconsistency": {
+      "paraphrase": 0.0,
+      "synonym": 0.0,
+      "reorder": 0.0,
+      "format": 1.0,
+      "distractor": 0.0
+    },
+    "propagation_patterns": {
+      "early_diverge": 2,
+      "consistent": 3
+    }
+  },
+  "propagation_details": [
+    {
+      "divergence_step": 1,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "early_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.0,
+          "action_match": true,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "paraphrase",
+      "variant_answer": "-$2"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "synonym",
+      "variant_answer": "-2"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "reorder",
+      "variant_answer": "-2"
+    },
+    {
+      "divergence_step": 1,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "early_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.0,
+          "action_match": true,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "format",
+      "variant_answer": "-12"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.5,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "distractor",
+      "variant_answer": "-2 dollars"
+    }
+  ],
+  "perturbation_variants": [
+    {
+      "perturbation_type": "paraphrase",
+      "variant_question": "How much money does Sarah have left after spending $12 on lunch and $25 on a book, if she initially had $25?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking for the same information and would yield the same answer, '-12', despite minor differences in wording and sentence structure."
+      },
+      "agent_run": {
+        "final_answer": "-$2",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "-$2",
+            "action": null,
+            "observation": null,
+            "raw_output": "-$2",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "synonym",
+      "variant_question": "Sarah possesses $25. She utilizes $12 on lunch and $25 on a book. How much money does she have remaining?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are phrased differently but ask for the same calculation and would yield the same answer. The minor changes in wording do not alter the core meaning or the numerical outcome."
+      },
+      "agent_run": {
+        "final_answer": "-2",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "-2",
+            "action": null,
+            "observation": null,
+            "raw_output": "-2",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "reorder",
+      "variant_question": "She spends $12 on lunch and $25 on a book. Sarah has $25. How much money does she have left?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (reorder; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "-2",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "-2",
+            "action": null,
+            "observation": null,
+            "raw_output": "-2",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "format",
+      "variant_question": "- Sarah has $25.\n- She spends $12 on lunch and $25 on a book.\nQuestion: How much money does she have left?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (format; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "-12",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "-12",
+            "action": null,
+            "observation": null,
+            "raw_output": "-12",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "distractor",
+      "variant_question": "Note: the following sentence is unrelated to the question. The weather that day was particularly sunny with clear skies. Now, sarah has $25. She spends $12 on lunch and $25 on a book. How much money does she have left?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (distractor; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "-2 dollars",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "-2 dollars",
+            "action": null,
+            "observation": null,
+            "raw_output": "-2 dollars",
+            "is_final": true
+          }
+        ]
+      }
+    }
+  ],
+  "patch_results": {
+    "step_patch": {
+      "consistency_rate": 0.0,
+      "inconsistent_count": 5,
+      "is_correct": true,
+      "intervention_step": 1,
+      "target_types": [
+        "format"
+      ]
+    },
+    "system_patch": {
+      "consistency_rate": 0.19999999999999996,
+      "inconsistent_count": 4,
+      "is_correct": true,
+      "target_types": [
+        "format"
+      ]
+    }
+  },
+  "n_variants_generated": 5,
+  "n_variants_valid": 5,
+  "n_variants_rejected": 0,
+  "elapsed_seconds": 5.175678730010986
+}

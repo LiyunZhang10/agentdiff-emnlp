@@ -1,0 +1,257 @@
+{
+  "sample_id": "hotpotqa_0018",
+  "agent_type": "direct",
+  "sample_question": "When was telescope observations created by the person born in Pisa?",
+  "sample_context": "Galileo Galilei was born in Pisa, Italy in 1564. Galileo Galilei created telescope observations in 1610. Meanwhile, Alexander Graham Bell was working on similar topics in Scotland.",
+  "sample_gold_answer": "1610",
+  "original_result": {
+    "final_answer": "1610",
+    "n_steps": 1,
+    "is_correct": true,
+    "trace": [
+      {
+        "step": 1,
+        "thought": "1610",
+        "action": null,
+        "observation": null,
+        "raw_output": "1610",
+        "is_final": true
+      }
+    ]
+  },
+  "consistency_analysis": {
+    "consistency_rate": 1.0,
+    "is_consistent": true,
+    "inconsistent_count": 0,
+    "per_type_inconsistency": {
+      "paraphrase": 0.0,
+      "synonym": 0.0,
+      "reorder": 0.0,
+      "format": 0.0,
+      "distractor": 0.0
+    },
+    "propagation_patterns": {
+      "consistent": 4,
+      "early_diverge": 1
+    }
+  },
+  "propagation_details": [
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "paraphrase",
+      "variant_answer": "1610"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "synonym",
+      "variant_answer": "1610"
+    },
+    {
+      "divergence_step": 1,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "early_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.0,
+          "action_match": true,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "reorder",
+      "variant_answer": "Galileo Galilei, the person born in Pisa, created telescope observations in 1610."
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "format",
+      "variant_answer": "1610"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "distractor",
+      "variant_answer": "1610"
+    }
+  ],
+  "perturbation_variants": [
+    {
+      "perturbation_type": "paraphrase",
+      "variant_question": "What is the creation date of telescope observations by the individual born in Pisa?",
+      "variant_context": "Galileo Galilei was born in Pisa, Italy in 1564. Galileo Galilei created telescope observations in 1610. Meanwhile, Alexander Graham Bell was working on similar topics in Scotland.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking for the same information: the creation date of telescope observations by someone born in Pisa. The minor differences in wording do not change the core of the question or "
+      },
+      "agent_run": {
+        "final_answer": "1610",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "1610",
+            "action": null,
+            "observation": null,
+            "raw_output": "1610",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "synonym",
+      "variant_question": "When were telescope observations developed by the individual born in Pisa?",
+      "variant_context": "Galileo Galilei was born in Pisa, Italy in 1564. Galileo Galilei created telescope observations in 1610. Meanwhile, Alexander Graham Bell was working on similar topics in Scotland.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking about the same event (the development of telescope observations) and the same individual (the person born in Pisa, likely referring to Galileo Galilei). The minor differe"
+      },
+      "agent_run": {
+        "final_answer": "1610",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "1610",
+            "action": null,
+            "observation": null,
+            "raw_output": "1610",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "reorder",
+      "variant_question": "When was telescope observations created by the person born in Pisa? Please reason step by step.",
+      "variant_context": "Galileo Galilei was born in Pisa, Italy in 1564. Galileo Galilei created telescope observations in 1610. Meanwhile, Alexander Graham Bell was working on similar topics in Scotland.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (reorder; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "Galileo Galilei, the person born in Pisa, created telescope observations in 1610.",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "Galileo Galilei, the person born in Pisa, created telescope observations in 1610.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Galileo Galilei, the person born in Pisa, created telescope observations in 1610.",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "format",
+      "variant_question": "> When was telescope observations created by the person born in Pisa?",
+      "variant_context": "• Galileo Galilei was born in Pisa, Italy in 1564.\n• Galileo Galilei created telescope observations in 1610.\n• Meanwhile, Alexander Graham Bell was working on similar topics in Scotland.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (format; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "1610",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "1610",
+            "action": null,
+            "observation": null,
+            "raw_output": "1610",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "distractor",
+      "variant_question": "Note: the following sentence is unrelated to the question. Historical records from that era are preserved in multiple archives. Now, when was telescope observations created by the person born in Pisa?",
+      "variant_context": "Galileo Galilei was born in Pisa, Italy in 1564. Galileo Galilei created telescope observations in 1610. Meanwhile, Alexander Graham Bell was working on similar topics in Scotland. Historical records from that era are preserved in multiple archives.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (distractor; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "1610",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "1610",
+            "action": null,
+            "observation": null,
+            "raw_output": "1610",
+            "is_final": true
+          }
+        ]
+      }
+    }
+  ],
+  "patch_results": null,
+  "n_variants_generated": 5,
+  "n_variants_valid": 5,
+  "n_variants_rejected": 0,
+  "elapsed_seconds": 4.31746506690979
+}

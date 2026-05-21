@@ -1,0 +1,490 @@
+{
+  "sample_id": "math_0046",
+  "agent_type": "cot",
+  "sample_question": "Solve for x: 11x + 14 = 9x + 7",
+  "sample_context": null,
+  "sample_gold_answer": "-3.50",
+  "original_result": {
+    "final_answer": "\\(-\\frac{7}{2}\\)",
+    "n_steps": 4,
+    "is_correct": false,
+    "trace": [
+      {
+        "step": 1,
+        "thought": "To solve the equation \\(11x + 14 = 9x + 7\\) for \\(x\\), follow these steps:",
+        "action": null,
+        "observation": null,
+        "raw_output": "To solve the equation \\(11x + 14 = 9x + 7\\) for \\(x\\), follow these steps:",
+        "is_final": false
+      },
+      {
+        "step": 2,
+        "thought": "**Isolate the variable terms on one side of the equation**: Start by subtracting \\(9x\\) from both sides of the equation to get all the \\(x\\)-terms on one side.\n   \\[\n   11x + 14 - 9x = 9x + 7 - 9x\n   \\]\n   Simplifying this, we get:\n   \\[\n   2x + 14 = 7\n   \\]",
+        "action": null,
+        "observation": null,
+        "raw_output": "**Isolate the variable terms on one side of the equation**: Start by subtracting \\(9x\\) from both sides of the equation to get all the \\(x\\)-terms on one side.\n   \\[\n   11x + 14 - 9x = 9x + 7 - 9x\n   \\]\n   Simplifying this, we get:\n   \\[\n   2x + 14 = 7\n   \\]",
+        "is_final": false
+      },
+      {
+        "step": 3,
+        "thought": "**Isolate the constant terms on the other side of the equation**: Subtract 14 from both sides to get all the constant terms on the other side.\n   \\[\n   2x + 14 - 14 = 7 - 14\n   \\]\n   Simplifying this, we get:\n   \\[\n   2x = -7\n   \\]",
+        "action": null,
+        "observation": null,
+        "raw_output": "**Isolate the constant terms on the other side of the equation**: Subtract 14 from both sides to get all the constant terms on the other side.\n   \\[\n   2x + 14 - 14 = 7 - 14\n   \\]\n   Simplifying this, we get:\n   \\[\n   2x = -7\n   \\]",
+        "is_final": false
+      },
+      {
+        "step": 4,
+        "thought": "**Solve for \\(x\\)**: Divide both sides of the equation by 2 to solve for \\(x\\).\n   \\[\n   \\frac{2x}{2} = \\frac{-7}{2}\n   \\]\n   Simplifying this, we get:\n   \\[\n   x = -\\frac{7}{2}\n   \\]\n\nFinal Answer: \\(-\\frac{7}{2}\\)",
+        "action": null,
+        "observation": null,
+        "raw_output": "**Solve for \\(x\\)**: Divide both sides of the equation by 2 to solve for \\(x\\).\n   \\[\n   \\frac{2x}{2} = \\frac{-7}{2}\n   \\]\n   Simplifying this, we get:\n   \\[\n   x = -\\frac{7}{2}\n   \\]\n\nFinal Answer: \\(-\\frac{7}{2}\\)",
+        "is_final": true
+      }
+    ]
+  },
+  "consistency_analysis": {
+    "consistency_rate": 1.0,
+    "is_consistent": true,
+    "inconsistent_count": 0,
+    "per_type_inconsistency": {
+      "paraphrase": 0.0,
+      "synonym": 0.0,
+      "reorder": 0.0,
+      "format": 0.0,
+      "distractor": 0.0
+    },
+    "propagation_patterns": {
+      "consistent": 5
+    }
+  },
+  "propagation_details": [
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.7560975609756098,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.8484848484848485,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.8275862068965517,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 4,
+      "n_steps_variant": 4,
+      "perturbation_type": "paraphrase",
+      "variant_answer": "\\(-\\frac{7}{2}\\)"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 4,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 4,
+      "n_steps_variant": 4,
+      "perturbation_type": "synonym",
+      "variant_answer": "\\(-\\frac{7}{2}\\)"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.8823529411764706,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.7045454545454546,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.7714285714285715,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.696969696969697,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 4,
+      "n_steps_variant": 4,
+      "perturbation_type": "reorder",
+      "variant_answer": "\\(-\\frac{7}{2}\\)"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 4,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 4,
+      "n_steps_variant": 4,
+      "perturbation_type": "format",
+      "variant_answer": "\\(-\\frac{7}{2}\\)"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.8823529411764706,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.9459459459459459,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.967741935483871,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.8620689655172413,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 4,
+      "n_steps_variant": 4,
+      "perturbation_type": "distractor",
+      "variant_answer": "\\(-\\frac{7}{2}\\)"
+    }
+  ],
+  "perturbation_variants": [
+    {
+      "perturbation_type": "paraphrase",
+      "variant_question": "Find x: 11x + 14 = 9x + 7",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking for the same solution, with only a minor wording difference in the instruction (\"Solve for x\" vs \"Find x\"). This does not change the answer."
+      },
+      "agent_run": {
+        "final_answer": "\\(-\\frac{7}{2}\\)",
+        "n_steps": 4,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the equation \\(11x + 14 = 9x + 7\\) for \\(x\\), follow these steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the equation \\(11x + 14 = 9x + 7\\) for \\(x\\), follow these steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "**Isolate the variable terms on one side of the equation**: Subtract \\(9x\\) from both sides of the equation to move all terms with \\(x\\) to the left side.\n   \\[\n   11x + 14 - 9x = 9x + 7 - 9x\n   \\]\n   Simplifying this, we get:\n   \\[\n   2x + 14 = 7\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Isolate the variable terms on one side of the equation**: Subtract \\(9x\\) from both sides of the equation to move all terms with \\(x\\) to the left side.\n   \\[\n   11x + 14 - 9x = 9x + 7 - 9x\n   \\]\n   Simplifying this, we get:\n   \\[\n   2x + 14 = 7\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "**Isolate the constant terms on the other side of the equation**: Subtract 14 from both sides to move the constant term to the right side.\n   \\[\n   2x + 14 - 14 = 7 - 14\n   \\]\n   Simplifying this, we get:\n   \\[\n   2x = -7\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Isolate the constant terms on the other side of the equation**: Subtract 14 from both sides to move the constant term to the right side.\n   \\[\n   2x + 14 - 14 = 7 - 14\n   \\]\n   Simplifying this, we get:\n   \\[\n   2x = -7\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "**Solve for \\(x\\)**: Divide both sides by 2 to isolate \\(x\\).\n   \\[\n   \\frac{2x}{2} = \\frac{-7}{2}\n   \\]\n   Simplifying this, we get:\n   \\[\n   x = -\\frac{7}{2}\n   \\]\n\nFinal Answer: \\(-\\frac{7}{2}\\)",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Solve for \\(x\\)**: Divide both sides by 2 to isolate \\(x\\).\n   \\[\n   \\frac{2x}{2} = \\frac{-7}{2}\n   \\]\n   Simplifying this, we get:\n   \\[\n   x = -\\frac{7}{2}\n   \\]\n\nFinal Answer: \\(-\\frac{7}{2}\\)",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "synonym",
+      "variant_question": "Determine for x: 11x + 14 = 9x + 7",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking for the same operation, which is to solve for x in the given equation. The wording difference between \"Solve for x\" and \"Determine for x\" does not change the meaning or t"
+      },
+      "agent_run": {
+        "final_answer": "\\(-\\frac{7}{2}\\)",
+        "n_steps": 4,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the equation \\(11x + 14 = 9x + 7\\) for \\(x\\), follow these steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the equation \\(11x + 14 = 9x + 7\\) for \\(x\\), follow these steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "**Isolate the variable terms on one side of the equation**: Start by subtracting \\(9x\\) from both sides of the equation to get all the \\(x\\)-terms on one side.\n   \\[\n   11x + 14 - 9x = 9x + 7 - 9x\n   \\]\n   Simplifying this, we get:\n   \\[\n   2x + 14 = 7\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Isolate the variable terms on one side of the equation**: Start by subtracting \\(9x\\) from both sides of the equation to get all the \\(x\\)-terms on one side.\n   \\[\n   11x + 14 - 9x = 9x + 7 - 9x\n   \\]\n   Simplifying this, we get:\n   \\[\n   2x + 14 = 7\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "**Isolate the constant terms on the other side of the equation**: Subtract 14 from both sides to get all the constant terms on the other side.\n   \\[\n   2x + 14 - 14 = 7 - 14\n   \\]\n   Simplifying this, we get:\n   \\[\n   2x = -7\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Isolate the constant terms on the other side of the equation**: Subtract 14 from both sides to get all the constant terms on the other side.\n   \\[\n   2x + 14 - 14 = 7 - 14\n   \\]\n   Simplifying this, we get:\n   \\[\n   2x = -7\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "**Solve for \\(x\\)**: Divide both sides of the equation by 2 to solve for \\(x\\).\n   \\[\n   \\frac{2x}{2} = \\frac{-7}{2}\n   \\]\n   Simplifying this, we get:\n   \\[\n   x = -\\frac{7}{2}\n   \\]\n\nFinal Answer: \\(-\\frac{7}{2}\\)",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Solve for \\(x\\)**: Divide both sides of the equation by 2 to solve for \\(x\\).\n   \\[\n   \\frac{2x}{2} = \\frac{-7}{2}\n   \\]\n   Simplifying this, we get:\n   \\[\n   x = -\\frac{7}{2}\n   \\]\n\nFinal Answer: \\(-\\frac{7}{2}\\)",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "reorder",
+      "variant_question": "Solve for x: 11x + 14 = 9x + 7 Please reason step by step.",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (reorder; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "\\(-\\frac{7}{2}\\)",
+        "n_steps": 4,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the equation \\(11x + 14 = 9x + 7\\) for \\(x\\), we will follow these steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the equation \\(11x + 14 = 9x + 7\\) for \\(x\\), we will follow these steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "**Isolate the variable terms on one side of the equation**: To do this, we can subtract \\(9x\\) from both sides of the equation to move all terms with \\(x\\) to the left side.\n   \\[\n   11x + 14 - 9x = 9x + 7 - 9x\n   \\]\n   Simplifying both sides, we get:\n   \\[\n   2x + 14 = 7\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Isolate the variable terms on one side of the equation**: To do this, we can subtract \\(9x\\) from both sides of the equation to move all terms with \\(x\\) to the left side.\n   \\[\n   11x + 14 - 9x = 9x + 7 - 9x\n   \\]\n   Simplifying both sides, we get:\n   \\[\n   2x + 14 = 7\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "**Isolate the constant terms on the other side of the equation**: Now, we subtract 14 from both sides to move the constant term to the right side.\n   \\[\n   2x + 14 - 14 = 7 - 14\n   \\]\n   Simplifying both sides, we get:\n   \\[\n   2x = -7\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Isolate the constant terms on the other side of the equation**: Now, we subtract 14 from both sides to move the constant term to the right side.\n   \\[\n   2x + 14 - 14 = 7 - 14\n   \\]\n   Simplifying both sides, we get:\n   \\[\n   2x = -7\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "**Solve for \\(x\\)**: To find the value of \\(x\\), we divide both sides of the equation by 2.\n   \\[\n   \\frac{2x}{2} = \\frac{-7}{2}\n   \\]\n   Simplifying, we get:\n   \\[\n   x = -\\frac{7}{2}\n   \\]\n\nFinal Answer: \\(-\\frac{7}{2}\\)",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Solve for \\(x\\)**: To find the value of \\(x\\), we divide both sides of the equation by 2.\n   \\[\n   \\frac{2x}{2} = \\frac{-7}{2}\n   \\]\n   Simplifying, we get:\n   \\[\n   x = -\\frac{7}{2}\n   \\]\n\nFinal Answer: \\(-\\frac{7}{2}\\)",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "format",
+      "variant_question": "> Solve for x: 11x + 14 = 9x + 7",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (format; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "\\(-\\frac{7}{2}\\)",
+        "n_steps": 4,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the equation \\(11x + 14 = 9x + 7\\) for \\(x\\), follow these steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the equation \\(11x + 14 = 9x + 7\\) for \\(x\\), follow these steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "**Isolate the variable terms on one side of the equation**: Start by subtracting \\(9x\\) from both sides of the equation to get all the \\(x\\)-terms on one side.\n   \\[\n   11x + 14 - 9x = 9x + 7 - 9x\n   \\]\n   Simplifying this, we get:\n   \\[\n   2x + 14 = 7\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Isolate the variable terms on one side of the equation**: Start by subtracting \\(9x\\) from both sides of the equation to get all the \\(x\\)-terms on one side.\n   \\[\n   11x + 14 - 9x = 9x + 7 - 9x\n   \\]\n   Simplifying this, we get:\n   \\[\n   2x + 14 = 7\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "**Isolate the constant terms on the other side of the equation**: Subtract 14 from both sides to get all the constant terms on the other side.\n   \\[\n   2x + 14 - 14 = 7 - 14\n   \\]\n   Simplifying this, we get:\n   \\[\n   2x = -7\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Isolate the constant terms on the other side of the equation**: Subtract 14 from both sides to get all the constant terms on the other side.\n   \\[\n   2x + 14 - 14 = 7 - 14\n   \\]\n   Simplifying this, we get:\n   \\[\n   2x = -7\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "**Solve for \\(x\\)**: Divide both sides of the equation by 2 to solve for \\(x\\).\n   \\[\n   \\frac{2x}{2} = \\frac{-7}{2}\n   \\]\n   Simplifying this, we get:\n   \\[\n   x = -\\frac{7}{2}\n   \\]\n\nFinal Answer: \\(-\\frac{7}{2}\\)",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Solve for \\(x\\)**: Divide both sides of the equation by 2 to solve for \\(x\\).\n   \\[\n   \\frac{2x}{2} = \\frac{-7}{2}\n   \\]\n   Simplifying this, we get:\n   \\[\n   x = -\\frac{7}{2}\n   \\]\n\nFinal Answer: \\(-\\frac{7}{2}\\)",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "distractor",
+      "variant_question": "Note: the following sentence is unrelated to the question. Historical records from that era are preserved in multiple archives. Now, solve for x: 11x + 14 = 9x + 7",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (distractor; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "\\(-\\frac{7}{2}\\)",
+        "n_steps": 4,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the equation \\(11x + 14 = 9x + 7\\) for \\(x\\), we will follow these steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the equation \\(11x + 14 = 9x + 7\\) for \\(x\\), we will follow these steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "**Isolate the variable terms on one side of the equation**: We start by subtracting \\(9x\\) from both sides of the equation to get all the \\(x\\) terms on one side.\n   \\[\n   11x + 14 - 9x = 9x + 7 - 9x\n   \\]\n   Simplifying this, we get:\n   \\[\n   2x + 14 = 7\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Isolate the variable terms on one side of the equation**: We start by subtracting \\(9x\\) from both sides of the equation to get all the \\(x\\) terms on one side.\n   \\[\n   11x + 14 - 9x = 9x + 7 - 9x\n   \\]\n   Simplifying this, we get:\n   \\[\n   2x + 14 = 7\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "**Isolate the constant terms on the other side of the equation**: Next, we subtract 14 from both sides to get all the constant terms on the other side.\n   \\[\n   2x + 14 - 14 = 7 - 14\n   \\]\n   Simplifying this, we get:\n   \\[\n   2x = -7\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Isolate the constant terms on the other side of the equation**: Next, we subtract 14 from both sides to get all the constant terms on the other side.\n   \\[\n   2x + 14 - 14 = 7 - 14\n   \\]\n   Simplifying this, we get:\n   \\[\n   2x = -7\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "**Solve for \\(x\\)**: Finally, we divide both sides by 2 to solve for \\(x\\).\n   \\[\n   \\frac{2x}{2} = \\frac{-7}{2}\n   \\]\n   Simplifying this, we get:\n   \\[\n   x = -\\frac{7}{2}\n   \\]\n\nFinal Answer: \\(-\\frac{7}{2}\\)",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Solve for \\(x\\)**: Finally, we divide both sides by 2 to solve for \\(x\\).\n   \\[\n   \\frac{2x}{2} = \\frac{-7}{2}\n   \\]\n   Simplifying this, we get:\n   \\[\n   x = -\\frac{7}{2}\n   \\]\n\nFinal Answer: \\(-\\frac{7}{2}\\)",
+            "is_final": true
+          }
+        ]
+      }
+    }
+  ],
+  "patch_results": null,
+  "n_variants_generated": 5,
+  "n_variants_valid": 5,
+  "n_variants_rejected": 0,
+  "elapsed_seconds": 41.59225916862488
+}

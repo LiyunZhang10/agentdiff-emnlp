@@ -1,0 +1,277 @@
+{
+  "sample_id": "gsm8k_0133",
+  "agent_type": "direct",
+  "sample_question": "A train travels at 33 km/h for 16 hours, then at 2 km/h for 10 hours. What is the total distance?",
+  "sample_context": null,
+  "sample_gold_answer": "548",
+  "original_result": {
+    "final_answer": "596 km",
+    "n_steps": 1,
+    "is_correct": false,
+    "trace": [
+      {
+        "step": 1,
+        "thought": "596 km",
+        "action": null,
+        "observation": null,
+        "raw_output": "596 km",
+        "is_final": true
+      }
+    ]
+  },
+  "consistency_analysis": {
+    "consistency_rate": 0.19999999999999996,
+    "is_consistent": false,
+    "inconsistent_count": 4,
+    "per_type_inconsistency": {
+      "paraphrase": 1.0,
+      "synonym": 1.0,
+      "reorder": 1.0,
+      "format": 0.0,
+      "distractor": 1.0
+    },
+    "propagation_patterns": {
+      "early_diverge": 4,
+      "consistent": 1
+    }
+  },
+  "propagation_details": [
+    {
+      "divergence_step": 1,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "early_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.3333333333333333,
+          "action_match": true,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "paraphrase",
+      "variant_answer": "550 km"
+    },
+    {
+      "divergence_step": 1,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "early_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.0,
+          "action_match": true,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "synonym",
+      "variant_answer": "53 hours"
+    },
+    {
+      "divergence_step": 1,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "early_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.0,
+          "action_match": true,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "reorder",
+      "variant_answer": "Step 1: Calculate the distance traveled at 33 km/h for 16 hours."
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "format",
+      "variant_answer": "596 km"
+    },
+    {
+      "divergence_step": 1,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "early_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.3333333333333333,
+          "action_match": true,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "distractor",
+      "variant_answer": "626 km"
+    }
+  ],
+  "perturbation_variants": [
+    {
+      "perturbation_type": "paraphrase",
+      "variant_question": "What is the total distance a train travels at 33 km/h for 16 hours and then at 2 km/h for 10 hours?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking for the same information with only minor wording differences, which do not change the core of the question or the calculation required to find the answer. Both questions "
+      },
+      "agent_run": {
+        "final_answer": "550 km",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "550 km",
+            "action": null,
+            "observation": null,
+            "raw_output": "550 km",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "synonym",
+      "variant_question": "A locomotive moves at 33 km/h for 16 hours, then at 2 km/h for 10 hours. What is the total span?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking for the total distance traveled by a train/locomotive under the same conditions (speed and time intervals). The terms \"total distance\" and \"total span\" are used interchan"
+      },
+      "agent_run": {
+        "final_answer": "53 hours",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "53 hours",
+            "action": null,
+            "observation": null,
+            "raw_output": "53 hours",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "reorder",
+      "variant_question": "A train travels at 33 km/h for 16 hours, then at 2 km/h for 10 hours. What is the total distance? Please reason step by step.",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (reorder; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "Step 1: Calculate the distance traveled at 33 km/h for 16 hours.",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "Step 1: Calculate the distance traveled at 33 km/h for 16 hours.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Step 1: Calculate the distance traveled at 33 km/h for 16 hours.\nDistance = Speed × Time = 33 km/h × 16 h = 528 km\n\nStep 2: Calculate the distance traveled at 2 km/h for 10 hours.\nDistance = Speed × Time = 2 km/h × 10 h = 20 km\n\nStep 3: Add the two distances to get the total distance.\nTotal Distance = 528 km + 20 km = 548 km\n\nAnswer: 548 km",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "format",
+      "variant_question": "- A train travels at 33 km/h for 16 hours, then at 2 km/h for 10 hours.\nQuestion: What is the total distance?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (format; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "596 km",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "596 km",
+            "action": null,
+            "observation": null,
+            "raw_output": "596 km",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "distractor",
+      "variant_question": "Note: the following sentence is unrelated to the question. The weather that day was particularly sunny with clear skies. Now, a train travels at 33 km/h for 16 hours, then at 2 km/h for 10 hours. What is the total distance?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (distractor; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "626 km",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "626 km",
+            "action": null,
+            "observation": null,
+            "raw_output": "626 km",
+            "is_final": true
+          }
+        ]
+      }
+    }
+  ],
+  "patch_results": {
+    "step_patch": {
+      "consistency_rate": 0.19999999999999996,
+      "inconsistent_count": 4,
+      "is_correct": false,
+      "intervention_step": 1,
+      "target_types": [
+        "paraphrase",
+        "synonym"
+      ]
+    },
+    "system_patch": {
+      "consistency_rate": 0.19999999999999996,
+      "inconsistent_count": 4,
+      "is_correct": false,
+      "target_types": [
+        "paraphrase",
+        "synonym"
+      ]
+    }
+  },
+  "n_variants_generated": 5,
+  "n_variants_valid": 5,
+  "n_variants_rejected": 0,
+  "elapsed_seconds": 14.822621583938599
+}

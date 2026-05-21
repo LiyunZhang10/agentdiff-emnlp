@@ -1,0 +1,300 @@
+{"id": "math_0000", "problem": "If f(x) = 2x + 3 and g(x) = x^2 - 1, what is f(g(2))?", "answer": "9", "reasoning_steps": ["Calculate g(2) = 2^2 - 1 = 3", "Calculate f(3) = 2(3) + 3 = 9"], "level": 3, "type": "math"}
+{"id": "math_0001", "problem": "A rectangle has a perimeter of 24 cm. If its length is twice its width, what is its area?", "answer": "32", "reasoning_steps": ["Let width = w, length = 2w", "2(w + 2w) = 24, so w = 4", "Area = 4 * 8 = 32"], "level": 3, "type": "math"}
+{"id": "math_0002", "problem": "How many ways can you arrange the letters in the word MATH?", "answer": "24", "reasoning_steps": ["4 distinct letters", "4! = 4 * 3 * 2 * 1 = 24"], "level": 3, "type": "math"}
+{"id": "math_0003", "problem": "Find the sum of the first 10 terms of the arithmetic sequence 3, 7, 11, 15, ...", "answer": "210", "reasoning_steps": ["a1=3, d=4, n=10", "S = n/2 * (2a1 + (n-1)d) = 5 * (6 + 36) = 210"], "level": 4, "type": "math"}
+{"id": "math_0004", "problem": "If log_2(x) + log_2(x-2) = 3, find x.", "answer": "4", "reasoning_steps": ["log_2(x(x-2)) = 3", "x^2 - 2x = 8", "x^2 - 2x - 8 = 0", "(x-4)(x+2)=0, x=4"], "level": 4, "type": "math"}
+{"id": "math_0005", "problem": "A bag contains 5 red and 3 blue balls. Two balls are drawn without replacement. What is the probability both are red?", "answer": "5/14", "reasoning_steps": ["P(1st red) = 5/8", "P(2nd red|1st red) = 4/7", "P = 5/8 * 4/7 = 20/56 = 5/14"], "level": 4, "type": "math"}
+{"id": "math_0006", "problem": "Find the derivative of f(x) = x^3 * sin(x).", "answer": "3x^2*sin(x) + x^3*cos(x)", "reasoning_steps": ["Product rule: (uv)' = u'v + uv'", "u=x^3, u'=3x^2, v=sin(x), v'=cos(x)", "f'(x) = 3x^2*sin(x) + x^3*cos(x)"], "level": 5, "type": "math"}
+{"id": "math_0007", "problem": "Solve the system: 2x + 3y = 12 and x - y = 1.", "answer": "x=3, y=2", "reasoning_steps": ["From eq2: x = y + 1", "Substitute: 2(y+1) + 3y = 12", "5y = 10, y = 2", "x = 3"], "level": 3, "type": "math"}
+{"id": "math_0008", "problem": "What is the sum of the first 5 positive integers?", "answer": "15", "reasoning_steps": ["Sum = n(n+1)/2 = 5*6/2 = 15"], "level": 3, "type": "math"}
+{"id": "math_0009", "problem": "Solve for x: 9x + 3 = 2x + 18", "answer": "2.14", "reasoning_steps": ["9x - 2x = 18 - 3", "7x = 15", "x = 2.14"], "level": 3, "type": "math"}
+{"id": "math_0010", "problem": "What is the sum of the first 4 positive integers?", "answer": "10", "reasoning_steps": ["Sum = n(n+1)/2 = 4*5/2 = 10"], "level": 3, "type": "math"}
+{"id": "math_0011", "problem": "What is the sum of the first 2 positive integers?", "answer": "3", "reasoning_steps": ["Sum = n(n+1)/2 = 2*3/2 = 3"], "level": 3, "type": "math"}
+{"id": "math_0012", "problem": "Solve for x: 18x + 10 = 1x + 7", "answer": "-0.18", "reasoning_steps": ["18x - 1x = 7 - 10", "17x = -3", "x = -0.18"], "level": 3, "type": "math"}
+{"id": "math_0013", "problem": "If a rectangle has length 19 and width 7, what is its area?", "answer": "133", "reasoning_steps": ["Area = length * width = 19 * 7 = 133"], "level": 3, "type": "math"}
+{"id": "math_0014", "problem": "What is the sum of the first 20 positive integers?", "answer": "210", "reasoning_steps": ["Sum = n(n+1)/2 = 20*21/2 = 210"], "level": 3, "type": "math"}
+{"id": "math_0015", "problem": "What is the sum of the first 15 positive integers?", "answer": "120", "reasoning_steps": ["Sum = n(n+1)/2 = 15*16/2 = 120"], "level": 3, "type": "math"}
+{"id": "math_0016", "problem": "What is the sum of the first 8 positive integers?", "answer": "36", "reasoning_steps": ["Sum = n(n+1)/2 = 8*9/2 = 36"], "level": 3, "type": "math"}
+{"id": "math_0017", "problem": "If a rectangle has length 4 and width 7, what is its area?", "answer": "28", "reasoning_steps": ["Area = length * width = 4 * 7 = 28"], "level": 3, "type": "math"}
+{"id": "math_0018", "problem": "What is the sum of the first 13 positive integers?", "answer": "91", "reasoning_steps": ["Sum = n(n+1)/2 = 13*14/2 = 91"], "level": 3, "type": "math"}
+{"id": "math_0019", "problem": "If a rectangle has length 16 and width 9, what is its area?", "answer": "144", "reasoning_steps": ["Area = length * width = 16 * 9 = 144"], "level": 3, "type": "math"}
+{"id": "math_0020", "problem": "Solve for x: 4x + 9 = 5x + 20", "answer": "-11", "reasoning_steps": ["4x - 5x = 20 - 9", "-1x = 11", "x = -11"], "level": 3, "type": "math"}
+{"id": "math_0021", "problem": "Solve for x: 13x + 10 = 4x + 3", "answer": "-0.78", "reasoning_steps": ["13x - 4x = 3 - 10", "9x = -7", "x = -0.78"], "level": 3, "type": "math"}
+{"id": "math_0022", "problem": "If a rectangle has length 3 and width 11, what is its area?", "answer": "33", "reasoning_steps": ["Area = length * width = 3 * 11 = 33"], "level": 3, "type": "math"}
+{"id": "math_0023", "problem": "What is the sum of the first 4 positive integers?", "answer": "10", "reasoning_steps": ["Sum = n(n+1)/2 = 4*5/2 = 10"], "level": 3, "type": "math"}
+{"id": "math_0024", "problem": "Solve for x: 14x + 5 = 8x + 12", "answer": "1.17", "reasoning_steps": ["14x - 8x = 12 - 5", "6x = 7", "x = 1.17"], "level": 3, "type": "math"}
+{"id": "math_0025", "problem": "What is the sum of the first 7 positive integers?", "answer": "28", "reasoning_steps": ["Sum = n(n+1)/2 = 7*8/2 = 28"], "level": 3, "type": "math"}
+{"id": "math_0026", "problem": "Solve for x: 10x + 12 = 2x + 6", "answer": "-0.75", "reasoning_steps": ["10x - 2x = 6 - 12", "8x = -6", "x = -0.75"], "level": 3, "type": "math"}
+{"id": "math_0027", "problem": "What is the sum of the first 19 positive integers?", "answer": "190", "reasoning_steps": ["Sum = n(n+1)/2 = 19*20/2 = 190"], "level": 3, "type": "math"}
+{"id": "math_0028", "problem": "Solve for x: 16x + 7 = 5x + 18", "answer": "1", "reasoning_steps": ["16x - 5x = 18 - 7", "11x = 11", "x = 1"], "level": 3, "type": "math"}
+{"id": "math_0029", "problem": "What is the sum of the first 9 positive integers?", "answer": "45", "reasoning_steps": ["Sum = n(n+1)/2 = 9*10/2 = 45"], "level": 3, "type": "math"}
+{"id": "math_0030", "problem": "If a rectangle has length 9 and width 14, what is its area?", "answer": "126", "reasoning_steps": ["Area = length * width = 9 * 14 = 126"], "level": 3, "type": "math"}
+{"id": "math_0031", "problem": "What is the sum of the first 14 positive integers?", "answer": "105", "reasoning_steps": ["Sum = n(n+1)/2 = 14*15/2 = 105"], "level": 3, "type": "math"}
+{"id": "math_0032", "problem": "What is the sum of the first 20 positive integers?", "answer": "210", "reasoning_steps": ["Sum = n(n+1)/2 = 20*21/2 = 210"], "level": 3, "type": "math"}
+{"id": "math_0033", "problem": "What is the sum of the first 17 positive integers?", "answer": "153", "reasoning_steps": ["Sum = n(n+1)/2 = 17*18/2 = 153"], "level": 3, "type": "math"}
+{"id": "math_0034", "problem": "Solve for x: 10x + 3 = 4x + 18", "answer": "2.50", "reasoning_steps": ["10x - 4x = 18 - 3", "6x = 15", "x = 2.50"], "level": 3, "type": "math"}
+{"id": "math_0035", "problem": "If a rectangle has length 19 and width 5, what is its area?", "answer": "95", "reasoning_steps": ["Area = length * width = 19 * 5 = 95"], "level": 3, "type": "math"}
+{"id": "math_0036", "problem": "What is the sum of the first 20 positive integers?", "answer": "210", "reasoning_steps": ["Sum = n(n+1)/2 = 20*21/2 = 210"], "level": 3, "type": "math"}
+{"id": "math_0037", "problem": "What is the sum of the first 6 positive integers?", "answer": "21", "reasoning_steps": ["Sum = n(n+1)/2 = 6*7/2 = 21"], "level": 3, "type": "math"}
+{"id": "math_0038", "problem": "What is the sum of the first 3 positive integers?", "answer": "6", "reasoning_steps": ["Sum = n(n+1)/2 = 3*4/2 = 6"], "level": 3, "type": "math"}
+{"id": "math_0039", "problem": "What is 7 + 13 * 7?", "answer": "98", "reasoning_steps": ["Order of operations: 13 * 7 = 91", "7 + 91 = 98"], "level": 3, "type": "math"}
+{"id": "math_0040", "problem": "If a rectangle has length 14 and width 7, what is its area?", "answer": "98", "reasoning_steps": ["Area = length * width = 14 * 7 = 98"], "level": 3, "type": "math"}
+{"id": "math_0041", "problem": "What is the sum of the first 18 positive integers?", "answer": "171", "reasoning_steps": ["Sum = n(n+1)/2 = 18*19/2 = 171"], "level": 3, "type": "math"}
+{"id": "math_0042", "problem": "If a rectangle has length 5 and width 11, what is its area?", "answer": "55", "reasoning_steps": ["Area = length * width = 5 * 11 = 55"], "level": 3, "type": "math"}
+{"id": "math_0043", "problem": "If a rectangle has length 12 and width 2, what is its area?", "answer": "24", "reasoning_steps": ["Area = length * width = 12 * 2 = 24"], "level": 3, "type": "math"}
+{"id": "math_0044", "problem": "Solve for x: 7x + 8 = 1x + 9", "answer": "0.17", "reasoning_steps": ["7x - 1x = 9 - 8", "6x = 1", "x = 0.17"], "level": 3, "type": "math"}
+{"id": "math_0045", "problem": "Solve for x: 18x + 13 = 3x + 4", "answer": "-0.60", "reasoning_steps": ["18x - 3x = 4 - 13", "15x = -9", "x = -0.60"], "level": 3, "type": "math"}
+{"id": "math_0046", "problem": "Solve for x: 11x + 14 = 9x + 7", "answer": "-3.50", "reasoning_steps": ["11x - 9x = 7 - 14", "2x = -7", "x = -3.50"], "level": 3, "type": "math"}
+{"id": "math_0047", "problem": "Solve for x: 6x + 6 = 3x + 17", "answer": "3.67", "reasoning_steps": ["6x - 3x = 17 - 6", "3x = 11", "x = 3.67"], "level": 3, "type": "math"}
+{"id": "math_0048", "problem": "If a rectangle has length 2 and width 10, what is its area?", "answer": "20", "reasoning_steps": ["Area = length * width = 2 * 10 = 20"], "level": 3, "type": "math"}
+{"id": "math_0049", "problem": "If a rectangle has length 2 and width 2, what is its area?", "answer": "4", "reasoning_steps": ["Area = length * width = 2 * 2 = 4"], "level": 3, "type": "math"}
+{"id": "math_0050", "problem": "Solve for x: 9x + 1 = 4x + 3", "answer": "0.40", "reasoning_steps": ["9x - 4x = 3 - 1", "5x = 2", "x = 0.40"], "level": 3, "type": "math"}
+{"id": "math_0051", "problem": "What is the sum of the first 4 positive integers?", "answer": "10", "reasoning_steps": ["Sum = n(n+1)/2 = 4*5/2 = 10"], "level": 3, "type": "math"}
+{"id": "math_0052", "problem": "What is the sum of the first 19 positive integers?", "answer": "190", "reasoning_steps": ["Sum = n(n+1)/2 = 19*20/2 = 190"], "level": 3, "type": "math"}
+{"id": "math_0053", "problem": "If a rectangle has length 17 and width 9, what is its area?", "answer": "153", "reasoning_steps": ["Area = length * width = 17 * 9 = 153"], "level": 3, "type": "math"}
+{"id": "math_0054", "problem": "If a rectangle has length 18 and width 14, what is its area?", "answer": "252", "reasoning_steps": ["Area = length * width = 18 * 14 = 252"], "level": 3, "type": "math"}
+{"id": "math_0055", "problem": "Solve for x: 8x + 15 = 9x + 7", "answer": "8", "reasoning_steps": ["8x - 9x = 7 - 15", "-1x = -8", "x = 8"], "level": 3, "type": "math"}
+{"id": "math_0056", "problem": "If a rectangle has length 11 and width 7, what is its area?", "answer": "77", "reasoning_steps": ["Area = length * width = 11 * 7 = 77"], "level": 3, "type": "math"}
+{"id": "math_0057", "problem": "What is the sum of the first 18 positive integers?", "answer": "171", "reasoning_steps": ["Sum = n(n+1)/2 = 18*19/2 = 171"], "level": 3, "type": "math"}
+{"id": "math_0058", "problem": "What is the sum of the first 9 positive integers?", "answer": "45", "reasoning_steps": ["Sum = n(n+1)/2 = 9*10/2 = 45"], "level": 3, "type": "math"}
+{"id": "math_0059", "problem": "Solve for x: 20x + 9 = 4x + 8", "answer": "-0.06", "reasoning_steps": ["20x - 4x = 8 - 9", "16x = -1", "x = -0.06"], "level": 3, "type": "math"}
+{"id": "math_0060", "problem": "What is the sum of the first 2 positive integers?", "answer": "3", "reasoning_steps": ["Sum = n(n+1)/2 = 2*3/2 = 3"], "level": 3, "type": "math"}
+{"id": "math_0061", "problem": "If a rectangle has length 4 and width 15, what is its area?", "answer": "60", "reasoning_steps": ["Area = length * width = 4 * 15 = 60"], "level": 3, "type": "math"}
+{"id": "math_0062", "problem": "If a rectangle has length 4 and width 9, what is its area?", "answer": "36", "reasoning_steps": ["Area = length * width = 4 * 9 = 36"], "level": 3, "type": "math"}
+{"id": "math_0063", "problem": "What is the sum of the first 17 positive integers?", "answer": "153", "reasoning_steps": ["Sum = n(n+1)/2 = 17*18/2 = 153"], "level": 3, "type": "math"}
+{"id": "math_0064", "problem": "What is the sum of the first 20 positive integers?", "answer": "210", "reasoning_steps": ["Sum = n(n+1)/2 = 20*21/2 = 210"], "level": 3, "type": "math"}
+{"id": "math_0065", "problem": "What is the sum of the first 17 positive integers?", "answer": "153", "reasoning_steps": ["Sum = n(n+1)/2 = 17*18/2 = 153"], "level": 3, "type": "math"}
+{"id": "math_0066", "problem": "If a rectangle has length 5 and width 2, what is its area?", "answer": "10", "reasoning_steps": ["Area = length * width = 5 * 2 = 10"], "level": 3, "type": "math"}
+{"id": "math_0067", "problem": "Solve for x: 15x + 7 = 8x + 2", "answer": "-0.71", "reasoning_steps": ["15x - 8x = 2 - 7", "7x = -5", "x = -0.71"], "level": 3, "type": "math"}
+{"id": "math_0068", "problem": "Solve for x: 5x + 1 = 7x + 11", "answer": "-5", "reasoning_steps": ["5x - 7x = 11 - 1", "-2x = 10", "x = -5"], "level": 3, "type": "math"}
+{"id": "math_0069", "problem": "What is the sum of the first 5 positive integers?", "answer": "15", "reasoning_steps": ["Sum = n(n+1)/2 = 5*6/2 = 15"], "level": 3, "type": "math"}
+{"id": "math_0070", "problem": "If a rectangle has length 19 and width 8, what is its area?", "answer": "152", "reasoning_steps": ["Area = length * width = 19 * 8 = 152"], "level": 3, "type": "math"}
+{"id": "math_0071", "problem": "What is the sum of the first 7 positive integers?", "answer": "28", "reasoning_steps": ["Sum = n(n+1)/2 = 7*8/2 = 28"], "level": 3, "type": "math"}
+{"id": "math_0072", "problem": "What is the sum of the first 4 positive integers?", "answer": "10", "reasoning_steps": ["Sum = n(n+1)/2 = 4*5/2 = 10"], "level": 3, "type": "math"}
+{"id": "math_0073", "problem": "What is the sum of the first 3 positive integers?", "answer": "6", "reasoning_steps": ["Sum = n(n+1)/2 = 3*4/2 = 6"], "level": 3, "type": "math"}
+{"id": "math_0074", "problem": "What is the sum of the first 4 positive integers?", "answer": "10", "reasoning_steps": ["Sum = n(n+1)/2 = 4*5/2 = 10"], "level": 3, "type": "math"}
+{"id": "math_0075", "problem": "What is the sum of the first 15 positive integers?", "answer": "120", "reasoning_steps": ["Sum = n(n+1)/2 = 15*16/2 = 120"], "level": 3, "type": "math"}
+{"id": "math_0076", "problem": "What is the sum of the first 14 positive integers?", "answer": "105", "reasoning_steps": ["Sum = n(n+1)/2 = 14*15/2 = 105"], "level": 3, "type": "math"}
+{"id": "math_0077", "problem": "If a rectangle has length 14 and width 1, what is its area?", "answer": "14", "reasoning_steps": ["Area = length * width = 14 * 1 = 14"], "level": 3, "type": "math"}
+{"id": "math_0078", "problem": "Solve for x: 16x + 5 = 7x + 18", "answer": "1.44", "reasoning_steps": ["16x - 7x = 18 - 5", "9x = 13", "x = 1.44"], "level": 3, "type": "math"}
+{"id": "math_0079", "problem": "If a rectangle has length 17 and width 3, what is its area?", "answer": "51", "reasoning_steps": ["Area = length * width = 17 * 3 = 51"], "level": 3, "type": "math"}
+{"id": "math_0080", "problem": "Solve for x: 8x + 1 = 10x + 18", "answer": "-8.50", "reasoning_steps": ["8x - 10x = 18 - 1", "-2x = 17", "x = -8.50"], "level": 3, "type": "math"}
+{"id": "math_0081", "problem": "What is the sum of the first 3 positive integers?", "answer": "6", "reasoning_steps": ["Sum = n(n+1)/2 = 3*4/2 = 6"], "level": 3, "type": "math"}
+{"id": "math_0082", "problem": "Solve for x: 3x + 10 = 8x + 17", "answer": "-1.40", "reasoning_steps": ["3x - 8x = 17 - 10", "-5x = 7", "x = -1.40"], "level": 3, "type": "math"}
+{"id": "math_0083", "problem": "What is the sum of the first 7 positive integers?", "answer": "28", "reasoning_steps": ["Sum = n(n+1)/2 = 7*8/2 = 28"], "level": 3, "type": "math"}
+{"id": "math_0084", "problem": "What is the sum of the first 7 positive integers?", "answer": "28", "reasoning_steps": ["Sum = n(n+1)/2 = 7*8/2 = 28"], "level": 3, "type": "math"}
+{"id": "math_0085", "problem": "Solve for x: 9x + 7 = 2x + 8", "answer": "0.14", "reasoning_steps": ["9x - 2x = 8 - 7", "7x = 1", "x = 0.14"], "level": 3, "type": "math"}
+{"id": "math_0086", "problem": "Solve for x: 20x + 10 = 1x + 3", "answer": "-0.37", "reasoning_steps": ["20x - 1x = 3 - 10", "19x = -7", "x = -0.37"], "level": 3, "type": "math"}
+{"id": "math_0087", "problem": "Solve for x: 15x + 11 = 10x + 17", "answer": "1.20", "reasoning_steps": ["15x - 10x = 17 - 11", "5x = 6", "x = 1.20"], "level": 3, "type": "math"}
+{"id": "math_0088", "problem": "What is the sum of the first 12 positive integers?", "answer": "78", "reasoning_steps": ["Sum = n(n+1)/2 = 12*13/2 = 78"], "level": 3, "type": "math"}
+{"id": "math_0089", "problem": "If a rectangle has length 12 and width 4, what is its area?", "answer": "48", "reasoning_steps": ["Area = length * width = 12 * 4 = 48"], "level": 3, "type": "math"}
+{"id": "math_0090", "problem": "If a rectangle has length 6 and width 11, what is its area?", "answer": "66", "reasoning_steps": ["Area = length * width = 6 * 11 = 66"], "level": 3, "type": "math"}
+{"id": "math_0091", "problem": "What is the sum of the first 12 positive integers?", "answer": "78", "reasoning_steps": ["Sum = n(n+1)/2 = 12*13/2 = 78"], "level": 3, "type": "math"}
+{"id": "math_0092", "problem": "What is the sum of the first 16 positive integers?", "answer": "136", "reasoning_steps": ["Sum = n(n+1)/2 = 16*17/2 = 136"], "level": 3, "type": "math"}
+{"id": "math_0093", "problem": "What is 4 + 9 * 4?", "answer": "40", "reasoning_steps": ["Order of operations: 9 * 4 = 36", "4 + 36 = 40"], "level": 3, "type": "math"}
+{"id": "math_0094", "problem": "What is the sum of the first 6 positive integers?", "answer": "21", "reasoning_steps": ["Sum = n(n+1)/2 = 6*7/2 = 21"], "level": 3, "type": "math"}
+{"id": "math_0095", "problem": "What is the sum of the first 9 positive integers?", "answer": "45", "reasoning_steps": ["Sum = n(n+1)/2 = 9*10/2 = 45"], "level": 3, "type": "math"}
+{"id": "math_0096", "problem": "Solve for x: 16x + 14 = 9x + 10", "answer": "-0.57", "reasoning_steps": ["16x - 9x = 10 - 14", "7x = -4", "x = -0.57"], "level": 3, "type": "math"}
+{"id": "math_0097", "problem": "If a rectangle has length 18 and width 1, what is its area?", "answer": "18", "reasoning_steps": ["Area = length * width = 18 * 1 = 18"], "level": 3, "type": "math"}
+{"id": "math_0098", "problem": "If a rectangle has length 5 and width 15, what is its area?", "answer": "75", "reasoning_steps": ["Area = length * width = 5 * 15 = 75"], "level": 3, "type": "math"}
+{"id": "math_0099", "problem": "Solve for x: 5x + 15 = 2x + 18", "answer": "1", "reasoning_steps": ["5x - 2x = 18 - 15", "3x = 3", "x = 1"], "level": 3, "type": "math"}
+{"id": "math_0100", "problem": "Solve for x: 6x + 5 = 5x + 7", "answer": "2", "reasoning_steps": ["6x - 5x = 7 - 5", "1x = 2", "x = 2"], "level": 3, "type": "math"}
+{"id": "math_0101", "problem": "Solve for x: 12x + 4 = 5x + 16", "answer": "1.71", "reasoning_steps": ["12x - 5x = 16 - 4", "7x = 12", "x = 1.71"], "level": 3, "type": "math"}
+{"id": "math_0102", "problem": "What is the sum of the first 10 positive integers?", "answer": "55", "reasoning_steps": ["Sum = n(n+1)/2 = 10*11/2 = 55"], "level": 3, "type": "math"}
+{"id": "math_0103", "problem": "What is the sum of the first 15 positive integers?", "answer": "120", "reasoning_steps": ["Sum = n(n+1)/2 = 15*16/2 = 120"], "level": 3, "type": "math"}
+{"id": "math_0104", "problem": "Solve for x: 2x + 6 = 3x + 9", "answer": "-3", "reasoning_steps": ["2x - 3x = 9 - 6", "-1x = 3", "x = -3"], "level": 3, "type": "math"}
+{"id": "math_0105", "problem": "Solve for x: 7x + 12 = 8x + 14", "answer": "-2", "reasoning_steps": ["7x - 8x = 14 - 12", "-1x = 2", "x = -2"], "level": 3, "type": "math"}
+{"id": "math_0106", "problem": "What is the sum of the first 19 positive integers?", "answer": "190", "reasoning_steps": ["Sum = n(n+1)/2 = 19*20/2 = 190"], "level": 3, "type": "math"}
+{"id": "math_0107", "problem": "If a rectangle has length 6 and width 9, what is its area?", "answer": "54", "reasoning_steps": ["Area = length * width = 6 * 9 = 54"], "level": 3, "type": "math"}
+{"id": "math_0108", "problem": "If a rectangle has length 20 and width 9, what is its area?", "answer": "180", "reasoning_steps": ["Area = length * width = 20 * 9 = 180"], "level": 3, "type": "math"}
+{"id": "math_0109", "problem": "If a rectangle has length 6 and width 1, what is its area?", "answer": "6", "reasoning_steps": ["Area = length * width = 6 * 1 = 6"], "level": 3, "type": "math"}
+{"id": "math_0110", "problem": "What is the sum of the first 3 positive integers?", "answer": "6", "reasoning_steps": ["Sum = n(n+1)/2 = 3*4/2 = 6"], "level": 3, "type": "math"}
+{"id": "math_0111", "problem": "If a rectangle has length 9 and width 11, what is its area?", "answer": "99", "reasoning_steps": ["Area = length * width = 9 * 11 = 99"], "level": 3, "type": "math"}
+{"id": "math_0112", "problem": "Solve for x: 19x + 15 = 7x + 5", "answer": "-0.83", "reasoning_steps": ["19x - 7x = 5 - 15", "12x = -10", "x = -0.83"], "level": 3, "type": "math"}
+{"id": "math_0113", "problem": "What is the sum of the first 9 positive integers?", "answer": "45", "reasoning_steps": ["Sum = n(n+1)/2 = 9*10/2 = 45"], "level": 3, "type": "math"}
+{"id": "math_0114", "problem": "Solve for x: 15x + 1 = 3x + 11", "answer": "0.83", "reasoning_steps": ["15x - 3x = 11 - 1", "12x = 10", "x = 0.83"], "level": 3, "type": "math"}
+{"id": "math_0115", "problem": "If a rectangle has length 15 and width 13, what is its area?", "answer": "195", "reasoning_steps": ["Area = length * width = 15 * 13 = 195"], "level": 3, "type": "math"}
+{"id": "math_0116", "problem": "If a rectangle has length 7 and width 13, what is its area?", "answer": "91", "reasoning_steps": ["Area = length * width = 7 * 13 = 91"], "level": 3, "type": "math"}
+{"id": "math_0117", "problem": "What is the sum of the first 3 positive integers?", "answer": "6", "reasoning_steps": ["Sum = n(n+1)/2 = 3*4/2 = 6"], "level": 3, "type": "math"}
+{"id": "math_0118", "problem": "If a rectangle has length 8 and width 14, what is its area?", "answer": "112", "reasoning_steps": ["Area = length * width = 8 * 14 = 112"], "level": 3, "type": "math"}
+{"id": "math_0119", "problem": "What is the sum of the first 11 positive integers?", "answer": "66", "reasoning_steps": ["Sum = n(n+1)/2 = 11*12/2 = 66"], "level": 3, "type": "math"}
+{"id": "math_0120", "problem": "If a rectangle has length 2 and width 11, what is its area?", "answer": "22", "reasoning_steps": ["Area = length * width = 2 * 11 = 22"], "level": 3, "type": "math"}
+{"id": "math_0121", "problem": "If a rectangle has length 12 and width 5, what is its area?", "answer": "60", "reasoning_steps": ["Area = length * width = 12 * 5 = 60"], "level": 3, "type": "math"}
+{"id": "math_0122", "problem": "If a rectangle has length 13 and width 11, what is its area?", "answer": "143", "reasoning_steps": ["Area = length * width = 13 * 11 = 143"], "level": 3, "type": "math"}
+{"id": "math_0123", "problem": "What is the sum of the first 19 positive integers?", "answer": "190", "reasoning_steps": ["Sum = n(n+1)/2 = 19*20/2 = 190"], "level": 3, "type": "math"}
+{"id": "math_0124", "problem": "If a rectangle has length 10 and width 3, what is its area?", "answer": "30", "reasoning_steps": ["Area = length * width = 10 * 3 = 30"], "level": 3, "type": "math"}
+{"id": "math_0125", "problem": "If a rectangle has length 3 and width 2, what is its area?", "answer": "6", "reasoning_steps": ["Area = length * width = 3 * 2 = 6"], "level": 3, "type": "math"}
+{"id": "math_0126", "problem": "If a rectangle has length 13 and width 12, what is its area?", "answer": "156", "reasoning_steps": ["Area = length * width = 13 * 12 = 156"], "level": 3, "type": "math"}
+{"id": "math_0127", "problem": "Solve for x: 18x + 2 = 7x + 7", "answer": "0.45", "reasoning_steps": ["18x - 7x = 7 - 2", "11x = 5", "x = 0.45"], "level": 3, "type": "math"}
+{"id": "math_0128", "problem": "What is the sum of the first 10 positive integers?", "answer": "55", "reasoning_steps": ["Sum = n(n+1)/2 = 10*11/2 = 55"], "level": 3, "type": "math"}
+{"id": "math_0129", "problem": "Solve for x: 18x + 15 = 9x + 7", "answer": "-0.89", "reasoning_steps": ["18x - 9x = 7 - 15", "9x = -8", "x = -0.89"], "level": 3, "type": "math"}
+{"id": "math_0130", "problem": "Solve for x: 13x + 7 = 2x + 11", "answer": "0.36", "reasoning_steps": ["13x - 2x = 11 - 7", "11x = 4", "x = 0.36"], "level": 3, "type": "math"}
+{"id": "math_0131", "problem": "Solve for x: 12x + 11 = 2x + 10", "answer": "-0.10", "reasoning_steps": ["12x - 2x = 10 - 11", "10x = -1", "x = -0.10"], "level": 3, "type": "math"}
+{"id": "math_0132", "problem": "If a rectangle has length 18 and width 5, what is its area?", "answer": "90", "reasoning_steps": ["Area = length * width = 18 * 5 = 90"], "level": 3, "type": "math"}
+{"id": "math_0133", "problem": "Solve for x: 14x + 12 = 5x + 5", "answer": "-0.78", "reasoning_steps": ["14x - 5x = 5 - 12", "9x = -7", "x = -0.78"], "level": 3, "type": "math"}
+{"id": "math_0134", "problem": "Solve for x: 8x + 7 = 7x + 6", "answer": "-1", "reasoning_steps": ["8x - 7x = 6 - 7", "1x = -1", "x = -1"], "level": 3, "type": "math"}
+{"id": "math_0135", "problem": "Solve for x: 20x + 5 = 7x + 1", "answer": "-0.31", "reasoning_steps": ["20x - 7x = 1 - 5", "13x = -4", "x = -0.31"], "level": 3, "type": "math"}
+{"id": "math_0136", "problem": "If a rectangle has length 11 and width 5, what is its area?", "answer": "55", "reasoning_steps": ["Area = length * width = 11 * 5 = 55"], "level": 3, "type": "math"}
+{"id": "math_0137", "problem": "If a rectangle has length 20 and width 10, what is its area?", "answer": "200", "reasoning_steps": ["Area = length * width = 20 * 10 = 200"], "level": 3, "type": "math"}
+{"id": "math_0138", "problem": "Solve for x: 16x + 8 = 4x + 16", "answer": "0.67", "reasoning_steps": ["16x - 4x = 16 - 8", "12x = 8", "x = 0.67"], "level": 3, "type": "math"}
+{"id": "math_0139", "problem": "If a rectangle has length 7 and width 11, what is its area?", "answer": "77", "reasoning_steps": ["Area = length * width = 7 * 11 = 77"], "level": 3, "type": "math"}
+{"id": "math_0140", "problem": "If a rectangle has length 18 and width 11, what is its area?", "answer": "198", "reasoning_steps": ["Area = length * width = 18 * 11 = 198"], "level": 3, "type": "math"}
+{"id": "math_0141", "problem": "What is 4 + 14 * 4?", "answer": "60", "reasoning_steps": ["Order of operations: 14 * 4 = 56", "4 + 56 = 60"], "level": 3, "type": "math"}
+{"id": "math_0142", "problem": "What is the sum of the first 9 positive integers?", "answer": "45", "reasoning_steps": ["Sum = n(n+1)/2 = 9*10/2 = 45"], "level": 3, "type": "math"}
+{"id": "math_0143", "problem": "If a rectangle has length 2 and width 1, what is its area?", "answer": "2", "reasoning_steps": ["Area = length * width = 2 * 1 = 2"], "level": 3, "type": "math"}
+{"id": "math_0144", "problem": "Solve for x: 4x + 8 = 7x + 19", "answer": "-3.67", "reasoning_steps": ["4x - 7x = 19 - 8", "-3x = 11", "x = -3.67"], "level": 3, "type": "math"}
+{"id": "math_0145", "problem": "If a rectangle has length 8 and width 12, what is its area?", "answer": "96", "reasoning_steps": ["Area = length * width = 8 * 12 = 96"], "level": 3, "type": "math"}
+{"id": "math_0146", "problem": "Solve for x: 14x + 4 = 3x + 1", "answer": "-0.27", "reasoning_steps": ["14x - 3x = 1 - 4", "11x = -3", "x = -0.27"], "level": 3, "type": "math"}
+{"id": "math_0147", "problem": "What is the sum of the first 5 positive integers?", "answer": "15", "reasoning_steps": ["Sum = n(n+1)/2 = 5*6/2 = 15"], "level": 3, "type": "math"}
+{"id": "math_0148", "problem": "If a rectangle has length 7 and width 13, what is its area?", "answer": "91", "reasoning_steps": ["Area = length * width = 7 * 13 = 91"], "level": 3, "type": "math"}
+{"id": "math_0149", "problem": "What is the sum of the first 3 positive integers?", "answer": "6", "reasoning_steps": ["Sum = n(n+1)/2 = 3*4/2 = 6"], "level": 3, "type": "math"}
+{"id": "math_0150", "problem": "Solve for x: 16x + 3 = 8x + 17", "answer": "1.75", "reasoning_steps": ["16x - 8x = 17 - 3", "8x = 14", "x = 1.75"], "level": 3, "type": "math"}
+{"id": "math_0151", "problem": "If a rectangle has length 19 and width 10, what is its area?", "answer": "190", "reasoning_steps": ["Area = length * width = 19 * 10 = 190"], "level": 3, "type": "math"}
+{"id": "math_0152", "problem": "If a rectangle has length 18 and width 7, what is its area?", "answer": "126", "reasoning_steps": ["Area = length * width = 18 * 7 = 126"], "level": 3, "type": "math"}
+{"id": "math_0153", "problem": "If a rectangle has length 7 and width 12, what is its area?", "answer": "84", "reasoning_steps": ["Area = length * width = 7 * 12 = 84"], "level": 3, "type": "math"}
+{"id": "math_0154", "problem": "Solve for x: 10x + 13 = 4x + 9", "answer": "-0.67", "reasoning_steps": ["10x - 4x = 9 - 13", "6x = -4", "x = -0.67"], "level": 3, "type": "math"}
+{"id": "math_0155", "problem": "If a rectangle has length 18 and width 8, what is its area?", "answer": "144", "reasoning_steps": ["Area = length * width = 18 * 8 = 144"], "level": 3, "type": "math"}
+{"id": "math_0156", "problem": "What is the sum of the first 16 positive integers?", "answer": "136", "reasoning_steps": ["Sum = n(n+1)/2 = 16*17/2 = 136"], "level": 3, "type": "math"}
+{"id": "math_0157", "problem": "Solve for x: 10x + 6 = 6x + 3", "answer": "-0.75", "reasoning_steps": ["10x - 6x = 3 - 6", "4x = -3", "x = -0.75"], "level": 3, "type": "math"}
+{"id": "math_0158", "problem": "If a rectangle has length 6 and width 3, what is its area?", "answer": "18", "reasoning_steps": ["Area = length * width = 6 * 3 = 18"], "level": 3, "type": "math"}
+{"id": "math_0159", "problem": "What is the sum of the first 6 positive integers?", "answer": "21", "reasoning_steps": ["Sum = n(n+1)/2 = 6*7/2 = 21"], "level": 3, "type": "math"}
+{"id": "math_0160", "problem": "Solve for x: 15x + 7 = 6x + 15", "answer": "0.89", "reasoning_steps": ["15x - 6x = 15 - 7", "9x = 8", "x = 0.89"], "level": 3, "type": "math"}
+{"id": "math_0161", "problem": "If a rectangle has length 15 and width 1, what is its area?", "answer": "15", "reasoning_steps": ["Area = length * width = 15 * 1 = 15"], "level": 3, "type": "math"}
+{"id": "math_0162", "problem": "Solve for x: 14x + 15 = 10x + 1", "answer": "-3.50", "reasoning_steps": ["14x - 10x = 1 - 15", "4x = -14", "x = -3.50"], "level": 3, "type": "math"}
+{"id": "math_0163", "problem": "What is the sum of the first 20 positive integers?", "answer": "210", "reasoning_steps": ["Sum = n(n+1)/2 = 20*21/2 = 210"], "level": 3, "type": "math"}
+{"id": "math_0164", "problem": "If a rectangle has length 13 and width 5, what is its area?", "answer": "65", "reasoning_steps": ["Area = length * width = 13 * 5 = 65"], "level": 3, "type": "math"}
+{"id": "math_0165", "problem": "Solve for x: 19x + 12 = 9x + 8", "answer": "-0.40", "reasoning_steps": ["19x - 9x = 8 - 12", "10x = -4", "x = -0.40"], "level": 3, "type": "math"}
+{"id": "math_0166", "problem": "If a rectangle has length 17 and width 4, what is its area?", "answer": "68", "reasoning_steps": ["Area = length * width = 17 * 4 = 68"], "level": 3, "type": "math"}
+{"id": "math_0167", "problem": "If a rectangle has length 17 and width 1, what is its area?", "answer": "17", "reasoning_steps": ["Area = length * width = 17 * 1 = 17"], "level": 3, "type": "math"}
+{"id": "math_0168", "problem": "If a rectangle has length 14 and width 12, what is its area?", "answer": "168", "reasoning_steps": ["Area = length * width = 14 * 12 = 168"], "level": 3, "type": "math"}
+{"id": "math_0169", "problem": "What is the sum of the first 6 positive integers?", "answer": "21", "reasoning_steps": ["Sum = n(n+1)/2 = 6*7/2 = 21"], "level": 3, "type": "math"}
+{"id": "math_0170", "problem": "Solve for x: 14x + 10 = 10x + 1", "answer": "-2.25", "reasoning_steps": ["14x - 10x = 1 - 10", "4x = -9", "x = -2.25"], "level": 3, "type": "math"}
+{"id": "math_0171", "problem": "What is the sum of the first 4 positive integers?", "answer": "10", "reasoning_steps": ["Sum = n(n+1)/2 = 4*5/2 = 10"], "level": 3, "type": "math"}
+{"id": "math_0172", "problem": "If a rectangle has length 16 and width 3, what is its area?", "answer": "48", "reasoning_steps": ["Area = length * width = 16 * 3 = 48"], "level": 3, "type": "math"}
+{"id": "math_0173", "problem": "If a rectangle has length 14 and width 6, what is its area?", "answer": "84", "reasoning_steps": ["Area = length * width = 14 * 6 = 84"], "level": 3, "type": "math"}
+{"id": "math_0174", "problem": "If a rectangle has length 12 and width 6, what is its area?", "answer": "72", "reasoning_steps": ["Area = length * width = 12 * 6 = 72"], "level": 3, "type": "math"}
+{"id": "math_0175", "problem": "If a rectangle has length 15 and width 5, what is its area?", "answer": "75", "reasoning_steps": ["Area = length * width = 15 * 5 = 75"], "level": 3, "type": "math"}
+{"id": "math_0176", "problem": "What is the sum of the first 2 positive integers?", "answer": "3", "reasoning_steps": ["Sum = n(n+1)/2 = 2*3/2 = 3"], "level": 3, "type": "math"}
+{"id": "math_0177", "problem": "Solve for x: 13x + 4 = 2x + 2", "answer": "-0.18", "reasoning_steps": ["13x - 2x = 2 - 4", "11x = -2", "x = -0.18"], "level": 3, "type": "math"}
+{"id": "math_0178", "problem": "What is the sum of the first 2 positive integers?", "answer": "3", "reasoning_steps": ["Sum = n(n+1)/2 = 2*3/2 = 3"], "level": 3, "type": "math"}
+{"id": "math_0179", "problem": "If a rectangle has length 6 and width 4, what is its area?", "answer": "24", "reasoning_steps": ["Area = length * width = 6 * 4 = 24"], "level": 3, "type": "math"}
+{"id": "math_0180", "problem": "If a rectangle has length 5 and width 10, what is its area?", "answer": "50", "reasoning_steps": ["Area = length * width = 5 * 10 = 50"], "level": 3, "type": "math"}
+{"id": "math_0181", "problem": "What is the sum of the first 10 positive integers?", "answer": "55", "reasoning_steps": ["Sum = n(n+1)/2 = 10*11/2 = 55"], "level": 3, "type": "math"}
+{"id": "math_0182", "problem": "If a rectangle has length 5 and width 13, what is its area?", "answer": "65", "reasoning_steps": ["Area = length * width = 5 * 13 = 65"], "level": 3, "type": "math"}
+{"id": "math_0183", "problem": "If a rectangle has length 5 and width 10, what is its area?", "answer": "50", "reasoning_steps": ["Area = length * width = 5 * 10 = 50"], "level": 3, "type": "math"}
+{"id": "math_0184", "problem": "If a rectangle has length 20 and width 11, what is its area?", "answer": "220", "reasoning_steps": ["Area = length * width = 20 * 11 = 220"], "level": 3, "type": "math"}
+{"id": "math_0185", "problem": "Solve for x: 8x + 2 = 10x + 8", "answer": "-3", "reasoning_steps": ["8x - 10x = 8 - 2", "-2x = 6", "x = -3"], "level": 3, "type": "math"}
+{"id": "math_0186", "problem": "What is 5 + 12 * 5?", "answer": "65", "reasoning_steps": ["Order of operations: 12 * 5 = 60", "5 + 60 = 65"], "level": 3, "type": "math"}
+{"id": "math_0187", "problem": "What is the sum of the first 5 positive integers?", "answer": "15", "reasoning_steps": ["Sum = n(n+1)/2 = 5*6/2 = 15"], "level": 3, "type": "math"}
+{"id": "math_0188", "problem": "Solve for x: 13x + 9 = 7x + 12", "answer": "0.50", "reasoning_steps": ["13x - 7x = 12 - 9", "6x = 3", "x = 0.50"], "level": 3, "type": "math"}
+{"id": "math_0189", "problem": "What is the sum of the first 4 positive integers?", "answer": "10", "reasoning_steps": ["Sum = n(n+1)/2 = 4*5/2 = 10"], "level": 3, "type": "math"}
+{"id": "math_0190", "problem": "What is the sum of the first 15 positive integers?", "answer": "120", "reasoning_steps": ["Sum = n(n+1)/2 = 15*16/2 = 120"], "level": 3, "type": "math"}
+{"id": "math_0191", "problem": "Solve for x: 15x + 6 = 8x + 5", "answer": "-0.14", "reasoning_steps": ["15x - 8x = 5 - 6", "7x = -1", "x = -0.14"], "level": 3, "type": "math"}
+{"id": "math_0192", "problem": "Solve for x: 15x + 3 = 9x + 9", "answer": "1", "reasoning_steps": ["15x - 9x = 9 - 3", "6x = 6", "x = 1"], "level": 3, "type": "math"}
+{"id": "math_0193", "problem": "If a rectangle has length 19 and width 13, what is its area?", "answer": "247", "reasoning_steps": ["Area = length * width = 19 * 13 = 247"], "level": 3, "type": "math"}
+{"id": "math_0194", "problem": "If a rectangle has length 15 and width 14, what is its area?", "answer": "210", "reasoning_steps": ["Area = length * width = 15 * 14 = 210"], "level": 3, "type": "math"}
+{"id": "math_0195", "problem": "What is the sum of the first 12 positive integers?", "answer": "78", "reasoning_steps": ["Sum = n(n+1)/2 = 12*13/2 = 78"], "level": 3, "type": "math"}
+{"id": "math_0196", "problem": "What is the sum of the first 10 positive integers?", "answer": "55", "reasoning_steps": ["Sum = n(n+1)/2 = 10*11/2 = 55"], "level": 3, "type": "math"}
+{"id": "math_0197", "problem": "Solve for x: 16x + 10 = 10x + 13", "answer": "0.50", "reasoning_steps": ["16x - 10x = 13 - 10", "6x = 3", "x = 0.50"], "level": 3, "type": "math"}
+{"id": "math_0198", "problem": "If a rectangle has length 12 and width 1, what is its area?", "answer": "12", "reasoning_steps": ["Area = length * width = 12 * 1 = 12"], "level": 3, "type": "math"}
+{"id": "math_0199", "problem": "If a rectangle has length 7 and width 8, what is its area?", "answer": "56", "reasoning_steps": ["Area = length * width = 7 * 8 = 56"], "level": 3, "type": "math"}
+{"id": "math_0200", "problem": "Solve for x: 10x + 6 = 5x + 9", "answer": "0.60", "reasoning_steps": ["10x - 5x = 9 - 6", "5x = 3", "x = 0.60"], "level": 3, "type": "math"}
+{"id": "math_0201", "problem": "What is the sum of the first 19 positive integers?", "answer": "190", "reasoning_steps": ["Sum = n(n+1)/2 = 19*20/2 = 190"], "level": 3, "type": "math"}
+{"id": "math_0202", "problem": "If a rectangle has length 4 and width 4, what is its area?", "answer": "16", "reasoning_steps": ["Area = length * width = 4 * 4 = 16"], "level": 3, "type": "math"}
+{"id": "math_0203", "problem": "Solve for x: 19x + 13 = 4x + 16", "answer": "0.20", "reasoning_steps": ["19x - 4x = 16 - 13", "15x = 3", "x = 0.20"], "level": 3, "type": "math"}
+{"id": "math_0204", "problem": "What is the sum of the first 17 positive integers?", "answer": "153", "reasoning_steps": ["Sum = n(n+1)/2 = 17*18/2 = 153"], "level": 3, "type": "math"}
+{"id": "math_0205", "problem": "Solve for x: 11x + 4 = 7x + 8", "answer": "1", "reasoning_steps": ["11x - 7x = 8 - 4", "4x = 4", "x = 1"], "level": 3, "type": "math"}
+{"id": "math_0206", "problem": "If a rectangle has length 11 and width 11, what is its area?", "answer": "121", "reasoning_steps": ["Area = length * width = 11 * 11 = 121"], "level": 3, "type": "math"}
+{"id": "math_0207", "problem": "If a rectangle has length 17 and width 9, what is its area?", "answer": "153", "reasoning_steps": ["Area = length * width = 17 * 9 = 153"], "level": 3, "type": "math"}
+{"id": "math_0208", "problem": "If a rectangle has length 15 and width 12, what is its area?", "answer": "180", "reasoning_steps": ["Area = length * width = 15 * 12 = 180"], "level": 3, "type": "math"}
+{"id": "math_0209", "problem": "If a rectangle has length 13 and width 12, what is its area?", "answer": "156", "reasoning_steps": ["Area = length * width = 13 * 12 = 156"], "level": 3, "type": "math"}
+{"id": "math_0210", "problem": "What is the sum of the first 11 positive integers?", "answer": "66", "reasoning_steps": ["Sum = n(n+1)/2 = 11*12/2 = 66"], "level": 3, "type": "math"}
+{"id": "math_0211", "problem": "Solve for x: 8x + 6 = 2x + 18", "answer": "2", "reasoning_steps": ["8x - 2x = 18 - 6", "6x = 12", "x = 2"], "level": 3, "type": "math"}
+{"id": "math_0212", "problem": "Solve for x: 7x + 4 = 4x + 16", "answer": "4", "reasoning_steps": ["7x - 4x = 16 - 4", "3x = 12", "x = 4"], "level": 3, "type": "math"}
+{"id": "math_0213", "problem": "What is 10 + 12 * 10?", "answer": "130", "reasoning_steps": ["Order of operations: 12 * 10 = 120", "10 + 120 = 130"], "level": 3, "type": "math"}
+{"id": "math_0214", "problem": "If a rectangle has length 11 and width 2, what is its area?", "answer": "22", "reasoning_steps": ["Area = length * width = 11 * 2 = 22"], "level": 3, "type": "math"}
+{"id": "math_0215", "problem": "If a rectangle has length 9 and width 6, what is its area?", "answer": "54", "reasoning_steps": ["Area = length * width = 9 * 6 = 54"], "level": 3, "type": "math"}
+{"id": "math_0216", "problem": "What is the sum of the first 2 positive integers?", "answer": "3", "reasoning_steps": ["Sum = n(n+1)/2 = 2*3/2 = 3"], "level": 3, "type": "math"}
+{"id": "math_0217", "problem": "Solve for x: 10x + 1 = 1x + 10", "answer": "1", "reasoning_steps": ["10x - 1x = 10 - 1", "9x = 9", "x = 1"], "level": 3, "type": "math"}
+{"id": "math_0218", "problem": "What is the sum of the first 6 positive integers?", "answer": "21", "reasoning_steps": ["Sum = n(n+1)/2 = 6*7/2 = 21"], "level": 3, "type": "math"}
+{"id": "math_0219", "problem": "If a rectangle has length 2 and width 10, what is its area?", "answer": "20", "reasoning_steps": ["Area = length * width = 2 * 10 = 20"], "level": 3, "type": "math"}
+{"id": "math_0220", "problem": "What is the sum of the first 17 positive integers?", "answer": "153", "reasoning_steps": ["Sum = n(n+1)/2 = 17*18/2 = 153"], "level": 3, "type": "math"}
+{"id": "math_0221", "problem": "What is the sum of the first 3 positive integers?", "answer": "6", "reasoning_steps": ["Sum = n(n+1)/2 = 3*4/2 = 6"], "level": 3, "type": "math"}
+{"id": "math_0222", "problem": "What is the sum of the first 4 positive integers?", "answer": "10", "reasoning_steps": ["Sum = n(n+1)/2 = 4*5/2 = 10"], "level": 3, "type": "math"}
+{"id": "math_0223", "problem": "What is the sum of the first 20 positive integers?", "answer": "210", "reasoning_steps": ["Sum = n(n+1)/2 = 20*21/2 = 210"], "level": 3, "type": "math"}
+{"id": "math_0224", "problem": "If a rectangle has length 6 and width 13, what is its area?", "answer": "78", "reasoning_steps": ["Area = length * width = 6 * 13 = 78"], "level": 3, "type": "math"}
+{"id": "math_0225", "problem": "Solve for x: 4x + 4 = 2x + 14", "answer": "5", "reasoning_steps": ["4x - 2x = 14 - 4", "2x = 10", "x = 5"], "level": 3, "type": "math"}
+{"id": "math_0226", "problem": "If a rectangle has length 9 and width 13, what is its area?", "answer": "117", "reasoning_steps": ["Area = length * width = 9 * 13 = 117"], "level": 3, "type": "math"}
+{"id": "math_0227", "problem": "If a rectangle has length 16 and width 15, what is its area?", "answer": "240", "reasoning_steps": ["Area = length * width = 16 * 15 = 240"], "level": 3, "type": "math"}
+{"id": "math_0228", "problem": "Solve for x: 20x + 7 = 5x + 20", "answer": "0.87", "reasoning_steps": ["20x - 5x = 20 - 7", "15x = 13", "x = 0.87"], "level": 3, "type": "math"}
+{"id": "math_0229", "problem": "What is the sum of the first 3 positive integers?", "answer": "6", "reasoning_steps": ["Sum = n(n+1)/2 = 3*4/2 = 6"], "level": 3, "type": "math"}
+{"id": "math_0230", "problem": "What is the sum of the first 8 positive integers?", "answer": "36", "reasoning_steps": ["Sum = n(n+1)/2 = 8*9/2 = 36"], "level": 3, "type": "math"}
+{"id": "math_0231", "problem": "What is the sum of the first 9 positive integers?", "answer": "45", "reasoning_steps": ["Sum = n(n+1)/2 = 9*10/2 = 45"], "level": 3, "type": "math"}
+{"id": "math_0232", "problem": "If a rectangle has length 7 and width 1, what is its area?", "answer": "7", "reasoning_steps": ["Area = length * width = 7 * 1 = 7"], "level": 3, "type": "math"}
+{"id": "math_0233", "problem": "What is the sum of the first 17 positive integers?", "answer": "153", "reasoning_steps": ["Sum = n(n+1)/2 = 17*18/2 = 153"], "level": 3, "type": "math"}
+{"id": "math_0234", "problem": "Solve for x: 11x + 12 = 5x + 15", "answer": "0.50", "reasoning_steps": ["11x - 5x = 15 - 12", "6x = 3", "x = 0.50"], "level": 3, "type": "math"}
+{"id": "math_0235", "problem": "If a rectangle has length 4 and width 11, what is its area?", "answer": "44", "reasoning_steps": ["Area = length * width = 4 * 11 = 44"], "level": 3, "type": "math"}
+{"id": "math_0236", "problem": "If a rectangle has length 20 and width 11, what is its area?", "answer": "220", "reasoning_steps": ["Area = length * width = 20 * 11 = 220"], "level": 3, "type": "math"}
+{"id": "math_0237", "problem": "Solve for x: 5x + 9 = 4x + 5", "answer": "-4", "reasoning_steps": ["5x - 4x = 5 - 9", "1x = -4", "x = -4"], "level": 3, "type": "math"}
+{"id": "math_0238", "problem": "What is the sum of the first 10 positive integers?", "answer": "55", "reasoning_steps": ["Sum = n(n+1)/2 = 10*11/2 = 55"], "level": 3, "type": "math"}
+{"id": "math_0239", "problem": "Solve for x: 3x + 3 = 5x + 19", "answer": "-8", "reasoning_steps": ["3x - 5x = 19 - 3", "-2x = 16", "x = -8"], "level": 3, "type": "math"}
+{"id": "math_0240", "problem": "If a rectangle has length 11 and width 8, what is its area?", "answer": "88", "reasoning_steps": ["Area = length * width = 11 * 8 = 88"], "level": 3, "type": "math"}
+{"id": "math_0241", "problem": "If a rectangle has length 11 and width 12, what is its area?", "answer": "132", "reasoning_steps": ["Area = length * width = 11 * 12 = 132"], "level": 3, "type": "math"}
+{"id": "math_0242", "problem": "If a rectangle has length 18 and width 9, what is its area?", "answer": "162", "reasoning_steps": ["Area = length * width = 18 * 9 = 162"], "level": 3, "type": "math"}
+{"id": "math_0243", "problem": "If a rectangle has length 4 and width 10, what is its area?", "answer": "40", "reasoning_steps": ["Area = length * width = 4 * 10 = 40"], "level": 3, "type": "math"}
+{"id": "math_0244", "problem": "What is the sum of the first 12 positive integers?", "answer": "78", "reasoning_steps": ["Sum = n(n+1)/2 = 12*13/2 = 78"], "level": 3, "type": "math"}
+{"id": "math_0245", "problem": "Solve for x: 4x + 4 = 10x + 1", "answer": "0.50", "reasoning_steps": ["4x - 10x = 1 - 4", "-6x = -3", "x = 0.50"], "level": 3, "type": "math"}
+{"id": "math_0246", "problem": "What is the sum of the first 10 positive integers?", "answer": "55", "reasoning_steps": ["Sum = n(n+1)/2 = 10*11/2 = 55"], "level": 3, "type": "math"}
+{"id": "math_0247", "problem": "If a rectangle has length 17 and width 9, what is its area?", "answer": "153", "reasoning_steps": ["Area = length * width = 17 * 9 = 153"], "level": 3, "type": "math"}
+{"id": "math_0248", "problem": "What is 7 + 10 * 7?", "answer": "77", "reasoning_steps": ["Order of operations: 10 * 7 = 70", "7 + 70 = 77"], "level": 3, "type": "math"}
+{"id": "math_0249", "problem": "If a rectangle has length 4 and width 8, what is its area?", "answer": "32", "reasoning_steps": ["Area = length * width = 4 * 8 = 32"], "level": 3, "type": "math"}
+{"id": "math_0250", "problem": "What is the sum of the first 12 positive integers?", "answer": "78", "reasoning_steps": ["Sum = n(n+1)/2 = 12*13/2 = 78"], "level": 3, "type": "math"}
+{"id": "math_0251", "problem": "If a rectangle has length 12 and width 7, what is its area?", "answer": "84", "reasoning_steps": ["Area = length * width = 12 * 7 = 84"], "level": 3, "type": "math"}
+{"id": "math_0252", "problem": "What is the sum of the first 14 positive integers?", "answer": "105", "reasoning_steps": ["Sum = n(n+1)/2 = 14*15/2 = 105"], "level": 3, "type": "math"}
+{"id": "math_0253", "problem": "If a rectangle has length 16 and width 2, what is its area?", "answer": "32", "reasoning_steps": ["Area = length * width = 16 * 2 = 32"], "level": 3, "type": "math"}
+{"id": "math_0254", "problem": "Solve for x: 12x + 2 = 7x + 1", "answer": "-0.20", "reasoning_steps": ["12x - 7x = 1 - 2", "5x = -1", "x = -0.20"], "level": 3, "type": "math"}
+{"id": "math_0255", "problem": "What is the sum of the first 19 positive integers?", "answer": "190", "reasoning_steps": ["Sum = n(n+1)/2 = 19*20/2 = 190"], "level": 3, "type": "math"}
+{"id": "math_0256", "problem": "Solve for x: 8x + 9 = 6x + 16", "answer": "3.50", "reasoning_steps": ["8x - 6x = 16 - 9", "2x = 7", "x = 3.50"], "level": 3, "type": "math"}
+{"id": "math_0257", "problem": "What is the sum of the first 16 positive integers?", "answer": "136", "reasoning_steps": ["Sum = n(n+1)/2 = 16*17/2 = 136"], "level": 3, "type": "math"}
+{"id": "math_0258", "problem": "If a rectangle has length 10 and width 9, what is its area?", "answer": "90", "reasoning_steps": ["Area = length * width = 10 * 9 = 90"], "level": 3, "type": "math"}
+{"id": "math_0259", "problem": "What is the sum of the first 16 positive integers?", "answer": "136", "reasoning_steps": ["Sum = n(n+1)/2 = 16*17/2 = 136"], "level": 3, "type": "math"}
+{"id": "math_0260", "problem": "What is the sum of the first 2 positive integers?", "answer": "3", "reasoning_steps": ["Sum = n(n+1)/2 = 2*3/2 = 3"], "level": 3, "type": "math"}
+{"id": "math_0261", "problem": "What is the sum of the first 7 positive integers?", "answer": "28", "reasoning_steps": ["Sum = n(n+1)/2 = 7*8/2 = 28"], "level": 3, "type": "math"}
+{"id": "math_0262", "problem": "What is the sum of the first 19 positive integers?", "answer": "190", "reasoning_steps": ["Sum = n(n+1)/2 = 19*20/2 = 190"], "level": 3, "type": "math"}
+{"id": "math_0263", "problem": "Solve for x: 5x + 8 = 2x + 5", "answer": "-1", "reasoning_steps": ["5x - 2x = 5 - 8", "3x = -3", "x = -1"], "level": 3, "type": "math"}
+{"id": "math_0264", "problem": "Solve for x: 17x + 15 = 5x + 9", "answer": "-0.50", "reasoning_steps": ["17x - 5x = 9 - 15", "12x = -6", "x = -0.50"], "level": 3, "type": "math"}
+{"id": "math_0265", "problem": "If a rectangle has length 15 and width 14, what is its area?", "answer": "210", "reasoning_steps": ["Area = length * width = 15 * 14 = 210"], "level": 3, "type": "math"}
+{"id": "math_0266", "problem": "What is the sum of the first 9 positive integers?", "answer": "45", "reasoning_steps": ["Sum = n(n+1)/2 = 9*10/2 = 45"], "level": 3, "type": "math"}
+{"id": "math_0267", "problem": "Solve for x: 14x + 4 = 10x + 5", "answer": "0.25", "reasoning_steps": ["14x - 10x = 5 - 4", "4x = 1", "x = 0.25"], "level": 3, "type": "math"}
+{"id": "math_0268", "problem": "If a rectangle has length 4 and width 5, what is its area?", "answer": "20", "reasoning_steps": ["Area = length * width = 4 * 5 = 20"], "level": 3, "type": "math"}
+{"id": "math_0269", "problem": "If a rectangle has length 18 and width 5, what is its area?", "answer": "90", "reasoning_steps": ["Area = length * width = 18 * 5 = 90"], "level": 3, "type": "math"}
+{"id": "math_0270", "problem": "Solve for x: 11x + 14 = 10x + 16", "answer": "2", "reasoning_steps": ["11x - 10x = 16 - 14", "1x = 2", "x = 2"], "level": 3, "type": "math"}
+{"id": "math_0271", "problem": "If a rectangle has length 6 and width 8, what is its area?", "answer": "48", "reasoning_steps": ["Area = length * width = 6 * 8 = 48"], "level": 3, "type": "math"}
+{"id": "math_0272", "problem": "Solve for x: 13x + 6 = 9x + 13", "answer": "1.75", "reasoning_steps": ["13x - 9x = 13 - 6", "4x = 7", "x = 1.75"], "level": 3, "type": "math"}
+{"id": "math_0273", "problem": "What is the sum of the first 16 positive integers?", "answer": "136", "reasoning_steps": ["Sum = n(n+1)/2 = 16*17/2 = 136"], "level": 3, "type": "math"}
+{"id": "math_0274", "problem": "What is the sum of the first 9 positive integers?", "answer": "45", "reasoning_steps": ["Sum = n(n+1)/2 = 9*10/2 = 45"], "level": 3, "type": "math"}
+{"id": "math_0275", "problem": "Solve for x: 15x + 1 = 6x + 16", "answer": "1.67", "reasoning_steps": ["15x - 6x = 16 - 1", "9x = 15", "x = 1.67"], "level": 3, "type": "math"}
+{"id": "math_0276", "problem": "If a rectangle has length 14 and width 7, what is its area?", "answer": "98", "reasoning_steps": ["Area = length * width = 14 * 7 = 98"], "level": 3, "type": "math"}
+{"id": "math_0277", "problem": "Solve for x: 3x + 3 = 9x + 11", "answer": "-1.33", "reasoning_steps": ["3x - 9x = 11 - 3", "-6x = 8", "x = -1.33"], "level": 3, "type": "math"}
+{"id": "math_0278", "problem": "What is the sum of the first 5 positive integers?", "answer": "15", "reasoning_steps": ["Sum = n(n+1)/2 = 5*6/2 = 15"], "level": 3, "type": "math"}
+{"id": "math_0279", "problem": "What is the sum of the first 18 positive integers?", "answer": "171", "reasoning_steps": ["Sum = n(n+1)/2 = 18*19/2 = 171"], "level": 3, "type": "math"}
+{"id": "math_0280", "problem": "What is the sum of the first 6 positive integers?", "answer": "21", "reasoning_steps": ["Sum = n(n+1)/2 = 6*7/2 = 21"], "level": 3, "type": "math"}
+{"id": "math_0281", "problem": "If a rectangle has length 17 and width 13, what is its area?", "answer": "221", "reasoning_steps": ["Area = length * width = 17 * 13 = 221"], "level": 3, "type": "math"}
+{"id": "math_0282", "problem": "If a rectangle has length 14 and width 11, what is its area?", "answer": "154", "reasoning_steps": ["Area = length * width = 14 * 11 = 154"], "level": 3, "type": "math"}
+{"id": "math_0283", "problem": "Solve for x: 19x + 7 = 6x + 16", "answer": "0.69", "reasoning_steps": ["19x - 6x = 16 - 7", "13x = 9", "x = 0.69"], "level": 3, "type": "math"}
+{"id": "math_0284", "problem": "What is the sum of the first 19 positive integers?", "answer": "190", "reasoning_steps": ["Sum = n(n+1)/2 = 19*20/2 = 190"], "level": 3, "type": "math"}
+{"id": "math_0285", "problem": "What is the sum of the first 9 positive integers?", "answer": "45", "reasoning_steps": ["Sum = n(n+1)/2 = 9*10/2 = 45"], "level": 3, "type": "math"}
+{"id": "math_0286", "problem": "Solve for x: 4x + 7 = 2x + 4", "answer": "-1.50", "reasoning_steps": ["4x - 2x = 4 - 7", "2x = -3", "x = -1.50"], "level": 3, "type": "math"}
+{"id": "math_0287", "problem": "What is the sum of the first 16 positive integers?", "answer": "136", "reasoning_steps": ["Sum = n(n+1)/2 = 16*17/2 = 136"], "level": 3, "type": "math"}
+{"id": "math_0288", "problem": "If a rectangle has length 3 and width 6, what is its area?", "answer": "18", "reasoning_steps": ["Area = length * width = 3 * 6 = 18"], "level": 3, "type": "math"}
+{"id": "math_0289", "problem": "What is the sum of the first 13 positive integers?", "answer": "91", "reasoning_steps": ["Sum = n(n+1)/2 = 13*14/2 = 91"], "level": 3, "type": "math"}
+{"id": "math_0290", "problem": "Solve for x: 9x + 9 = 7x + 6", "answer": "-1.50", "reasoning_steps": ["9x - 7x = 6 - 9", "2x = -3", "x = -1.50"], "level": 3, "type": "math"}
+{"id": "math_0291", "problem": "Solve for x: 7x + 3 = 2x + 13", "answer": "2", "reasoning_steps": ["7x - 2x = 13 - 3", "5x = 10", "x = 2"], "level": 3, "type": "math"}
+{"id": "math_0292", "problem": "What is the sum of the first 9 positive integers?", "answer": "45", "reasoning_steps": ["Sum = n(n+1)/2 = 9*10/2 = 45"], "level": 3, "type": "math"}
+{"id": "math_0293", "problem": "If a rectangle has length 9 and width 8, what is its area?", "answer": "72", "reasoning_steps": ["Area = length * width = 9 * 8 = 72"], "level": 3, "type": "math"}
+{"id": "math_0294", "problem": "If a rectangle has length 10 and width 11, what is its area?", "answer": "110", "reasoning_steps": ["Area = length * width = 10 * 11 = 110"], "level": 3, "type": "math"}
+{"id": "math_0295", "problem": "What is the sum of the first 11 positive integers?", "answer": "66", "reasoning_steps": ["Sum = n(n+1)/2 = 11*12/2 = 66"], "level": 3, "type": "math"}
+{"id": "math_0296", "problem": "Solve for x: 4x + 8 = 6x + 10", "answer": "-1", "reasoning_steps": ["4x - 6x = 10 - 8", "-2x = 2", "x = -1"], "level": 3, "type": "math"}
+{"id": "math_0297", "problem": "If a rectangle has length 15 and width 12, what is its area?", "answer": "180", "reasoning_steps": ["Area = length * width = 15 * 12 = 180"], "level": 3, "type": "math"}
+{"id": "math_0298", "problem": "If a rectangle has length 11 and width 4, what is its area?", "answer": "44", "reasoning_steps": ["Area = length * width = 11 * 4 = 44"], "level": 3, "type": "math"}
+{"id": "math_0299", "problem": "Solve for x: 5x + 4 = 7x + 12", "answer": "-4", "reasoning_steps": ["5x - 7x = 12 - 4", "-2x = 8", "x = -4"], "level": 3, "type": "math"}

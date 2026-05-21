@@ -1,0 +1,275 @@
+{
+  "sample_id": "hotpotqa_0003",
+  "agent_type": "direct",
+  "sample_question": "How long is the wall whose first major construction was initiated by Emperor Qin Shi Huang?",
+  "sample_context": "The Great Wall of China was built over many centuries, with the most well-known sections built during the Ming Dynasty (1368-1644). The wall stretches approximately 21,196 kilometers. Emperor Qin Shi Huang initiated the first major construction around 221 BC.",
+  "sample_gold_answer": "approximately 21,196 kilometers",
+  "original_result": {
+    "final_answer": "21,196 kilometers",
+    "n_steps": 1,
+    "is_correct": true,
+    "trace": [
+      {
+        "step": 1,
+        "thought": "21,196 kilometers",
+        "action": null,
+        "observation": null,
+        "raw_output": "21,196 kilometers",
+        "is_final": true
+      }
+    ]
+  },
+  "consistency_analysis": {
+    "consistency_rate": 0.8,
+    "is_consistent": false,
+    "inconsistent_count": 1,
+    "per_type_inconsistency": {
+      "paraphrase": 1.0,
+      "synonym": 0.0,
+      "reorder": 0.0,
+      "format": 0.0,
+      "distractor": 0.0
+    },
+    "propagation_patterns": {
+      "early_diverge": 2,
+      "consistent": 3
+    }
+  },
+  "propagation_details": [
+    {
+      "divergence_step": 1,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "early_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.0,
+          "action_match": true,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "paraphrase",
+      "variant_answer": "The length of the wall first significantly built by Emperor Qin Shi Huang is not specifically given in the context provided."
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.6666666666666666,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "synonym",
+      "variant_answer": "Approximately 21,196 kilometers"
+    },
+    {
+      "divergence_step": 1,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "early_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.01818181818181818,
+          "action_match": true,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "reorder",
+      "variant_answer": "The question asks for the length of the wall whose first major construction was initiated by Emperor Qin Shi Huang. The context provides the total length of the Great Wall of China as approximately 21,196 kilometers, but this includes constructions from various dynasties over many centuries. The specific length of the wall initiated by Emperor Qin Shi Huang is not directly provided in the context. Therefore, based on the information given, the exact length of the wall initiated by Emperor Qin Shi Huang cannot be determined from the provided context."
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "format",
+      "variant_answer": "21,196 kilometers"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.6666666666666666,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "distractor",
+      "variant_answer": "approximately 21,196 kilometers"
+    }
+  ],
+  "perturbation_variants": [
+    {
+      "perturbation_type": "paraphrase",
+      "variant_question": "What is the length of the wall that was first significantly built by Emperor Qin Shi Huang?",
+      "variant_context": "The Great Wall of China was built over many centuries, with the most well-known sections built during the Ming Dynasty (1368-1644). The wall stretches approximately 21,196 kilometers. Emperor Qin Shi Huang initiated the first major construction around 221 BC.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking for the same information: the length of the wall that was first significantly built by Emperor Qin Shi Huang. The minor differences in wording do not change the core of t"
+      },
+      "agent_run": {
+        "final_answer": "The length of the wall first significantly built by Emperor Qin Shi Huang is not specifically given in the context provided.",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "The length of the wall first significantly built by Emperor Qin Shi Huang is not specifically given in the context provided.",
+            "action": null,
+            "observation": null,
+            "raw_output": "The length of the wall first significantly built by Emperor Qin Shi Huang is not specifically given in the context provided.",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "synonym",
+      "variant_question": "How lengthy is the barrier whose primary construction was initiated by Emperor Qin Shi Huang?",
+      "variant_context": "The Great Wall of China was built over many centuries, with the most well-known sections built during the Ming Dynasty (1368-1644). The wall stretches approximately 21,196 kilometers. Emperor Qin Shi Huang initiated the first major construction around 221 BC.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking about the same physical quantity (the length of the wall/barrier initiated by Emperor Qin Shi Huang) and would yield the same answer. The minor differences in wording ('l"
+      },
+      "agent_run": {
+        "final_answer": "Approximately 21,196 kilometers",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "Approximately 21,196 kilometers",
+            "action": null,
+            "observation": null,
+            "raw_output": "Approximately 21,196 kilometers",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "reorder",
+      "variant_question": "How long is the wall whose first major construction was initiated by Emperor Qin Shi Huang? Please reason step by step.",
+      "variant_context": "The Great Wall of China was built over many centuries, with the most well-known sections built during the Ming Dynasty (1368-1644). The wall stretches approximately 21,196 kilometers. Emperor Qin Shi Huang initiated the first major construction around 221 BC.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (reorder; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "The question asks for the length of the wall whose first major construction was initiated by Emperor Qin Shi Huang. The context provides the total length of the Great Wall of China as approximately 21,196 kilometers, but this includes constructions from various dynasties over many centuries. The specific length of the wall initiated by Emperor Qin Shi Huang is not directly provided in the context. Therefore, based on the information given, the exact length of the wall initiated by Emperor Qin Shi Huang cannot be determined from the provided context.",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "The question asks for the length of the wall whose first major construction was initiated by Emperor Qin Shi Huang. The context provides the total length of the Great Wall of China as approximately 21,196 kilometers, but this includes constructions from various dynasties over many centuries. The specific length of the wall initiated by Emperor Qin Shi Huang is not directly provided in the context. Therefore, based on the information given, the exact length of the wall initiated by Emperor Qin Shi Huang cannot be determined from the provided context.",
+            "action": null,
+            "observation": null,
+            "raw_output": "The question asks for the length of the wall whose first major construction was initiated by Emperor Qin Shi Huang. The context provides the total length of the Great Wall of China as approximately 21,196 kilometers, but this includes constructions from various dynasties over many centuries. The specific length of the wall initiated by Emperor Qin Shi Huang is not directly provided in the context. Therefore, based on the information given, the exact length of the wall initiated by Emperor Qin Sh",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "format",
+      "variant_question": "> How long is the wall whose first major construction was initiated by Emperor Qin Shi Huang?",
+      "variant_context": "• The Great Wall of China was built over many centuries, with the most well-known sections built during the Ming Dynasty (1368-1644).\n• The wall stretches approximately 21,196 kilometers.\n• Emperor Qin Shi Huang initiated the first major construction around 221 BC.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (format; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "21,196 kilometers",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "21,196 kilometers",
+            "action": null,
+            "observation": null,
+            "raw_output": "21,196 kilometers",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "distractor",
+      "variant_question": "Note: the following sentence is unrelated to the question. Historical records from that era are preserved in multiple archives. Now, how long is the wall whose first major construction was initiated by Emperor Qin Shi Huang?",
+      "variant_context": "The Great Wall of China was built over many centuries, with the most well-known sections built during the Ming Dynasty (1368-1644). The wall stretches approximately 21,196 kilometers. Emperor Qin Shi Huang initiated the first major construction around 221 BC. Historical records from that era are preserved in multiple archives.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (distractor; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "approximately 21,196 kilometers",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "approximately 21,196 kilometers",
+            "action": null,
+            "observation": null,
+            "raw_output": "approximately 21,196 kilometers",
+            "is_final": true
+          }
+        ]
+      }
+    }
+  ],
+  "patch_results": {
+    "step_patch": {
+      "consistency_rate": 0.8,
+      "inconsistent_count": 1,
+      "is_correct": true,
+      "intervention_step": 1,
+      "target_types": [
+        "paraphrase"
+      ]
+    },
+    "system_patch": {
+      "consistency_rate": 0.8,
+      "inconsistent_count": 1,
+      "is_correct": true,
+      "target_types": [
+        "paraphrase"
+      ]
+    }
+  },
+  "n_variants_generated": 5,
+  "n_variants_valid": 5,
+  "n_variants_rejected": 0,
+  "elapsed_seconds": 16.620249271392822
+}

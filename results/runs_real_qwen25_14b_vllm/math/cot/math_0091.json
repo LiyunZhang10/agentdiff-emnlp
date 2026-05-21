@@ -1,0 +1,646 @@
+{
+  "sample_id": "math_0091",
+  "agent_type": "cot",
+  "sample_question": "What is the sum of the first 12 positive integers?",
+  "sample_context": null,
+  "sample_gold_answer": "78",
+  "original_result": {
+    "final_answer": "78",
+    "n_steps": 6,
+    "is_correct": true,
+    "trace": [
+      {
+        "step": 1,
+        "thought": "To find the sum of the first 12 positive integers, we can use the formula for the sum of the first \\(n\\) positive integers, which is given by:\n\n\\[ S = \\frac{n(n + 1)}{2} \\]\n\nwhere \\(S\\) is the sum and \\(n\\) is the number of terms.",
+        "action": null,
+        "observation": null,
+        "raw_output": "To find the sum of the first 12 positive integers, we can use the formula for the sum of the first \\(n\\) positive integers, which is given by:\n\n\\[ S = \\frac{n(n + 1)}{2} \\]\n\nwhere \\(S\\) is the sum and \\(n\\) is the number of terms.",
+        "is_final": false
+      },
+      {
+        "step": 2,
+        "thought": "Identify the value of \\(n\\).\nIn this case, \\(n = 12\\), as we are looking for the sum of the first 12 positive integers.",
+        "action": null,
+        "observation": null,
+        "raw_output": "Identify the value of \\(n\\).\nIn this case, \\(n = 12\\), as we are looking for the sum of the first 12 positive integers.",
+        "is_final": false
+      },
+      {
+        "step": 3,
+        "thought": "Substitute \\(n = 12\\) into the formula.\n\\[ S = \\frac{12(12 + 1)}{2} \\]",
+        "action": null,
+        "observation": null,
+        "raw_output": "Substitute \\(n = 12\\) into the formula.\n\\[ S = \\frac{12(12 + 1)}{2} \\]",
+        "is_final": false
+      },
+      {
+        "step": 4,
+        "thought": "Simplify the expression inside the parentheses.\n\\[ S = \\frac{12 \\times 13}{2} \\]",
+        "action": null,
+        "observation": null,
+        "raw_output": "Simplify the expression inside the parentheses.\n\\[ S = \\frac{12 \\times 13}{2} \\]",
+        "is_final": false
+      },
+      {
+        "step": 5,
+        "thought": "Multiply 12 by 13.\n\\[ S = \\frac{156}{2} \\]",
+        "action": null,
+        "observation": null,
+        "raw_output": "Multiply 12 by 13.\n\\[ S = \\frac{156}{2} \\]",
+        "is_final": false
+      },
+      {
+        "step": 6,
+        "thought": "Divide 156 by 2.\n\\[ S = 78 \\]\n\nFinal Answer: 78",
+        "action": null,
+        "observation": null,
+        "raw_output": "Divide 156 by 2.\n\\[ S = 78 \\]\n\nFinal Answer: 78",
+        "is_final": true
+      }
+    ]
+  },
+  "consistency_analysis": {
+    "consistency_rate": 1.0,
+    "is_consistent": true,
+    "inconsistent_count": 0,
+    "per_type_inconsistency": {
+      "paraphrase": 0.0,
+      "synonym": 0.0,
+      "reorder": 0.0,
+      "format": 0.0,
+      "distractor": 0.0
+    },
+    "propagation_patterns": {
+      "self_correct": 2,
+      "early_diverge": 2,
+      "cascade": 1
+    }
+  },
+  "propagation_details": [
+    {
+      "divergence_step": 2,
+      "cascade_depth": 0,
+      "self_corrections": 1,
+      "propagation_pattern": "self_correct",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.8285714285714286,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.375,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.6470588235294118,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 4,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 5,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 6,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 6,
+      "n_steps_variant": 6,
+      "perturbation_type": "paraphrase",
+      "variant_answer": "78"
+    },
+    {
+      "divergence_step": 1,
+      "cascade_depth": 6,
+      "self_corrections": 0,
+      "propagation_pattern": "early_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.20512820512820512,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.17142857142857143,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.02857142857142857,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.06976744186046512,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 5,
+          "thought_similarity": 0.045454545454545456,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 6,
+          "thought_similarity": 0.045454545454545456,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 7,
+          "thought_similarity": 0.0,
+          "action_match": false,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 6,
+      "n_steps_variant": 7,
+      "perturbation_type": "synonym",
+      "variant_answer": "78"
+    },
+    {
+      "divergence_step": 2,
+      "cascade_depth": 0,
+      "self_corrections": 1,
+      "propagation_pattern": "self_correct",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.8235294117647058,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.32,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.6470588235294118,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 4,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 5,
+          "thought_similarity": 0.5833333333333334,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 6,
+          "thought_similarity": 0.8333333333333334,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 6,
+      "n_steps_variant": 6,
+      "perturbation_type": "reorder",
+      "variant_answer": "78"
+    },
+    {
+      "divergence_step": 2,
+      "cascade_depth": 4,
+      "self_corrections": 0,
+      "propagation_pattern": "cascade",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.6944444444444444,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.09090909090909091,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.25,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.2222222222222222,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 5,
+          "thought_similarity": 0.3125,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 6,
+          "thought_similarity": 0.0,
+          "action_match": false,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 6,
+      "n_steps_variant": 5,
+      "perturbation_type": "format",
+      "variant_answer": "78"
+    },
+    {
+      "divergence_step": 1,
+      "cascade_depth": 5,
+      "self_corrections": 0,
+      "propagation_pattern": "early_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.2702702702702703,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.17142857142857143,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.1724137931034483,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.07692307692307693,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 5,
+          "thought_similarity": 0.13043478260869565,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 6,
+          "thought_similarity": 0.0,
+          "action_match": false,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 6,
+      "n_steps_variant": 5,
+      "perturbation_type": "distractor",
+      "variant_answer": "78"
+    }
+  ],
+  "perturbation_variants": [
+    {
+      "perturbation_type": "paraphrase",
+      "variant_question": "What would be the total of the first 12 positive integers?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking for the same information with only minor wording differences, which do not change the meaning or the answer. Both are asking for the sum (or total) of the first 12 positi"
+      },
+      "agent_run": {
+        "final_answer": "78",
+        "n_steps": 6,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To find the total of the first 12 positive integers, we can use the formula for the sum of the first \\( n \\) positive integers, which is given by:\n\n\\[ S = \\frac{n(n + 1)}{2} \\]\n\nwhere \\( S \\) is the sum and \\( n \\) is the number of terms.",
+            "action": null,
+            "observation": null,
+            "raw_output": "To find the total of the first 12 positive integers, we can use the formula for the sum of the first \\( n \\) positive integers, which is given by:\n\n\\[ S = \\frac{n(n + 1)}{2} \\]\n\nwhere \\( S \\) is the sum and \\( n \\) is the number of terms.",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "Identify the value of \\( n \\).\nIn this case, \\( n = 12 \\).",
+            "action": null,
+            "observation": null,
+            "raw_output": "Identify the value of \\( n \\).\nIn this case, \\( n = 12 \\).",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "Substitute \\( n = 12 \\) into the formula.\n\\[ S = \\frac{12(12 + 1)}{2} \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "Substitute \\( n = 12 \\) into the formula.\n\\[ S = \\frac{12(12 + 1)}{2} \\]",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "Simplify the expression inside the parentheses.\n\\[ S = \\frac{12 \\times 13}{2} \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "Simplify the expression inside the parentheses.\n\\[ S = \\frac{12 \\times 13}{2} \\]",
+            "is_final": false
+          },
+          {
+            "step": 5,
+            "thought": "Multiply 12 by 13.\n\\[ S = \\frac{156}{2} \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "Multiply 12 by 13.\n\\[ S = \\frac{156}{2} \\]",
+            "is_final": false
+          },
+          {
+            "step": 6,
+            "thought": "Divide 156 by 2.\n\\[ S = 78 \\]\n\nFinal Answer: 78",
+            "action": null,
+            "observation": null,
+            "raw_output": "Divide 156 by 2.\n\\[ S = 78 \\]\n\nFinal Answer: 78",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "synonym",
+      "variant_question": "What is the total of the first 12 positive numbers?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking for the same mathematical operation: the sum of the first 12 positive integers. The wording difference between \"sum\" and \"total\" does not change the meaning or the answer"
+      },
+      "agent_run": {
+        "final_answer": "78",
+        "n_steps": 7,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the problem of finding the total of the first 12 positive numbers, we can follow these steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the problem of finding the total of the first 12 positive numbers, we can follow these steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "Identify the sequence of the first 12 positive numbers: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Identify the sequence of the first 12 positive numbers: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12.",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "Recognize that this sequence is an arithmetic series where the first term (a) is 1, the last term (l) is 12, and the number of terms (n) is 12.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Recognize that this sequence is an arithmetic series where the first term (a) is 1, the last term (l) is 12, and the number of terms (n) is 12.",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "Use the formula for the sum of an arithmetic series, which is given by \\( S_n = \\frac{n}{2} \\times (a + l) \\), where \\( S_n \\) is the sum of the first n terms, a is the first term, l is the last term, and n is the number of terms.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Use the formula for the sum of an arithmetic series, which is given by \\( S_n = \\frac{n}{2} \\times (a + l) \\), where \\( S_n \\) is the sum of the first n terms, a is the first term, l is the last term, and n is the number of terms.",
+            "is_final": false
+          },
+          {
+            "step": 5,
+            "thought": "Substitute the values into the formula: \\( S_{12} = \\frac{12}{2} \\times (1 + 12) \\).",
+            "action": null,
+            "observation": null,
+            "raw_output": "Substitute the values into the formula: \\( S_{12} = \\frac{12}{2} \\times (1 + 12) \\).",
+            "is_final": false
+          },
+          {
+            "step": 6,
+            "thought": "Simplify the expression inside the parentheses: \\( 1 + 12 = 13 \\).",
+            "action": null,
+            "observation": null,
+            "raw_output": "Simplify the expression inside the parentheses: \\( 1 + 12 = 13 \\).",
+            "is_final": false
+          },
+          {
+            "step": 7,
+            "thought": "Multiply the result by \\( \\frac{12}{2} \\): \\( \\frac{12}{2} \\times 13 = 6 \\times 13 = 78 \\).\n\nFinal Answer: 78",
+            "action": null,
+            "observation": null,
+            "raw_output": "Multiply the result by \\( \\frac{12}{2} \\): \\( \\frac{12}{2} \\times 13 = 6 \\times 13 = 78 \\).\n\nFinal Answer: 78",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "reorder",
+      "variant_question": "What is the sum of the first 12 positive integers? Please reason step by step.",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (reorder; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "78",
+        "n_steps": 6,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To find the sum of the first 12 positive integers, we can use the formula for the sum of the first \\( n \\) positive integers, which is given by:\n\n\\[ S = \\frac{n(n + 1)}{2} \\]\n\nwhere \\( n \\) is the number of terms.",
+            "action": null,
+            "observation": null,
+            "raw_output": "To find the sum of the first 12 positive integers, we can use the formula for the sum of the first \\( n \\) positive integers, which is given by:\n\n\\[ S = \\frac{n(n + 1)}{2} \\]\n\nwhere \\( n \\) is the number of terms.",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "Identify the value of \\( n \\).\nIn this problem, \\( n = 12 \\).",
+            "action": null,
+            "observation": null,
+            "raw_output": "Identify the value of \\( n \\).\nIn this problem, \\( n = 12 \\).",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "Substitute \\( n = 12 \\) into the formula.\n\\[ S = \\frac{12(12 + 1)}{2} \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "Substitute \\( n = 12 \\) into the formula.\n\\[ S = \\frac{12(12 + 1)}{2} \\]",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "Simplify the expression inside the parentheses.\n\\[ S = \\frac{12 \\times 13}{2} \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "Simplify the expression inside the parentheses.\n\\[ S = \\frac{12 \\times 13}{2} \\]",
+            "is_final": false
+          },
+          {
+            "step": 5,
+            "thought": "Multiply 12 by 13.\n\\[ 12 \\times 13 = 156 \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "Multiply 12 by 13.\n\\[ 12 \\times 13 = 156 \\]",
+            "is_final": false
+          },
+          {
+            "step": 6,
+            "thought": "Divide 156 by 2.\n\\[ \\frac{156}{2} = 78 \\]\n\nFinal Answer: 78",
+            "action": null,
+            "observation": null,
+            "raw_output": "Divide 156 by 2.\n\\[ \\frac{156}{2} = 78 \\]\n\nFinal Answer: 78",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "format",
+      "variant_question": "> What is the sum of the first 12 positive integers?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (format; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "78",
+        "n_steps": 5,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To find the sum of the first 12 positive integers, we can use the formula for the sum of the first \\( n \\) positive integers, which is given by:\n\n\\[ S = \\frac{n(n + 1)}{2} \\]\n\nHere, \\( n = 12 \\).",
+            "action": null,
+            "observation": null,
+            "raw_output": "To find the sum of the first 12 positive integers, we can use the formula for the sum of the first \\( n \\) positive integers, which is given by:\n\n\\[ S = \\frac{n(n + 1)}{2} \\]\n\nHere, \\( n = 12 \\).",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "Substitute \\( n = 12 \\) into the formula.\n\\[ S = \\frac{12(12 + 1)}{2} \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "Substitute \\( n = 12 \\) into the formula.\n\\[ S = \\frac{12(12 + 1)}{2} \\]",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "Calculate the value inside the parentheses.\n\\[ 12 + 1 = 13 \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "Calculate the value inside the parentheses.\n\\[ 12 + 1 = 13 \\]",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "Multiply 12 by 13.\n\\[ 12 \\times 13 = 156 \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "Multiply 12 by 13.\n\\[ 12 \\times 13 = 156 \\]",
+            "is_final": false
+          },
+          {
+            "step": 5,
+            "thought": "Divide the result by 2.\n\\[ \\frac{156}{2} = 78 \\]\n\nFinal Answer: 78",
+            "action": null,
+            "observation": null,
+            "raw_output": "Divide the result by 2.\n\\[ \\frac{156}{2} = 78 \\]\n\nFinal Answer: 78",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "distractor",
+      "variant_question": "Note: the following sentence is unrelated to the question. Several other researchers had studied similar topics in the past decade. Now, what is the sum of the first 12 positive integers?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (distractor; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "78",
+        "n_steps": 5,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the problem of finding the sum of the first 12 positive integers, we can follow these steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the problem of finding the sum of the first 12 positive integers, we can follow these steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "Identify the sequence of the first 12 positive integers: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Identify the sequence of the first 12 positive integers: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12.",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "Recall the formula for the sum of the first n positive integers, which is given by \\( S = \\frac{n(n + 1)}{2} \\).",
+            "action": null,
+            "observation": null,
+            "raw_output": "Recall the formula for the sum of the first n positive integers, which is given by \\( S = \\frac{n(n + 1)}{2} \\).",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "Substitute \\( n = 12 \\) into the formula to find the sum of the first 12 positive integers.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Substitute \\( n = 12 \\) into the formula to find the sum of the first 12 positive integers.",
+            "is_final": false
+          },
+          {
+            "step": 5,
+            "thought": "Calculate the value: \\( S = \\frac{12(12 + 1)}{2} = \\frac{12 \\times 13}{2} = \\frac{156}{2} = 78 \\).\n\nFinal Answer: 78",
+            "action": null,
+            "observation": null,
+            "raw_output": "Calculate the value: \\( S = \\frac{12(12 + 1)}{2} = \\frac{12 \\times 13}{2} = \\frac{156}{2} = 78 \\).\n\nFinal Answer: 78",
+            "is_final": true
+          }
+        ]
+      }
+    }
+  ],
+  "patch_results": null,
+  "n_variants_generated": 5,
+  "n_variants_valid": 5,
+  "n_variants_rejected": 0,
+  "elapsed_seconds": 32.462666749954224
+}

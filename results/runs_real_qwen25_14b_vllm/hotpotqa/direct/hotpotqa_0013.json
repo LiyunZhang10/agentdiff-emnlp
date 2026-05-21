@@ -1,0 +1,257 @@
+{
+  "sample_id": "hotpotqa_0013",
+  "agent_type": "direct",
+  "sample_question": "What nationality was the person who created telescope observations?",
+  "sample_context": "Galileo Galilei was born in Pisa, Italy in 1564. Galileo Galilei created telescope observations in 1610. Meanwhile, Isaac Newton was working on similar topics in England.",
+  "sample_gold_answer": "Italy",
+  "original_result": {
+    "final_answer": "Italian",
+    "n_steps": 1,
+    "is_correct": false,
+    "trace": [
+      {
+        "step": 1,
+        "thought": "Italian",
+        "action": null,
+        "observation": null,
+        "raw_output": "Italian",
+        "is_final": true
+      }
+    ]
+  },
+  "consistency_analysis": {
+    "consistency_rate": 1.0,
+    "is_consistent": true,
+    "inconsistent_count": 0,
+    "per_type_inconsistency": {
+      "paraphrase": 0.0,
+      "synonym": 0.0,
+      "reorder": 0.0,
+      "format": 0.0,
+      "distractor": 0.0
+    },
+    "propagation_patterns": {
+      "consistent": 4,
+      "early_diverge": 1
+    }
+  },
+  "propagation_details": [
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "paraphrase",
+      "variant_answer": "Italian"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "synonym",
+      "variant_answer": "Italian"
+    },
+    {
+      "divergence_step": 1,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "early_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.0,
+          "action_match": true,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "reorder",
+      "variant_answer": "Galileo Galilei, who created telescope observations, was Italian."
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "format",
+      "variant_answer": "Italian"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "distractor",
+      "variant_answer": "Italian"
+    }
+  ],
+  "perturbation_variants": [
+    {
+      "perturbation_type": "paraphrase",
+      "variant_question": "Which nationality did the creator of the telescope observations have?",
+      "variant_context": "Galileo Galilei was born in Pisa, Italy in 1564. Galileo Galilei created telescope observations in 1610. Meanwhile, Isaac Newton was working on similar topics in England.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe two questions are asking for the same information: the nationality of the person who created telescope observations. The slight rephrasing does not change the core of the question or the expe"
+      },
+      "agent_run": {
+        "final_answer": "Italian",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "Italian",
+            "action": null,
+            "observation": null,
+            "raw_output": "Italian",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "synonym",
+      "variant_question": "What ethnic background was the individual who established telescope observations?",
+      "variant_context": "Galileo Galilei was born in Pisa, Italy in 1564. Galileo Galilei created telescope observations in 1610. Meanwhile, Isaac Newton was working on similar topics in England.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe core of both questions is asking about the nationality/ethnic background of the person who created/established telescope observations. The minor differences in wording do not change the answe"
+      },
+      "agent_run": {
+        "final_answer": "Italian",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "Italian",
+            "action": null,
+            "observation": null,
+            "raw_output": "Italian",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "reorder",
+      "variant_question": "What nationality was the person who created telescope observations? Please reason step by step.",
+      "variant_context": "Galileo Galilei was born in Pisa, Italy in 1564. Galileo Galilei created telescope observations in 1610. Meanwhile, Isaac Newton was working on similar topics in England.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (reorder; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "Galileo Galilei, who created telescope observations, was Italian.",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "Galileo Galilei, who created telescope observations, was Italian.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Galileo Galilei, who created telescope observations, was Italian.",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "format",
+      "variant_question": "> What nationality was the person who created telescope observations?",
+      "variant_context": "• Galileo Galilei was born in Pisa, Italy in 1564.\n• Galileo Galilei created telescope observations in 1610.\n• Meanwhile, Isaac Newton was working on similar topics in England.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (format; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "Italian",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "Italian",
+            "action": null,
+            "observation": null,
+            "raw_output": "Italian",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "distractor",
+      "variant_question": "Note: the following sentence is unrelated to the question. The local newspaper reported extensively on unrelated events that week. Now, what nationality was the person who created telescope observations?",
+      "variant_context": "Galileo Galilei was born in Pisa, Italy in 1564. Galileo Galilei created telescope observations in 1610. Meanwhile, Isaac Newton was working on similar topics in England. The local newspaper reported extensively on unrelated events that week.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (distractor; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "Italian",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "Italian",
+            "action": null,
+            "observation": null,
+            "raw_output": "Italian",
+            "is_final": true
+          }
+        ]
+      }
+    }
+  ],
+  "patch_results": null,
+  "n_variants_generated": 5,
+  "n_variants_valid": 5,
+  "n_variants_rejected": 0,
+  "elapsed_seconds": 3.2214579582214355
+}

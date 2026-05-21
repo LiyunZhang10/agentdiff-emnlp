@@ -1,0 +1,537 @@
+{
+  "sample_id": "gsm8k_0058",
+  "agent_type": "cot",
+  "sample_question": "A train travels at 14 km/h for 8 hours, then at 15 km/h for 3 hours. What is the total distance?",
+  "sample_context": null,
+  "sample_gold_answer": "157",
+  "original_result": {
+    "final_answer": "157 km",
+    "n_steps": 5,
+    "is_correct": true,
+    "trace": [
+      {
+        "step": 1,
+        "thought": "To solve this problem, we will break it down into steps, calculating the distance traveled at each speed and then summing these distances to find the total distance.",
+        "action": null,
+        "observation": null,
+        "raw_output": "To solve this problem, we will break it down into steps, calculating the distance traveled at each speed and then summing these distances to find the total distance.",
+        "is_final": false
+      },
+      {
+        "step": 2,
+        "thought": "Calculate the distance traveled at 14 km/h.\n- The formula for distance is \\( \\text{distance} = \\text{speed} \\times \\text{time} \\).\n- Here, the speed is 14 km/h and the time is 8 hours.\n- Therefore, the distance traveled at 14 km/h is \\( 14 \\, \\text{km/h} \\times 8 \\, \\text{hours} = 112 \\, \\text{km} \\).",
+        "action": null,
+        "observation": null,
+        "raw_output": "Calculate the distance traveled at 14 km/h.\n- The formula for distance is \\( \\text{distance} = \\text{speed} \\times \\text{time} \\).\n- Here, the speed is 14 km/h and the time is 8 hours.\n- Therefore, the distance traveled at 14 km/h is \\( 14 \\, \\text{km/h} \\times 8 \\, \\text{hours} = 112 \\, \\text{km} \\).",
+        "is_final": false
+      },
+      {
+        "step": 3,
+        "thought": "Calculate the distance traveled at 15 km/h.\n- The speed is 15 km/h and the time is 3 hours.\n- Therefore, the distance traveled at 15 km/h is \\( 15 \\, \\text{km/h} \\times 3 \\, \\text{hours} = 45 \\, \\text{km} \\).",
+        "action": null,
+        "observation": null,
+        "raw_output": "Calculate the distance traveled at 15 km/h.\n- The speed is 15 km/h and the time is 3 hours.\n- Therefore, the distance traveled at 15 km/h is \\( 15 \\, \\text{km/h} \\times 3 \\, \\text{hours} = 45 \\, \\text{km} \\).",
+        "is_final": false
+      },
+      {
+        "step": 4,
+        "thought": "Sum the distances from both parts of the journey to find the total distance.\n- The total distance is the sum of the distances from Step 1 and",
+        "action": null,
+        "observation": null,
+        "raw_output": "Sum the distances from both parts of the journey to find the total distance.\n- The total distance is the sum of the distances from Step 1 and",
+        "is_final": false
+      },
+      {
+        "step": 5,
+        "thought": "- Therefore, the total distance is \\( 112 \\, \\text{km} + 45 \\, \\text{km} = 157 \\, \\text{km} \\).\n\nFinal Answer: 157 km",
+        "action": null,
+        "observation": null,
+        "raw_output": "- Therefore, the total distance is \\( 112 \\, \\text{km} + 45 \\, \\text{km} = 157 \\, \\text{km} \\).\n\nFinal Answer: 157 km",
+        "is_final": true
+      }
+    ]
+  },
+  "consistency_analysis": {
+    "consistency_rate": 1.0,
+    "is_consistent": true,
+    "inconsistent_count": 0,
+    "per_type_inconsistency": {
+      "paraphrase": 0.0,
+      "synonym": 0.0,
+      "reorder": 0.0,
+      "format": 0.0,
+      "distractor": 0.0
+    },
+    "propagation_patterns": {
+      "late_diverge": 1,
+      "early_diverge": 4
+    }
+  },
+  "propagation_details": [
+    {
+      "divergence_step": 4,
+      "cascade_depth": 1,
+      "self_corrections": 0,
+      "propagation_pattern": "late_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.8928571428571429,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.4411764705882353,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.4827586206896552,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.375,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 5,
+          "thought_similarity": 0.0,
+          "action_match": false,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 5,
+      "n_steps_variant": 4,
+      "perturbation_type": "paraphrase",
+      "variant_answer": "157 km"
+    },
+    {
+      "divergence_step": 1,
+      "cascade_depth": 4,
+      "self_corrections": 0,
+      "propagation_pattern": "early_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.29411764705882354,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.358974358974359,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.37142857142857144,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.36363636363636365,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 5,
+          "thought_similarity": 0.0,
+          "action_match": false,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 5,
+      "n_steps_variant": 4,
+      "perturbation_type": "synonym",
+      "variant_answer": "157 km"
+    },
+    {
+      "divergence_step": 1,
+      "cascade_depth": 1,
+      "self_corrections": 1,
+      "propagation_pattern": "early_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.3333333333333333,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.8787878787878788,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.71875,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.3055555555555556,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 5,
+          "thought_similarity": 0.0,
+          "action_match": false,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 5,
+      "n_steps_variant": 4,
+      "perturbation_type": "reorder",
+      "variant_answer": "157 km"
+    },
+    {
+      "divergence_step": 1,
+      "cascade_depth": 4,
+      "self_corrections": 0,
+      "propagation_pattern": "early_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.3333333333333333,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.36585365853658536,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.3888888888888889,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.3870967741935484,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 5,
+          "thought_similarity": 0.0,
+          "action_match": false,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 5,
+      "n_steps_variant": 4,
+      "perturbation_type": "format",
+      "variant_answer": "157 km"
+    },
+    {
+      "divergence_step": 1,
+      "cascade_depth": 3,
+      "self_corrections": 1,
+      "propagation_pattern": "early_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.3333333333333333,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.18181818181818182,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.3,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.08571428571428572,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 5,
+          "thought_similarity": 0.5714285714285714,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 5,
+      "n_steps_variant": 5,
+      "perturbation_type": "distractor",
+      "variant_answer": "157 km"
+    }
+  ],
+  "perturbation_variants": [
+    {
+      "perturbation_type": "paraphrase",
+      "variant_question": "What is the total distance a train travels at 14 km/h for 8 hours and then at 15 km/h for 3 hours?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking for the same information with only minor wording differences, which do not change the core of the question or the calculation needed to find the answer. Both questions re"
+      },
+      "agent_run": {
+        "final_answer": "157 km",
+        "n_steps": 4,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve this problem, we will break it down into steps, calculating the distance traveled at each speed separately and then summing these distances to find the total distance traveled.",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve this problem, we will break it down into steps, calculating the distance traveled at each speed separately and then summing these distances to find the total distance traveled.",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "Calculate the distance traveled at 14 km/h for 8 hours.\n- Distance = Speed × Time\n- Distance at 14 km/h = 14 km/h × 8 h = 112 km",
+            "action": null,
+            "observation": null,
+            "raw_output": "Calculate the distance traveled at 14 km/h for 8 hours.\n- Distance = Speed × Time\n- Distance at 14 km/h = 14 km/h × 8 h = 112 km",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "Calculate the distance traveled at 15 km/h for 3 hours.\n- Distance = Speed × Time\n- Distance at 15 km/h = 15 km/h × 3 h = 45 km",
+            "action": null,
+            "observation": null,
+            "raw_output": "Calculate the distance traveled at 15 km/h for 3 hours.\n- Distance = Speed × Time\n- Distance at 15 km/h = 15 km/h × 3 h = 45 km",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "Add the distances from Step 1 and Step 2 to find the total distance.\n- Total Distance = Distance at 14 km/h + Distance at 15 km/h\n- Total Distance = 112 km + 45 km = 157 km\n\nFinal Answer: 157 km",
+            "action": null,
+            "observation": null,
+            "raw_output": "Add the distances from Step 1 and Step 2 to find the total distance.\n- Total Distance = Distance at 14 km/h + Distance at 15 km/h\n- Total Distance = 112 km + 45 km = 157 km\n\nFinal Answer: 157 km",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "synonym",
+      "variant_question": "A locomotive moves at 14 km/h for 8 hours, then at 15 km/h for 3 hours. What is the overall distance?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking for the same information with only minor wording differences ('train' vs 'locomotive', 'total distance' vs 'overall distance'), which do not change the answer."
+      },
+      "agent_run": {
+        "final_answer": "157 km",
+        "n_steps": 4,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the problem of finding the overall distance traveled by the locomotive, we can break it down into steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the problem of finding the overall distance traveled by the locomotive, we can break it down into steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "**Calculate the distance traveled at the first speed:**\n   - The locomotive moves at 14 km/h for 8 hours.\n   - Distance = Speed × Time\n   - Distance at 14 km/h = 14 km/h × 8 h = 112 km",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Calculate the distance traveled at the first speed:**\n   - The locomotive moves at 14 km/h for 8 hours.\n   - Distance = Speed × Time\n   - Distance at 14 km/h = 14 km/h × 8 h = 112 km",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "**Calculate the distance traveled at the second speed:**\n   - The locomotive then moves at 15 km/h for 3 hours.\n   - Distance = Speed × Time\n   - Distance at 15 km/h = 15 km/h × 3 h = 45 km",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Calculate the distance traveled at the second speed:**\n   - The locomotive then moves at 15 km/h for 3 hours.\n   - Distance = Speed × Time\n   - Distance at 15 km/h = 15 km/h × 3 h = 45 km",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "**Add the distances from both parts of the journey to find the overall distance:**\n   - Total distance = Distance at 14 km/h + Distance at 15 km/h\n   - Total distance = 112 km + 45 km = 157 km\n\nFinal Answer: 157 km",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Add the distances from both parts of the journey to find the overall distance:**\n   - Total distance = Distance at 14 km/h + Distance at 15 km/h\n   - Total distance = 112 km + 45 km = 157 km\n\nFinal Answer: 157 km",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "reorder",
+      "variant_question": "A train travels at 14 km/h for 8 hours, then at 15 km/h for 3 hours. What is the total distance? Please reason step by step.",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (reorder; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "157 km",
+        "n_steps": 4,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the problem of finding the total distance traveled by the train, we can break it down into steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the problem of finding the total distance traveled by the train, we can break it down into steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "**Calculate the distance traveled at 14 km/h:**\n   - The formula for distance is \\( \\text{Distance} = \\text{Speed} \\times \\text{Time} \\).\n   - Here, the speed is 14 km/h and the time is 8 hours.\n   - Therefore, the distance traveled at 14 km/h is \\( 14 \\, \\text{km/h} \\times 8 \\, \\text{hours} = 112 \\, \\text{km} \\).",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Calculate the distance traveled at 14 km/h:**\n   - The formula for distance is \\( \\text{Distance} = \\text{Speed} \\times \\text{Time} \\).\n   - Here, the speed is 14 km/h and the time is 8 hours.\n   - Therefore, the distance traveled at 14 km/h is \\( 14 \\, \\text{km/h} \\times 8 \\, \\text{hours} = 112 \\, \\text{km} \\).",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "**Calculate the distance traveled at 15 km/h:**\n   - Using the same formula for distance, the speed is 15 km/h and the time is 3 hours.\n   - Therefore, the distance traveled at 15 km/h is \\( 15 \\, \\text{km/h} \\times 3 \\, \\text{hours} = 45 \\, \\text{km} \\).",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Calculate the distance traveled at 15 km/h:**\n   - Using the same formula for distance, the speed is 15 km/h and the time is 3 hours.\n   - Therefore, the distance traveled at 15 km/h is \\( 15 \\, \\text{km/h} \\times 3 \\, \\text{hours} = 45 \\, \\text{km} \\).",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "**Add the distances from both parts of the journey:**\n   - The total distance is the sum of the distances from each part of the journey.\n   - Therefore, the total distance is \\( 112 \\, \\text{km} + 45 \\, \\text{km} = 157 \\, \\text{km} \\).\n\nFinal Answer: 157 km",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Add the distances from both parts of the journey:**\n   - The total distance is the sum of the distances from each part of the journey.\n   - Therefore, the total distance is \\( 112 \\, \\text{km} + 45 \\, \\text{km} = 157 \\, \\text{km} \\).\n\nFinal Answer: 157 km",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "format",
+      "variant_question": "- A train travels at 14 km/h for 8 hours, then at 15 km/h for 3 hours.\nQuestion: What is the total distance?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (format; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "157 km",
+        "n_steps": 4,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the problem of finding the total distance traveled by the train, we can break it down into steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the problem of finding the total distance traveled by the train, we can break it down into steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "Calculate the distance traveled during the first part of the journey.\n   - The train travels at 14 km/h for 8 hours.\n   - Distance = Speed × Time\n   - Distance = 14 km/h × 8 h = 112 km",
+            "action": null,
+            "observation": null,
+            "raw_output": "Calculate the distance traveled during the first part of the journey.\n   - The train travels at 14 km/h for 8 hours.\n   - Distance = Speed × Time\n   - Distance = 14 km/h × 8 h = 112 km",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "Calculate the distance traveled during the second part of the journey.\n   - The train travels at 15 km/h for 3 hours.\n   - Distance = Speed × Time\n   - Distance = 15 km/h × 3 h = 45 km",
+            "action": null,
+            "observation": null,
+            "raw_output": "Calculate the distance traveled during the second part of the journey.\n   - The train travels at 15 km/h for 3 hours.\n   - Distance = Speed × Time\n   - Distance = 15 km/h × 3 h = 45 km",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "Add the distances from both parts of the journey to get the total distance.\n   - Total Distance = Distance from first part + Distance from second part\n   - Total Distance = 112 km + 45 km = 157 km\n\nFinal Answer: 157 km",
+            "action": null,
+            "observation": null,
+            "raw_output": "Add the distances from both parts of the journey to get the total distance.\n   - Total Distance = Distance from first part + Distance from second part\n   - Total Distance = 112 km + 45 km = 157 km\n\nFinal Answer: 157 km",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "distractor",
+      "variant_question": "Note: the following sentence is unrelated to the question. Meanwhile, advances in technology continued to reshape daily life. Now, a train travels at 14 km/h for 8 hours, then at 15 km/h for 3 hours. What is the total distance?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (distractor; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "157 km",
+        "n_steps": 5,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the problem of finding the total distance traveled by the train, we can break it down into steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the problem of finding the total distance traveled by the train, we can break it down into steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "**Identify the two segments of the journey:**\n   - The first segment involves the train traveling at 14 km/h for 8 hours.\n   - The second segment involves the train traveling at 15 km/h for 3 hours.",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Identify the two segments of the journey:**\n   - The first segment involves the train traveling at 14 km/h for 8 hours.\n   - The second segment involves the train traveling at 15 km/h for 3 hours.",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "**Calculate the distance for the first segment:**\n   - Distance is calculated using the formula: \\( \\text{Distance} = \\text{Speed} \\times \\text{Time} \\).\n   - For the first segment: \\( \\text{Distance}_1 = 14 \\, \\text{km/h} \\times 8 \\, \\text{hours} \\).\n   - \\( \\text{Distance}_1 = 112 \\, \\text{km} \\).",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Calculate the distance for the first segment:**\n   - Distance is calculated using the formula: \\( \\text{Distance} = \\text{Speed} \\times \\text{Time} \\).\n   - For the first segment: \\( \\text{Distance}_1 = 14 \\, \\text{km/h} \\times 8 \\, \\text{hours} \\).\n   - \\( \\text{Distance}_1 = 112 \\, \\text{km} \\).",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "**Calculate the distance for the second segment:**\n   - For the second segment: \\( \\text{Distance}_2 = 15 \\, \\text{km/h} \\times 3 \\, \\text{hours} \\).\n   - \\( \\text{Distance}_2 = 45 \\, \\text{km} \\).",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Calculate the distance for the second segment:**\n   - For the second segment: \\( \\text{Distance}_2 = 15 \\, \\text{km/h} \\times 3 \\, \\text{hours} \\).\n   - \\( \\text{Distance}_2 = 45 \\, \\text{km} \\).",
+            "is_final": false
+          },
+          {
+            "step": 5,
+            "thought": "**Add the distances from both segments to find the total distance:**\n   - Total distance = \\( \\text{Distance}_1 + \\text{Distance}_2 \\).\n   - Total distance = \\( 112 \\, \\text{km} + 45 \\, \\text{km} \\).\n   - Total distance = \\( 157 \\, \\text{km} \\).\n\nFinal Answer: 157 km",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Add the distances from both segments to find the total distance:**\n   - Total distance = \\( \\text{Distance}_1 + \\text{Distance}_2 \\).\n   - Total distance = \\( 112 \\, \\text{km} + 45 \\, \\text{km} \\).\n   - Total distance = \\( 157 \\, \\text{km} \\).\n\nFinal Answer: 157 km",
+            "is_final": true
+          }
+        ]
+      }
+    }
+  ],
+  "patch_results": null,
+  "n_variants_generated": 5,
+  "n_variants_valid": 5,
+  "n_variants_rejected": 0,
+  "elapsed_seconds": 37.9210102558136
+}

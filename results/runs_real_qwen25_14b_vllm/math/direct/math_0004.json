@@ -1,0 +1,275 @@
+{
+  "sample_id": "math_0004",
+  "agent_type": "direct",
+  "sample_question": "If log_2(x) + log_2(x-2) = 3, find x.",
+  "sample_context": null,
+  "sample_gold_answer": "4",
+  "original_result": {
+    "final_answer": "4",
+    "n_steps": 1,
+    "is_correct": true,
+    "trace": [
+      {
+        "step": 1,
+        "thought": "4",
+        "action": null,
+        "observation": null,
+        "raw_output": "4",
+        "is_final": true
+      }
+    ]
+  },
+  "consistency_analysis": {
+    "consistency_rate": 0.8,
+    "is_consistent": false,
+    "inconsistent_count": 1,
+    "per_type_inconsistency": {
+      "paraphrase": 0.0,
+      "synonym": 0.0,
+      "reorder": 1.0,
+      "format": 0.0,
+      "distractor": 0.0
+    },
+    "propagation_patterns": {
+      "consistent": 4,
+      "early_diverge": 1
+    }
+  },
+  "propagation_details": [
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "paraphrase",
+      "variant_answer": "4"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "synonym",
+      "variant_answer": "4"
+    },
+    {
+      "divergence_step": 1,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "early_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.0,
+          "action_match": true,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "reorder",
+      "variant_answer": "Step 1: Use the logarithm property to combine the logs: log_2(x(x-2)) = 3."
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "format",
+      "variant_answer": "4"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "distractor",
+      "variant_answer": "4"
+    }
+  ],
+  "perturbation_variants": [
+    {
+      "perturbation_type": "paraphrase",
+      "variant_question": "Find x if log_2(x) + log_2(x-2) = 3.",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are phrased differently but both ask to solve the same equation for x, which is log_2(x) + log_2(x-2) = 3. The reference answer to both questions is '4'. The minor difference in wor"
+      },
+      "agent_run": {
+        "final_answer": "4",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "4",
+            "action": null,
+            "observation": null,
+            "raw_output": "4",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "synonym",
+      "variant_question": "If logarithm_2(x) + logarithm_2(x-2) = 3, determine x.",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking for the same solution, with only minor wording differences ('log_2' vs 'logarithm_2', 'find' vs 'determine'). These differences do not change the meaning or the answer to"
+      },
+      "agent_run": {
+        "final_answer": "4",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "4",
+            "action": null,
+            "observation": null,
+            "raw_output": "4",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "reorder",
+      "variant_question": "If log_2(x) + log_2(x-2) = 3, find x. Please reason step by step.",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (reorder; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "Step 1: Use the logarithm property to combine the logs: log_2(x(x-2)) = 3.",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "Step 1: Use the logarithm property to combine the logs: log_2(x(x-2)) = 3.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Step 1: Use the logarithm property to combine the logs: log_2(x(x-2)) = 3.\nStep 2: Convert the logarithmic equation to its exponential form: x(x-2) = 2^3.\nStep 3: Simplify the equation: x^2 - 2x = 8.\nStep 4: Rearrange the equation to standard quadratic form: x^2 - 2x - 8 = 0.\nStep 5: Factor the quadratic equation: (x-4)(x+2) = 0.\nStep 6: Solve for x: x = 4 or x = -2.\nStep 7: Since log_2(x) and log_2(x-2) are only defined for positive x and x-2, discard x = -2.\n\nAnswer: x = 4.",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "format",
+      "variant_question": "> If log_2(x) + log_2(x-2) = 3, find x.",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (format; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "4",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "4",
+            "action": null,
+            "observation": null,
+            "raw_output": "4",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "distractor",
+      "variant_question": "Note: the following sentence is unrelated to the question. Several other researchers had studied similar topics in the past decade. Now, if log_2(x) + log_2(x-2) = 3, find x.",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (distractor; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "4",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "4",
+            "action": null,
+            "observation": null,
+            "raw_output": "4",
+            "is_final": true
+          }
+        ]
+      }
+    }
+  ],
+  "patch_results": {
+    "step_patch": {
+      "consistency_rate": 0.8,
+      "inconsistent_count": 1,
+      "is_correct": true,
+      "intervention_step": 1,
+      "target_types": [
+        "reorder"
+      ]
+    },
+    "system_patch": {
+      "consistency_rate": 0.8,
+      "inconsistent_count": 1,
+      "is_correct": true,
+      "target_types": [
+        "reorder"
+      ]
+    }
+  },
+  "n_variants_generated": 5,
+  "n_variants_valid": 5,
+  "n_variants_rejected": 0,
+  "elapsed_seconds": 16.496967315673828
+}

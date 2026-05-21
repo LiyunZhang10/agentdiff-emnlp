@@ -1,0 +1,505 @@
+{
+  "sample_id": "math_0144",
+  "agent_type": "cot",
+  "sample_question": "Solve for x: 4x + 8 = 7x + 19",
+  "sample_context": null,
+  "sample_gold_answer": "-3.67",
+  "original_result": {
+    "final_answer": "\\(-\\frac{11}{3}\\)",
+    "n_steps": 4,
+    "is_correct": false,
+    "trace": [
+      {
+        "step": 1,
+        "thought": "To solve the equation \\(4x + 8 = 7x + 19\\) for \\(x\\), follow these steps:",
+        "action": null,
+        "observation": null,
+        "raw_output": "To solve the equation \\(4x + 8 = 7x + 19\\) for \\(x\\), follow these steps:",
+        "is_final": false
+      },
+      {
+        "step": 2,
+        "thought": "**Isolate the variable terms on one side of the equation**: To do this, subtract \\(4x\\) from both sides of the equation to move all terms with \\(x\\) to the right side.\n   \\[\n   4x + 8 - 4x = 7x + 19 - 4x\n   \\]\n   Simplifying both sides, we get:\n   \\[\n   8 = 3x + 19\n   \\]",
+        "action": null,
+        "observation": null,
+        "raw_output": "**Isolate the variable terms on one side of the equation**: To do this, subtract \\(4x\\) from both sides of the equation to move all terms with \\(x\\) to the right side.\n   \\[\n   4x + 8 - 4x = 7x + 19 - 4x\n   \\]\n   Simplifying both sides, we get:\n   \\[\n   8 = 3x + 19\n   \\]",
+        "is_final": false
+      },
+      {
+        "step": 3,
+        "thought": "**Isolate the constant terms on the other side of the equation**: Subtract 19 from both sides to move the constant term to the left side.\n   \\[\n   8 - 19 = 3x + 19 - 19\n   \\]\n   Simplifying both sides, we get:\n   \\[\n   -11 = 3x\n   \\]",
+        "action": null,
+        "observation": null,
+        "raw_output": "**Isolate the constant terms on the other side of the equation**: Subtract 19 from both sides to move the constant term to the left side.\n   \\[\n   8 - 19 = 3x + 19 - 19\n   \\]\n   Simplifying both sides, we get:\n   \\[\n   -11 = 3x\n   \\]",
+        "is_final": false
+      },
+      {
+        "step": 4,
+        "thought": "**Solve for \\(x\\)**: Divide both sides by 3 to isolate \\(x\\).\n   \\[\n   \\frac{-11}{3} = \\frac{3x}{3}\n   \\]\n   Simplifying, we get:\n   \\[\n   x = -\\frac{11}{3}\n   \\]\n\nFinal Answer: \\(-\\frac{11}{3}\\)",
+        "action": null,
+        "observation": null,
+        "raw_output": "**Solve for \\(x\\)**: Divide both sides by 3 to isolate \\(x\\).\n   \\[\n   \\frac{-11}{3} = \\frac{3x}{3}\n   \\]\n   Simplifying, we get:\n   \\[\n   x = -\\frac{11}{3}\n   \\]\n\nFinal Answer: \\(-\\frac{11}{3}\\)",
+        "is_final": true
+      }
+    ]
+  },
+  "consistency_analysis": {
+    "consistency_rate": 1.0,
+    "is_consistent": true,
+    "inconsistent_count": 0,
+    "per_type_inconsistency": {
+      "paraphrase": 0.0,
+      "synonym": 0.0,
+      "reorder": 0.0,
+      "format": 0.0,
+      "distractor": 0.0
+    },
+    "propagation_patterns": {
+      "consistent": 4,
+      "self_correct": 1
+    }
+  },
+  "propagation_details": [
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.6666666666666666,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.8604651162790697,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.6585365853658537,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.7,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 4,
+      "n_steps_variant": 4,
+      "perturbation_type": "paraphrase",
+      "variant_answer": "\\(-\\frac{11}{3}\\)"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.6666666666666666,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.8372093023255814,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.6190476190476191,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.5588235294117647,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 4,
+      "n_steps_variant": 4,
+      "perturbation_type": "synonym",
+      "variant_answer": "\\(-\\frac{11}{3}\\)"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.8823529411764706,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.8181818181818182,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.5609756097560976,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.5428571428571428,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 4,
+      "n_steps_variant": 4,
+      "perturbation_type": "reorder",
+      "variant_answer": "\\(-\\frac{11}{3}\\)"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.9736842105263158,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.9375,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.8846153846153846,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 4,
+      "n_steps_variant": 4,
+      "perturbation_type": "format",
+      "variant_answer": "\\(-\\frac{11}{3}\\)"
+    },
+    {
+      "divergence_step": 2,
+      "cascade_depth": 1,
+      "self_corrections": 1,
+      "propagation_pattern": "self_correct",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.24390243902439024,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.45,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.23684210526315788,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 5,
+          "thought_similarity": 0.0,
+          "action_match": false,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 4,
+      "n_steps_variant": 5,
+      "perturbation_type": "distractor",
+      "variant_answer": "\\(-\\frac{11}{3}\\)"
+    }
+  ],
+  "perturbation_variants": [
+    {
+      "perturbation_type": "paraphrase",
+      "variant_question": "Find x: 4x + 8 = 7x + 19",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking for the same solution, with only a minor wording difference ('Solve for x' vs 'Find x')."
+      },
+      "agent_run": {
+        "final_answer": "\\(-\\frac{11}{3}\\)",
+        "n_steps": 4,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the equation \\(4x + 8 = 7x + 19\\), we will follow these steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the equation \\(4x + 8 = 7x + 19\\), we will follow these steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "**Isolate the variable terms on one side of the equation and the constant terms on the other side.** To do this, we can subtract \\(4x\\) from both sides of the equation to move all terms with \\(x\\) to the right side.\n   \\[\n   4x + 8 - 4x = 7x + 19 - 4x\n   \\]\n   Simplifying both sides, we get:\n   \\[\n   8 = 3x + 19\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Isolate the variable terms on one side of the equation and the constant terms on the other side.** To do this, we can subtract \\(4x\\) from both sides of the equation to move all terms with \\(x\\) to the right side.\n   \\[\n   4x + 8 - 4x = 7x + 19 - 4x\n   \\]\n   Simplifying both sides, we get:\n   \\[\n   8 = 3x + 19\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "**Isolate the term with the variable.** We need to move the constant term on the right side to the left side. We can do this by subtracting 19 from both sides of the equation.\n   \\[\n   8 - 19 = 3x + 19 - 19\n   \\]\n   Simplifying both sides, we get:\n   \\[\n   -11 = 3x\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Isolate the term with the variable.** We need to move the constant term on the right side to the left side. We can do this by subtracting 19 from both sides of the equation.\n   \\[\n   8 - 19 = 3x + 19 - 19\n   \\]\n   Simplifying both sides, we get:\n   \\[\n   -11 = 3x\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "**Solve for \\(x\\).** To isolate \\(x\\), we divide both sides of the equation by 3.\n   \\[\n   \\frac{-11}{3} = \\frac{3x}{3}\n   \\]\n   Simplifying, we get:\n   \\[\n   x = -\\frac{11}{3}\n   \\]\n\nFinal Answer: \\(-\\frac{11}{3}\\)",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Solve for \\(x\\).** To isolate \\(x\\), we divide both sides of the equation by 3.\n   \\[\n   \\frac{-11}{3} = \\frac{3x}{3}\n   \\]\n   Simplifying, we get:\n   \\[\n   x = -\\frac{11}{3}\n   \\]\n\nFinal Answer: \\(-\\frac{11}{3}\\)",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "synonym",
+      "variant_question": "Determine for x: 4x + 8 = 7x + 19",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are phrased differently but ask for the same solution, with \"Solve for x\" and \"Determine for x\" being minor wording differences that do not change the core of the question or its an"
+      },
+      "agent_run": {
+        "final_answer": "\\(-\\frac{11}{3}\\)",
+        "n_steps": 4,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the equation \\(4x + 8 = 7x + 19\\), we will follow these steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the equation \\(4x + 8 = 7x + 19\\), we will follow these steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "**Isolate the variable terms on one side of the equation and the constant terms on the other side.** To do this, we can subtract \\(4x\\) from both sides of the equation to move all terms with \\(x\\) to the right side.\n   \\[\n   4x + 8 - 4x = 7x + 19 - 4x\n   \\]\n   Simplifying this, we get:\n   \\[\n   8 = 3x + 19\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Isolate the variable terms on one side of the equation and the constant terms on the other side.** To do this, we can subtract \\(4x\\) from both sides of the equation to move all terms with \\(x\\) to the right side.\n   \\[\n   4x + 8 - 4x = 7x + 19 - 4x\n   \\]\n   Simplifying this, we get:\n   \\[\n   8 = 3x + 19\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "**Isolate the term with the variable.** Now, we need to move the constant term on the right side to the left side. We do this by subtracting 19 from both sides of the equation.\n   \\[\n   8 - 19 = 3x + 19 - 19\n   \\]\n   Simplifying this, we get:\n   \\[\n   -11 = 3x\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Isolate the term with the variable.** Now, we need to move the constant term on the right side to the left side. We do this by subtracting 19 from both sides of the equation.\n   \\[\n   8 - 19 = 3x + 19 - 19\n   \\]\n   Simplifying this, we get:\n   \\[\n   -11 = 3x\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "**Solve for \\(x\\).** To find the value of \\(x\\), we divide both sides of the equation by 3.\n   \\[\n   \\frac{-11}{3} = \\frac{3x}{3}\n   \\]\n   Simplifying this, we get:\n   \\[\n   x = -\\frac{11}{3}\n   \\]\n\nFinal Answer: \\(-\\frac{11}{3}\\)",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Solve for \\(x\\).** To find the value of \\(x\\), we divide both sides of the equation by 3.\n   \\[\n   \\frac{-11}{3} = \\frac{3x}{3}\n   \\]\n   Simplifying this, we get:\n   \\[\n   x = -\\frac{11}{3}\n   \\]\n\nFinal Answer: \\(-\\frac{11}{3}\\)",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "reorder",
+      "variant_question": "Solve for x: 4x + 8 = 7x + 19 Please reason step by step.",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (reorder; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "\\(-\\frac{11}{3}\\)",
+        "n_steps": 4,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the equation \\(4x + 8 = 7x + 19\\) for \\(x\\), we will follow these steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the equation \\(4x + 8 = 7x + 19\\) for \\(x\\), we will follow these steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "**Isolate the variable terms on one side of the equation and the constant terms on the other side.** To do this, we can subtract \\(4x\\) from both sides of the equation to move all terms with \\(x\\) to the right side:\n   \\[\n   4x + 8 - 4x = 7x + 19 - 4x\n   \\]\n   Simplifying both sides, we get:\n   \\[\n   8 = 3x + 19\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Isolate the variable terms on one side of the equation and the constant terms on the other side.** To do this, we can subtract \\(4x\\) from both sides of the equation to move all terms with \\(x\\) to the right side:\n   \\[\n   4x + 8 - 4x = 7x + 19 - 4x\n   \\]\n   Simplifying both sides, we get:\n   \\[\n   8 = 3x + 19\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "**Isolate the term with \\(x\\) by moving the constant term to the left side of the equation.** We can do this by subtracting 19 from both sides:\n   \\[\n   8 - 19 = 3x + 19 - 19\n   \\]\n   Simplifying both sides, we get:\n   \\[\n   -11 = 3x\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Isolate the term with \\(x\\) by moving the constant term to the left side of the equation.** We can do this by subtracting 19 from both sides:\n   \\[\n   8 - 19 = 3x + 19 - 19\n   \\]\n   Simplifying both sides, we get:\n   \\[\n   -11 = 3x\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "**Solve for \\(x\\) by dividing both sides of the equation by the coefficient of \\(x\\).** In this case, we divide both sides by 3:\n   \\[\n   \\frac{-11}{3} = \\frac{3x}{3}\n   \\]\n   Simplifying, we get:\n   \\[\n   x = -\\frac{11}{3}\n   \\]\n\nFinal Answer: \\(-\\frac{11}{3}\\)",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Solve for \\(x\\) by dividing both sides of the equation by the coefficient of \\(x\\).** In this case, we divide both sides by 3:\n   \\[\n   \\frac{-11}{3} = \\frac{3x}{3}\n   \\]\n   Simplifying, we get:\n   \\[\n   x = -\\frac{11}{3}\n   \\]\n\nFinal Answer: \\(-\\frac{11}{3}\\)",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "format",
+      "variant_question": "> Solve for x: 4x + 8 = 7x + 19",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (format; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "\\(-\\frac{11}{3}\\)",
+        "n_steps": 4,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the equation \\(4x + 8 = 7x + 19\\) for \\(x\\), follow these steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the equation \\(4x + 8 = 7x + 19\\) for \\(x\\), follow these steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "**Isolate the variable terms on one side of the equation**: To do this, subtract \\(4x\\) from both sides of the equation to move all terms with \\(x\\) to the right side.\n   \\[\n   4x + 8 - 4x = 7x + 19 - 4x\n   \\]\n   Simplifying this, we get:\n   \\[\n   8 = 3x + 19\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Isolate the variable terms on one side of the equation**: To do this, subtract \\(4x\\) from both sides of the equation to move all terms with \\(x\\) to the right side.\n   \\[\n   4x + 8 - 4x = 7x + 19 - 4x\n   \\]\n   Simplifying this, we get:\n   \\[\n   8 = 3x + 19\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "**Isolate the constant terms on the other side of the equation**: Subtract 19 from both sides to move the constant term to the left side.\n   \\[\n   8 - 19 = 3x + 19 - 19\n   \\]\n   Simplifying this, we get:\n   \\[\n   -11 = 3x\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Isolate the constant terms on the other side of the equation**: Subtract 19 from both sides to move the constant term to the left side.\n   \\[\n   8 - 19 = 3x + 19 - 19\n   \\]\n   Simplifying this, we get:\n   \\[\n   -11 = 3x\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "**Solve for \\(x\\)**: Divide both sides by 3 to isolate \\(x\\).\n   \\[\n   \\frac{-11}{3} = \\frac{3x}{3}\n   \\]\n   Simplifying this, we get:\n   \\[\n   x = -\\frac{11}{3}\n   \\]\n\nFinal Answer: \\(-\\frac{11}{3}\\)",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Solve for \\(x\\)**: Divide both sides by 3 to isolate \\(x\\).\n   \\[\n   \\frac{-11}{3} = \\frac{3x}{3}\n   \\]\n   Simplifying this, we get:\n   \\[\n   x = -\\frac{11}{3}\n   \\]\n\nFinal Answer: \\(-\\frac{11}{3}\\)",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "distractor",
+      "variant_question": "Note: the following sentence is unrelated to the question. The local newspaper reported extensively on unrelated events that week. Now, solve for x: 4x + 8 = 7x + 19",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (distractor; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "\\(-\\frac{11}{3}\\)",
+        "n_steps": 5,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the equation \\(4x + 8 = 7x + 19\\) for \\(x\\), follow these steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the equation \\(4x + 8 = 7x + 19\\) for \\(x\\), follow these steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "**Start with the given equation:**\n   \\[\n   4x + 8 = 7x + 19\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Start with the given equation:**\n   \\[\n   4x + 8 = 7x + 19\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "**Subtract \\(4x\\) from both sides to isolate the \\(x\\) terms on one side:**\n   \\[\n   4x + 8 - 4x = 7x + 19 - 4x\n   \\]\n   Simplifying this, we get:\n   \\[\n   8 = 3x + 19\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Subtract \\(4x\\) from both sides to isolate the \\(x\\) terms on one side:**\n   \\[\n   4x + 8 - 4x = 7x + 19 - 4x\n   \\]\n   Simplifying this, we get:\n   \\[\n   8 = 3x + 19\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "**Subtract 19 from both sides to isolate the term with \\(x\\):**\n   \\[\n   8 - 19 = 3x + 19 - 19\n   \\]\n   Simplifying this, we get:\n   \\[\n   -11 = 3x\n   \\]",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Subtract 19 from both sides to isolate the term with \\(x\\):**\n   \\[\n   8 - 19 = 3x + 19 - 19\n   \\]\n   Simplifying this, we get:\n   \\[\n   -11 = 3x\n   \\]",
+            "is_final": false
+          },
+          {
+            "step": 5,
+            "thought": "**Divide both sides by 3 to solve for \\(x\\):**\n   \\[\n   \\frac{-11}{3} = \\frac{3x}{3}\n   \\]\n   Simplifying this, we get:\n   \\[\n   x = -\\frac{11}{3}\n   \\]\n\nFinal Answer: \\(-\\frac{11}{3}\\)",
+            "action": null,
+            "observation": null,
+            "raw_output": "**Divide both sides by 3 to solve for \\(x\\):**\n   \\[\n   \\frac{-11}{3} = \\frac{3x}{3}\n   \\]\n   Simplifying this, we get:\n   \\[\n   x = -\\frac{11}{3}\n   \\]\n\nFinal Answer: \\(-\\frac{11}{3}\\)",
+            "is_final": true
+          }
+        ]
+      }
+    }
+  ],
+  "patch_results": null,
+  "n_variants_generated": 5,
+  "n_variants_valid": 5,
+  "n_variants_rejected": 0,
+  "elapsed_seconds": 42.97629952430725
+}

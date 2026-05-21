@@ -1,0 +1,484 @@
+{
+  "sample_id": "hotpotqa_0009",
+  "agent_type": "cot",
+  "sample_question": "In what year was the creator of The Two Fridas born?",
+  "sample_context": "Frida Kahlo was born in Coyoacan, Mexico in 1907. Frida Kahlo created The Two Fridas in 1939. Meanwhile, Ada Lovelace was working on similar topics in England.",
+  "sample_gold_answer": "1907",
+  "original_result": {
+    "final_answer": "1907",
+    "n_steps": 3,
+    "is_correct": true,
+    "trace": [
+      {
+        "step": 1,
+        "thought": "To determine the birth year of the creator of \"The Two Fridas,\" we can follow these steps:",
+        "action": null,
+        "observation": null,
+        "raw_output": "To determine the birth year of the creator of \"The Two Fridas,\" we can follow these steps:",
+        "is_final": false
+      },
+      {
+        "step": 2,
+        "thought": "Identify the creator of \"The Two Fridas.\" According to the context provided, Frida Kahlo created \"The Two Fridas\" in 1939.",
+        "action": null,
+        "observation": null,
+        "raw_output": "Identify the creator of \"The Two Fridas.\" According to the context provided, Frida Kahlo created \"The Two Fridas\" in 1939.",
+        "is_final": false
+      },
+      {
+        "step": 3,
+        "thought": "Determine the birth year of Frida Kahlo. The context also provides that Frida Kahlo was born in Coyoacan, Mexico in 1907.\n\nBy following these steps, we can conclude that the creator of \"The Two Fridas,\" Frida Kahlo, was born in 1907.\n\nFinal Answer: 1907",
+        "action": null,
+        "observation": null,
+        "raw_output": "Determine the birth year of Frida Kahlo. The context also provides that Frida Kahlo was born in Coyoacan, Mexico in 1907.\n\nBy following these steps, we can conclude that the creator of \"The Two Fridas,\" Frida Kahlo, was born in 1907.\n\nFinal Answer: 1907",
+        "is_final": true
+      }
+    ]
+  },
+  "consistency_analysis": {
+    "consistency_rate": 1.0,
+    "is_consistent": true,
+    "inconsistent_count": 0,
+    "per_type_inconsistency": {
+      "paraphrase": 0.0,
+      "synonym": 0.0,
+      "reorder": 0.0,
+      "format": 0.0,
+      "distractor": 0.0
+    },
+    "propagation_patterns": {
+      "early_diverge": 2,
+      "consistent": 2,
+      "late_diverge": 1
+    }
+  },
+  "propagation_details": [
+    {
+      "divergence_step": 1,
+      "cascade_depth": 0,
+      "self_corrections": 1,
+      "propagation_pattern": "early_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.08333333333333333,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.8888888888888888,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.45714285714285713,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.0,
+          "action_match": false,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 3,
+      "n_steps_variant": 4,
+      "perturbation_type": "paraphrase",
+      "variant_answer": "1907"
+    },
+    {
+      "divergence_step": 1,
+      "cascade_depth": 3,
+      "self_corrections": 1,
+      "propagation_pattern": "early_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.13043478260869565,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.47619047619047616,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.17073170731707318,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.0,
+          "action_match": false,
+          "is_divergent": true
+        },
+        {
+          "step": 5,
+          "thought_similarity": 0.0,
+          "action_match": false,
+          "is_divergent": true
+        },
+        {
+          "step": 6,
+          "thought_similarity": 0.0,
+          "action_match": false,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 3,
+      "n_steps_variant": 6,
+      "perturbation_type": "synonym",
+      "variant_answer": "1907"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.7837837837837838,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 3,
+      "n_steps_variant": 3,
+      "perturbation_type": "reorder",
+      "variant_answer": "1907"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.65,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.8888888888888888,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.8333333333333334,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 3,
+      "n_steps_variant": 3,
+      "perturbation_type": "format",
+      "variant_answer": "1907"
+    },
+    {
+      "divergence_step": 3,
+      "cascade_depth": 1,
+      "self_corrections": 0,
+      "propagation_pattern": "late_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.7368421052631579,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 2,
+          "thought_similarity": 0.47619047619047616,
+          "action_match": true,
+          "is_divergent": false
+        },
+        {
+          "step": 3,
+          "thought_similarity": 0.275,
+          "action_match": true,
+          "is_divergent": true
+        },
+        {
+          "step": 4,
+          "thought_similarity": 0.0,
+          "action_match": false,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 3,
+      "n_steps_variant": 4,
+      "perturbation_type": "distractor",
+      "variant_answer": "1907"
+    }
+  ],
+  "perturbation_variants": [
+    {
+      "perturbation_type": "paraphrase",
+      "variant_question": "What year was the creator of The Two Fridas born in?",
+      "variant_context": "Frida Kahlo was born in Coyoacan, Mexico in 1907. Frida Kahlo created The Two Fridas in 1939. Meanwhile, Ada Lovelace was working on similar topics in England.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe two questions are asking for the same information and would yield the same answer. The minor difference in wording does not change the core of the question."
+      },
+      "agent_run": {
+        "final_answer": "1907",
+        "n_steps": 4,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve this problem, let's break it down into clear steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve this problem, let's break it down into clear steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "Identify the creator of \"The Two Fridas\": According to the context provided, Frida Kahlo created \"The Two Fridas\" in 1939.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Identify the creator of \"The Two Fridas\": According to the context provided, Frida Kahlo created \"The Two Fridas\" in 1939.",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "Determine the birth year of Frida Kahlo: The context also states that Frida Kahlo was born in Coyoacan, Mexico in 1907.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Determine the birth year of Frida Kahlo: The context also states that Frida Kahlo was born in Coyoacan, Mexico in 1907.",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "Conclude the answer: Since Frida Kahlo is the creator of \"The Two Fridas\" and she was born in 1907, the year the creator of \"The Two Fridas\" was born is 1907.\n\nFinal Answer: 1907",
+            "action": null,
+            "observation": null,
+            "raw_output": "Conclude the answer: Since Frida Kahlo is the creator of \"The Two Fridas\" and she was born in 1907, the year the creator of \"The Two Fridas\" was born is 1907.\n\nFinal Answer: 1907",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "synonym",
+      "variant_question": "In what annum was the originator of The Two Fridas born?",
+      "variant_context": "Frida Kahlo was born in Coyoacan, Mexico in 1907. Frida Kahlo created The Two Fridas in 1939. Meanwhile, Ada Lovelace was working on similar topics in England.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe wording in Question B uses synonyms like \"annum\" for \"year\" and \"originator\" for \"creator,\" but the core meaning and the answer remain the same. Therefore, these questions are equivalent."
+      },
+      "agent_run": {
+        "final_answer": "1907",
+        "n_steps": 6,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To solve the problem, let's break it down into clear steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To solve the problem, let's break it down into clear steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "Identify the key information given in the context: Frida Kahlo created \"The Two Fridas\" in 1939.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Identify the key information given in the context: Frida Kahlo created \"The Two Fridas\" in 1939.",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "Recognize that the question asks for the birth year of the person who created \"The Two Fridas.\"",
+            "action": null,
+            "observation": null,
+            "raw_output": "Recognize that the question asks for the birth year of the person who created \"The Two Fridas.\"",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "From the context, we know that Frida Kahlo is the creator of \"The Two Fridas.\"",
+            "action": null,
+            "observation": null,
+            "raw_output": "From the context, we know that Frida Kahlo is the creator of \"The Two Fridas.\"",
+            "is_final": false
+          },
+          {
+            "step": 5,
+            "thought": "The context also provides Frida Kahlo's birth year: 1907.",
+            "action": null,
+            "observation": null,
+            "raw_output": "The context also provides Frida Kahlo's birth year: 1907.",
+            "is_final": false
+          },
+          {
+            "step": 6,
+            "thought": "Since the question is asking for the birth year of the creator of \"The Two Fridas,\" and we know Frida Kahlo is the creator, we can conclude that the birth year we are looking for is 1907.\n\nFinal Answer: 1907",
+            "action": null,
+            "observation": null,
+            "raw_output": "Since the question is asking for the birth year of the creator of \"The Two Fridas,\" and we know Frida Kahlo is the creator, we can conclude that the birth year we are looking for is 1907.\n\nFinal Answer: 1907",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "reorder",
+      "variant_question": "In what year was the creator of The Two Fridas born? Please reason step by step.",
+      "variant_context": "Frida Kahlo was born in Coyoacan, Mexico in 1907. Frida Kahlo created The Two Fridas in 1939. Meanwhile, Ada Lovelace was working on similar topics in England.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (reorder; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "1907",
+        "n_steps": 3,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To determine the birth year of the creator of \"The Two Fridas,\" we can follow these steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To determine the birth year of the creator of \"The Two Fridas,\" we can follow these steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "Identify the creator of \"The Two Fridas.\" According to the context provided, Frida Kahlo created \"The Two Fridas\" in 1939.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Identify the creator of \"The Two Fridas.\" According to the context provided, Frida Kahlo created \"The Two Fridas\" in 1939.",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "Recall the birth year of Frida Kahlo from the context. The context states that Frida Kahlo was born in Coyoacan, Mexico in 1907.\n\nBy following these steps, we can conclude that the creator of \"The Two Fridas,\" Frida Kahlo, was born in 1907.\n\nFinal Answer: 1907",
+            "action": null,
+            "observation": null,
+            "raw_output": "Recall the birth year of Frida Kahlo from the context. The context states that Frida Kahlo was born in Coyoacan, Mexico in 1907.\n\nBy following these steps, we can conclude that the creator of \"The Two Fridas,\" Frida Kahlo, was born in 1907.\n\nFinal Answer: 1907",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "format",
+      "variant_question": "> In what year was the creator of The Two Fridas born?",
+      "variant_context": "• Frida Kahlo was born in Coyoacan, Mexico in 1907.\n• Frida Kahlo created The Two Fridas in 1939.\n• Meanwhile, Ada Lovelace was working on similar topics in England.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (format; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "1907",
+        "n_steps": 3,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To determine the year in which the creator of \"The Two Fridas\" was born, we can follow these steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To determine the year in which the creator of \"The Two Fridas\" was born, we can follow these steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "Identify the creator of \"The Two Fridas\": According to the context provided, Frida Kahlo created \"The Two Fridas\" in 1939.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Identify the creator of \"The Two Fridas\": According to the context provided, Frida Kahlo created \"The Two Fridas\" in 1939.",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "Find the birth year of Frida Kahlo: The context also states that Frida Kahlo was born in Coyoacan, Mexico in 1907.\n\nBy following these steps, we can conclude that the creator of \"The Two Fridas,\" Frida Kahlo, was born in 1907.\n\nFinal Answer: 1907",
+            "action": null,
+            "observation": null,
+            "raw_output": "Find the birth year of Frida Kahlo: The context also states that Frida Kahlo was born in Coyoacan, Mexico in 1907.\n\nBy following these steps, we can conclude that the creator of \"The Two Fridas,\" Frida Kahlo, was born in 1907.\n\nFinal Answer: 1907",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "distractor",
+      "variant_question": "Note: the following sentence is unrelated to the question. The local newspaper reported extensively on unrelated events that week. Now, in what year was the creator of The Two Fridas born?",
+      "variant_context": "Frida Kahlo was born in Coyoacan, Mexico in 1907. Frida Kahlo created The Two Fridas in 1939. Meanwhile, Ada Lovelace was working on similar topics in England. The local newspaper reported extensively on unrelated events that week.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (distractor; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "1907",
+        "n_steps": 4,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To determine the year Frida Kahlo, the creator of \"The Two Fridas,\" was born, we can follow these steps:",
+            "action": null,
+            "observation": null,
+            "raw_output": "To determine the year Frida Kahlo, the creator of \"The Two Fridas,\" was born, we can follow these steps:",
+            "is_final": false
+          },
+          {
+            "step": 2,
+            "thought": "Identify the key information provided in the context: Frida Kahlo created \"The Two Fridas\" in 1939.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Identify the key information provided in the context: Frida Kahlo created \"The Two Fridas\" in 1939.",
+            "is_final": false
+          },
+          {
+            "step": 3,
+            "thought": "Recall the specific information about Frida Kahlo's birth year from the context: Frida Kahlo was born in Coyoacan, Mexico in 1907.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Recall the specific information about Frida Kahlo's birth year from the context: Frida Kahlo was born in Coyoacan, Mexico in 1907.",
+            "is_final": false
+          },
+          {
+            "step": 4,
+            "thought": "Conclude that the year Frida Kahlo was born is 1907, based on the information given.\n\nFinal Answer: 1907",
+            "action": null,
+            "observation": null,
+            "raw_output": "Conclude that the year Frida Kahlo was born is 1907, based on the information given.\n\nFinal Answer: 1907",
+            "is_final": true
+          }
+        ]
+      }
+    }
+  ],
+  "patch_results": null,
+  "n_variants_generated": 5,
+  "n_variants_valid": 5,
+  "n_variants_rejected": 0,
+  "elapsed_seconds": 21.454180002212524
+}

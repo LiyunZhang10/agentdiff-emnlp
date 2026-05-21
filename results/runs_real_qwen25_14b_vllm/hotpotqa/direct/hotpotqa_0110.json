@@ -1,0 +1,257 @@
+{
+  "sample_id": "hotpotqa_0110",
+  "agent_type": "direct",
+  "sample_question": "In which city was the creator of Principia Mathematica born?",
+  "sample_context": "Isaac Newton was born in Woolsthorpe, England in 1643. Isaac Newton created Principia Mathematica in 1687. Meanwhile, Thomas Edison was working on similar topics in United States.",
+  "sample_gold_answer": "Woolsthorpe",
+  "original_result": {
+    "final_answer": "Woolsthorpe",
+    "n_steps": 1,
+    "is_correct": true,
+    "trace": [
+      {
+        "step": 1,
+        "thought": "Woolsthorpe",
+        "action": null,
+        "observation": null,
+        "raw_output": "Woolsthorpe",
+        "is_final": true
+      }
+    ]
+  },
+  "consistency_analysis": {
+    "consistency_rate": 1.0,
+    "is_consistent": true,
+    "inconsistent_count": 0,
+    "per_type_inconsistency": {
+      "paraphrase": 0.0,
+      "synonym": 0.0,
+      "reorder": 0.0,
+      "format": 0.0,
+      "distractor": 0.0
+    },
+    "propagation_patterns": {
+      "early_diverge": 1,
+      "consistent": 4
+    }
+  },
+  "propagation_details": [
+    {
+      "divergence_step": 1,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "early_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.0,
+          "action_match": true,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "paraphrase",
+      "variant_answer": "Woolsthorpe, England"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "synonym",
+      "variant_answer": "Woolsthorpe"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "reorder",
+      "variant_answer": "Woolsthorpe"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "format",
+      "variant_answer": "Woolsthorpe"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "distractor",
+      "variant_answer": "Woolsthorpe"
+    }
+  ],
+  "perturbation_variants": [
+    {
+      "perturbation_type": "paraphrase",
+      "variant_question": "Where was the creator of Principia Mathematica born?",
+      "variant_context": "Isaac Newton was born in Woolsthorpe, England in 1643. Isaac Newton created Principia Mathematica in 1687. Meanwhile, Thomas Edison was working on similar topics in United States.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking for the same information: the birthplace of the creator of Principia Mathematica. The minor difference in wording does not change the answer."
+      },
+      "agent_run": {
+        "final_answer": "Woolsthorpe, England",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "Woolsthorpe, England",
+            "action": null,
+            "observation": null,
+            "raw_output": "Woolsthorpe, England",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "synonym",
+      "variant_question": "In which metropolis was the originator of Principia Mathematica born?",
+      "variant_context": "Isaac Newton was born in Woolsthorpe, England in 1643. Isaac Newton created Principia Mathematica in 1687. Meanwhile, Thomas Edison was working on similar topics in United States.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe wording in Question B uses synonyms like \"metropolis\" for \"city\" and \"originator\" for \"creator,\" which do not change the core meaning or the answer to the question. Therefore, both questions "
+      },
+      "agent_run": {
+        "final_answer": "Woolsthorpe",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "Woolsthorpe",
+            "action": null,
+            "observation": null,
+            "raw_output": "Woolsthorpe",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "reorder",
+      "variant_question": "In which city was the creator of Principia Mathematica born? Please reason step by step.",
+      "variant_context": "Isaac Newton was born in Woolsthorpe, England in 1643. Isaac Newton created Principia Mathematica in 1687. Meanwhile, Thomas Edison was working on similar topics in United States.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (reorder; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "Woolsthorpe",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "Woolsthorpe",
+            "action": null,
+            "observation": null,
+            "raw_output": "Woolsthorpe\n\nStep 1: Identify the creator of Principia Mathematica - Isaac Newton.\nStep 2: Recall the birthplace of Isaac Newton - Woolsthorpe, England.\nStep 3: Conclude that the creator of Principia Mathematica was born in Woolsthorpe.",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "format",
+      "variant_question": "> In which city was the creator of Principia Mathematica born?",
+      "variant_context": "• Isaac Newton was born in Woolsthorpe, England in 1643.\n• Isaac Newton created Principia Mathematica in 1687.\n• Meanwhile, Thomas Edison was working on similar topics in United States.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (format; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "Woolsthorpe",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "Woolsthorpe",
+            "action": null,
+            "observation": null,
+            "raw_output": "Woolsthorpe",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "distractor",
+      "variant_question": "Note: the following sentence is unrelated to the question. Historical records from that era are preserved in multiple archives. Now, in which city was the creator of Principia Mathematica born?",
+      "variant_context": "Isaac Newton was born in Woolsthorpe, England in 1643. Isaac Newton created Principia Mathematica in 1687. Meanwhile, Thomas Edison was working on similar topics in United States. Historical records from that era are preserved in multiple archives.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (distractor; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "Woolsthorpe",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "Woolsthorpe",
+            "action": null,
+            "observation": null,
+            "raw_output": "Woolsthorpe",
+            "is_final": true
+          }
+        ]
+      }
+    }
+  ],
+  "patch_results": null,
+  "n_variants_generated": 5,
+  "n_variants_valid": 5,
+  "n_variants_rejected": 0,
+  "elapsed_seconds": 5.251429557800293
+}

@@ -1,0 +1,224 @@
+{
+  "sample_id": "hotpotqa_0030",
+  "agent_type": "direct",
+  "sample_question": "In which town was the creator of Principia Mathematica born?",
+  "sample_context": "Isaac Newton was born in Woolsthorpe, England in 1643. Isaac Newton created Principia Mathematica in 1687. Meanwhile, Pablo Picasso was working on similar topics in Spain.",
+  "sample_gold_answer": "Woolsthorpe",
+  "original_result": {
+    "final_answer": "Woolsthorpe",
+    "n_steps": 1,
+    "is_correct": true,
+    "trace": [
+      {
+        "step": 1,
+        "thought": "Woolsthorpe",
+        "action": null,
+        "observation": null,
+        "raw_output": "Woolsthorpe",
+        "is_final": true
+      }
+    ]
+  },
+  "consistency_analysis": {
+    "consistency_rate": 1.0,
+    "is_consistent": true,
+    "inconsistent_count": 0,
+    "per_type_inconsistency": {
+      "paraphrase": 0.0,
+      "reorder": 0.0,
+      "format": 0.0,
+      "distractor": 0.0
+    },
+    "propagation_patterns": {
+      "consistent": 4
+    }
+  },
+  "propagation_details": [
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "paraphrase",
+      "variant_answer": "Woolsthorpe"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "reorder",
+      "variant_answer": "Woolsthorpe"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "format",
+      "variant_answer": "Woolsthorpe"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "distractor",
+      "variant_answer": "Woolsthorpe"
+    }
+  ],
+  "perturbation_variants": [
+    {
+      "perturbation_type": "paraphrase",
+      "variant_question": "Where was the creator of Principia Mathematica born in terms of the town?",
+      "variant_context": "Isaac Newton was born in Woolsthorpe, England in 1643. Isaac Newton created Principia Mathematica in 1687. Meanwhile, Pablo Picasso was working on similar topics in Spain.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking for the same information: the town where the creator of Principia Mathematica was born. The slight rephrasing does not change the core of the question or the expected ans"
+      },
+      "agent_run": {
+        "final_answer": "Woolsthorpe",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "Woolsthorpe",
+            "action": null,
+            "observation": null,
+            "raw_output": "Woolsthorpe",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "synonym",
+      "variant_question": "In what borough was the originator of Principia Mathematica born?",
+      "variant_context": "Isaac Newton was born in Woolsthorpe, England in 1643. Isaac Newton created Principia Mathematica in 1687. Meanwhile, Pablo Picasso was working on similar topics in Spain.",
+      "validation": {
+        "is_equivalent": false,
+        "confidence": 0.2,
+        "reason": "NO\nThe term \"town\" in Question A and \"borough\" in Question B refer to different administrative divisions. While \"borough\" could sometimes be synonymous with \"town\" depending on the context and locatio"
+      },
+      "agent_run": null
+    },
+    {
+      "perturbation_type": "reorder",
+      "variant_question": "In which town was the creator of Principia Mathematica born? Please reason step by step.",
+      "variant_context": "Isaac Newton was born in Woolsthorpe, England in 1643. Isaac Newton created Principia Mathematica in 1687. Meanwhile, Pablo Picasso was working on similar topics in Spain.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (reorder; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "Woolsthorpe",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "Woolsthorpe",
+            "action": null,
+            "observation": null,
+            "raw_output": "Woolsthorpe\n\nStep-by-step reasoning:\n1. Isaac Newton created Principia Mathematica in 1687.\n2. Isaac Newton was born in Woolsthorpe, England in 1643.\n3. Therefore, the creator of Principia Mathematica, Isaac Newton, was born in Woolsthorpe.",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "format",
+      "variant_question": "> In which town was the creator of Principia Mathematica born?",
+      "variant_context": "• Isaac Newton was born in Woolsthorpe, England in 1643.\n• Isaac Newton created Principia Mathematica in 1687.\n• Meanwhile, Pablo Picasso was working on similar topics in Spain.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (format; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "Woolsthorpe",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "Woolsthorpe",
+            "action": null,
+            "observation": null,
+            "raw_output": "Woolsthorpe",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "distractor",
+      "variant_question": "Note: the following sentence is unrelated to the question. Historical records from that era are preserved in multiple archives. Now, in which town was the creator of Principia Mathematica born?",
+      "variant_context": "Isaac Newton was born in Woolsthorpe, England in 1643. Isaac Newton created Principia Mathematica in 1687. Meanwhile, Pablo Picasso was working on similar topics in Spain. Historical records from that era are preserved in multiple archives.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (distractor; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "Woolsthorpe",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "Woolsthorpe",
+            "action": null,
+            "observation": null,
+            "raw_output": "Woolsthorpe",
+            "is_final": true
+          }
+        ]
+      }
+    }
+  ],
+  "patch_results": null,
+  "n_variants_generated": 5,
+  "n_variants_valid": 4,
+  "n_variants_rejected": 1,
+  "elapsed_seconds": 5.5475218296051025
+}

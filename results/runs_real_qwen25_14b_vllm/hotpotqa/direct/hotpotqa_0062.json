@@ -1,0 +1,257 @@
+{
+  "sample_id": "hotpotqa_0062",
+  "agent_type": "direct",
+  "sample_question": "When was The Two Fridas created by the person born in Coyoacan?",
+  "sample_context": "Frida Kahlo was born in Coyoacan, Mexico in 1907. Frida Kahlo created The Two Fridas in 1939. Meanwhile, Isaac Newton was working on similar topics in England.",
+  "sample_gold_answer": "1939",
+  "original_result": {
+    "final_answer": "1939",
+    "n_steps": 1,
+    "is_correct": true,
+    "trace": [
+      {
+        "step": 1,
+        "thought": "1939",
+        "action": null,
+        "observation": null,
+        "raw_output": "1939",
+        "is_final": true
+      }
+    ]
+  },
+  "consistency_analysis": {
+    "consistency_rate": 1.0,
+    "is_consistent": true,
+    "inconsistent_count": 0,
+    "per_type_inconsistency": {
+      "paraphrase": 0.0,
+      "synonym": 0.0,
+      "reorder": 0.0,
+      "format": 0.0,
+      "distractor": 0.0
+    },
+    "propagation_patterns": {
+      "consistent": 4,
+      "early_diverge": 1
+    }
+  },
+  "propagation_details": [
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "paraphrase",
+      "variant_answer": "1939"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "synonym",
+      "variant_answer": "1939"
+    },
+    {
+      "divergence_step": 1,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "early_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.06666666666666667,
+          "action_match": true,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "reorder",
+      "variant_answer": "The Two Fridas was created in 1939 by Frida Kahlo, who was born in Coyoacan, Mexico in 1907."
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "format",
+      "variant_answer": "1939"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "distractor",
+      "variant_answer": "1939"
+    }
+  ],
+  "perturbation_variants": [
+    {
+      "perturbation_type": "paraphrase",
+      "variant_question": "What is the creation date of The Two Fridas by the individual born in Coyoacan?",
+      "variant_context": "Frida Kahlo was born in Coyoacan, Mexico in 1907. Frida Kahlo created The Two Fridas in 1939. Meanwhile, Isaac Newton was working on similar topics in England.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe two questions are asking for the same information: the creation date of \"The Two Fridas\" by an individual born in Coyoacan. The minor differences in wording do not change the core information"
+      },
+      "agent_run": {
+        "final_answer": "1939",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "1939",
+            "action": null,
+            "observation": null,
+            "raw_output": "1939",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "synonym",
+      "variant_question": "When was The Two Fridas produced by the individual born in Coyoacan?",
+      "variant_context": "Frida Kahlo was born in Coyoacan, Mexico in 1907. Frida Kahlo created The Two Fridas in 1939. Meanwhile, Isaac Newton was working on similar topics in England.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking for the same information: the creation year of \"The Two Fridas\" by the person born in Coyoacan. The minor wording differences ('created' vs 'produced', 'the person' vs 't"
+      },
+      "agent_run": {
+        "final_answer": "1939",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "1939",
+            "action": null,
+            "observation": null,
+            "raw_output": "1939",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "reorder",
+      "variant_question": "When was The Two Fridas created by the person born in Coyoacan? Please reason step by step.",
+      "variant_context": "Frida Kahlo was born in Coyoacan, Mexico in 1907. Frida Kahlo created The Two Fridas in 1939. Meanwhile, Isaac Newton was working on similar topics in England.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (reorder; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "The Two Fridas was created in 1939 by Frida Kahlo, who was born in Coyoacan, Mexico in 1907.",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "The Two Fridas was created in 1939 by Frida Kahlo, who was born in Coyoacan, Mexico in 1907.",
+            "action": null,
+            "observation": null,
+            "raw_output": "The Two Fridas was created in 1939 by Frida Kahlo, who was born in Coyoacan, Mexico in 1907.",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "format",
+      "variant_question": "> When was The Two Fridas created by the person born in Coyoacan?",
+      "variant_context": "• Frida Kahlo was born in Coyoacan, Mexico in 1907.\n• Frida Kahlo created The Two Fridas in 1939.\n• Meanwhile, Isaac Newton was working on similar topics in England.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (format; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "1939",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "1939",
+            "action": null,
+            "observation": null,
+            "raw_output": "1939",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "distractor",
+      "variant_question": "Note: the following sentence is unrelated to the question. Several other researchers had studied similar topics in the past decade. Now, when was The Two Fridas created by the person born in Coyoacan?",
+      "variant_context": "Frida Kahlo was born in Coyoacan, Mexico in 1907. Frida Kahlo created The Two Fridas in 1939. Meanwhile, Isaac Newton was working on similar topics in England. Several other researchers had studied similar topics in the past decade.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (distractor; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "1939",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "1939",
+            "action": null,
+            "observation": null,
+            "raw_output": "1939",
+            "is_final": true
+          }
+        ]
+      }
+    }
+  ],
+  "patch_results": null,
+  "n_variants_generated": 5,
+  "n_variants_valid": 5,
+  "n_variants_rejected": 0,
+  "elapsed_seconds": 5.157262802124023
+}

@@ -1,0 +1,193 @@
+{
+  "sample_id": "hotpotqa_0120",
+  "agent_type": "direct",
+  "sample_question": "What nationality was the person who created telephone?",
+  "sample_context": "Alexander Graham Bell was born in Edinburgh, Scotland in 1847. Alexander Graham Bell created telephone in 1876. Meanwhile, Pablo Picasso was working on similar topics in Spain.",
+  "sample_gold_answer": "Scotland",
+  "original_result": {
+    "final_answer": "Scottish",
+    "n_steps": 1,
+    "is_correct": false,
+    "trace": [
+      {
+        "step": 1,
+        "thought": "Scottish",
+        "action": null,
+        "observation": null,
+        "raw_output": "Scottish",
+        "is_final": true
+      }
+    ]
+  },
+  "consistency_analysis": {
+    "consistency_rate": 1.0,
+    "is_consistent": true,
+    "inconsistent_count": 0,
+    "per_type_inconsistency": {
+      "reorder": 0.0,
+      "format": 0.0,
+      "distractor": 0.0
+    },
+    "propagation_patterns": {
+      "early_diverge": 1,
+      "consistent": 2
+    }
+  },
+  "propagation_details": [
+    {
+      "divergence_step": 1,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "early_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.0,
+          "action_match": true,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "reorder",
+      "variant_answer": "Alexander Graham Bell, who created the telephone in 1876, was Scottish. He was born in Edinburgh, Scotland in 1847."
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "format",
+      "variant_answer": "Scottish"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "distractor",
+      "variant_answer": "Scottish"
+    }
+  ],
+  "perturbation_variants": [
+    {
+      "perturbation_type": "paraphrase",
+      "variant_question": "Who created the telephone, and what was their nationality?",
+      "variant_context": "Alexander Graham Bell was born in Edinburgh, Scotland in 1847. Alexander Graham Bell created telephone in 1876. Meanwhile, Pablo Picasso was working on similar topics in Spain.",
+      "validation": {
+        "is_equivalent": false,
+        "confidence": 0.2,
+        "reason": "NO\nThe reference answer to Question A is 'Scotland', which implies the question is seeking the nationality of the person who created the telephone. However, Question B asks for both the creator of the"
+      },
+      "agent_run": null
+    },
+    {
+      "perturbation_type": "synonym",
+      "variant_question": "What ethnic origin was the individual who invented telephone?",
+      "variant_context": "Alexander Graham Bell was born in Edinburgh, Scotland in 1847. Alexander Graham Bell created telephone in 1876. Meanwhile, Pablo Picasso was working on similar topics in Spain.",
+      "validation": {
+        "is_equivalent": false,
+        "confidence": 0.2,
+        "reason": "NO\nThe terms \"nationality\" and \"ethnic origin\" can sometimes be used interchangeably, but they have distinct meanings. Nationality refers to the country with which a person is associated, while ethnic"
+      },
+      "agent_run": null
+    },
+    {
+      "perturbation_type": "reorder",
+      "variant_question": "What nationality was the person who created telephone? Please reason step by step.",
+      "variant_context": "Alexander Graham Bell was born in Edinburgh, Scotland in 1847. Alexander Graham Bell created telephone in 1876. Meanwhile, Pablo Picasso was working on similar topics in Spain.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (reorder; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "Alexander Graham Bell, who created the telephone in 1876, was Scottish. He was born in Edinburgh, Scotland in 1847.",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "Alexander Graham Bell, who created the telephone in 1876, was Scottish. He was born in Edinburgh, Scotland in 1847.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Alexander Graham Bell, who created the telephone in 1876, was Scottish. He was born in Edinburgh, Scotland in 1847.",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "format",
+      "variant_question": "> What nationality was the person who created telephone?",
+      "variant_context": "• Alexander Graham Bell was born in Edinburgh, Scotland in 1847.\n• Alexander Graham Bell created telephone in 1876.\n• Meanwhile, Pablo Picasso was working on similar topics in Spain.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (format; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "Scottish",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "Scottish",
+            "action": null,
+            "observation": null,
+            "raw_output": "Scottish",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "distractor",
+      "variant_question": "Note: the following sentence is unrelated to the question. Historical records from that era are preserved in multiple archives. Now, what nationality was the person who created telephone?",
+      "variant_context": "Alexander Graham Bell was born in Edinburgh, Scotland in 1847. Alexander Graham Bell created telephone in 1876. Meanwhile, Pablo Picasso was working on similar topics in Spain. Historical records from that era are preserved in multiple archives.",
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (distractor; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "Scottish",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "Scottish",
+            "action": null,
+            "observation": null,
+            "raw_output": "Scottish",
+            "is_final": true
+          }
+        ]
+      }
+    }
+  ],
+  "patch_results": null,
+  "n_variants_generated": 5,
+  "n_variants_valid": 3,
+  "n_variants_rejected": 2,
+  "elapsed_seconds": 6.2504377365112305
+}

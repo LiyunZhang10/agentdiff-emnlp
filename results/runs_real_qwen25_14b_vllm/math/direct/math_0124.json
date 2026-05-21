@@ -1,0 +1,243 @@
+{
+  "sample_id": "math_0124",
+  "agent_type": "direct",
+  "sample_question": "If a rectangle has length 10 and width 3, what is its area?",
+  "sample_context": null,
+  "sample_gold_answer": "30",
+  "original_result": {
+    "final_answer": "30",
+    "n_steps": 1,
+    "is_correct": true,
+    "trace": [
+      {
+        "step": 1,
+        "thought": "30",
+        "action": null,
+        "observation": null,
+        "raw_output": "30",
+        "is_final": true
+      }
+    ]
+  },
+  "consistency_analysis": {
+    "consistency_rate": 0.75,
+    "is_consistent": false,
+    "inconsistent_count": 1,
+    "per_type_inconsistency": {
+      "paraphrase": 0.0,
+      "reorder": 1.0,
+      "format": 0.0,
+      "distractor": 0.0
+    },
+    "propagation_patterns": {
+      "consistent": 3,
+      "early_diverge": 1
+    }
+  },
+  "propagation_details": [
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "paraphrase",
+      "variant_answer": "30"
+    },
+    {
+      "divergence_step": 1,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "early_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.0,
+          "action_match": true,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "reorder",
+      "variant_answer": "Step 1: Identify the formula for the area of a rectangle, which is length multiplied by width."
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "format",
+      "variant_answer": "30"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "distractor",
+      "variant_answer": "30"
+    }
+  ],
+  "perturbation_variants": [
+    {
+      "perturbation_type": "paraphrase",
+      "variant_question": "What is the area of a rectangle with length 10 and width 3?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking for the same information and would yield the same answer. The only difference is in the wording and the order in which the information is presented, which does not affect"
+      },
+      "agent_run": {
+        "final_answer": "30",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "30",
+            "action": null,
+            "observation": null,
+            "raw_output": "30",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "synonym",
+      "variant_question": "If a rectangle possesses length 10 and breadth 3, what is its surface?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": false,
+        "confidence": 0.2,
+        "reason": "NO\nThe term \"surface\" is not typically used for the area of a rectangle; instead, \"area\" is the correct term. Although the wording is slightly different and the intent seems similar, the use of \"surfa"
+      },
+      "agent_run": null
+    },
+    {
+      "perturbation_type": "reorder",
+      "variant_question": "If a rectangle has length 10 and width 3, what is its area? Please reason step by step.",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (reorder; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "Step 1: Identify the formula for the area of a rectangle, which is length multiplied by width.",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "Step 1: Identify the formula for the area of a rectangle, which is length multiplied by width.",
+            "action": null,
+            "observation": null,
+            "raw_output": "Step 1: Identify the formula for the area of a rectangle, which is length multiplied by width.\nStep 2: Substitute the given values into the formula: length = 10, width = 3.\nStep 3: Calculate the area: \\(10 \\times 3 = 30\\).\n\nAnswer: 30",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "format",
+      "variant_question": "> If a rectangle has length 10 and width 3, what is its area?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (format; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "30",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "30",
+            "action": null,
+            "observation": null,
+            "raw_output": "30",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "distractor",
+      "variant_question": "Note: the following sentence is unrelated to the question. Meanwhile, advances in technology continued to reshape daily life. Now, if a rectangle has length 10 and width 3, what is its area?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (distractor; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "30",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "30",
+            "action": null,
+            "observation": null,
+            "raw_output": "30",
+            "is_final": true
+          }
+        ]
+      }
+    }
+  ],
+  "patch_results": {
+    "step_patch": {
+      "consistency_rate": 0.75,
+      "inconsistent_count": 1,
+      "is_correct": true,
+      "intervention_step": 1,
+      "target_types": [
+        "reorder"
+      ]
+    },
+    "system_patch": {
+      "consistency_rate": 1.0,
+      "inconsistent_count": 0,
+      "is_correct": true,
+      "target_types": [
+        "reorder"
+      ]
+    }
+  },
+  "n_variants_generated": 5,
+  "n_variants_valid": 4,
+  "n_variants_rejected": 1,
+  "elapsed_seconds": 8.850675821304321
+}

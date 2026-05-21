@@ -1,0 +1,63 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.ipynb_checkpoints/
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs / pids / temp dumps
+*.log
+*.pid
+*.out
+*.tmp
+nohup.out
+_*.txt
+_*.out
+_*.pid
+_*.json
+_*.sh
+_*.py
+_archive_*/
+_diag/
+_export_v*/
+_acl_template/
+_acl_official_template/
+
+# Paper build artifacts
+paper/*.aux
+paper/*.bbl
+paper/*.blg
+paper/*.toc
+paper/*.synctex.gz
+paper/*.fls
+paper/*.fdb_latexmk
+
+# Big intermediate experiment dumps (we keep summaries only)
+output/
+output_v2/
+exports/
+preview/
+analysis_b/
+scaleup_logs/
+cross_model_logs/
+logs/
+
+# GPU run artifacts (will be added explicitly when ready)
+gpu_kit/_runs/
+gpu_kit/_logs/
+
+# Python virtualenvs
+.venv/
+venv/
+env/
+
+# Local-only safety snapshots (硬链接备份，不进仓库)
+results/_snapshot_*/
+

@@ -1,0 +1,277 @@
+{
+  "sample_id": "math_0006",
+  "agent_type": "direct",
+  "sample_question": "Find the derivative of f(x) = x^3 * sin(x).",
+  "sample_context": null,
+  "sample_gold_answer": "3x^2*sin(x) + x^3*cos(x)",
+  "original_result": {
+    "final_answer": "f'(x) = 3x^2*sin(x) + x^3*cos(x)",
+    "n_steps": 1,
+    "is_correct": true,
+    "trace": [
+      {
+        "step": 1,
+        "thought": "f'(x) = 3x^2*sin(x) + x^3*cos(x)",
+        "action": null,
+        "observation": null,
+        "raw_output": "f'(x) = 3x^2*sin(x) + x^3*cos(x)",
+        "is_final": true
+      }
+    ]
+  },
+  "consistency_analysis": {
+    "consistency_rate": 0.6,
+    "is_consistent": false,
+    "inconsistent_count": 2,
+    "per_type_inconsistency": {
+      "paraphrase": 0.0,
+      "synonym": 1.0,
+      "reorder": 1.0,
+      "format": 0.0,
+      "distractor": 0.0
+    },
+    "propagation_patterns": {
+      "consistent": 3,
+      "early_diverge": 2
+    }
+  },
+  "propagation_details": [
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.6,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "paraphrase",
+      "variant_answer": "3x^2*sin(x) + x^3*cos(x)"
+    },
+    {
+      "divergence_step": 1,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "early_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.3333333333333333,
+          "action_match": true,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "synonym",
+      "variant_answer": "3x^2*sin(x) + x^3*cos(x)dx"
+    },
+    {
+      "divergence_step": 1,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "early_diverge",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 0.1111111111111111,
+          "action_match": true,
+          "is_divergent": true
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "reorder",
+      "variant_answer": "To find the derivative of \\( f(x) = x^3 \\sin(x) \\), apply the product rule, which states that if \\( f(x) = g(x)h(x) \\), then \\( f'(x) = g'(x)h(x) + g(x)h'(x) \\)."
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "format",
+      "variant_answer": "f'(x) = 3x^2*sin(x) + x^3*cos(x)"
+    },
+    {
+      "divergence_step": 0,
+      "cascade_depth": 0,
+      "self_corrections": 0,
+      "propagation_pattern": "consistent",
+      "step_similarities": [
+        {
+          "step": 1,
+          "thought_similarity": 1.0,
+          "action_match": true,
+          "is_divergent": false
+        }
+      ],
+      "n_steps_original": 1,
+      "n_steps_variant": 1,
+      "perturbation_type": "distractor",
+      "variant_answer": "f'(x) = 3x^2*sin(x) + x^3*cos(x)"
+    }
+  ],
+  "perturbation_variants": [
+    {
+      "perturbation_type": "paraphrase",
+      "variant_question": "What is the derivative of f(x) = x^3 * sin(x)?",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe questions are asking for the same information with only a minor wording difference ('Find the derivative' vs 'What is the derivative'). Therefore, they are equivalent."
+      },
+      "agent_run": {
+        "final_answer": "3x^2*sin(x) + x^3*cos(x)",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "3x^2*sin(x) + x^3*cos(x)",
+            "action": null,
+            "observation": null,
+            "raw_output": "3x^2*sin(x) + x^3*cos(x)",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "synonym",
+      "variant_question": "Determine the differential of f(x) = x^3 * sin(x).",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 0.9,
+        "reason": "YES\n\nThe terms \"find the derivative\" and \"determine the differential\" are used interchangeably in this context, both referring to the process of calculating the rate of change of the function f(x) = x"
+      },
+      "agent_run": {
+        "final_answer": "3x^2*sin(x) + x^3*cos(x)dx",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "3x^2*sin(x) + x^3*cos(x)dx",
+            "action": null,
+            "observation": null,
+            "raw_output": "3x^2*sin(x) + x^3*cos(x)dx",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "reorder",
+      "variant_question": "Find the derivative of f(x) = x^3 * sin(x). Please reason step by step.",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (reorder; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "To find the derivative of \\( f(x) = x^3 \\sin(x) \\), apply the product rule, which states that if \\( f(x) = g(x)h(x) \\), then \\( f'(x) = g'(x)h(x) + g(x)h'(x) \\).",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "To find the derivative of \\( f(x) = x^3 \\sin(x) \\), apply the product rule, which states that if \\( f(x) = g(x)h(x) \\), then \\( f'(x) = g'(x)h(x) + g(x)h'(x) \\).",
+            "action": null,
+            "observation": null,
+            "raw_output": "To find the derivative of \\( f(x) = x^3 \\sin(x) \\), apply the product rule, which states that if \\( f(x) = g(x)h(x) \\), then \\( f'(x) = g'(x)h(x) + g(x)h'(x) \\).\n\nHere, \\( g(x) = x^3 \\) and \\( h(x) = \\sin(x) \\).\n\n1. Compute \\( g'(x) \\): \\( g'(x) = 3x^2 \\).\n2. Compute \\( h'(x) \\): \\( h'(x) = \\cos(x) \\).\n\nUsing the product rule:\n\\[ f'(x) = (3x^2)(\\sin(x)) + (x^3)(\\cos(x)) \\]\n\\[ f'(x) = 3x^2 \\sin(x) + x^3 \\cos(x) \\]",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "format",
+      "variant_question": "> Find the derivative of f(x) = x^3 * sin(x).",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (format; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "f'(x) = 3x^2*sin(x) + x^3*cos(x)",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "f'(x) = 3x^2*sin(x) + x^3*cos(x)",
+            "action": null,
+            "observation": null,
+            "raw_output": "f'(x) = 3x^2*sin(x) + x^3*cos(x)",
+            "is_final": true
+          }
+        ]
+      }
+    },
+    {
+      "perturbation_type": "distractor",
+      "variant_question": "Note: the following sentence is unrelated to the question. The weather that day was particularly sunny with clear skies. Now, find the derivative of f(x) = x^3 * sin(x).",
+      "variant_context": null,
+      "validation": {
+        "is_equivalent": true,
+        "confidence": 1.0,
+        "reason": "Structural check passed (distractor; nums/symbols/wh/qmark preserved)"
+      },
+      "agent_run": {
+        "final_answer": "f'(x) = 3x^2*sin(x) + x^3*cos(x)",
+        "n_steps": 1,
+        "trace": [
+          {
+            "step": 1,
+            "thought": "f'(x) = 3x^2*sin(x) + x^3*cos(x)",
+            "action": null,
+            "observation": null,
+            "raw_output": "f'(x) = 3x^2*sin(x) + x^3*cos(x)",
+            "is_final": true
+          }
+        ]
+      }
+    }
+  ],
+  "patch_results": {
+    "step_patch": {
+      "consistency_rate": 0.6,
+      "inconsistent_count": 2,
+      "is_correct": false,
+      "intervention_step": 1,
+      "target_types": [
+        "synonym",
+        "reorder"
+      ]
+    },
+    "system_patch": {
+      "consistency_rate": 0.19999999999999996,
+      "inconsistent_count": 4,
+      "is_correct": true,
+      "target_types": [
+        "synonym",
+        "reorder"
+      ]
+    }
+  },
+  "n_variants_generated": 5,
+  "n_variants_valid": 5,
+  "n_variants_rejected": 0,
+  "elapsed_seconds": 26.42663264274597
+}
