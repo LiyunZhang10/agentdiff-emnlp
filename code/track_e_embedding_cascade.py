@@ -38,7 +38,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 from scipy.stats import ttest_ind, pearsonr
 
-ROOT = "."
+ROOT = "/data/workspace/agentdiff_exp"
 OUT = os.path.join(ROOT, "track_e")
 CELLS_DIR = os.path.join(OUT, "cells")
 os.makedirs(CELLS_DIR, exist_ok=True)

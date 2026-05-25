@@ -25,7 +25,7 @@ from collections import defaultdict
 
 import numpy as np
 
-ROOT = "."
+ROOT = "/data/workspace/agentdiff_exp"
 SEM = {"paraphrase", "synonym"}
 SUR = {"reorder", "format", "distractor"}
 SEVERITY_FILE = os.path.join(ROOT, "track_a", "severity_per_variant.jsonl")

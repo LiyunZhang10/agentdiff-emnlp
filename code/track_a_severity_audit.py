@@ -26,7 +26,7 @@ import time
 import re
 from collections import defaultdict
 
-ROOT = "."
+ROOT = "/data/workspace/agentdiff_exp"
 OUT_DIR = os.path.join(ROOT, "track_a")
 os.makedirs(OUT_DIR, exist_ok=True)
 SEVERITY_JSONL = os.path.join(OUT_DIR, "severity_per_variant.jsonl")

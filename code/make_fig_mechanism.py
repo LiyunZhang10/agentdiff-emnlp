@@ -17,7 +17,7 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
-ROOT = "."
+ROOT = "/data/workspace/agentdiff-emnlp"
 SRC  = os.path.join(ROOT, "results/conditional_v2/trace_mech_qwen25_14b.json")
 OUT_DIR = os.path.join(ROOT, "paper/paper_figs")
 os.makedirs(OUT_DIR, exist_ok=True)

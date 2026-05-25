@@ -32,7 +32,7 @@ from collections import defaultdict
 import urllib.request
 import urllib.error
 
-ROOT = "."
+ROOT = "/data/workspace/agentdiff_exp"
 OUT = os.path.join(ROOT, "track_f")
 os.makedirs(OUT, exist_ok=True)
 JUDGE_FILE = os.path.join(OUT, "judge_results.jsonl")
@@ -40,8 +40,8 @@ PROGRESS = os.path.join(OUT, "_f_progress.txt")
 SUMMARY = os.path.join(OUT, "_f_summary.txt")
 RESULT_FILE = os.path.join(OUT, "judge_agreement.json")
 
-MIMO_API_KEY = os.environ.get("MIMO_API_KEY", "")
-MIMO_BASE_URL = os.environ.get("MIMO_BASE_URL", "")
+MIMO_API_KEY = "tp-s5xwbhbqjzgvoka4dtm8v7xso1lv23vugelchz4w4j3uma0p"
+MIMO_BASE_URL = "https://token-plan-sgp.xiaomimimo.com/v1"
 MAX_CALLS = 1500  # safety cap
 
 SEM = {"paraphrase", "synonym"}

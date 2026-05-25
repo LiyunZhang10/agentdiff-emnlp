@@ -44,7 +44,7 @@ from collections import defaultdict
 import numpy as np
 from scipy.stats import ttest_ind, ttest_1samp
 
-ROOT = "."
+ROOT = "/data/workspace/agentdiff_exp"
 OUT = os.path.join(ROOT, "track_d")
 os.makedirs(OUT, exist_ok=True)
 RESULT_FILE = os.path.join(OUT, "within_benchmark.json")

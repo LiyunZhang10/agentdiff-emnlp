@@ -62,7 +62,7 @@ plt.rcParams.update({
     "axes.spines.right": False,
 })
 
-ROOT = "."
+ROOT = "/data/workspace/agentdiff_exp"
 OUT  = os.path.join(ROOT, "paper_figs")
 os.makedirs(OUT, exist_ok=True)
 

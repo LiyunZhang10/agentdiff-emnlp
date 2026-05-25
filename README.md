@@ -1,138 +1,188 @@
 # AgentDiff: Semantic vs Surface Inconsistency in LLM Agents
 
-> **Anonymized supplementary material accompanying an EMNLP 2026 Findings submission.**
-> All identifying information (authors, affiliations, repository URLs, API keys,
-> internal paths) has been removed from this snapshot.
-
-This repository accompanies the paper **"When Do LLM Agents Treat Surface Noise
-Differently from Semantic Noise? A 44-Cell Measurement Study with a Held-Out
-Trace-Level Validation."** It contains all source code, raw experimental
-trajectories, analysis scripts, and the camera-ready PDF.
+> **EMNLP 2026 Findings submission (in preparation).**
+> An empirical study of how meaning-preserving lexical rewrites destabilize
+> multi-step LLM agents more than presentation-level surface edits — across
+> benchmarks, scaffolds, and model families.
 
 ---
 
-## TL;DR
+## 🎯 What this repo contains
 
-We run **44 (model × benchmark × scaffold) cells** across 6 model families on
-3 benchmarks (GSM8K, MATH, HotpotQA), measuring how often the agent's final
-answer flips when the question is rewritten in a meaning-preserving way
-(`paraphrase`, `synonym`) versus a presentation-only way (`reorder`, `format`,
-`distractor`). We document a **capability-gated, task-tractable dichotomy**:
-once both gates open, semantic-preserving rewrites destabilize agents
-substantially more than surface edits (mean **+14.32 pp** on the original
-6-model panel; replicated in direction on a held-out 7th model run of 1,800
-trajectories).
+| Path | What | Size |
+|---|---|---|
+| [`paper/`](paper/) | The paper itself: `paper.md` (source), `Paper_EN.docx`, `Paper_EN.pdf`, `Paper_ACL.tex`, `Paper_ACL.pdf`, all figures | ~6 MB |
+| [`code/`](code/) | All experiment + analysis scripts (22 files) | ~320 KB |
+| [`data/`](data/) | The 5 task files (GSM8K, MATH, HotpotQA test/ablation) | ~500 KB |
+| [`results/`](results/) | All raw run outputs already produced (27 model × benchmark cells) | ~63 MB |
+| [`docs/`](docs/) | Design docs: `EMNLP_FINDINGS_ROADMAP.md`, `PAPER_OUTLINE_v3.md`, `intake_report.md`, `experiment_plan.md` | ~40 KB |
+| [`gpu_kit/`](gpu_kit/) | **Self-contained kit to run the missing 70B / heavy experiments on a GPU node** | small |
 
-The full paper is in [`paper/acl/acl_paper.pdf`](paper/acl/acl_paper.pdf).
-
----
-
-## Repository contents
-
-| Path | What |
-|---|---|
-| `paper/acl/acl_paper.tex` + `acl_paper.pdf` | LaTeX source + camera-ready PDF (ACL Rolling Review format, anonymized) |
-| `paper/acl/figs/` | All 6 main figures (vector PDF) |
-| `paper/acl/references.bib` | Bibliography |
-| `paper/paper.md` | Markdown source the LaTeX was generated from |
-| `code/` | 25 Python scripts: experiment driver, perturbation generators, aggregation, statistical tests, figure generation |
-| `data/` | The 5 task files (GSM8K test, MATH test + ablation, HotpotQA test + ablation) |
-| `results/` | Raw `.jsonl` trajectories for every cell + aggregated CSV/JSON tables |
-| `gpu_kit/` | Self-contained workflow for the held-out Qwen-2.5-14B run on a GPU node (vLLM serving + client) |
+Total checked in: ~70 MB (well below GitHub's 1 GB recommended limit, no LFS needed).
 
 ---
 
-## Quick reproduction (CPU-only)
+## 🧪 Headline finding (one paragraph)
 
-All headline numbers in the paper can be recomputed from `results/` without
-running any LLM:
+Across **3 benchmarks** (GSM8K, MATH, HotpotQA) × **8 model families**
+(Llama-3.2 1B/3B, Llama-3.1 8B, Qwen-2.5 3B/7B, Mistral 7B, Gemma-2 9B,
+MiMo-v2.5-pro), we ran 19 controlled perturbations per cell and measured
+*semantic-preserving lexical rewrites* (`syn_swap`, `paraphrase`,
+`negation_double`, …) versus *surface-only edits* (`whitespace`, `case`,
+`punct`, …). We find a **robust empirical regularity**: meaning-preserving
+lexical rewrites consistently produce larger answer-instability deltas than
+presentation edits, and this gap **scales positively with task tractability
+and model capability** — a *capability-gated, task-tractable dichotomy*.
+Existing tractability- and topology-based explanations fail to predict it.
+
+> **Capability-Gated AND Task-Tractable Dichotomy** (26 cells aggregated):
+> Pearson r = +0.37, p = 0.050; OLS slope = +17.7 pp / acc unit.
+> At acc ≥ 0.65, **8/8 capable cells** show Δ > 0 (mean +14.6 pp,
+> Fisher exact p = 0.0016); below threshold, only 5/18 (mean −1.2 pp).
+> Mechanism: χ² = 9.93, p = 0.042 over 5-pattern distribution; semantic
+> perturbations are **3× less likely to self-correct** (0.8 % vs 2.6 %,
+> p = 0.005) and diverge **0.11 step earlier** (paired *t* = −2.30, p = 0.021).
+
+---
+
+## 📁 Repository structure
+
+```
+agentdiff-emnlp/
+├── README.md                       ← you are here
+├── LICENSE                         (MIT)
+├── .gitignore
+│
+├── paper/                          ← the manuscript & camera-ready figures
+│   ├── paper.md                    ← canonical source (markdown, ~48 KB)
+│   ├── Paper_EN.docx               ← Word export
+│   ├── Paper_EN.pdf                ← PDF export
+│   ├── Paper_ACL.tex               ← ACL/EMNLP LaTeX source
+│   ├── Paper_ACL.pdf
+│   ├── figures/                    ← 5 main figures (PDF + PNG)
+│   ├── paper_figs_v2/              ← alternative figure set
+│   └── figs_v3/                    ← supplementary heatmaps / bars
+│
+├── code/                           ← reproducible pipeline
+│   ├── agentdiff_v2.py             ← main perturbation+agent driver
+│   ├── agentdiff_probe.py
+│   ├── run_cross_model.py          ← cross-family evaluation orchestrator
+│   ├── api_router.py               ← unified ollama/groq/openai-compat router
+│   ├── make_paper_figures.py       ← regenerates figs from results/
+│   ├── make_paper_figs_n50.py
+│   ├── md_to_docx.py               ← paper.md → docx with embedded images
+│   ├── plot_dichotomy_heatmap.py
+│   ├── analyze_propagation_dichotomy.py
+│   ├── aggregate_conditional.py    ← builds 26-cell aggregate
+│   ├── aggregate_fix_models.py
+│   ├── checklist_vs_agentdiff.py
+│   ├── sanity_judge.py
+│   ├── track_a_severity_audit.py        ← Track A: severity-controlled
+│   ├── track_a2_severity_matched.py
+│   ├── track_b_robust_inference.py      ← Track B: scaffold robustness
+│   ├── track_c_family_cluster.py        ← Track C: family clustering
+│   ├── track_c_genrank.py
+│   ├── track_d_embedding_severity.py    ← Track D: embedding severity
+│   ├── track_d_within_benchmark.py
+│   ├── track_e_embedding_cascade.py     ← Track E: cascade analysis
+│   └── track_f_second_judge.py          ← Track F: second-judge robustness
+│
+├── data/                           ← task sets
+│   ├── gsm8k_test.jsonl
+│   ├── math_test.jsonl             ← deep-math
+│   ├── math_ablation.jsonl
+│   ├── hotpotqa_test.jsonl
+│   └── hotpotqa_ablation.jsonl
+│
+├── results/                        ← 63 MB of already-produced runs
+│   ├── results_conditional/        ← aggregate analysis outputs
+│   ├── runs_real_llama32_1b_*/     ← Llama-3.2 1B (fix + hpqa)
+│   ├── runs_real_llama32_3b_*/     ← Llama-3.2 3B
+│   ├── runs_real_llama31_8b_*/     ← Llama-3.1 8B
+│   ├── runs_real_qwen25_3b_*/      ← Qwen-2.5 3B
+│   ├── runs_real_qwen25_7b_*/      ← Qwen-2.5 7B
+│   ├── runs_real_mistral_7b_*/     ← Mistral 7B (partial)
+│   └── runs_real_mimo_v25_pro_*/   ← MiMo-v2.5-pro (frontier API)
+│
+├── docs/                           ← internal planning notes
+│   ├── EMNLP_FINDINGS_ROADMAP.md
+│   ├── PAPER_OUTLINE_v3.md
+│   ├── intake_report.md
+│   ├── experiment_plan.md
+│   └── OVERNIGHT_PLAN_2026-05-13.md
+│
+└── gpu_kit/                        ← run heavy experiments on a GPU node
+    └── README_GPU.md               ← copy-paste workflow (see below)
+```
+
+---
+
+## 🚀 Quick reproduction (light, no GPU)
 
 ```bash
-# 1. Aggregate the 26-cell main panel + 16-cell severity-matched extension
+git clone <THIS_REPO> agentdiff-emnlp
+cd agentdiff-emnlp
+
+# 1. regenerate all figures from existing results/
+python3 code/make_paper_figures.py
+
+# 2. regenerate the 26-cell aggregate analysis
 python3 code/aggregate_conditional.py
 
-# 2. Re-run the merged 42-cell analysis (held-out + main panel)
-python3 code/merged_analysis_42cells.py
-
-# 3. Trace-level mechanism probes on the held-out 1,800 trajectories
-python3 code/trace_mechanism_probes.py
-
-# 4. Regenerate the 6 main figures
-python3 code/make_paper_figures.py
-python3 code/make_fig_mechanism.py
+# 3. rebuild Word + PDF from paper.md
+python3 code/md_to_docx.py paper/paper.md -o paper/Paper_EN.docx
 ```
 
-Aggregated outputs land in `results/results_conditional/` and
-`results/conditional_v2/`. Figure PDFs land in `paper/acl/figs/`.
+Everything in `paper/` and `results/` is already produced; the scripts above
+just verify reproducibility.
 
 ---
 
-## Reproducing the experiments from scratch
+## 🖥 Running the heavy experiments on a GPU node
 
-The experiments in `results/` were collected with a free-tier API mix:
+The experiments **already in `results/`** were run via free-tier APIs
+(Ollama local + Groq + Gemini + MiMo). To extend to **larger open-weight
+models that the API tier can't host** (Qwen-2.5-14B / Llama-3.3-70B / etc.),
+use [`gpu_kit/`](gpu_kit/).
 
-* `ollama` (local CPU) for ≤ 7 B open-weight models
-* `groq` for ≤ 70 B open-weight models
-* `gemini` 2.0 flash (Google AI Studio) for closed-source baseline calls
-* a frontier proprietary OpenAI-compatible API for the closed-source agent
+The kit is designed for the following workflow:
 
-Set environment variables before running:
-
-```bash
-export GROQ_API_KEY=...        # https://console.groq.com
-export GOOGLE_API_KEY=...      # https://aistudio.google.com
-export MIMO_API_KEY=...        # any frontier OpenAI-compatible API
-export MIMO_BASE_URL=...       # base URL for the above (optional)
+```text
+  ┌──────────────┐  git clone   ┌───────────────┐  vllm serve   ┌────────┐
+  │  this repo   │ ───────────► │   GPU node    │ ────────────► │ models │
+  │ (control PC) │              │ (2× H20 96GB) │               └────────┘
+  └──────────────┘              └───────┬───────┘
+         ▲                              │ python client_run.py
+         │   git push results/_new      ▼
+         │                       results/_gpu_new/
+         └─── git pull ─────────────────┘
 ```
 
-Then either:
+See [`gpu_kit/README_GPU.md`](gpu_kit/README_GPU.md) for the exact 5-command
+recipe to clone, serve, run, and push results back.
 
-```bash
-# Smoke-test one cell (Llama-3.2-3B / GSM8K / CoT)
-python3 code/agentdiff_v2.py --model llama3.2:3b --bench gsm8k --scaffold cot
+---
 
-# Full 26-cell sweep (24-48 h on a 32-core CPU node, free-tier rate-limited)
-python3 code/run_cross_model.py
+## 📌 What still needs to be added (open work)
+
+These are the gaps the GPU node will close:
+
+1. **Qwen-2.5-14B** — 14 B reference model, fix benchmark (3 perturbation × 200 q)
+2. **Llama-3.3-70B** — frontier open model, fix benchmark
+3. **Gemma-2 9B** — additional family beyond Llama / Qwen / Mistral
+4. **Mistral 7B full sweep** — current run is smoke only
+5. **HotpotQA cross-generator transfer** — `genqwen14b` / `genmimo` columns
+
+---
+
+## 🔖 Citation
+
+```bibtex
+@inproceedings{agentdiff2026,
+  title  = {When Do LLM Agents Treat Surface Noise Differently from Semantic Noise?},
+  author = {Anonymous},
+  booktitle = {Findings of EMNLP},
+  year   = {2026},
+  note   = {Under review}
+}
 ```
-
-The held-out Qwen-2.5-14B / 1,800-trajectory run was executed on a GPU node
-running vLLM. See `gpu_kit/README_GPU.md` for the exact 5-command workflow.
-
----
-
-## What is in `results/`
-
-| Directory | Cells | Trajectories | Notes |
-|---|---|---|---|
-| `runs_real_llama32_1b_*` | 4 (GSM8K + HotpotQA × CoT/ReAct) | ~1 600 | Llama-3.2-1B |
-| `runs_real_llama32_3b_*` | 6 + 2 gen-swap | ~3 200 | Llama-3.2-3B |
-| `runs_real_llama31_8b_*` | 6 + 2 gen-swap | ~3 200 | Llama-3.1-8B |
-| `runs_real_qwen25_3b_*` | 6 + 2 gen-swap | ~3 200 | Qwen-2.5-3B |
-| `runs_real_qwen25_7b_*` | 6 + 2 gen-swap | ~3 200 | Qwen-2.5-7B |
-| `runs_real_mistral_7b_fix` | 2 | ~800 | Mistral-7B (fix-set only) |
-| `runs_real_mimo_v25_pro_*` | 6 + 2 gen-swap | ~3 200 | Frontier closed-source proprietary |
-| `runs_real_qwen25_14b_vllm` | **9** (3 benchmarks × CoT/ReAct/Direct) | **1 800** | **Held-out validation, GPU vLLM** |
-| `results_conditional/` | — | — | Aggregated CSV/JSON, OLS results, mechanism stats |
-| `conditional_v2/` | — | — | Held-out 9-cell aggregate + merged 42-cell analysis |
-
----
-
-## Anonymization notes
-
-* `code/track_f_second_judge.py` and `code/api_router.py` previously hard-coded
-  a frontier-API key; both now read from `MIMO_API_KEY` / `MIMO_BASE_URL`
-  environment variables (any OpenAI-compatible endpoint works).
-* All absolute paths (`/data/workspace/...`) have been replaced with relative
-  paths so the scripts run from the repo root.
-* No author names, affiliations, internal hostnames, or version-control
-  identifiers (commit hashes from non-anonymized branches) appear in this
-  snapshot.
-* The `paper/acl/acl_paper.tex` already declares `\author{Anonymous ACL
-  Submission}` and uses `\usepackage[review]{acl}`.
-
----
-
-## License
-
-Code: MIT (see `LICENSE`).
-Paper text and figures: CC-BY 4.0 once de-anonymized after acceptance.

@@ -32,7 +32,7 @@ import importlib.util
 
 import numpy as np
 
-ROOT = "."
+ROOT = "/data/workspace/agentdiff_exp"
 OUT = os.path.join(ROOT, "track_c")
 os.makedirs(OUT, exist_ok=True)
 

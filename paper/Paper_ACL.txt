@@ -1,0 +1,668 @@
+          When Do LLM Agents Treat Surface Noise Differently from Semantic
+                                      Noise?
+           A 44-Cell Measurement Study with Severity, Generator, and Judge
+                                 Robustness Tests
+
+                                             Anonymous ACL submission
+
+
+
+001                         Abstract                              substitution) as equivalent, or whether the two per-    043
+                                                                  turbation classes propagate to the final answer at      044
+002       We document a robust empirical phenomenon               systematically different rates. The latter case has     045
+003       in chain-of-thought and ReAct agents driven             direct engineering implications: input normalisa-       046
+004       by six large language models: when an in-               tion should focus on whichever perturbation class       047
+005       put is perturbed by a meaning-bearing oper-
+                                                                  actually changes answers.                               048
+006       ator (paraphrase, synonym), the agent’s final
+007       answer changes more often than when it is per-             Prior work on perturbation robustness has largely    049
+
+008       turbed by a presentation operator (reordering,          treated single-step language models. Zhu et al.         050
+009       formatting, distractor) of comparable severity.         (2024) report that prompt rewrites of various           051
+010       Across 44 cells covering three benchmarks               flavours degrade accuracy, but PromptBench does         052
+011       (GSM8K, MATH, HotpotQA), 970 originals                  not separate out a directional gap between meaning-     053
+012       and 8,350 variants, the inconsistency rate gap          bearing and presentation perturbations, and it does     054
+013       averages +14.32 pp after severity matching
+                                                                  not study multi-step agent trajectories. Ribeiro        055
+014       (paired t = 6.76, p < 0.0001; 40 of 44 cells
+015       positive). The gap correlates with task accu-
+                                                                  et al. (2020) introduced behavioural categories with    056
+
+016       racy (Pearson r = +0.44, BH q = 0.021),                 CheckList but operate on classifiers, not agents        057
+017       and on GSM8K shows a +0.38 step cascade                 with tool use and retrieval. Recent agent bench-        058
+018       depth gap (p = 0.007) that survives a TF-IDF            marks such as AgentBench (Liu et al., 2024) mea-        059
+019       cosine redefinition (+0.66 step, p < 0.001).            sure raw success rate, not perturbation sensitivity.    060
+020       However, the phenomenon fails several stress            Sclar et al. (2024) showed that prompt formatting       061
+021       tests: a wild cluster bootstrap with K =                alone can shift accuracy by tens of points, moti-       062
+022       6 model clusters renders the topology coef-
+                                                                  vating the question of whether agents inherit this      063
+023       ficient non-significant (p = 0.165), within-
+024       benchmark tractability proxies show 0/3 sig-            fragility. The methodological question — whether        064
+
+025       nificant contrasts, and a cross-architecture gen-       the gap exists in agents and whether it is robust to    065
+026       erator swap destroys per-cell ranking (Spear-           severity matching, judge replacement, and genera-       066
+027       man ρ = +0.14) while the within-architecture            tor replacement — has not been answered.                067
+028       swap preserves it (ρ = +0.71). A second                    We address that question with a 44-cell mea-         068
+029       LLM judge agrees at Cohen’s κ = 0.50 uni-               surement study covering six LLMs (qwen2.5               069
+030       formly across strata. We position this as a mea-
+                                                                  1B/3B/7B/14B, llama-3.2 1B/3B, llama-3.1 8B,            070
+031       surement contribution: a stable phenomenon
+032       with explicit boundaries on what current data
+                                                                  MiMo-v2.5-Pro), three benchmarks (GSM8K                 071
+
+033       can and cannot establish.                               (Cobbe et al., 2021); MATH (Hendrycks et al.,           072
+                                                                  2021); HotpotQA (Yang et al., 2018)), and two           073
+
+034   1   Introduction                                            scaffolds (chain-of-thought (Wei et al., 2022); Re-     074
+                                                                  Act (Yao et al., 2023)). For each cell we run 20        075
+035   Large language model agents that solve multi-step           to 50 originals through 5 perturbation operators (2     076
+036   reasoning, math, and retrieval tasks are increas-           meaning-bearing: paraphrase, synonym; 3 presen-         077
+037   ingly deployed in settings where input prompts              tation: reorder, format, distractor) and record the     078
+038   are paraphrased by upstream models, reordered by            agent’s final answer plus full step-level trajectory.   079
+039   templating systems, or perturbed by adversaries.            We then submit the resulting data to a sequence of      080
+040   A practitioner therefore needs to know whether a            stress tests: severity matching by edit-distance bin,   081
+041   given agent treats lexical noise (formatting, token         wild cluster bootstrap (Cameron et al., 2008; Rood-     082
+042   order) and semantic noise (paraphrase, synonym              man et al., 2019) for small-K inference, hierarchi-     083
+
+
+                                                              1
+084   cal bootstrap for nested trajectory data, generator-          generation models that found performance drops           131
+085   swap with two alternative perturbation generators,            vary by operator. Ribeiro et al. (2020) defined          132
+086   and second-judge cross-validation with a different            behavioural categories in CheckList that include         133
+087   LLM family (Zheng et al., 2023).                              both meaning-preserving rewrites and meaning-            134
+088     Our contributions are:                                      changing edits but operate on the model’s own pre-       135
+                                                                    dictions, not on a multi-step trajectory. Gardner        136
+089       1. A robust empirical phenomenon. After                   et al. (2020) created Contrast Sets — minimal-pair       137
+090          matching meaning-bearing and presentation              test items — that again target single-step predic-       138
+091          operators on edit-distance distribution, the in-       tions. Sclar et al. (2024) showed that prompt for-       139
+092          consistency rate gap remains +14.32 percent-           matting alone can shift accuracy by tens of points,      140
+093          age points (paired t = 6.76, p < 0.0001;               motivating the question of whether agents inherit        141
+094          40/44 cells positive). It survives a TF-IDF re-        this fragility. None of these studies separates a        142
+095          definition of cascade depth on GSM8K (gap              directional gap between meaning-bearing and pre-         143
+096          +0.66 steps, p < 0.001) and is uniform across          sentation operators on agent trajectories or runs the    144
+097          operator pairs.                                        gap through a severity match, generator swap, and        145
+                                                                    judge swap.                                              146
+098       2. A statistically faithful identification of the
+099          boundary at K = 6 model clusters.                      Agent benchmarks and trajectory analysis.                147
+100          Wild cluster bootstrap renders the regres-             Liu et al. (2024) and Yan et al. (2024) measure          148
+101          sion coefficient on multi-path benchmarks              end-to-end success on multi-step tasks via Agent-        149
+102          non-significant (p = 0.165), and within-               Bench and AgentBoard, while Yao et al. (2025)            150
+103          benchmark tractability proxies fail in 0/3 con-        study tool-agent-user interaction in τ -Bench. Yao       151
+104          trasts. We therefore explicitly downgrade ear-         et al. (2023), Shinn et al. (2023), and Madaan et al.    152
+105          lier “topology gates the dichotomy” framings           (2023) instrument the trajectory itself in ReAct,        153
+106          to “∆ varies with benchmark identity for rea-          Reflexion, and Self-Refine, allowing fine-grained        154
+107          sons we cannot resolve at K = 6”.                      inspection of step-level failure modes. Our cascade-     155
+                                                                    depth statistic borrows the trajectory-level intuition   156
+108       3. A generator-family-conditional generalisa-
+                                                                    but applies it to inconsistency rather than success,     157
+109          tion claim. Cross-family generator swap
+                                                                    and we replace exact string matching with TF-            158
+110          (qwen vs MiMo) destroys per-cell ranking
+                                                                    IDF cosine to rule out lexical-drift artefacts (Sec-     159
+111          (Spearman ρ = +0.14, n = 8 paired cells);
+                                                                    tion 4.4).                                               160
+112          within-family swap (qwen 3B vs qwen 14B)
+113          preserves it (ρ = +0.71). The paper does not           Statistical inference at small cluster counts.           161
+114          claim cross-family generalisation.                     Cluster-robust standard errors with K below              162
+                                                                    roughly 30 are known to be over-confident (Liang         163
+115       4. A judge-replacement audit. A second LLM
+                                                                    and Zeger, 1986); wild cluster bootstrap (Cameron        164
+116          judge from a different family (MiMo vs
+                                                                    et al., 2008; Roodman et al., 2019) and CR2 cor-         165
+117          qwen2.5-7B) agrees with the primary judge
+                                                                    rections are the standard fix. We adopt wild clus-       166
+118          at Cohen’s κ = 0.50, uniform across bench-
+                                                                    ter bootstrap as the primary inferential test (Sec-      167
+119          marks (0.50, 0.44, 0.55) and operators (0.48–
+                                                                    tion 4.2) and report the resulting p-values along-       168
+120          0.52). The disagreement is therefore moderate
+                                                                    side the naive Liang–Zeger sandwich estimates so a       169
+121          but unbiased.
+                                                                    reader can see how much our small K = 6 deflates         170
+
+122     The remainder of the paper presents the mea-                the headline.                                            171
+
+123   surement framework (Section 3), the seven robust-             LLM-as-judge reliability. Zheng et al. (2023)            172
+124   ness tests (Section 4), the prototype diagnostic tool         document that single-LLM judges can be biased            173
+125   AgentDiff-Probe v2 (Section 5), and a careful dis-            on specific output formats. We respond by running        174
+126   cussion of limitations (Section 6).                           a second judge from a different family (MiMo vs          175
+                                                                    qwen2.5-7B) on a stratified subsample of 1,486           176
+127   2     Related Work
+                                                                    paired decisions and reporting Cohen’s κ over-           177
+128   Perturbation robustness for single-step models.               all and per stratum (Section 4.6). Schaeffer et al.      178
+129   Zhu et al. (2024) introduced PromptBench, a bat-              (2023) caution that perturbation-induced metrics         179
+130   tery of perturbation operators on classification and          can be artefacts of metric choice; we therefore re-      180
+
+
+                                                                2
+      Side         Operator      Targets                   Preserving      their whitespace-normalised text is identical; the       213
+      Meaning      Paraphrase    Whole-question rewrite    Yes             cascade depth is the count of consecutive steps af-      214
+      Meaning      Synonym       Open-class word sub.      Yes             ter the first divergence point at which the perturbed    215
+      Present.     Reorder       Token / clause perm.      Yes
+      Present.     Format        Whitespace, casing        Yes
+                                                                           step does not match any subsequent original step.        216
+      Present.     Distractor    Irrelevant context add.   Yes             To rule out the concern that this metric captures        217
+                                                                           lexical drift rather than reasoning chain difference,    218
+      Table 1: Operator taxonomy. “Meaning” denotes                        Section 4.4 redefines cascade depth using TF-IDF         219
+      meaning-bearing-token-targeted operators; “Present.”                 cosine alignment with thresholds 0.3, 0.5, and 0.7.      220
+      denotes presentation-targeted operators. All five pre-
+      serve the gold answer; an equivalence judge filters out              3.4    Inferential Model                                 221
+      variants that change the underlying question.
+                                                                           We fit two regression specifications. The descrip-       222
+                                                                           tive specification regresses cell-level ∆ on a multi-    223
+181   port results across both edit-distance and cosine-                   path benchmark indicator and on cell accuracy with       224
+182   based metrics.                                                       cluster-robust standard errors, where clusters are       225
+                                                                           model identities (K = 6). Because K = 6 is below         226
+183   3      Measurement Framework
+                                                                           the threshold at which the Liang–Zeger sandwich          227
+184   3.1     Operator Taxonomy                                            is reliable, we additionally run a wild cluster boot-    228
+                                                                           strap with 10,000 Rademacher replicates and im-          229
+185   We label perturbation operators by what they tar-
+                                                                           pose the null per coefficient. We report wild boot-      230
+186   get rather than by whether they change meaning,
+                                                                           strap p-values as the primary inferential statistic      231
+187   since paraphrase and synonym substitution are for-
+                                                                           and naive cluster-robust z-statistics for comparison     232
+188   mally meaning-preserving rewrites yet they target
+                                                                           only.                                                    233
+189   meaning-bearing tokens.
+190      We deliberately avoid the term “semantic” in                         For the cascade depth analysis, observations          234
+
+191   operator labels because, as raised in earlier draft                  are nested as variants within originals within cells     235
+
+192   reviews, “semantic” perturbations that preserve                      within models. We therefore report both pooled           236
+
+193   meaning are conceptually closer to “more aggres-                     Welch t-tests (mirroring prior work) and a hierar-       237
+
+194   sive lexical rewrites” than to “different-meaning                    chical bootstrap that resamples models, then cells       238
+
+195   edits”.                                                              within model, then questions within cell. Cell-level     239
+                                                                           paired t-tests with K = 12 cells per benchmark           240
+196   3.2     The Inconsistency Rate Gap ∆                                 serve as a sanity check.                                 241
+
+197   For each cell c (a model × benchmark × scaffold
+                                                                           4     Experiments: Robustness Tests and                  242
+198   combination) and each operator o, the inconsis-
+199   tency rate is
+                                                                                 Ablations                                          243
+
+
+                              Nc
+                                                                           Figure 1 summarises the cell-level ∆ distribution        244
+                           1 X    h                i
+                                                                           across all 44 cells; Figure 2 shows the severity-
+200              IRc,o   =       1 ac,o,i 6= aorig
+                                              c,i    ,           (1)                                                                245
+                           Nc                                              match audit; Figure 3 visualises the cascade-depth       246
+                                i=1
+                                                                           gap on GSM8K under exact and TF-IDF cosine               247
+201      where ac,o,i is the agent’s final answer on the
+                                                                           alignments; Figure 4 plots the within-benchmark          248
+202   perturbed variant of original question i and aorig
+                                                     c,i                   tractability strata; Figure 5 plots the three-way gen-   249
+203   is the answer on the original question. The gap is                   erator rank correlation. Sections 4.1–4.7 each act       250
+204   then                                                                 as a controlled ablation on a specific component of      251
+                                                                           the framework.                                           252
+205                      ∆c = IRc,sem − IRc,sur ,                (2)
+206     where IRc,sem averages over paraphrase and syn-                    4.1    Severity Audit and Severity-Matched ∆             253
+
+207   onym, and IRc,sur averages over reorder, format,                     A first concern is that the gap might simply reflect     254
+208   and distractor.                                                      that meaning-bearing operators are stronger pertur-      255
+                                                                           bations than presentation operators. We measure          256
+209   3.3     Cascade Depth                                                the normalised Levenshtein edit distance for every       257
+210   For each inconsistent variant we compare the origi-                  (original, variant) pair across all 44 cells, yielding   258
+211   nal and perturbed agent traces step by step. Under                   8,350 measurements. The per-operator means are           259
+212   the exact-match definition, two steps are equal if                   paraphrase 0.480, synonym 0.257, reorder 0.284,          260
+
+
+                                                                       3
+                        Per-cell severity-matched across 44 cells; 40/44 positive                                                      (a) Per-operator severity
+                                                                                                                             (blue: meaning-bearing; orange: presentation)
+                                                                                                                                                                                                  (b) Severity matching shrinkage
+                                                                                                                                                                                                      (mean shrink = 0.21 pp)
+                 50
+                         Mean = +14.32 pp (paired t=6.76, p<0.0001)                                                    0.6                                                                        y=x
+                                                                                                                                                                                        40
+
+
+
+
+                                                                                            Normalised edit distance
+                 40                                                                                                    0.5
+                                                                                                                                                                                        30
+
+
+
+
+                                                                                                                                                                             (pp)
+                 30                                                                                                    0.4                                                              20
+
+
+
+
+                                                                                                                                                                              matched
+                                                                                                                       0.3                                                              10
+      (pp)
+
+
+
+
+                 20
+                                                                                                                       0.2                                                               0
+       matched
+
+
+
+
+                 10                                                                                                    0.1                                                              10
+                                                                                                                       0.0                                                              20
+                  0                                                                                                                                                                          20   10    0    10       20   30    40
+                                                                                                                                                    phrase                                                          (pp)
+                                                                                                                                               para                                                           raw
+                 10
+                 20                                                                         Figure 2: (a) Per-operator edit-distance severity (blue:
+                                         Cells (n=44, sorted by   matched)
+                                                                                            meaning-bearing; orange: presentation). (b) ∆raw vs
+      Figure 1: Per-cell severity-matched ∆ across 44 cells;                                ∆matched scatter; the dashed line is y = x. Mean shrink-
+      40 of 44 are positive, with a mean of +14.32 pp (paired                               age is only 0.21 pp.
+      t = 6.76, p < 0.0001).
+                                                                                                       Coefficient                                      β (pp)          SE                         t        wild p              BH q
+                 Statistic                               ∆raw                ∆matched                  Intercept                                   −2.48             1.79               −1.38               0.108               0.230
+                                                                                                       Multi-path                                  +4.31             2.40               +1.80               0.165               0.230
+                 Mean across 44 cells (pp)               +14.53              +14.32                    Accuracy                                   +11.49             5.81               +1.98               0.126               0.230
+                 Cells with ∆ > 0                        39/44               40/44                     ReAct                                       −1.25             2.74               −0.46               0.626               0.626
+                 Median (pp)                             +12.84              +13.43
+                 Paired t vs zero                        t = 6.78            t = 6.76
+                 Wilcoxon signed-rank p                  < 0.0001            < 0.0001       Table 3: Cell-level OLS regression of ∆ on multi-
+                                                                                            path indicator, accuracy, and ReAct scaffold dummy.
+      Table 2: Severity-matched and unmatched inconsis-                                     Cluster-robust standard errors and wild cluster boot-
+      tency rate gaps ∆ across the 44 cells. The matched sub-                               strap p-values use model identity as the cluster (K =
+      sample equalises the edit-distance distribution between                               6); BH q values apply Benjamini–Hochberg correction
+      meaning-bearing and presentation operators within                                     (Benjamini and Hochberg, 1995) across the four coeffi-
+      each cell.                                                                            cients.
+
+
+261   format 0.078, distractor 0.485. Distractor and para-                                  Rademacher replicates, re-fitting the OLS coeffi-                                                                                           287
+262   phrase are therefore comparable in severity; format                                   cients on each replicate and computing two-sided                                                                                            288
+263   is the lightest perturbation; synonym is the lightest                                 p-values by inversion. The headline regression is                                                                                           289
+264   meaning-bearing perturbation.
+265      To match severity within each cell, we bin all
+266   variants of that cell into ten quantile-based edit-                                    ∆c = α + β1 multi-pathc + β2 accuracyc + εc ,
+267   distance bins and take the minimum count of                                                                                               (3)                                                                                     290
+
+268   meaning-bearing and presentation variants from                                           where multi-path is 1 for GSM8K and Hot-                                                                                                 291
+269   each bin to form a paired subsample. We then re-                                      potQA cells and 0 for MATH cells, and accuracy                                                                                              292
+270   compute ∆ on the matched subsample. Table 2 re-                                       is the cell’s task accuracy.                                                                                                                293
+271   ports aggregates: across 44 cells the mean matched                                       Point estimates with K = 6 wild cluster boot-                                                                                            294
+272   ∆ is +14.32 pp (vs +14.53 pp unmatched), with                                         strap p-values are reported in Table 3.                                                                                                     295
+273   shrinkage of only +0.21 pp; 40 of 44 cells remain                                        Neither coefficient survives wild cluster boot-                                                                                          296
+274   positive. A paired t-test on the 44 matched val-                                      strap at the conventional 0.05 threshold. A naive                                                                                           297
+275   ues gives t = 6.76 and p < 0.0001; the Wilcoxon                                       Liang–Zeger reading would have declared multi-                                                                                              298
+276   signed-rank test yields p < 0.0001.                                                   path significant (because the small-K sandwich                                                                                              299
+277      The severity match closes the most direct alter-                                   under-estimates SE), which illustrates exactly the                                                                                          300
+278   native explanation for ∆. A reviewer who claims                                       small-K inflation that the bootstrap is designed to                                                                                         301
+279   that ∆ is a severity artefact must explain why the                                    correct. We therefore report these regression coeffi-                                                                                       302
+280   gap survives explicit edit-distance matching with                                     cients as descriptive associations rather than identi-                                                                                      303
+281   shrinkage below 0.3 pp.                                                               fied effects, and the headline ∆ result is established                                                                                      304
+                                                                                            by the marginal robustness checks (Sections 4.1,                                                                                            305
+282   4.2             Wild Cluster Bootstrap with K = 6                                     4.3, 4.4) rather than by the regression.                                                                                                    306
+283                   Clusters
+284   Naive cluster-robust standard errors with K = 6                                       4.3                                   Hierarchical Bootstrap on Cascade Depth                                                               307
+
+285   clusters are known to under-estimate variance. We                                     We resample (model → cell-within-model →                                                                                                    308
+286   therefore run a wild cluster bootstrap with 10,000                                    question-within-cell) for 5,000 replicates and re-                                                                                          309
+
+
+                                                                                        4
+          Bench.                                   Gap          Cell-p                       Hier. CI              Hier. p       Threshold    GSM8K gap     MATH gap      HotpotQA gap
+                                                                                                                                                     ∗∗∗
+          GSM8K                                +0.38           0.0065            [+0.02, +0.87]                    0.035         cos ≥ 0.3     +0.66            +0.15            +0.07
+          MATH                                 +0.04             0.99            [−0.54, +0.55]                      0.90        cos ≥ 0.5      +0.46∗∗         +0.06            +0.02
+          HotpotQA                             −0.17            0.080            [−0.45, +0.06]                      0.14        cos ≥ 0.7        +0.24         −0.07            −0.13
+
+      Table 4: Cascade-depth gap (steps) per benchmark,                                                                          Table 5: TF-IDF cosine cascade-depth gap. Signifi-
+      with cell-level paired t-test (df = 11) and hierarchical                                                                   cance: ∗ ∗ p < .01, ∗ ∗ ∗p < .001.
+      bootstrap (K = 5,000).
+                                                                                                                                   Bench.      Tract. ∆    Non-T. ∆      Diff      p
+                                           Cascade-depth
+                                            ***
+                                                         gap, exact vs TF-IDF cosine; *p<.05, **p<.01, ***p<.001
+                                  0.7                                                                                              GSM8K         +7.59      +14.65      −7.06   0.155
+                                                                                                  exact            cos 0.5
+                                  0.6                                                             cos 0.3          cos 0.7         MATH          +0.72       +3.04      −2.32   0.426
+      Cascade-depth gap (steps)
+
+
+
+
+                                  0.5             **
+                                                                                                                                   HotpotQA      +7.71       +7.38      +0.33   0.962
+                                  0.4
+                                  0.3
+                                  0.2                                                                                            Table 6: Within-benchmark contrast between tractable
+                                  0.1                                                                                            (multi-path) and non-tractable (single-path) strata.
+                                  0.0                                                                                            None of the three contrasts is significant.
+                                  0.1
+                                             GSM8K                        MATH                        HotpotQA
+
+
+      Figure 3: Cascade-depth gap (steps), exact match vs                                                                        4.5   Within-Benchmark Tractability                     339
+
+      TF-IDF cosine alignment with thresholds 0.3, 0.5, 0.7.                                                                     A within-benchmark proxy for tractability tags          340
+      Stars: ∗p < .05, ∗ ∗ p < .01, ∗ ∗ ∗p < .001.                                                                               GSM8K problems as multi-route or single-route by        341
+                                                                                                                                 counting distinct numerical entities and arithmetic-    342
+                                                                                                                                 relevant keywords; MATH problems by their pub-          343
+310   port 95% percentile intervals plus an inversion p-
+                                                                                                                                 lished subject field (algebra and counting as           344
+311   value. Per-benchmark results on inconsistent traces
+                                                                                                                                 multi-method, number theory and geometry as             345
+312   are reported in Table 4.
+                                                                                                                                 single-canonical); HotpotQA problems by type            346
+313      GSM8K cascade depth is the only benchmark                                                                               (comparison with 3+ supporting facts as multi-          347
+314   that survives the hierarchical correction. The                                                                             evidence; bridge as unique-chain). For each             348
+315   MATH null is consistent with the hypothesis that                                                                           benchmark we compare ∆ between the tractable            349
+316   single-canonical-chain problems do not produce a                                                                           and non-tractable strata using a Welch t-test on the    350
+317   cascade gap. HotpotQA is in the opposite direction                                                                         K = 12 cells.                                           351
+318   at marginal significance — we discuss this honestly
+                                                                                                                                    None of the three within-benchmark contrasts         352
+319   in Section 6.
+                                                                                                                                 is significant. Both strata in GSM8K are positive       353
+                                                                                                                                 (multi-route p = 0.027, single-route p = 0.003),        354
+320   4.4                               TF-IDF Cosine Cascade Depth                                                              as is unique-chain HotpotQA (p = 0.001), but the        355
+
+321   A reviewer might object that exact string match-                                                                           contrast between tractable and non-tractable is null.   356
+
+322   ing captures lexical drift, not reasoning chain dif-                                                                       We therefore explicitly retract any earlier “topol-     357
+
+323   ference. We re-derive the cascade depth statistic                                                                          ogy gates the dichotomy” claim: the proxies do          358
+
+324   with TF-IDF cosine alignment between trajectory                                                                            not identify a within-benchmark tractability gate.      359
+
+325   steps, using thresholds 0.3, 0.5, and 0.7. Two steps                                                                       Whatever drives the cross-benchmark ∆ hetero-           360
+
+326   count as matched if their TF-IDF cosine similarity                                                                         geneity is not captured by these proxies.               361
+
+327   is above the threshold; cascade depth becomes the
+328   count of post-divergence steps that fail to match                                                                          4.6   Second-Judge Cross-Validation                     362
+
+329   any subsequent original step under that threshold.                                                                         To address concern about a single qwen2.5-7B            363
+330      The GSM8K gap is robust at the lenient and                                                                              judge dominating the evaluation, we re-judge a          364
+331   medium thresholds. At the strict threshold (0.7)                                                                           stratified subsample of 1,486 paired (variant, gold)    365
+332   it shrinks but stays in the same direction; this is                                                                        decisions using MiMo-v2.5-Pro. Stratification cov-      366
+333   expected because TF-IDF assigns near-1 similarity                                                                          ers benchmark, operator, and answer format. Co-         367
+334   only to near-identical strings, recovering the exact-                                                                      hen’s κ values are reported in Table 7.                 368
+335   match regime. The audit therefore rules out the                                                                               κ = 0.50 is moderate, not strong, but the value      369
+336   “cascade depth = string divergence” reading: a TF-                                                                         is uniform across benchmarks (range 0.44–0.55),         370
+337   IDF-aligned cascade gap on GSM8K is at least as                                                                            across the meaning-bearing / presentation split         371
+338   large as the exact-match gap.                                                                                              (0.50 vs 0.51), and across operators (0.48–0.52).       372
+
+
+                                                                                                                             5
+                                   Within-benchmark tractability strata (0/3 contrasts significant)
+                                                                                                                      Pair                                                                  Pearson r                                     p         Spearman ρ               p
+                        17.5                                                        Tractable (multi-path)
+                                                                                    Non-tractable (single-path)
+                        15.0                                                                                          qwen3b vs MiMo                                                         +0.342                    0.41                              +0.143            0.74
+                        12.5                                                                                          qwen3b vs qwen14b                                                      +0.794                  0.019                               +0.714           0.047
+      Cell-level (pp)
+
+
+
+
+                        10.0                                                                                          MiMo vs qwen14b                                                        +0.649                   0.082                              +0.524            0.18
+                         7.5
+                         5.0                                                                                          Table 8: Three-way pairwise correlation of cell-level ∆
+                         2.5                                                                                          across perturbation generators (n = 8 paired cells).
+                         0.0
+                                   GSM8K                        MATH                        HotpotQA
+                                                                                                                                           qwen2.5:3b vs qwen2.5:14b                        qwen2.5:3b vs MiMo-v2.5-Pro                          MiMo vs qwen2.5:14b
+                                                                                                                                                 (within family)                                  (across family)                                   (across family)
+                                                                                                                                           Pearson r=+0.79, p=0.019                          Pearson r=+0.34, p=0.41                           Pearson r=+0.65, p=0.082
+                                                                                                                                      30                                               30                                                 30
+      Figure 4: Within-benchmark tractability strata ∆ for
+
+
+
+
+                                                                                                                      (generator B)
+
+
+
+
+                                                                                                                                                                       (generator B)
+
+
+
+
+                                                                                                                                                                                                                          (generator B)
+                                                                                                                                      20                                               20                                                 20
+      GSM8K, MATH, and HotpotQA. Error bars show stan-                                                                                10                                               10                                                 10
+
+      dard error across 12 cells per benchmark; 0/3 contrasts                                                                          0                                                0                                                  0
+                                                                                                                                      10                                               10                                                 10
+      significant.                                                                                                                         10   0     10    20    30                         10   0     10    20    30                         10    0   10    20    30
+                                                                                                                                                 (generator A)                                     (generator A)                                     (generator A)
+
+
+                                Stratum                                    κ                    n                     Figure 5: Three-way generator scatter on n = 8 paired
+                                Overall                           0.50                1486                            cells. Left: within-architecture (qwen 3B vs qwen 14B)
+                                GSM8K                             0.50                 485                            preserves ranking. Centre and right: cross-architecture
+                                MATH                              0.44                 492                            pairs destroy ranking. Dashed line is y = x.
+                                HotpotQA                          0.55                 499
+                                Meaning-bearing                   0.50                 583
+                                Presentation                      0.51                 893
+                                Per operator                 0.48–0.52             285–299                            scaffolds) and outputs a per-cell ∆ estimate plus                                                                                                           399
+                                                                                                                      a traffic-light recommendation. The tool is explic-                                                                                                         400
+      Table 7: Cohen’s κ between the primary qwen2.5-7B                                                               itly a prototype rather than a deployable diagnostic:                                                                                                       401
+      judge and a secondary MiMo-v2.5-Pro judge.                                                                      leave-one-model-out evaluation gives a mean ab-                                                                                                             402
+                                                                                                                      solute error of 7.10 pp on ∆, and sign accuracy                                                                                                             403
+
+373   This pattern is consistent with random disagree-                                                                is 72.2%, which equals the trivial-mean baseline                                                                                                            404
+
+374   ment on borderline cases, not with a systematic                                                                 at the same metric. We report this honestly. The                                                                                                            405
+
+375   per-operator or per-benchmark bias that would in-                                                               MAE improvement (8.27 pp → 7.10 pp, 14% rela-                                                                                                               406
+
+376   flate ∆ in one direction. The MiMo-judge per-cell                                                               tive reduction) is real but the deployment-relevant                                                                                                         407
+
+377   ∆ on the same subsample remains positive in 20 of                                                               sign decision is unchanged.                                                                                                                                 408
+
+378   36 cells.                                                                                                          The tool’s value is therefore not in being a better                                                                                                      409
+                                                                                                                      predictor than the trivial mean, but in producing a                                                                                                         410
+379   4.7                      Three-Generator Family Swap                                                            calibrated ∆ point estimate plus a stratified break-                                                                                                        411
+
+380   We compare cell-level ∆ across three perturba-                                                                  down that lets a practitioner inspect which operator                                                                                                        412
+
+381   tion generators on the same eight cells: the orig-                                                              class drives the gap on their specific deployment.                                                                                                          413
+
+382   inal qwen2.5:3b generator, MiMo-v2.5-Pro, and                                                                   The prototype is released alongside the paper so the                                                                                                        414
+
+383   qwen2.5:14b. Table 8 reports pairwise correlations                                                              community can independently audit the calibration.                                                                                                          415
+
+384   on the n = 8 paired ∆ vectors; Figure 5 visualises
+385   the three pairwise scatterplots.                                                                                6                    Discussion                                                                                                                             416
+
+386      The within-architecture swap (qwen3b vs                                                                      We have established a robust empirical phe-                                                                                                                 417
+387   qwen14b) preserves cell-level ranking; the cross-                                                               nomenon and explicitly bounded what current data                                                                                                            418
+388   architecture swap (qwen vs MiMo) destroys it. We                                                                can support. Beyond the observation itself, three                                                                                                           419
+389   therefore restrict any generalisation claim to within-                                                          points deserve emphasis. First, the headline ro-                                                                                                            420
+390   architecture generator swaps. A practitioner de-                                                                bustness finding (Section 4.1) does not depend                                                                                                              421
+391   ploying AgentDiff with a different perturbation                                                                 on the regression in Section 4.2; the marginal                                                                                                              422
+392   generator from a non-qwen family must expect ∆                                                                  severity-matched paired t-test is the cleanest ev-                                                                                                          423
+393   values to re-rank.                                                                                              idence. Second, the cascade-depth phenomenon is                                                                                                             424
+                                                                                                                      GSM8K-specific in the present data (Section 4.3);                                                                                                           425
+394   5                    AgentDiff-Probe v2: A Prototype
+                                                                                                                      the MATH null and HotpotQA reversal indicate                                                                                                                426
+395                        Diagnostic
+                                                                                                                      that any mechanistic interpretation cannot be uni-                                                                                                          427
+396   We package the framework as a prototype Python                                                                  formly applied across all benchmarks. Third, the                                                                                                            428
+397   tool, AgentDiff-Probe v2, that takes a small cali-                                                              cross-architecture generator swap (Section 4.7) is                                                                                                          429
+398   bration set (≥ 30 originals × 5 perturbations × 2                                                               the single result that most threatens precise claims                                                                                                        430
+
+
+                                                                                                                  6
+431   about absolute ∆ values; future work must repli-            bel refers to which tokens the operator targets, not       481
+432   cate with at least three generator families before          to whether the operator changes meaning. A reader          482
+433   treating any specific number as a robust estimate.          who reserves “semantic” for label-changing edits           483
+434   We discuss the corresponding limitations in detail          may prefer to read the entire paper as a study of          484
+435   below.                                                      “more aggressive lexical rewrites” versus “lighter         485
+                                                                  lexical rewrites” of comparable severity. The em-          486
+436   Limitations                                                 pirical finding stands either way.                         487
+
+437   We summarise the boundaries of our claims so a              Ethics Statement                                           488
+438   reader can gauge where the evidence is strong and
+439   where it is suggestive.                                     This work uses three publicly available benchmarks         489
+                                                                  (GSM8K, MATH, HotpotQA) under their respec-                490
+440      L1. Within-benchmark tractability proxies
+                                                                  tive research-use licences; no human subjects were         491
+441   fail. Section 4.5 reports 0/3 significant within-
+                                                                  recruited. All perturbation generation and judg-           492
+442   benchmark contrasts. Whatever drives cross-
+                                                                  ing is done by open-weight or self-hosted LLMs,            493
+443   benchmark ∆ heterogeneity is not captured by our
+                                                                  and no personally identifying information is ex-           494
+444   proxies. Possible alternative explanations include
+                                                                  posed. The released calibration tool (AgentDiff-           495
+445   task domain (arithmetic vs proof), answer-format
+                                                                  Probe v2) is intended for research auditing of agent       496
+446   constraints, retrieval-grounded versus closed-book
+                                                                  robustness; we do not advocate using its outputs           497
+447   reasoning, and trajectory-length differences. We
+                                                                  as the sole gate for production deployment, since          498
+448   do not attempt to discriminate among these in this
+                                                                  the diagnostic ties the trivial-mean baseline on           499
+449   paper.
+                                                                  the deployment-relevant sign decision (Section 5).         500
+450      L2. Topology coefficient does not survive
+                                                                  Compute usage was approximately 22 CPU-only                501
+451   small-K cluster correction. Section 4.2 reports
+                                                                  days on a 48-core, 64 GB RAM workstation plus a            502
+452   wild cluster bootstrap p = 0.165 on the multi-path
+                                                                  bounded 200 M-token MiMo-v2.5-Pro API alloca-              503
+453   indicator. Our headline robustness finding (Sec-
+                                                                  tion.                                                      504
+454   tion 4.1) does not depend on this regression; it
+455   relies on the cell-level severity-matched paired t-
+456   test. We would need a substantially larger cluster          References                                                 505
+457   count (more model families) to identify a topology
+                                                                  Yoav Benjamini and Yosef Hochberg. 1995. Control-          506
+458   coefficient with confidence. We treat the regression          ling the false discovery rate: A practical and pow-      507
+459   as descriptive.                                               erful approach to multiple testing. Journal of the       508
+460      L3. Cross-architecture generator instability.              Royal Statistical Society Series B, 57(1):289–300.       509
+461   Section 4.7 shows that swapping the perturba-               A. Colin Cameron, Jonah B. Gelbach, and Douglas L.         510
+462   tion generator from qwen to MiMo destroys per-                Miller. 2008. Bootstrap-based improvements for in-       511
+463   cell ranking. Practitioners deploying AgentDiff               ference with clustered errors. Review of Economics       512
+464   with a non-qwen generator must recalibrate. The               and Statistics, 90(3):414–427.                           513
+
+465   generator-source instability is the single largest          Karl Cobbe, Vineet Kosaraju, Mohammad Bavarian,            514
+466   threat to the precise ∆ value of any individual cell.         Mark Chen, Heewoo Jun, Lukasz Kaiser, Matthias           515
+467      L4. Moderate second-judge agreement. Sec-                  Plappert, Jerry Tworek, Jacob Hilton, Reiichiro          516
+                                                                    Nakano, Christopher Hesse, and John Schulman.            517
+468   tion 4.6 reports Cohen’s κ = 0.50 with MiMo. The              2021. Training verifiers to solve math word prob-        518
+469   agreement is uniform across strata, suggesting ran-           lems. In arXiv preprint arXiv:2110.14168.                519
+470   dom disagreement on borderline cases rather than
+                                                                  Matt Gardner, Yoav Artzi, Victoria Basmov, Jonathan        520
+471   systematic bias, but any reader concerned about              Berant, Ben Bogin, Sihao Chen, Pradeep Dasigi,            521
+472   single-judge dominance should treat the absolute             Dheeru Dua, Yanai Elazar, Ananth Gottumukkala,            522
+473   ∆ point estimates as moderately uncertain.                   Nitish Gupta, Hannaneh Hajishirzi, Gabriel Ilharco,       523
+474      L5. AgentDiff-Probe v2 is a prototype, not a              Daniel Khashabi, Kevin Lin, Jiangming Liu, Nel-           524
+                                                                   son F. Liu, Phoebe Mulcaire, Qiang Ning, and 7 oth-       525
+475   deployable diagnostic. Section 5 reports MAE                 ers. 2020. Evaluating models’ local decision bound-       526
+476   7.10 pp and sign accuracy 72.2%, the latter tying            aries via contrast sets. In Findings of the Association   527
+477   the trivial-mean baseline. We do not claim the tool          for Computational Linguistics: EMNLP 2020, pages          528
+478   is production-ready.                                         1307–1323.                                                529
+
+479      L6. Paraphrase and synonym are meaning-                  Dan Hendrycks, Collin Burns, Saurav Kadavath, Akul         530
+480   preserving rewrites. Our “meaning-bearing” la-                Arora, Steven Basart, Eric Tang, Dawn Song, and          531
+
+
+                                                              7
+532     Jacob Steinhardt. 2021. Measuring mathematical                  of multi-turn LLM agents. In Advances in Neural In-   587
+533     problem solving with the MATH dataset. In Pro-                  formation Processing Systems Datasets and Bench-      588
+534     ceedings of the Neural Information Processing Sys-              marks Track.                                          589
+535     tems Track on Datasets and Benchmarks.
+                                                                    Zhilin Yang, Peng Qi, Saizheng Zhang, Yoshua Ben-         590
+536   Kung-Yee Liang and Scott L. Zeger. 1986. Longitu-               gio, William W. Cohen, Ruslan Salakhutdinov, and        591
+537     dinal data analysis using generalized linear models.          Christopher D. Manning. 2018. HotpotQA: A               592
+538     Biometrika, 73(1):13–22.                                      dataset for diverse, explainable multi-hop question     593
+                                                                      answering. In Proceedings of the 2018 Conference        594
+539   Xiao Liu, Hao Yu, Hanchen Zhang, Yifan Xu, Xuanyu               on Empirical Methods in Natural Language Process-       595
+540     Lei, Hanyu Lai, Yu Gu, Hangliang Ding, Kaiwen                 ing, pages 2369–2380.                                   596
+541     Men, Kejuan Yang, Shudan Zhang, Xiang Deng, Ao-
+542     han Zeng, Zhengxiao Du, Chenhui Zhang, Sheng
+                                                                    Shunyu Yao, Noah Shinn, Pedram Razavi, and Karthik        597
+543     Shen, Tianjun Zhang, Yu Su, Huan Sun, and 3 oth-
+                                                                      Narasimhan. 2025. τ -Bench: A benchmark for tool-       598
+544     ers. 2024. AgentBench: Evaluating LLMs as agents.
+                                                                      agent-user interaction in real-world domains. In        599
+545     In International Conference on Learning Represen-
+                                                                      International Conference on Learning Representa-        600
+546     tations.
+                                                                      tions.                                                  601
+547   Aman Madaan, Niket Tandon, Prakhar Gupta, Skyler
+548    Hallinan, Luyu Gao, Sarah Wiegreffe, Uri Alon,               Shunyu Yao, Jeffrey Zhao, Dian Yu, Nan Du, Izhak          602
+549    Nouha Dziri, Shrimai Prabhumoye, Yiming Yang,                  Shafran, Karthik Narasimhan, and Yuan Cao. 2023.        603
+550    Shashank Gupta, Bodhisattwa Prasad Majumder,                   ReAct: Synergizing reasoning and acting in lan-         604
+551    Katherine Hermann, Sean Welleck, Amir Yazdan-                  guage models. In International Conference on            605
+552    bakhsh, and Peter Clark. 2023. Self-refine: Iterative          Learning Representations.                               606
+553    refinement with self-feedback. In Advances in Neu-
+554    ral Information Processing Systems.                          Lianmin Zheng, Wei-Lin Chiang, Ying Sheng, Siyuan         607
+                                                                      Zhuang, Zhanghao Wu, Yonghao Zhuang, Zi Lin,            608
+555   Marco Túlio Ribeiro, Tongshuang Wu, Carlos Guestrin,            Zhuohan Li, Dacheng Li, Eric P. Xing, Hao Zhang,        609
+556    and Sameer Singh. 2020. Beyond accuracy: Be-                   Joseph E. Gonzalez, and Ion Stoica. 2023. Judg-         610
+557    havioral testing of NLP models with CheckList. In              ing LLM-as-a-Judge with MT-Bench and Chatbot            611
+558    Proceedings of the 58th Annual Meeting of the Asso-            Arena. In Advances in Neural Information Process-       612
+559    ciation for Computational Linguistics, pages 4902–             ing Systems Datasets and Benchmarks Track.              613
+560    4912.
+                                                                    Kaijie Zhu, Jindong Wang, Jiaheng Zhou, Zichen            614
+561   David Roodman, Morten Ørregaard Nielsen, James G.               Wang, Hao Chen, Yidong Wang, Linyi Yang, Wei            615
+562     MacKinnon, and Matthew D. Webb. 2019. Fast and                Ye, Neil Zhenqiang Gong, Yue Zhang, and Xing            616
+563     wild: Bootstrap inference in Stata using boottest.            Xie. 2024. PromptBench: Towards evaluating the          617
+564     The Stata Journal, 19(1):4–60.                                robustness of large language models on adversarial      618
+                                                                      prompts. In Advances in Neural Information Pro-         619
+565   Rylan Schaeffer, Brando Miranda, and Sanmi Koyejo.              cessing Systems Datasets and Benchmarks Track.          620
+566     2023. Are emergent abilities of large language mod-
+567     els a mirage? In Advances in Neural Information
+568     Processing Systems.                                         A     Reproducibility Details                             621
+
+569   Melanie Sclar, Yejin Choi, Yulia Tsvetkov, and Alane          A.1    Cell Sample Sizes                                  622
+570    Suhr. 2024. Quantifying language models’ sensitiv-
+571    ity to spurious features in prompt design. In Interna-       Of the 36 main cells, 21 use n = 50 originals,            623
+572    tional Conference on Learning Representations.               10 use n = 30, and 5 use n = 20 (for cells                624
+
+573   Noah Shinn, Federico Cassano, Edward Berman, Ash-             where rate-limited API access constrained sam-            625
+574     win Gopinath, Karthik Narasimhan, and Shunyu                pling). The 8 generator-swap cells use n = 20             626
+575     Yao. 2023. Reflexion: Language agents with ver-             for the cross-architecture swap and n = 20 for the        627
+576     bal reinforcement learning. In Advances in Neural           within-architecture swap. Total trajectories: 970         628
+577     Information Processing Systems.
+                                                                    originals × 5 perturbations × 2 scaffolds = 8,350         629
+578   Jason Wei, Xuezhi Wang, Dale Schuurmans, Maarten              variant evaluations.                                      630
+579      Bosma, Brian Ichter, Fei Xia, Ed H. Chi, Quoc V. Le,
+580      and Denny Zhou. 2022. Chain-of-thought prompt-             A.2    Hyperparameters                                    631
+581      ing elicits reasoning in large language models. In
+582      Advances in Neural Information Processing Sys-             All agents are run with temperature 0.0 and max           632
+583      tems.                                                      output tokens 1024. The variant generator uses            633
+
+584   Yueqi Yan, Yuxuan Cai, Yufan Zhang, Sirui Li, Zhiwei
+                                                                    temperature 0.7 for diversity and top-p 0.95. Judge       634
+
+585     Tang, Viet Dac Lai, Philip S. Yu, and Lichao Sun.           models use temperature 0.0 for deterministic deci-        635
+586     2024. AgentBoard: An analytical evaluation board            sions.                                                    636
+
+
+                                                                8
+637   A.3   Compute
+638   Runs were performed on a single 48-core work-
+639   station with 64 GB RAM, no GPU. Total wall-
+640   clock for the full experiment grid is approximately
+641   22 CPU-days; the wild cluster bootstrap and hi-
+642   erarchical bootstrap each complete in under one
+643   minute on the same hardware. The MiMo-v2.5-Pro
+644   generator and second judge use the public API with
+645   a 200 M-token total budget.
+
+
+
+
+                                                            9
+

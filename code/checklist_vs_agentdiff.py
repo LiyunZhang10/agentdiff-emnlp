@@ -37,7 +37,7 @@ import sys
 from collections import defaultdict
 from glob import glob
 
-ROOT = "."
+ROOT = "/data/workspace/agentdiff_exp"
 
 
 def load_cell(jsonl_path):

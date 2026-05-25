@@ -27,7 +27,7 @@ from collections import defaultdict
 import numpy as np
 from scipy.stats import pearsonr, spearmanr
 
-ROOT = "."
+ROOT = "/data/workspace/agentdiff_exp"
 SEM = {"paraphrase", "synonym"}
 SUR = {"reorder", "format", "distractor"}
 

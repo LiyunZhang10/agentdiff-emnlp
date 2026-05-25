@@ -74,7 +74,7 @@ def gemini_call(prompt, temperature=0.0):
     api_key = os.environ.get("GOOGLE_API_KEY", "")
     if not api_key:
         raise RuntimeError("GOOGLE_API_KEY not set")
-    url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent"
+    url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent"
     headers = {"Content-Type": "application/json"}
     payload = {
         "contents": [{"parts": [{"text": prompt}]}],
@@ -84,9 +84,16 @@ def gemini_call(prompt, temperature=0.0):
         try:
             time.sleep(4)  # 15 RPM -> 4s min
             resp = requests.post(url + "?key=" + api_key, headers=headers, json=payload, timeout=60)
+            if resp.status_code == 429:
+                body = resp.text[:300]
+                if "RESOURCE_EXHAUSTED" in body or "quota" in body.lower():
+                    logger.error("Gemini quota exhausted, failing fast: %s", body)
+                    raise RuntimeError("Gemini quota exhausted: " + body)
             resp.raise_for_status()
             data = resp.json()
             return data["candidates"][0]["content"]["parts"][0]["text"]
+        except RuntimeError:
+            raise
         except Exception as e:
             wait = min(60, 4 * (2 ** attempt))
             logger.warning("Gemini attempt %d failed: %s, waiting %ds", attempt + 1, str(e), wait)
@@ -94,20 +101,51 @@ def gemini_call(prompt, temperature=0.0):
     raise RuntimeError("Gemini failed after 5 attempts")
 
 
+def deepseek_call(prompt, model="deepseek-chat", temperature=0.0):
+    """调用 DeepSeek API（OpenAI 兼容）"""
+    api_key = os.environ.get("DEEPSEEK_API_KEY", "")
+    if not api_key:
+        raise RuntimeError("DEEPSEEK_API_KEY not set")
+    url = "https://api.deepseek.com/v1/chat/completions"
+    headers = {
+        "Authorization": "Bearer " + api_key,
+        "Content-Type": "application/json",
+    }
+    payload = {
+        "model": model,
+        "messages": [{"role": "user", "content": prompt}],
+        "temperature": temperature,
+        "max_tokens": 2048,
+        "stream": False,
+    }
+    for attempt in range(5):
+        try:
+            time.sleep(1)
+            resp = requests.post(url, headers=headers, json=payload, timeout=120)
+            resp.raise_for_status()
+            data = resp.json()
+            return data["choices"][0]["message"]["content"]
+        except Exception as e:
+            wait = min(60, 4 * (2 ** attempt))
+            logger.warning("DeepSeek attempt %d failed: %s, waiting %ds", attempt + 1, str(e), wait)
+            time.sleep(wait)
+    raise RuntimeError("DeepSeek failed after 5 attempts")
+
+
 def mimo_call(prompt, model="mimo-v2.5-pro", temperature=0.0, system=None,
               base_url=None):
-    """调用<proprietary-vendor> MiMo API（OpenAI 兼容，Bearer header，专属套餐 sgp 网关）
+    """调用小米 MiMo API（OpenAI 兼容，Bearer header，专属套餐 sgp 网关）
 
-    NOTE 2026-05-13: 套餐 token 走 <proprietary-api-host> 而非公网
-    <proprietary-api-host>；header 必须为 Authorization: Bearer，模型名必须全小写。
-    旧实现 (api-key header + <proprietary-api-host>) 在新 token 上恒返 401。
+    NOTE 2026-05-13: 套餐 token 走 token-plan-sgp.xiaomimimo.com 而非公网
+    api.xiaomimimo.com；header 必须为 Authorization: Bearer，模型名必须全小写。
+    旧实现 (api-key header + api.xiaomimimo.com) 在新 token 上恒返 401。
     """
     api_key = os.environ.get("MIMO_API_KEY", "")
     if not api_key:
         raise RuntimeError("MIMO_API_KEY not set")
     base = (base_url
             or os.environ.get("MIMO_BASE_URL")
-            or "https://<proprietary-api-host>/v1")
+            or "https://token-plan-sgp.xiaomimimo.com/v1")
     url = base.rstrip("/") + "/chat/completions"
     headers = {
         "Authorization": "Bearer " + api_key,
@@ -148,6 +186,9 @@ def call_llm(prompt, provider="ollama", model=None, temperature=0.0):
         return groq_call(prompt, model=m, temperature=temperature)
     elif provider == "gemini":
         return gemini_call(prompt, temperature=temperature)
+    elif provider == "deepseek":
+        m = model or "deepseek-chat"
+        return deepseek_call(prompt, model=m, temperature=temperature)
     elif provider == "mimo":
         m = model or "mimo-v2.5-pro"
         return mimo_call(prompt, model=m, temperature=temperature)

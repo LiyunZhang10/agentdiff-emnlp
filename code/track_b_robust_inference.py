@@ -24,7 +24,7 @@ from collections import defaultdict
 
 import numpy as np
 
-ROOT = "."
+ROOT = "/data/workspace/agentdiff_exp"
 OUT = os.path.join(ROOT, "track_b")
 os.makedirs(OUT, exist_ok=True)
 SEED = 42

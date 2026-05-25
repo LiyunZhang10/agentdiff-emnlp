@@ -33,7 +33,7 @@ from collections import defaultdict
 
 import numpy as np
 
-ROOT = "."
+ROOT = "/data/workspace/agentdiff_exp"
 SRC = os.path.join(ROOT, "track_a/severity_per_variant.jsonl")
 OUT_DIR = os.path.join(ROOT, "track_d")
 os.makedirs(OUT_DIR, exist_ok=True)

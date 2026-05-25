@@ -3,7 +3,7 @@
 code/merged_analysis_42cells.py
 
 Merge:
-  - Old 36 cells from ./results/results_conditional/per_cell_long.csv
+  - Old 36 cells from /data/workspace/agentdiff_exp/results_conditional/per_cell_long.csv
     (6 models × 3 benches × 2 agents [cot,react])
   - New 6 cells from Qwen-2.5-14B vLLM run (cot,react × 3 benches)
 => 42 cells total.
@@ -34,9 +34,9 @@ import os
 import sys
 from collections import Counter
 
-OLD_CSV = "./results/results_conditional/per_cell_long.csv"
-NEW_ROOT = "./results/runs_real_qwen25_14b_vllm"
-OUT_DIR = "./results/conditional_v2"
+OLD_CSV = "/data/workspace/agentdiff_exp/results_conditional/per_cell_long.csv"
+NEW_ROOT = "/data/workspace/agentdiff-emnlp/results/runs_real_qwen25_14b_vllm"
+OUT_DIR = "/data/workspace/agentdiff-emnlp/results/conditional_v2"
 os.makedirs(OUT_DIR, exist_ok=True)
 
 SEM_TYPES = {"paraphrase", "synonym"}

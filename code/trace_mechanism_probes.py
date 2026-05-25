@@ -27,8 +27,8 @@ import math
 import os
 from collections import Counter, defaultdict
 
-ROOT = "./results/runs_real_qwen25_14b_vllm"
-OUT_DIR = "./results/conditional_v2"
+ROOT = "/data/workspace/agentdiff-emnlp/results/runs_real_qwen25_14b_vllm"
+OUT_DIR = "/data/workspace/agentdiff-emnlp/results/conditional_v2"
 os.makedirs(OUT_DIR, exist_ok=True)
 
 SEM_TYPES = {"paraphrase", "synonym"}
