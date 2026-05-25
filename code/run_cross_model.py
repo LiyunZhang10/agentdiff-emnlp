@@ -242,11 +242,11 @@ def run_all(model_tag, slug, n_samples, benchmarks, agent_types, runs_dir, resul
 def main():
     parser = argparse.ArgumentParser(description="AgentDiff cross-model runner")
     parser.add_argument("-m", "--model", required=True, help="model tag (e.g. qwen2.5:7b, gemini-2.0-flash, mimo-v2.5-pro)")
-    parser.add_argument("--provider", default="ollama", choices=["ollama", "groq", "gemini", "mimo"],
+    parser.add_argument("--provider", default="ollama", choices=["ollama", "groq", "gemini", "mimo", "deepseek"],
                         help="LLM provider for the test model")
     parser.add_argument("--gen-model", default=None,
                         help="independent variant-generator model tag (recommended: qwen2.5:3b)")
-    parser.add_argument("--gen-provider", default="ollama", choices=["ollama", "groq", "gemini", "mimo"],
+    parser.add_argument("--gen-provider", default="ollama", choices=["ollama", "groq", "gemini", "mimo", "deepseek"],
                         help="LLM provider for the variant generator (default: ollama)")
     parser.add_argument("--slug", default=None, help="output slug; auto-derived if omitted")
     parser.add_argument("-b", "--benchmark", default=None)
