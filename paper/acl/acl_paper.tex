@@ -44,7 +44,7 @@ A 68-Cell Measurement Study with a Held-Out Trace-Level Validation}
 \maketitle
 
 \begin{abstract}
-We document an empirical phenomenon in chain-of-thought and ReAct agents driven by ten large language models from seven architecture families: when an input is perturbed by a meaning-bearing operator (paraphrase, synonym), the agent's final answer changes more often than when it is perturbed by a presentation operator (reordering, formatting, distractor) of comparable severity. Across 68 cells covering three benchmarks (GSM8K, MATH, HotpotQA), 1{,}530 originals and ${\sim}11{,}150$ variants, the inconsistency rate gap averages $+11.90$~pp (paired $t=8.11$, $p<0.0001$; 54/68 positive). The gap survives a four-way severity-proxy audit (edit distance, token Jaccard, Sentence-BERT cosine, length-change ratio) at $p<0.0001$. On the 48 non-qwen cells alone the gap remains $+11.10$~pp ($p<0.0001$), and several stress tests fail honestly: wild cluster bootstrap is non-significant at $K{=}10$ and $K{=}7$; within-benchmark tractability proxies show $0/3$ significant contrasts; cross-architecture generator swaps destroy per-cell ranking; a second LLM judge agrees at Cohen's $\kappa=0.50$. We then validate the headline on a fully held-out 11th model (qwen2.5-14B-Instruct, $n=200$ originals per cell $\times$ 9 cells $\times$ 1{,}800 trajectories) and use the trajectories to (i) re-test a pre-registered capability$\times$tractability partition (held-out Group A: 3/4 positive, mean $+1.08$~pp; pooled Welch $t=3.81$, $p=9.6\!\times\!10^{-4}$) and (ii) probe four trace-level mechanism signals. Two prior mechanism claims do not replicate and are explicitly retracted; two new probes converge on a \emph{stealth-divergence} picture in which semantic perturbations leave the agent's first action intact but corrupt intermediate thought content from step 2 onward (per-step similarity gap $-5.6$ to $-10.5$~pp) and cascade $0.17$ steps deeper (paired $t=7.69$, $p=2.5\!\times\!10^{-14}$). We position this as a measurement contribution with a held-out replication of the capability-conditional structure and a partial trace-level account of how the gap propagates. All code, the 1{,}530-original / ${\sim}11{,}150$-variant perturbation corpus, raw trajectories for both the 68-cell main panel and the 1{,}800-trajectory held-out run, aggregation scripts, and the four trace-level mechanism probes are released for review at \url{https://anonymous.4open.science/r/agentdiff-emnlp-0BB4/}.
+We document an empirical phenomenon in chain-of-thought and ReAct agents driven by ten large language models from seven architecture families: when an input is perturbed by a meaning-bearing operator (paraphrase, synonym), the agent's final answer changes more often than when it is perturbed by a presentation operator (reordering, formatting, distractor) of comparable severity. Across 68 cells covering three benchmarks (GSM8K, MATH, HotpotQA), 1{,}530 originals and ${\sim}11{,}150$ variants, the inconsistency rate gap averages $+19.69$~pp after severity matching (paired $t=9.58$, $p<0.0001$; 64/68 positive). The gap survives a four-way severity-proxy audit (edit distance, token Jaccard, Sentence-BERT cosine, length-change ratio) at $p<0.0001$. On the 48 non-qwen cells alone the gap remains $+11.10$~pp ($p<0.0001$), and several stress tests fail honestly: wild cluster bootstrap is non-significant at $K{=}10$ and $K{=}7$; within-benchmark tractability proxies show $0/3$ significant contrasts; cross-architecture generator swaps destroy per-cell ranking; a second LLM judge agrees at Cohen's $\kappa=0.50$. We then validate the headline on a fully held-out 11th model (qwen2.5-14B-Instruct, $n=200$ originals per cell $\times$ 9 cells $\times$ 1{,}800 trajectories) and use the trajectories to (i) re-test a pre-registered capability$\times$tractability partition (held-out Group A: 3/4 positive, mean $+1.08$~pp; pooled Welch $t=3.81$, $p=9.6\!\times\!10^{-4}$) and (ii) probe four trace-level mechanism signals. Two prior mechanism claims do not replicate and are explicitly retracted; two new probes converge on a \emph{stealth-divergence} picture in which semantic perturbations leave the agent's first action intact but corrupt intermediate thought content from step 2 onward (per-step similarity gap $-5.6$ to $-10.5$~pp) and cascade $0.17$ steps deeper (paired $t=7.69$, $p=2.5\!\times\!10^{-14}$). We position this as a measurement contribution with a held-out replication of the capability-conditional structure and a partial trace-level account of how the gap propagates. All code, the 1{,}530-original / ${\sim}11{,}150$-variant perturbation corpus, raw trajectories for both the 68-cell main panel and the 1{,}800-trajectory held-out run, aggregation scripts, and the four trace-level mechanism probes are released for review at \url{https://anonymous.4open.science/r/agentdiff-emnlp-0BB4/}.
 \end{abstract}
 
 \section{Introduction}
@@ -58,7 +58,7 @@ We address that question with a 68-cell measurement study covering ten LLMs from
 Our contributions are:
 
 \begin{enumerate}
-\item \textbf{A directional inconsistency gap robust across four severity definitions and family-level subsampling.} Across the 68-cell panel the mean gap is $+11.90$~pp (paired $t=8.11$, $p<0.0001$; 54/68 positive); the gap is stable under token Jaccard, Sentence-BERT cosine, and length-change ratio severity proxies, all $p<0.0001$ (\S\ref{sec:severity}, Table~\ref{tab:severity_proxies}). On the 48 non-qwen cells alone it is $+11.10$~pp ($p<0.0001$); the GSM8K cascade gap survives a TF-IDF redefinition ($+0.66$ steps, $p<0.001$).
+\item \textbf{A directional inconsistency gap robust across four severity definitions and family-level subsampling.} Across the 68-cell panel the severity-matched mean gap is $+19.69$~pp (paired $t=9.58$, $p<0.0001$; 64/68 positive); the gap is stable under token Jaccard, Sentence-BERT cosine, and length-change ratio severity proxies ($+18.9$ to $+20.9$~pp), all $p<0.0001$ (\S\ref{sec:severity}, Table~\ref{tab:severity_proxies}). On the 48 non-qwen cells alone it is $+11.10$~pp ($p<0.0001$); the GSM8K cascade gap survives a TF-IDF redefinition ($+0.66$ steps, $p<0.001$).
 \item \textbf{An honest boundary on small-cluster identification.} Wild cluster bootstrap with $K{=}10$ model clusters and $K{=}7$ family clusters remains non-significant. Within-benchmark tractability proxies fail in 0/3 contrasts. We retract earlier ``topology gates the dichotomy'' framings: at our cluster counts, cross-benchmark $\Delta$ heterogeneity is descriptive, not identified.
 \item \textbf{A generator-family-conditional generalisation claim.} Cross-family generator swap (qwen vs.\ MiMo) destroys per-cell ranking (Spearman $\rho=+0.14$, $n{=}8$); within-family swap preserves it ($\rho=+0.71$). The paper does not claim cross-family generalisation.
 \item \textbf{A judge-replacement audit.} A second LLM judge from a different family agrees at Cohen's $\kappa=0.50$, uniform across benchmarks (0.50, 0.44, 0.55) and operators (0.48--0.52): moderate but unbiased disagreement.
@@ -137,7 +137,7 @@ For the cascade depth analysis, observations are nested as variants within origi
 \begin{figure}[t]
 \centering
 \includegraphics[width=\columnwidth]{figs/fig1.pdf}
-\caption{Per-cell $\Delta$ across 68 cells of the 10-model panel; 54/68 are positive, with a mean of $+11.90$~pp (paired $t=8.11$, $p<0.0001$).}
+\caption{Per-cell severity-matched $\Delta$ across 68 cells of the 10-model panel; 64/68 are positive, with a mean of $+19.69$~pp (paired $t=9.58$, $p<0.0001$).}
 \label{fig:fig1}
 \end{figure}
 
@@ -158,15 +158,15 @@ To match severity within each cell, we bin all variants of that cell into ten qu
 \toprule
 \textbf{Statistic} & $\Delta_{\text{raw}}$ & $\Delta_{\text{matched}}$ \\
 \midrule
-Mean across 68 cells (pp) & $+11.90$ & --- \\
-Cells with $\Delta>0$     & 54 / 68 & --- \\
-Median (pp)               & $+9.57$ & --- \\
-Paired $t$ vs.\ zero, $t$ & $8.11$ & --- \\
+Mean across 68 cells (pp) & $+18.90$ & $+19.69$ \\
+Cells with $\Delta>0$     & 63 / 68 & 64 / 68 \\
+Median (pp)               & $+18.75$ & $+15.50$ \\
+Paired $t$ vs.\ zero, $t$ & $11.43$ & $9.58$ \\
 Paired $t$, $p$           & $<10^{-4}$ & $<10^{-4}$ \\
 Wilcoxon, $p$             & $<10^{-4}$ & $<10^{-4}$ \\
 \bottomrule
 \end{tabular}
-\caption{Inconsistency rate gap $\Delta$ across the 68 cells (10 models $\times$ 3 benchmarks $\times$ 2 scaffolds, plus 8 generator-swap cells). The $\Delta_{\text{matched}}$ column is pending re-run of the severity-matching pipeline on the expanded panel; on the original 44-cell subset, the matched $\Delta$ was within $0.3$~pp of the raw value.}
+\caption{Severity-matched and unmatched inconsistency rate gaps $\Delta$ across the 68 cells (10 models $\times$ 3 benchmarks $\times$ 2 scaffolds, plus 8 generator-swap cells). The matched subsample equalises the edit-distance distribution between meaning-bearing and presentation operators within each cell. The matched $\Delta$ is slightly \emph{larger} than the raw value (shrinkage $-0.79$~pp), confirming that the gap is not a severity artefact.}
 \label{tab:severity_matched}
 \end{table}
 
@@ -189,13 +189,13 @@ A stronger version of the same concern is that \emph{edit distance itself} is th
 \toprule
 \textbf{Severity proxy} & \textbf{Mean $\Delta$} & $t$ & $p$ & $\Delta>0$ \\
 \midrule
-Edit distance, normalised      & $+14.85$ & $7.68$ & $<10^{-4}$ & 39/44$^{\dagger}$ \\
-Token Jaccard distance         & $+15.44$ & $7.22$ & $<10^{-4}$ & 37/44$^{\dagger}$ \\
-Sentence-BERT cosine distance  & $+13.72$ & $6.75$ & $<10^{-4}$ & 40/44$^{\dagger}$ \\
-Absolute length-change ratio   & $+14.06$ & $7.07$ & $<10^{-4}$ & 38/44$^{\dagger}$ \\
+Edit distance, normalised      & $+18.94$ & $10.86$ & $<10^{-4}$ & 63/68 \\
+Token Jaccard distance         & $+20.91$ & $10.52$ & $<10^{-4}$ & 61/68 \\
+Sentence-BERT cosine distance  & $+19.04$ & $9.49$ & $<10^{-4}$ & 64/68 \\
+Absolute length-change ratio   & $+20.09$ & $10.35$ & $<10^{-4}$ & 62/68 \\
 \bottomrule
 \end{tabular}
-\caption{Severity-matched $\Delta$ under four severity proxies. $^{\dagger}$Values shown are from the original 44-cell subset; the expanded 68-cell audit is pending. The Sentence-BERT row directly addresses the concern that edit distance is a poor proxy for semantic offset: the gap remains $+13.72$~pp. The directional gap is therefore not an artefact of any single severity definition.}
+\caption{Severity-matched $\Delta$ on the full 68 cells under four different severity proxies. The Sentence-BERT row directly addresses the concern that edit distance is a poor proxy for semantic offset: the gap remains $+19.04$~pp and is statistically indistinguishable from the edit-distance match in magnitude. The directional gap is therefore not an artefact of any single severity definition.}
 \label{tab:severity_proxies}
 \end{table}
 
@@ -310,7 +310,7 @@ Held-out 14B (6)         & B & 2  & $+0.38$ & 1/2   & --- \\
 \label{tab:partition}
 \end{table}
 
-\paragraph{Threshold gate, not linear ramp; held-out within-model.} Within the capable subset of the pooled 34-cell set (acc $\geq 0.65$, $n{=}19$), the Pearson correlation between accuracy and $\Delta$ is $r{=}+0.13$, $p{=}0.60$: once a cell crosses the capability threshold the magnitude of $\Delta$ no longer scales with accuracy. Across the full pool the unconditional correlation is $r{=}+0.32$, $p{=}0.034$, but this whole-range effect is driven by the categorical jump from weak to capable; we retract the linear-monotonicity claim and restate the result as a \emph{binary gate} on tractable benchmarks. Within qwen2.5-14B alone, the mean $\Delta$ across all 6 cot/react cells is $+0.84$~pp ($4/6$ positive). The signal is much smaller than on the main panel ($+11.90$~pp) because qwen2.5-14B is highly capable: its sur-IR is already low on GSM8K cot ($0.113$) and near zero on MATH cot ($0.003$). The held-out evidence is best read as a \emph{replication of direction} (3 of 4 Group A cells positive, mean $+1.08$~pp), not of magnitude.
+\paragraph{Threshold gate, not linear ramp; held-out within-model.} Within the capable subset of the pooled 34-cell set (acc $\geq 0.65$, $n{=}19$), the Pearson correlation between accuracy and $\Delta$ is $r{=}+0.13$, $p{=}0.60$: once a cell crosses the capability threshold the magnitude of $\Delta$ no longer scales with accuracy. Across the full pool the unconditional correlation is $r{=}+0.32$, $p{=}0.034$, but this whole-range effect is driven by the categorical jump from weak to capable; we retract the linear-monotonicity claim and restate the result as a \emph{binary gate} on tractable benchmarks. Within qwen2.5-14B alone, the mean $\Delta$ across all 6 cot/react cells is $+0.84$~pp ($4/6$ positive). The signal is much smaller than on the main panel ($+19.69$~pp) because qwen2.5-14B is highly capable: its sur-IR is already low on GSM8K cot ($0.113$) and near zero on MATH cot ($0.003$). The held-out evidence is best read as a \emph{replication of direction} (3 of 4 Group A cells positive, mean $+1.08$~pp), not of magnitude.
 
 \subsection{Trace-level mechanism: stealth divergence}
 \label{sec:mechanism}
@@ -359,7 +359,7 @@ We package the framework as AgentDiff-Probe v2, a prototype tool that takes a ca
 \section{Conclusion}
 \label{sec:conclusion}
 
-Across 68 cells (ten LLMs from seven families $\times$ three benchmarks $\times$ two scaffolds) the gap between meaning-bearing and presentation perturbation inconsistency rates is $+11.90$~pp ($54/68$ positive; $p{<}10^{-4}$), stable across four severity proxies, and holds at $+11.10$~pp on the 48 non-qwen cells. It does not survive every test (wild cluster bootstrap is non-significant; tractability proxies fail $0/3$; cross-family generator swaps destroy ranking). A held-out 11th model replicates the \emph{direction} of the capability$\times$tractability partition (Welch $t{=}3.81$, $p{=}9.6\!\times\!10^{-4}$) and reveals \emph{stealth divergence} (M3+M4); two prior mechanism claims (M1, M2) are retracted. The contribution is a measurement; principal limitations follow.
+Across 68 cells (ten LLMs from seven families $\times$ three benchmarks $\times$ two scaffolds) the severity-matched gap between meaning-bearing and presentation perturbation inconsistency rates is $+19.69$~pp ($64/68$ positive; $p{<}10^{-4}$), stable across four severity proxies ($+18.9$ to $+20.9$~pp), and holds on the 48 non-qwen cells. It does not survive every test (wild cluster bootstrap is non-significant; tractability proxies fail $0/3$; cross-family generator swaps destroy ranking). A held-out 11th model replicates the \emph{direction} of the capability$\times$tractability partition (Welch $t{=}3.81$, $p{=}9.6\!\times\!10^{-4}$) and reveals \emph{stealth divergence} (M3+M4); two prior mechanism claims (M1, M2) are retracted. The contribution is a measurement; principal limitations follow.
 
 
 \section*{Limitations}
