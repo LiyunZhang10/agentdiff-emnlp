@@ -173,11 +173,11 @@ Wilcoxon, $p$             & $<10^{-4}$ & $<10^{-4}$ \\
 \begin{figure}[t]
 \centering
 \includegraphics[width=\columnwidth]{figs/fig2.pdf}
-\caption{(a) Per-operator edit-distance severity (blue: meaning-bearing; orange: presentation). (b) $\Delta_{\text{raw}}$ vs.\ $\Delta_{\text{matched}}$ scatter; the dashed line is $y{=}x$. Mean shrinkage is only $0.21$~pp.}
+\caption{(a) Per-operator edit-distance severity (blue: meaning-bearing; orange: presentation). (b) $\Delta_{\text{raw}}$ vs.\ $\Delta_{\text{matched}}$ scatter; the dashed line is $y{=}x$. Mean shrinkage is $-0.79$~pp (matched is slightly larger than raw).}
 \label{fig:fig2}
 \end{figure}
 
-The severity match closes the most direct alternative explanation for $\Delta$. A reviewer who claims that $\Delta$ is a severity artefact must explain why the gap survives explicit edit-distance matching with shrinkage below $0.3$~pp.
+The severity match closes the most direct alternative explanation for $\Delta$. A reviewer who claims that $\Delta$ is a severity artefact must explain why the gap \emph{increases} after explicit edit-distance matching (shrinkage $-0.79$~pp).
 
 A stronger version of the same concern is that \emph{edit distance itself} is the wrong severity proxy: meaning-bearing operators target high-information tokens, and a single token edit can change meaning while leaving edit distance small. We address this by re-running the within-cell severity match under three additional severity proxies and reporting the resulting matched $\Delta$ in Table~\ref{tab:severity_proxies}. The four proxies are (i) normalised Levenshtein edit distance, (ii) token-level Jaccard distance, (iii) Sentence-BERT cosine distance using the open-weight 768-d nomic-embed-text encoder applied to (original, variant) question pairs, and (iv) absolute prompt-length-change ratio.
 
