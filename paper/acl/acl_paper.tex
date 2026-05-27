@@ -112,7 +112,7 @@ All five operators preserve the gold answer; an equivalence judge filters out va
 
 For each cell $c$ (a model $\times$ benchmark $\times$ scaffold combination) and each operator $o$, the inconsistency rate is
 \begin{equation}
-\mathrm{IR}_{c,o} = \frac{1}{N_c}\sum_{i=1}^{N_c}\mathbb{1}\bigl[\,a_{c,o,i}\ne a^{\mathrm{orig}}_{c,i}\,\bigr],
+\mathrm{IR}_{c,o} = \frac{1}{N_c}\sum_{i=1}^{N_c}\mathbf{1}\bigl[\,a_{c,o,i}\ne a^{\mathrm{orig}}_{c,i}\,\bigr],
 \end{equation}
 where $a_{c,o,i}$ is the agent's final answer on the perturbed variant of original question $i$ and $a^{\mathrm{orig}}_{c,i}$ is the answer on the original question. The gap is then
 \begin{equation}
